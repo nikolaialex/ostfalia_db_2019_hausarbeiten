@@ -1,1 +1,1 @@
-# ostfalia_db_2019_hausarbeiten
+# Gruppenarbeiten Datenbanktechnologien WS19/20
