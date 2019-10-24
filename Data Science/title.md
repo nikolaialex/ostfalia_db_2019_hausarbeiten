@@ -8,6 +8,7 @@ Eine Ausarbeitung zum Thema Data Science.
 | -----------           | -------------- | ------------------------------   |
 | Sarah-Désirée Weber   | 887646         | Beuth Hochschule Technik Berlin  |
 | Janet Vu              |                |                                  |
+| Isirafil Gülap        | 874786         | Beuth Hochschule Technik Berlin  |
 
 ***
 [Inhaltsverzeichnis >>](inhaltsverzeichnis.md)
