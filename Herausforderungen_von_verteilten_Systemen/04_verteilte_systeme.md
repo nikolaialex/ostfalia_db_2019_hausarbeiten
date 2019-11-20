@@ -1,6 +1,6 @@
 # 2 Verteilte Systeme
 
-Für das Konzept der verteilten Systeme gibt es in der Literatur, soweit ersichtlich, keine allgemein anerkannte und gültige Definition. Bei [[Steen_2017](#steen_2017)] wird daher eine eher unspezifische Definition verwendet:
+Für das Konzept der verteilten Systeme gibt es in der Literatur, soweit ersichtlich, keine allgemein anerkannte und gültige Definition. Bei van Steen und Tanenbaum (2017)[^steen_tanenbaum_2017] wird daher eine eher unspezifische Definition verwendet:
 > A distributed system is a collection of autonomous computing elements that appears to its users as a single coherent system.
 
 Nach dieser Definition besitzt ein verteiltes System zwei grundlegende Charakteristiken:
@@ -12,10 +12,25 @@ Bei den Knoten kann es sich um viele verschiedene Arten von Computern handeln, w
 Die zweite Eigenschaft, das Erscheinen als ein einheitliches System, erfordert in der extremsten Deutung dieser Eigenschaft, dass sich das verteilte System gegenüber dem Nutzer so verhält als sei es ein einziger Computer. Diese Forderung dürfte in den meisten Fällen jedoch zu weit gehen, sodass im Regelfall die Eigenschaft als erfüllt anzusehen ist, wenn sich das verteilte System den Erwartungen des Nutzers entsprechend verhält.
 
 
-
 ## 2.1 Hardware
+
+Verteilte Systeme lassen sich zum einen aus Sicht der verwendeten Hardware betrachten. Im Unterschied zu zentralisierten, Ein-Kern-Rechnern setzen sich verteilte Systeme aus mehreren Recheneinheiten zusammen. Hierbei wird häufig zwischen Multiprozessorsystemen und Multicomputersystemen unterschieden.
+
+**Multiprozessorsysteme** umfassen mehrere Prozessoren, die sich einen gemeinsamen Speicher teilen und meist an einen gemeinsamen Bus angeschlossen sind. Hierüber folgt ein direkter Zugriff aller beteiligten Prozessoren auf den Speicher sowie die Kommunikation zwischen den Prozessoren.
+
+In **Multicomputersystemen** hingegen haben die einzelnen Prozessoren eigene, private Speicher, welchen sie nicht mit den anderen Prozessoren teilen. Die Kommunikation zwischen den Prozessoren erfolgt hier über ein Verbindungsnetzwerk. Multicomputersysteme lassen sich weiter in homogene und heterogene System unterteilen. **Homogene Systeme** setzen sich aus identischen Systemen zusammen, die alle die gleiche CPU, den gleichen Speicher usw. haben. **Heterogene Systeme** können aus verschiedensten Typen von Computern mit unterschiedlichsten Leistungsmerkmalen bestehen.
+
+In den weiteren Teilen dieser Ausarbeitung wird von heterogenen Systemen ausgegangen, da diese in der Praxis am Häufigsten zu finden sind und für die die betrachteten Probleme die größte Relevanz besitzen. In Multiprozessorsysteme sind weitere Probleme zu finden, auf die hier nicht weiter eingegangen werden soll. Informationen hierzu finden sich u.a. bei Tanenbaum und Bos, 2015[^tanenbaum_bos_2015].
 
 ## 2.2 Software
 
-Quellen:
-<a name="steen_2017">[Steen_2017]</a> M. van Steen and A. S. Tanenbaum, Distributed systems, Third edition (Version 3.01 (2017)). London: Pearson Education, 2017.
+* TODO: Hinweis auf Middleware zum Erreichen von Uniformität
+
+## 2.3 Middleware
+
+
+
+
+[^steen_tanenbaum_2017]: M. van Steen and A. S. Tanenbaum, Distributed systems, Third edition (Version 3.01 (2017)). London: Pearson Education, 2017.
+
+[^tanenbaum_bos_2015]: A. S. Tanenbaum, Modern operating systems, Fourth edition. Boston: Pearson, 2015.
