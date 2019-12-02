@@ -1,1 +1,4 @@
-# 6 Fallbeispiele
+# 5. Fallbeispiele
+
+---
+[<< Herausforderungen](05_herausforderungen.md) | [Inhaltsverzeichnis](02_toc.md) | [Zusammenfassung >>](07_zusammenfassung.md)

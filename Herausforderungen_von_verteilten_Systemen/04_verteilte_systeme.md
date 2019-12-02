@@ -24,13 +24,31 @@ In den weiteren Teilen dieser Ausarbeitung wird von heterogenen Systemen ausgega
 
 ## 2.2 Software
 
-* TODO: Hinweis auf Middleware zum Erreichen von Uniformität
+Der Software kommt in verteilten Systemen die vermutlich wichtigste Rolle zu, ist es doch bislang nur durch den geschickten Einsatz der Software möglich, die Ziele verteilter Systeme zu erreichen. Zu diesen Zielen zählen die gemeinsame Nutzung von Ressourcen, die Transparenz der Verteilung, Offenheit und Skalierbarkeit.
+
+Das Ziel der **gemeinsame Nutzung von Ressourcen** umfasst vor allem den Ansatz, entfernte und / oder teure Ressourcen für mehrere Nutzer zugänglich zu machen. Der Begriff Ressource ist hierbei sehr weit zu verstehen und umfasst sowohl Hardware-Ressourcen wie Drucker, Speicher oder Rechenleistung als auch Software-Ressourcen wie Datenbestände.
+
+Die **Verteilungstransparenz** entspricht der o.g. Definition von verteilten Systemen und benennt die Eigenschaft, dass bei der Nutzung des verteilten Systems dessen Verteilung nicht unmittelbar sichtbar ist. Hierdurch wird insbesondere verborgen,
+* wie der Zugriff auf die Ressource erfolgt (Zugriff)
+* wo sich die Ressource befindet (Position)
+* dass eine Ressource repliziert ist (Replikation)
+* dass eine Ressource von mehreren, konkurrierenden Benutzern gleichzeitig genutz werden kann (Nebenläufigkeit)
+* dass ein Teil des Systems ausgefallen ist und / oder wiederhergestellt wird (Fehler)
+* ob eine Ressource sich im Speicher oder auf einer Festplatte befindet (Persistenz).
+
+Mit **Offenheit** eines verteilten Systems ist gemeint, dass die Bestandteile des Systems leicht von anderen Systemen verwendet oder in diese integriert werden können und teilweise auch selber Komponenten aus anderen Systemen umfassen.
+
+Die Fähigkeit eines verteilten Systems, auch bei stark wachsenden Nutzerzahlen und einer weitläufigen Verteilung der Nutzer die angebotenen Dienste angemessen und ohne Einschränkungen für die Nutzer zu erfüllen, wird als **Skalierbarkeit** bezeichnet. Hierzu ist es erforderlich, dass das System auch bei Hinzunahme (beliebig) vieler Knoten funktioniert. Neben der reinen Skalierbarkeit im Sinne von Größe, die sich insbesondere auf die Anzahl der Nutzer und Ressourcen / Zugriffe bezieht, ist auch die Skalierbarkeit in geographischer (regionale Verteilung der Nutzer ohne starke Latenzen) und administrativer Hinsicht notwendig. 
 
 ## 2.3 Middleware
 
+Dem Ziel der Verteilungstransparenz folgend sollte es für Programme auf Applikationsebene nicht erforderlich sein
 
 
 
 [^steen_tanenbaum_2017]: M. van Steen and A. S. Tanenbaum, Distributed systems, Third edition (Version 3.01 (2017)). London: Pearson Education, 2017.
 
 [^tanenbaum_bos_2015]: A. S. Tanenbaum, Modern operating systems, Fourth edition. Boston: Pearson, 2015.
+
+---
+[<< Einleitung](03_einleitung.md) | [Inhaltsverzeichnis](02_toc.md) | [Herausforderungen >>](05_herausforderungen.md)
