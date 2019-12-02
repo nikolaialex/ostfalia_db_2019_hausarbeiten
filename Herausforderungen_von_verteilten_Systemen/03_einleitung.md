@@ -1,3 +1,7 @@
+[<< Inhaltsverzeichnis](02_toc.md) | [Verteilte Systeme >>](04_verteilte_systeme.md)
+|-|-|-|
+---
+
 # 1 Einleitung
 
 **TODO: Überarbeiten**
@@ -18,3 +22,4 @@ In [Kapitel 2](04_verteilte_systeme.md) werden zunächst Eigenschaften verteilte
 
 ---
 [<< Inhaltsverzeichnis](02_toc.md) | [Verteilte Systeme >>](04_verteilte_systeme.md)
+|-|-|-|

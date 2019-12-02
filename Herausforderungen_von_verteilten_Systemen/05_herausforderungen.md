@@ -1,4 +1,9 @@
-# 4. Herausforderungen
+[<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md)
+|-|-|-|
+
+---
+
+# 3. Herausforderungen
 
 In diesem Kapitel sollen die Herausforderungen erläutert werden, denen man bei Entwicklung und Betrieb verteilter Systeme üblicherweise begegnet.
 
@@ -16,7 +21,7 @@ In diesem Kapitel sollen die Herausforderungen erläutert werden, denen man bei 
 
 ## 4.7 Fehlerbahndlung / Failure Handling -->
 
-## 4.1 Architektur
+## 3.1 Architektur
 
 In verteilten Systemen laufen die beteiligten Komponenten per Definition auf mehreren, unterschiedlichen Knoten.
 Mit wachsender Anzahl von Komponenten und Knoten steigt die Komplexität dieser Systeme massiv an.
@@ -26,13 +31,14 @@ Um diese Komplexität angemessen zu handhaben, wird bei den verteilten Komponent
 Ein wichtiges Ziel bei der Erstellung von Software-Architekturen in verteilten Systemen ist die Trennung der Applikationen von der zugrunde liegenden Plattform. Hierzu wird häufig eine Schicht eingeführt, die als **middleware** bezeichnet wird und welche der Erlangung von Transparenz dient (siehe dazu den Abschnitt Ziele in [Verteilte Systeme](04_verteilte_systeme.md)).
 
 
-## 4.2 Prozesse
-## 4.3 Kommunikation
-## 4.4 Namensgebung
-## 4.5 Koordination
-## 4.6 Konsistenz und Replikation
-## 4.7 Fehlertoleranz
-## 4.8 Sicherheit
+## 3.2 Prozesse
+## 3.3 Kommunikation
+## 3.4 Namensgebung
+## 3.5 Koordination
+## 3.6 Konsistenz und Replikation
+## 3.7 Fehlertoleranz
+## 3.8 Sicherheit
 
 ---
 [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md)
+|-|-|-|
