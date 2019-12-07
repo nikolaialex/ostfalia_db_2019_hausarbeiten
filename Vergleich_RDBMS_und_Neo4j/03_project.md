@@ -27,6 +27,7 @@ Das Datenmodell dieses Projektes besteht aus folgenden Komponenten:
   
 # 3.4 Unterschiede in der Implementierung 
 
+# 3.4.1 Objekt Mapping für RDBMS und Graphdatenbank
 Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der der ORM Frameworks ausgezeichnet, sodass der OR - Mapper diese persistieren kann. Nachfolgende soll die Beschreibungsentität kurz erläutert werden: 
 
     @Entity
@@ -78,3 +79,43 @@ Für Beziehungen zu anderen Objekten stehen folgende Annotationen zur Verfügung
 gespeichert, gelöscht oder geladen werden was die Arbeit mit Objekten des ORM in der Praxis oft komplex werden lässt. 
 
 Bei der Konfiguration der Objekt Mapper scheint das relationale Datenbankmanagementsystem mehr Steuerung zu benötigen als die Graphendatenbank.
+
+# 3.4.1 CREAD, READ, UPDATE and DELETE (CRUD) für RDBMS und Graphdatenbank
+
+Mit Spring Data bekommt der Entwickler eine der einfachsten Möglichkeiten für die Umsetzung der CRUD Operation an die Hand die es meiner Meinung nach gibt. Für jede Entität die durch Spring Data verwaltet werden soll muss lediglich 
+ein CRUDRepository erweitert werden. 
+
+**Beispiel NEO4J**
+
+    public interface BeschreibungsdokumentGraphRepository extends Neo4jRepository<Beschreibungsdokument,String> {
+    
+    }
+
+**Beispiel RDBMS**
+  
+    public interface BeschreibungsdokumenteRDBMSRepository extends CrudRepository<Beschreibungsdokument,String> {
+    
+    }
+
+Die Implementierung dieser Interfaces wird durch SpringData selbst vorgenommen. Mit Hilfe von Generics muss im Interface lediglich der Typ der Entität und der Typ des primäry Keys angebeben werden. In beiden Fällen ist dies jeweils
+die Klasse Beschreibungsdokument und die Klasse String. Die Verwendung des Repositories ist in beiden Fällen sehr einfach: 
+
+      @Autowired
+      private BeschreibungsdokumentGraphRepository beschreibungsdokumentGraphRepository;
+    
+      @Autowired
+      private BeschreibungsdokumenteRDBMSRepository beschreibungsdokumenteRDBMSRepository;
+      
+      beschreibungsdokumentGraphRepository.deleteAll();
+      
+      beschreibungsdokumenteRDBMSRepository.deleteAll();
+      
+      beschreibungsdokumentGraphRepository.saveAll(l);
+      
+      beschreibungsdokumenteRDBMSRepository.saveAll(l);
+      
+Im ersten Schritt muss die Implementierng via Dependency Injection einer Variable zugewiesen werden. Anschließend können die Entitäten mit save, delete, oder findBy Methoden in die entsprechende Datenbank 
+persistiert, gelöscht oder aktualisiert werden. Für die Verwendung der Standard Operation macht es hierbei keinen Unterschied ob diese auf einer Graphendatenbank oder einem relationales DBMS durchgeführt werden.
+
+      
+ 
