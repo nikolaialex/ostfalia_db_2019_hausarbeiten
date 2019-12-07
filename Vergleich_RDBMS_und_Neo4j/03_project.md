@@ -23,7 +23,7 @@ Das Datenmodell dieses Projektes besteht aus folgenden Komponenten:
   *  Person: Informationen zu einer Person, was in diesem Kontext ein Autor oder ein Besitzer einer Handschrift sein kann. 
   *  Koerperschaft: Informationen zu einer Institution. 
   *  Provenienz: Zeitlich begrenztes Besitzverhältnis. 
-  *  Digitalisat: Ergebnis eines Digitalisierungsprozesses. In der Regel Image einer Seite bzw. eines Handschriftenbestandteiles.  
+  *  Digitalisat: Ergebnis eines Digitalisierungsprozesses. In der Regel eine Bilddatei für einer Seite bzw. eines Handschriftenbestandteiles.  
   
 # 3.4 Unterschiede in der Implementierung 
 
@@ -65,7 +65,16 @@ Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der 
       @Relationship(type = "ENTHAELT")
       private Set<DokumentElement> bestandteile;
       
-Annotation für NEO4J
 
-Eine Neo4J Knoten wird durch die Annotation @NodeEntity gekennzeichnet. Zusätzlich benötigt ein Knoten eine eindeutige Identifikationsnummer. Eine Beziehung zu anderen Knoten wird 
-mit Hilfe der Annotation @Relationship gekennzeichnet. 
+**Annotation für GRAPH Datenbank** 
+
+Ein Neo4J Knoten wird durch die Annotation **@NodeEntity** gekennzeichnet. Zusätzlich benötigt ein Knoten eine eindeutige Identifikationsnummer. Eine Beziehung zu anderen Knoten wird 
+mit Hilfe der Annotation **@Relationship** gekennzeichnet. Mit Hilfe dieser Annotationen kann ein Objekt Graph Mapper, wie er im Spring Data Neo4J verwendet wird dieses Objekt in einer Graphendatenbank persistieren. 
+
+**Annotationen für RDBMS** 
+
+Ein Objekt welches in eine relationale Datenbank persistiert werden soll, muss mit der Annotation **@Entity** gekennzeichnet werden. Genau wie bei Neo4J muss dieses Objekt ein Attribute mit der **@Id** Annotation als primäry Key kennzeichnen. 
+Für Beziehungen zu anderen Objekten stehen folgende Annotationen zur Verfügung: **@OneToOne**, **@OneToMany**, **@ManyToOne**, **@ManyToMany**. Für diese Annotationen müssen noch Werte für das Verhalten beim Laden angegeben werden. Zusätzlich können Daten zusammenhänged 
+gespeichert, gelöscht oder geladen werden was die Arbeit mit Objekten des ORM in der Praxis oft komplex werden lässt. 
+
+Bei der Konfiguration der Objekt Mapper scheint das relationale Datenbankmanagementsystem mehr Steuerung zu benötigen als die Graphendatenbank.
