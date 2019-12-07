@@ -14,19 +14,41 @@ und eine NEO4J Graphendatenbank anbinden. Um die Daten in diesen System zu persi
 
 # 3.3 Domainmodell 
 
+![Johannes Versor Handschrift 15 Jahrhundert](johannesversorbuch.jpeg)
+
 Das Datenmodell dieses Projektes besteht aus folgenden Komponenten: 
 
-  *  Beschreibungsdokument: Enthält alle Metadaten zu einer abendländischen Handschriftenbeschreibung. Es stellt im Context von Domain Driven Design das Root Aggregate dar. 
-  *  Dokumentenelemt: Ist ein inhaltlicher Bestandteil einer Beschreibung. Das kann Textabschnitt zur Beschreibung eines Einbandes oder eine Sammlung von Texten sein. 
-  *  Beteiligte:  Ist ein abstraktes Element um gemeinsame Normdatenattribute für Personen und Koerperschaften zu verwalten. 
-  *  Ort: Informationen zu einem Ort. 
-  *  Person: Informationen zu einer Person, was in diesem Kontext ein Autor oder ein Besitzer einer Handschrift sein kann. 
-  *  Koerperschaft: Informationen zu einer Institution. 
-  *  Provenienz: Zeitlich begrenztes Besitzverhältnis. 
-  *  Digitalisat: Ergebnis eines Digitalisierungsprozesses. In der Regel eine Bilddatei für einer Seite bzw. eines Handschriftenbestandteiles.
+  *  **Beschreibungsdokument**: Enthält alle Metadaten zu einer abendländischen Handschriftenbeschreibung. Es stellt im Context von Domain Driven Design das Root Aggregate dar. 
+  *  **Dokumentenelemt**: Ist ein inhaltlicher Bestandteil einer Beschreibung. Das kann Textabschnitt zur Beschreibung eines Einbandes oder eine Sammlung von Texten sein. 
+  *  **Beteiligte**:  Ist ein abstraktes Element um gemeinsame Normdatenattribute für Personen und Koerperschaften zu verwalten. 
+  *  **Ort**: Informationen zu einem Ort. 
+  *  **Person**: Informationen zu einer Person, was in diesem Kontext ein Autor oder ein Besitzer einer Handschrift sein kann. 
+  *  **Koerperschaft**: Informationen zu einer Institution. 
+  *  **Provenienz**: Zeitlich begrenztes Besitzverhältnis. 
+  *  **Digitalisat**: Ergebnis eines Digitalisierungsprozesses. In der Regel eine Bilddatei für eine Seite bzw. eines Handschriftenbestandteiles.
   
-Das Beschreibungsdokument stellt im Sinne von Domain Driven Design ein sogenanntes Root Aggregate dar. Dieses Objekt führt mehrere Objekte zusammen und verwaltet dieses. Über diesen Mechnismus wird 
-die fachliche Konsistenz gewährleistet.  
+Das Beschreibungsdokument führt mehrere Objekte zusammen und verwaltet dieses. Ein Beschreibungsdokument besteht aus einer Hierarchie von Dokumentenelementen und den wichtigsten Metadaten. Zu jeder Handschrift werden Daten 
+zu folgenden wichtige Informationen erfasst: 
+
+  * Titel: [Johannes Versor, Johannes Tinctoris](http://www.manuscripta-mediaevalia.de/#|5)
+  * Signatur: S 67
+  * Entstehungsdatum: 1460 
+  * Bestandhaltende Einrichtung: Bonn, Universitäts- und Landesbibliothek Bonn
+  * Dokumentenbestandteile
+  * Provenienz
+  * Buchbinder 
+
+Nachfolgende Grafiken zeigen die fachliche Struktur einer Handschriftenbeschreibung. 
+
+![Beispiel Handschrift aus dem 15 Jahrhundert](johannesversor.png)
+
+![Beispiel Handschrift aus dem 15 Jahrhundert Inhalt](johannesversor_inhalt.png)
+
+Beispiel: Dokumentenelement Text
+
+![Beispiel Handschrift aus dem 15 Jahrhundert Inhalt](dokumentenelement.png) 
+
+Anhand dieses Beispiel wurde kurz die fachliche Struktur einer Handschriftenbeschreibung dargestellt. Zu erkennen ist, das ein Dokument viele Beziehungen zu Orten, Personen, Instiutionen mit zeitlicher Varianz haben kann. 
   
 # 3.4 Unterschiede in der Implementierung 
 
@@ -77,9 +99,9 @@ mit Hilfe der Annotation **@Relationship** gekennzeichnet. Mit Hilfe dieser Anno
 
 Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Provienz dar. Dieses Objekt ist eine Relationsobjekt welches zwei Entitäten miteinander verwendet. Ein solches Objekt gibt es im Kontext des RDBMS nicht. 
 
-  @Entity
-  @RelationshipEntity()
-  public class Provenienz {
+    @Entity
+    @RelationshipEntity()
+    public class Provenienz {
   
     protected Provenienz() {
     }
