@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="Add first project description">
+    <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" afterDir="false" />
     </list>
@@ -45,8 +45,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="422">
-                <caret line="25" column="114" selection-start-line="25" selection-start-column="114" selection-end-line="25" selection-end-column="114" />
+              <first_editor relative-caret-position="740">
+                <caret line="115" column="197" selection-start-line="115" selection-start-column="197" selection-end-line="115" selection-end-column="197" />
               </first_editor>
               <second_editor />
             </state>
@@ -199,7 +199,7 @@
       <workItem from="1574518934649" duration="186000" />
       <workItem from="1574519553124" duration="591000" />
       <workItem from="1574520720467" duration="485000" />
-      <workItem from="1574588975854" duration="5134000" />
+      <workItem from="1574588975854" duration="7443000" />
     </task>
     <task id="LOCAL-00001" summary="Add Table of Content">
       <created>1574515624180</created>
@@ -215,17 +215,31 @@
       <option name="project" value="LOCAL" />
       <updated>1574714950204</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add more information for ORM Mapping">
+      <created>1575727908071</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575727908071</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add more information for ORM Mapping">
+      <created>1575730917401</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575730917401</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8297000" />
+    <option name="totallyTimeSpent" value="10606000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1302621" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13621922" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -264,7 +278,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Table of Content" />
     <MESSAGE value="Add first project description" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add first project description" />
+    <MESSAGE value="Add more information for ORM Mapping" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more information for ORM Mapping" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Data Science/title.md">
@@ -305,8 +320,8 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="422">
-            <caret line="25" column="114" selection-start-line="25" selection-start-column="114" selection-end-line="25" selection-end-column="114" />
+          <first_editor relative-caret-position="740">
+            <caret line="115" column="197" selection-start-line="115" selection-start-column="197" selection-end-line="115" selection-end-column="197" />
           </first_editor>
           <second_editor />
         </state>
