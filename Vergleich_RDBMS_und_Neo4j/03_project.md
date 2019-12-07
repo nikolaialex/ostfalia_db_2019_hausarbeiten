@@ -19,7 +19,7 @@ und eine NEO4J Graphendatenbank anbinden. Um die Daten in diesen System zu persi
 Das Datenmodell dieses Projektes besteht aus folgenden Komponenten: 
 
   *  **Beschreibungsdokument**: Enthält alle Metadaten zu einer abendländischen Handschriftenbeschreibung. Es stellt im Context von Domain Driven Design das Root Aggregate dar. 
-  *  **Dokumentenelemt**: Ist ein inhaltlicher Bestandteil einer Beschreibung. Das kann Textabschnitt zur Beschreibung eines Einbandes oder eine Sammlung von Texten sein. 
+  *  **Dokumentenelement**: Ist ein inhaltlicher Bestandteil einer Beschreibung. Das kann Textabschnitt zur Beschreibung eines Einbandes oder eine Sammlung von Texten sein. 
   *  **Beteiligte**:  Ist ein abstraktes Element um gemeinsame Normdatenattribute für Personen und Koerperschaften zu verwalten. 
   *  **Ort**: Informationen zu einem Ort. 
   *  **Person**: Informationen zu einer Person, was in diesem Kontext ein Autor oder ein Besitzer einer Handschrift sein kann. 
@@ -28,7 +28,7 @@ Das Datenmodell dieses Projektes besteht aus folgenden Komponenten:
   *  **Digitalisat**: Ergebnis eines Digitalisierungsprozesses. In der Regel eine Bilddatei für eine Seite bzw. eines Handschriftenbestandteiles.
   
 Das Beschreibungsdokument führt mehrere Objekte zusammen und verwaltet dieses. Ein Beschreibungsdokument besteht aus einer Hierarchie von Dokumentenelementen und den wichtigsten Metadaten. Zu jeder Handschrift werden Daten 
-zu folgenden wichtige Informationen erfasst: 
+zu folgenden wichtigen Informationen erfasst: 
 
   * Titel: [Johannes Versor, Johannes Tinctoris](http://www.manuscripta-mediaevalia.de/#|5)
   * Signatur: S 67
@@ -97,7 +97,9 @@ Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der 
 Ein Neo4J Knoten wird durch die Annotation **@NodeEntity** gekennzeichnet. Zusätzlich benötigt ein Knoten eine eindeutige Identifikationsnummer. Eine Beziehung zu anderen Knoten wird 
 mit Hilfe der Annotation **@Relationship** gekennzeichnet. Mit Hilfe dieser Annotationen kann ein Objekt Graph Mapper, wie er im Spring Data Neo4J verwendet wird dieses Objekt in einer Graphendatenbank persistieren. 
 
-Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Provienz dar. Dieses Objekt ist eine Relationsobjekt welches zwei Entitäten miteinander verwendet. Ein solches Objekt gibt es im Kontext des RDBMS nicht. 
+# 3.4.1.1 Objekt Mapping, Besonderheit RelationshipEntity
+
+Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Provienz dar. Dieses Objekt ist ein Relationsobjekt **@RelationshipEntity()** welches zwei Entitäten miteinander verwendet. Ein solches Objekt gibt es im Kontext des RDBMS nicht. 
 
     @Entity
     @RelationshipEntity()
@@ -137,6 +139,28 @@ Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Prov
     
 Die Provienz verbindet hierbei die Entitäten Beschreibungsdokument und Betetiligte in einer gerichtet Form. Die Richtung wird durch die Annotationen **@StartNode** und **@EndNode** gekennzeichnet. 
 
+# 3.4.1.1 Objekt Mapping, Besonderheit Vererbung 
+
+In unserem Beispiel spielt für folgende Objekt die Vererbung im Sinne der Objektorientierten Programmierung eine Rolle. Die Objekte Ort, Koerperschaft und Person sind alle vom Typ Beteiligte. 
+
+    public class Ort extends Beteiligte
+    public class Koerperschaft extends Beteiligte
+    public class Person extends Beteiligte
+    
+Für ein relationales Datenbanksystem muss eine Strategie festgelegt werden, in wieviel Tabellen die Daten vom Typ Beteiligte abgelegt werden. 
+
+    Entity
+    @Table(name = "beteiligte")
+    @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+    public abstract class Beteiligte {
+
+In unserem Beispiel wird für jede Entität vom konkreten Typ eine Tabelle angelegt. So enthät die spätere Datenbank eine Tabelle Person, Ort und Körperschaft. Weitere Möglichkeiten die Daten 
+im RDBMS abzulegen sind: 
+
+  * SINGLE_TABLE, Eine Tabelle für alle Typen von Beteiligte 
+  * JOINED, Eine Tabelle für gemeinsame Attribute und jeweils eine Tabelle für Typ spezifische Attribute. Diese werden mit einem Join verbunden. 
+  
+Für die Graphendatenbank werden hier keine Steuerungsangaben benötigt. Jeder Knoten ist lediglich von dem konkreten Typ und der abstrakte Typ Beteiligte findet keine Verwendung. 
 
 **Annotationen für RDBMS** 
 
@@ -146,7 +170,9 @@ gespeichert, gelöscht oder geladen werden was die Arbeit mit Objekten des ORM i
 
 Bei der Konfiguration der Objekt Mapper scheint das relationale Datenbankmanagementsystem mehr Steuerung zu benötigen als die Graphendatenbank.
 
-# 3.4.1 CREAD, READ, UPDATE and DELETE (CRUD) für RDBMS und Graphdatenbank
+
+
+# 3.4.2 CREAD, READ, UPDATE and DELETE (CRUD) für RDBMS und Graphdatenbank
 
 Mit Spring Data bekommt der Entwickler eine der einfachsten Möglichkeiten für die Umsetzung der CRUD Operation an die Hand die es meiner Meinung nach gibt. Für jede Entität die durch Spring Data verwaltet werden soll muss lediglich 
 ein CRUDRepository erweitert werden. 
@@ -184,4 +210,5 @@ Im ersten Schritt muss die Implementierng via Dependency Injection einer Variabl
 persistiert, gelöscht oder aktualisiert werden. Für die Verwendung der Standard Operation macht es hierbei keinen Unterschied ob diese auf einer Graphendatenbank oder einem relationales DBMS durchgeführt werden.
 
       
- 
+# 3.4.3 Queries für RDBMS und Graphdatenbank
+

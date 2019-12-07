@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
+    <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="Add more Information to Domain Model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" afterDir="false" />
     </list>
@@ -11,9 +11,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -45,8 +58,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="740">
-                <caret line="115" column="197" selection-start-line="115" selection-start-column="197" selection-end-line="115" selection-end-column="197" />
+              <first_editor relative-caret-position="794">
+                <caret line="162" column="178" selection-start-line="162" selection-start-column="178" selection-end-line="162" selection-end-column="178" />
               </first_editor>
               <second_editor />
             </state>
@@ -199,7 +212,7 @@
       <workItem from="1574518934649" duration="186000" />
       <workItem from="1574519553124" duration="591000" />
       <workItem from="1574520720467" duration="485000" />
-      <workItem from="1574588975854" duration="7443000" />
+      <workItem from="1574588975854" duration="10342000" />
     </task>
     <task id="LOCAL-00001" summary="Add Table of Content">
       <created>1574515624180</created>
@@ -229,17 +242,31 @@
       <option name="project" value="LOCAL" />
       <updated>1575730917401</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add more information for ORM Mapping">
+      <created>1575731444561</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575731444561</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add more Information to Domain Model">
+      <created>1575733291748</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575733291748</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10606000" />
+    <option name="totallyTimeSpent" value="13505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13621922" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13621922" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -254,7 +281,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.329927" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.329927" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.33430657" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -266,7 +293,7 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32962668" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="right" id="Maven" order="9" />
       <window_info anchor="right" id="Graph Database" order="10" />
@@ -279,7 +306,8 @@
     <MESSAGE value="Add Table of Content" />
     <MESSAGE value="Add first project description" />
     <MESSAGE value="Add more information for ORM Mapping" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add more information for ORM Mapping" />
+    <MESSAGE value="Add more Information to Domain Model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more Information to Domain Model" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Data Science/title.md">
@@ -320,8 +348,8 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="740">
-            <caret line="115" column="197" selection-start-line="115" selection-start-column="197" selection-end-line="115" selection-end-column="197" />
+          <first_editor relative-caret-position="794">
+            <caret line="162" column="178" selection-start-line="162" selection-start-column="178" selection-end-line="162" selection-end-column="178" />
           </first_editor>
           <second_editor />
         </state>
