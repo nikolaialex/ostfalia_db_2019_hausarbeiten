@@ -99,7 +99,7 @@ mit Hilfe der Annotation **@Relationship** gekennzeichnet. Mit Hilfe dieser Anno
 
 # 3.4.1.1 Objekt Mapping, Besonderheit RelationshipEntity
 
-Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Provienz dar. Dieses Objekt ist ein Relationsobjekt **@RelationshipEntity()** welches zwei Entitäten miteinander verwendet. Ein solches Objekt gibt es im Kontext des RDBMS nicht. 
+Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Provienz dar. Dieses Objekt ist ein Relationsobjekt **@RelationshipEntity()** welches zwei Entitäten miteinander verbindet. Ein solches Objekt gibt es im Kontext des RDBMS nicht. 
 
     @Entity
     @RelationshipEntity()
@@ -137,7 +137,7 @@ Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Prov
     @StartNode
     private Beschreibungsdokument beschreibungsdokument;
     
-Die Provienz verbindet hierbei die Entitäten Beschreibungsdokument und Betetiligte in einer gerichtet Form. Die Richtung wird durch die Annotationen **@StartNode** und **@EndNode** gekennzeichnet. 
+Die Provienz verbindet hierbei die Entitäten Beschreibungsdokument und Beteiligte in einer gerichtet Form. Die Richtung wird durch die Annotationen **@StartNode** und **@EndNode** gekennzeichnet. 
 
 # 3.4.1.1 Objekt Mapping, Besonderheit Vererbung 
 
@@ -309,4 +309,4 @@ mit Hilfe des Return Statements noch eine Möglichkeit individuelle Ergebnisse z
     }
 
 Diese Abfrage gibt als Ergebnis ein Objekt zurück welches die Knoten Beteiligte und Beschreibungsdokument sowie die Beziehung Provienz enthält. Diese Flexibilität ermöglicht es für den Einsatz 
-einer Graphendatenbank sehr leicht beliebige Ergebnisse zu formulieren.     
+einer Graphendatenbank sehr leicht beliebige Ergebnisobjekte zu erschaffen. So können sehr leicht neue Informationen aus den Daten gewonnen werden ohne die Datenbankstruktur anpassen zu müssen.      
