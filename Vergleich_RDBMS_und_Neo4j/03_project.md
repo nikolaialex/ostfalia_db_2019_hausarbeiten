@@ -328,6 +328,6 @@ Die OR-Mapper Implementierung Hibernate benötigt hier die Einstellung für die 
 Der OR Graphmapper benötigt diese Einstellungen nicht. Ein Schmema der Graphendatenbank besteht lediglich aus der Definition von Inizes und Constraints. Die Strukturen der Knoten und Beziehungen werden automatisch angelegt. 
 
 Automatische Anpassungen am Schema sind sowohl für RDBMS als auch für Graphendatenbanken nicht für produktive Datenbanken empfohlen. Daher sollten die Schema Änderungen mit Hilfe eines Tools oder manuell durchgeführt werden. Populäre Werkzeuge sind das Google Tool [Flyway](https://flywaydb.org/getstarted/) oder 
-[Liquibase](https://www.liquibase.org/). Nur das Tool Liqiubase bietet Unterstützung für für die Änderungen in einer [Graphendatenbank](https://www.liquigraph.org/).   
+[Liquibase](https://www.liquibase.org/). Nur das Tool Liqiubase bietet Unterstützung für die Änderungen in einer [Graphendatenbank](https://www.liquigraph.org/).   
 
 RDBMS Strukturen sind wesentlich starrer und aufwendiger zu betreuen als das Schema einer Graphendatenbank. Dies gilt auch für den Einsatz mit Hilfe eines OR Mappers. 
