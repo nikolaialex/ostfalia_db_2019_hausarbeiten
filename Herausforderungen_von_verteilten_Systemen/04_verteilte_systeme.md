@@ -52,6 +52,16 @@ In der folgenden Abbildung ist zu sehen, wie die Middleware als Softwareschicht 
 ![Middleware](assets/middleware.svg)
 Wie in der Grafik zu sehen ist, ist jeder Knoten mit einem eigenen Betriebssystem und eigenen Netzwerkdiensten ausgestattet. Die Verwaltung übernimmt das jeweilige Betriebssystem. Die Middleware bietet dann, basiered auf den Diensten und Ressourcen der jeweiligen Knoten, selber Dienste an, welche die Heterogenität der einzelnen Knoten verbergen.
 
+**Beispiele für Dienste, die von Middleware bereitgestellt werden:**
+- Application Programming Interface (API)
+- Anwendungsserver
+- Anwendungsintegration
+- Datenintegration
+- Transaction Processing
+- Remote Procedure Call (RPC)
+- Message-orientierte Middleware
+- Object Request Broker (ORB)
+
 **Häufig verwendete Middleware**
 
 **TODO:**
