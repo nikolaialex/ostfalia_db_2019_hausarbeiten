@@ -59,7 +59,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="763">
-                <caret line="311" column="194" selection-start-line="311" selection-start-column="194" selection-end-line="311" selection-end-column="194" />
+                <caret line="332" column="167" selection-start-line="332" selection-start-column="167" selection-end-line="332" selection-end-column="167" />
               </first_editor>
               <second_editor />
             </state>
@@ -212,7 +212,7 @@
       <workItem from="1574518934649" duration="186000" />
       <workItem from="1574519553124" duration="591000" />
       <workItem from="1574520720467" duration="485000" />
-      <workItem from="1574588975854" duration="15155000" />
+      <workItem from="1574588975854" duration="17150000" />
     </task>
     <task id="LOCAL-00001" summary="Add Table of Content">
       <created>1574515624180</created>
@@ -270,11 +270,25 @@
       <option name="project" value="LOCAL" />
       <updated>1575801743319</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add more Information to Domain Model">
+      <created>1575802934651</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575802934651</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adjust Headlines">
+      <created>1575803306230</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575803306230</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18318000" />
+    <option name="totallyTimeSpent" value="20313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -321,7 +335,8 @@
     <MESSAGE value="Add first project description" />
     <MESSAGE value="Add more information for ORM Mapping" />
     <MESSAGE value="Add more Information to Domain Model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add more Information to Domain Model" />
+    <MESSAGE value="Adjust Headlines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust Headlines" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Data Science/title.md">
@@ -363,7 +378,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="763">
-            <caret line="311" column="194" selection-start-line="311" selection-start-column="194" selection-end-line="311" selection-end-column="194" />
+            <caret line="332" column="167" selection-start-line="332" selection-start-column="167" selection-end-line="332" selection-end-column="167" />
           </first_editor>
           <second_editor />
         </state>

@@ -189,7 +189,7 @@ ein CRUDRepository erweitert werden.
     
     }
 
-Die Implementierung dieser Interfaces wird durch SpringData selbst vorgenommen. Mit Hilfe von Generics muss im Interface lediglich der Typ der Entität und der Typ des primäry Keys angebeben werden. In beiden Fällen ist dies jeweils
+Die Implementierung dieser Interfaces wird durch Spring Data selbst vorgenommen. Mit Hilfe von Generics muss im Interface lediglich der Typ der Entität und der Typ des Primärschlüssels angebeben werden. In beiden Fällen ist dies jeweils
 die Klasse Beschreibungsdokument und die Klasse String. Die Verwendung des Repositories ist in beiden Fällen sehr einfach: 
 
       @Autowired
@@ -313,4 +313,21 @@ einer Graphendatenbank sehr leicht beliebige Ergebnisobjekte zu erschaffen. So k
 
 ### 3.4.3 Schema Management für RDBMS und Graphdatenbank
 
-Beide OR Mapper können das Schema automatisch verwalten. Dies bedeutet, dass sowohl die Tabellen als auch die Knoten und Beziehungen automatische angelegt werden. 
+Beide OR Mapper können das Schema automatisch verwalten. Dies bedeutet, dass sowohl die Tabellen als auch die Knoten und Beziehungen automatische angelegt werden. Allerdings benötigt der RDBMS OR Mapper 
+eine Einstellung zur Steuerung ob das Schema der Datenbank automatisch oder manuell angelegt werden soll. 
+
+    spring.jpa.hibernate.ddl-auto=update
+
+Die OR-Mapper Implementierung Hibernate benötigt hier die Einstellung für die Schema Verwaltung. Folgende Werte sind dabei zulässig: 
+
+  * Update: Nur Änderungen werden durchgeführt
+  * Validate:Das Schema wird lediglich validiert aber nicht verwaltet.  
+  * Create: Das Schema wird mit jeder Initialisierung erstellt. 
+  * Create-Drop: Das Schema wird mit jeder Initialisierung erstellt und dem Herunterfahren gelöscht.
+  
+Der OR Graphmapper benötigt diese Einstellungen nicht. Ein Schmema der Graphendatenbank besteht lediglich aus der Definition von Inizes und Constraints. Die Strukturen der Knoten und Beziehungen werden automatisch angelegt. 
+
+Automatische Anpassungen am Schema sind sowohl für RDBMS als auch für Graphendatenbanken nicht für produktive Datenbanken empfohlen. Daher sollten die Schema Änderungen mit Hilfe eines Tools oder manuell durchgeführt werden. Populäre Werkzeuge sind das Google Tool [Flyway](https://flywaydb.org/getstarted/) oder 
+[Liquibase](https://www.liquibase.org/). Nur das Tool Liqiubase bietet Unterstützung für für die Änderungen in einer [Graphendatenbank](https://www.liquigraph.org/).   
+
+RDBMS Strukturen sind wesentlich starrer und aufwendiger zu betreuen als das Schema einer Graphendatenbank. Dies gilt auch für den Einsatz mit Hilfe eines OR Mappers. 
