@@ -63,6 +63,9 @@ Wie in der Grafik zu sehen ist, ist jeder Knoten mit einem eigenen Betriebssyste
 - Object Request Broker (ORB)
 
 **Häufig verwendete Middleware**
+- MQSeries von IBM ( plattformunabhängige Message orientierte Middleware-Software)
+- der Websphere Application Server von IBM (Laufzeitumgebung für JavaEE-Anwendungen)
+- die SAP Exchange Infrastructure von SAP
 
 **TODO:**
 * Dienste auflisten
