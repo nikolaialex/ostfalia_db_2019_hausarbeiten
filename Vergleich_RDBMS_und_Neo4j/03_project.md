@@ -212,3 +212,101 @@ persistiert, gelöscht oder aktualisiert werden. Für die Verwendung der Standar
       
 # 3.4.3 Queries für RDBMS und Graphdatenbank
 
+In einem relationalen Datenbankmanagementsystem wird [Structured Query Language](https://de.wikipedia.org/wiki/SQL) als Datenbanksprache verwendet. SQL Befehle lassen sich in vier Kategorien einteilen: 
+
+  *  Data Query Language: Befehle zur Abfrage und Aufbereitung
+  *  Data Manipulation Language: Befehle zum Einfügen, Aktualisieren und Löschen von Daten
+  *  Data Definition Language: Befehle zur Schema Definition
+  *  Data Control Language: Befehle zur Rechteverwaltung und Transaktionskontrolle. 
+  
+In diesem Kapitel sollen primär die Befehle zur Abfrage mit den der Graphendatenbank verglichen werden. 
+
+Eine Graphdatenbank wie Neo4j kann mit Hilfe der Graphdatenbanksprache [Cypher](https://neo4j.com/cypher-graph-query-language/) abgefragt und manipuliert werden. Cypher ist SQL sehr ähnlich 
+und für einen Entwickler mit RDBMS Erfahrung sehr leicht zu lernen. 
+
+Grundsätzlich müssen mit dem Einsatz von Spring Data die einfachen Befehle zur Abfragen und Manipulation nicht mehr selbst geschrieben werden. Wie im vorhergehenden Kapitel beschrieben steht dafüt das CRUDRepository zur Verfügung. Allerdings bietet Spring Data 
+für beide Datenbanksysteme die Möglichkeit eigene Queries zu formulieren. 
+
+Nachfolgendes Codebeispiel zeigt die Implementierung einer CRUD und einer nativen Query einmal für ein RDBMS und einmal für ein Graphendatenbanksystem. 
+
+    public interface BeschreibungsdokumenteRDBMSRepository extends CrudRepository<Beschreibungsdokument,String> {
+    
+      List<Beschreibungsdokument> findByTitelAndSignatur(String titel, String signatur);
+    
+      @Query(value = "SELECT beschreibung FROM Beschreibungsdokument WHERE beschreibung.titel like %?1 AND beschreibung.signatur like %?2", nativeQuery = true)
+      List<Beschreibungsdokument> findBeschreibungenWithTitelAndSignatur(String titel, String signatur);
+    
+    }
+    
+    
+    public interface BeschreibungsdokumentGraphRepository extends Neo4jRepository<Beschreibungsdokument,String> {
+    
+      List<Beschreibungsdokument> findByTitelAndSignatur(String titel, String signatur);
+    
+      @Query("MATCH (b:Beschreibungsdokument{titel:{titel} & signatur:{signatur}})-[:r]->(n) return b")
+      List<Beschreibungsdokument> findWithTitelAndSignatur(String titel, String signatur);
+    }
+    
+Grundsätzlich lassen sich mit Hilfe des Frameworks Spring Data native Queries für beide Datenbanksysteme sehr leicht implementieren. Die Unterstützung der Standardoperation ist ebenfalls sehr gut. Allerdings bietet die Graphendatenbank 
+mit Hilfe des Return Statements noch eine Möglichkeit individuelle Ergebnisse zurück zugeben. Die Möglichkeit besteht für die relationale Datenbank nicht. Folgendes Beispiel zeigt dies anhand der Provienz: 
+
+    @Query("MATCH (k:Koerperschaft)-[r:PROVENIENZ]-(b:Beschreibungsdokument) RETURN k AS beteiligte,r AS provenienz,b AS beschreibungsdokument")
+      List<ProvenienzResult> findAllProvenienz();
+      
+    
+    @QueryResult
+    public class ProvenienzResult {
+    
+      Beteiligte beteiligte;
+    
+      Provenienz provenienz;
+    
+      Beschreibungsdokument beschreibungsdokument;
+    
+      @Override
+      public boolean equals(Object o) {
+        if (this == o) {
+          return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+          return false;
+        }
+        ProvenienzResult that = (ProvenienzResult) o;
+        return Objects.equals(beteiligte, that.beteiligte) &&
+            Objects.equals(provenienz, that.provenienz) &&
+            Objects.equals(beschreibungsdokument, that.beschreibungsdokument);
+      }
+    
+      @Override
+      public int hashCode() {
+        return Objects.hash(beteiligte, provenienz, beschreibungsdokument);
+      }
+    
+      public Beteiligte getBeteiligte() {
+        return beteiligte;
+      }
+    
+      public void setBeteiligte(Beteiligte beteiligte) {
+        this.beteiligte = beteiligte;
+      }
+    
+      public Provenienz getProvenienz() {
+        return provenienz;
+      }
+    
+      public void setProvenienz(Provenienz provenienz) {
+        this.provenienz = provenienz;
+      }
+    
+      public Beschreibungsdokument getBeschreibungsdokument() {
+        return beschreibungsdokument;
+      }
+    
+      public void setBeschreibungsdokument(
+          Beschreibungsdokument beschreibungsdokument) {
+        this.beschreibungsdokument = beschreibungsdokument;
+      }
+    }
+
+Diese Abfrage gibt als Ergebnis ein Objekt zurück welches die Knoten Beteiligte und Beschreibungsdokument sowie die Beziehung Provienz enthält. Diese Flexibilität ermöglicht es für den Einsatz 
+einer Graphendatenbank sehr leicht beliebige Ergebnisse zu formulieren.     
