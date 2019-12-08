@@ -3,7 +3,7 @@ Die Staatsbibliothek zu Berlin ermöglicht den ortsunabhängigen und kostenfreie
 sollen in diesem Projekt als Datengrundlage verwendet werden. Die Metadaten beschreiben den Handschriftenbestand und liegen in Form von XML Dateien vor. Diese Daten sollen in ein sehr vereinfachtes Datenmodell überführt und 
 in den entsprechenden Datenbanksystemen persitiert werden. 
 
-# 3.2 Technologie Stack
+## 3.2 Technologie Stack
 
 Um die theoretischen Fragestellungen praktisch evaluieren zu können wurde ein Java Enterprise Projekt mit Hilfe des [Spring Frameworks](https://spring.io/) aufgesetzt. 
 Um in kurzer Zeit eine lauffähige Serverumgebung zu bekommen wurde [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/) mit einem integriertem Tomcat Servlet Container als Laufzeitumgebung eingesetzt. Als Build Werkzeug 
@@ -12,7 +12,7 @@ kommt [Gradle](https://gradle.org/) zum Einsatz. Der gesamte Quellcode wird mit 
 Um die relevanten Datenbanksystem zur Verfügung zu stellen haben wir uns entschieden [Docker](https://www.docker.com/) als Container Technologie zu verwenden. So konnten wir sehr leicht eine relationale Postgres Datenbank
 und eine NEO4J Graphendatenbank anbinden. Um die Daten in diesen System zu persistieren wurden die ORM Bibliotheken [Spring NEO4J](https://spring.io/guides/gs/accessing-data-neo4j/) und [Spring Data](https://spring.io/projects/spring-data) verwendet. 
 
-# 3.3 Domainmodell 
+## 3.3 Domainmodell 
 
 ![Johannes Versor Handschrift 15 Jahrhundert](johannesversorbuch.jpeg)
 
@@ -50,9 +50,9 @@ Beispiel: Dokumentenelement Text
 
 Anhand dieses Beispiel wurde kurz die fachliche Struktur einer Handschriftenbeschreibung dargestellt. Zu erkennen ist, das ein Dokument viele Beziehungen zu Orten, Personen, Instiutionen mit zeitlicher Varianz haben kann. 
   
-# 3.4 Unterschiede in der Implementierung 
+## 3.4 Unterschiede in der Implementierung 
 
-# 3.4.1 Objekt Mapping für RDBMS und Graphdatenbank
+### 3.4.1 Objekt Mapping für RDBMS und Graphdatenbank
 Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der der ORM Frameworks ausgezeichnet, sodass der OR - Mapper diese persistieren kann. Nachfolgende soll die Beschreibungsentität kurz erläutert werden: 
 
     @Entity
@@ -97,7 +97,7 @@ Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der 
 Ein Neo4J Knoten wird durch die Annotation **@NodeEntity** gekennzeichnet. Zusätzlich benötigt ein Knoten eine eindeutige Identifikationsnummer. Eine Beziehung zu anderen Knoten wird 
 mit Hilfe der Annotation **@Relationship** gekennzeichnet. Mit Hilfe dieser Annotationen kann ein Objekt Graph Mapper, wie er im Spring Data Neo4J verwendet wird dieses Objekt in einer Graphendatenbank persistieren. 
 
-# 3.4.1.1 Objekt Mapping, Besonderheit RelationshipEntity
+#### 3.4.1.1 Objekt Mapping, Besonderheit RelationshipEntity
 
 Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Provienz dar. Dieses Objekt ist ein Relationsobjekt **@RelationshipEntity()** welches zwei Entitäten miteinander verbindet. Ein solches Objekt gibt es im Kontext des RDBMS nicht. 
 
@@ -139,7 +139,7 @@ Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Prov
     
 Die Provienz verbindet hierbei die Entitäten Beschreibungsdokument und Beteiligte in einer gerichtet Form. Die Richtung wird durch die Annotationen **@StartNode** und **@EndNode** gekennzeichnet. 
 
-# 3.4.1.1 Objekt Mapping, Besonderheit Vererbung 
+#### 3.4.1.2 Objekt Mapping, Besonderheit Vererbung 
 
 In unserem Beispiel spielt für folgende Objekt die Vererbung im Sinne der Objektorientierten Programmierung eine Rolle. Die Objekte Ort, Koerperschaft und Person sind alle vom Typ Beteiligte. 
 
@@ -172,7 +172,7 @@ Bei der Konfiguration der Objekt Mapper scheint das relationale Datenbankmanagem
 
 
 
-# 3.4.2 CREAD, READ, UPDATE and DELETE (CRUD) für RDBMS und Graphdatenbank
+### 3.4.2 CREAD, READ, UPDATE and DELETE (CRUD) für RDBMS und Graphdatenbank
 
 Mit Spring Data bekommt der Entwickler eine der einfachsten Möglichkeiten für die Umsetzung der CRUD Operation an die Hand die es meiner Meinung nach gibt. Für jede Entität die durch Spring Data verwaltet werden soll muss lediglich 
 ein CRUDRepository erweitert werden. 
@@ -210,7 +210,7 @@ Im ersten Schritt muss die Implementierng via Dependency Injection einer Variabl
 persistiert, gelöscht oder aktualisiert werden. Für die Verwendung der Standard Operation macht es hierbei keinen Unterschied ob diese auf einer Graphendatenbank oder einem relationales DBMS durchgeführt werden.
 
       
-# 3.4.3 Queries für RDBMS und Graphdatenbank
+### 3.4.3 Queries für RDBMS und Graphdatenbank
 
 In einem relationalen Datenbankmanagementsystem wird [Structured Query Language](https://de.wikipedia.org/wiki/SQL) als Datenbanksprache verwendet. SQL Befehle lassen sich in vier Kategorien einteilen: 
 
@@ -309,4 +309,8 @@ mit Hilfe des Return Statements noch eine Möglichkeit individuelle Ergebnisse z
     }
 
 Diese Abfrage gibt als Ergebnis ein Objekt zurück welches die Knoten Beteiligte und Beschreibungsdokument sowie die Beziehung Provienz enthält. Diese Flexibilität ermöglicht es für den Einsatz 
-einer Graphendatenbank sehr leicht beliebige Ergebnisobjekte zu erschaffen. So können sehr leicht neue Informationen aus den Daten gewonnen werden ohne die Datenbankstruktur anpassen zu müssen.      
+einer Graphendatenbank sehr leicht beliebige Ergebnisobjekte zu erschaffen. So können sehr leicht neue Informationen aus den Daten gewonnen werden ohne die Datenbankstruktur anpassen zu müssen.
+
+### 3.4.3 Schema Management für RDBMS und Graphdatenbank
+
+Beide OR Mapper können das Schema automatisch verwalten. Dies bedeutet, dass sowohl die Tabellen als auch die Knoten und Beziehungen automatische angelegt werden. 
