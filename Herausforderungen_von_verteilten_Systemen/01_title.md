@@ -5,8 +5,8 @@ Abstract
 ## Autoren
 | Name             | Matrikelnummer| Hochschule       |
 |:-----------------|:--------------|:-----------------|
-| Carsten Brauer   | XXXXXX       | Beuth Hochschule Berlin |
-| Hendrik Polczynski | 826112      | Beuth Hochschule Berlin |
+| Carsten Brauer   | 896335       | Beuth Hochschule für Technik Berlin |
+| Hendrik Polczynski | 826112      | Beuth Hochschule für Technik Berlin |
 | Andreas Willems  | 7003102       | Hochschule Emden/Leer   |
 
 ***
