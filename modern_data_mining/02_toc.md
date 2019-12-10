@@ -1,6 +1,6 @@
 # Inhaltsverzeichnis
 
-1. [Einleitung](03_einleitung.md)
+1. [Einleitung](03_einleitung.md) <- Joanna
 2. [Einführung in Data Mining](04_einfuehrung.md) <- Joanna
   2.1. [Definition](05_definition.md)
 3. [Data Mining Methoden](06_data_mining_methoden.md)
@@ -13,5 +13,5 @@
 5. [Trends](13_trends.md) <- Henning
   5.1 [DDM](14_ddm.md)
   5.2 [Multimedia Data Mining](15_MDM.md)
-6. [Data Mining Einsatz](16_datamining_einsatz.md)
+6. [Data Mining Einsatz](16_datamining_einsatz.md) <- Lars
 7. [Zusammenfassung](17_zusammenfassung.md)
