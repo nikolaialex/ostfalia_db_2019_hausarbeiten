@@ -11,7 +11,8 @@ Eine Tabelle bildet die einfachste Form von Datenspeicherung innerhalb dieses Sy
 | 2 | Max | Gerdes | gerdes1956@web.de 
 | 3 | Martina | Schröder | mschroed@gmail.com
 | 4 | Hans | Meyer | hameyer@arcor.de
-Tabelle: customer_data
+
+*Tabelle: customer_data*
 
 Ein einzelner Datensatz wird innerhalb dieser Struktur als Tupel, Record oder Reihe bezeichnet. Die zuvor dargestelle Kundendatenbank besitzt insgesamt vier solcher Tupel. Die Spalten der Tabelle stehen  hierbei für die einzelnen Merkmale (Attribute) und sind jeweils maßgeblich für die eigentliche Datenspeicherung, hier werden pro Spalte gleich strukturierte Informationen über die eizelnen Tupel (in unserem Beispiel ID, Vorname, Nachname sowie E-Mail Adresse) gespeichert. Die ID dient hierbei als sogenannter Schlüssel, der zur eindeutigen Identifikation des Tupels benötigt wird und nicht mehrfach vergeben werden darf. 
 
@@ -22,7 +23,8 @@ Mehrere Tabellen können miteinander verknüpft werden, sodass innerhalb des Sys
 | 1 | iPhone 6 | 23 | 399 
 | 2 | Nokia 3310 | 50 | 129 
 | 3 | Samsung S8 | 31 | 499
-Tabelle: product_data
+
+*Tabelle: product_data*
 
 Bestellt ein Kunde nun in diesem Online-Shop ein Produkt, können diese Bestellungen als Relation zwischen den Kunden und den Produkten dargestellt werden:
 
@@ -30,7 +32,8 @@ Bestellt ein Kunde nun in diesem Online-Shop ein Produkt, können diese Bestellu
 | --- | --- | ---  | --- | ---
 | 1 | 4 | 3 | 2019-05-25 | complete
 | 2 | 3 | 2 | 2019-05-27 | processing
-Tabelle: order_data
+
+*Tabelle: order_data*
 
 Durch die eindeutigen Schlüssel zur Indentifikation der entsprechenden Datensätze können die einzelnen Bestellungen einem Kunden (hat bestellt) und einem Produkt (wurde gekauft) zugeordnet werden.
 
