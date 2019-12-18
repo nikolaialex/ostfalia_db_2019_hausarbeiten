@@ -15,8 +15,8 @@ Erstellt von:   Andreas Breer (Hochschule Emden/Leer)
   * State-based CRDTs
 * [Beispiele für CRDTs](04_Beispiele.md)  
   * Counter
-  * Set
   * Register
+  * Set
 * [Implementierungen von CRDTs](05_Implementierungen.md)  
   * Riak
   * Ruby
