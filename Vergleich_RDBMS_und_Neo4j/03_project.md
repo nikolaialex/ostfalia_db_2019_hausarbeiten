@@ -409,7 +409,7 @@ An diesem Beispiel ist bereits zu erkennen, dass die SQL Query etwas aufwendiger
 
 <img src="./cypher_beschreibung_3.svg" width=650>
 
-3. Anzeigen eines Beschreibungsdokumentes und allen dazugehörigen Daten.
+4. Anzeigen eines Beschreibungsdokumentes und allen dazugehörigen Daten.
 
 
       SQL:   SELECT DISTINCT beschreibungen.id,signatur,titel,koerperschaft.name,orte_name,e.name, p.von_jahr, p.bis_jahr, p.beteiligte_name FROM beschreibungen
@@ -489,6 +489,54 @@ An diesem Beispiel ist bereits zu erkennen, dass die SQL Query etwas aufwendiger
 
 <img src="./cypher_beschreibung_4.svg" width=650>
 
+Je mehr Beziehungen abgefragt werden müssen, desdo einfacher wird die Anfrageformulierung mit Hilfe von Cypher.
 
 
+4. Anzeigen eines Beschreibungsdokumentes und allen Dokumentenelemente aller Hierarchien.
+
+        SQL:    WITH RECURSIVE  q as (
+                
+                    SELECT bb.bestandteile_id,e.name FROM beschreibungen
+                    LEFT JOIN beschreibungen_bestandteile bb on beschreibungen.id = bb.beschreibungsdokument_id
+                    LEFT JOIN elemente_bestandteile on elemente_bestandteile.bestandteile_id = bb.bestandteile_id
+                    LEFT JOIN elemente e on e.id = bb.bestandteile_id
+                    WHERE beschreibungen.id = '31275197'
+                
+                    UNION ALL
+                
+                    SELECT el.bestandteile_id, e.name from elemente_bestandteile el
+                    left join elemente e on e.id = el.bestandteile_id
+                    LEFT JOIN elemente_bestandteile on elemente_bestandteile.bestandteile_id = e.id
+                    LEFT JOIN beschreibungen_bestandteile on e.id = beschreibungen_bestandteile.bestandteile_id
+                    LEFT JOIN beschreibungen ON beschreibungen_bestandteile.beschreibungsdokument_id = beschreibungen.id
+                    join q on q.bestandteile_id = el.dokument_element_id
+                
+                    ) SELECT * from q   
+
+
+<table border="1" style="border-collapse:collapse">
+<tr><th>bestandteile_id</th><th>name</th></tr>
+<tr><td>31276465</td><td>Faszikel &amp; Inkunabel</td></tr>
+<tr><td>31276479</td><td>Faszikel &amp; Handschrift</td></tr>
+<tr><td>31276456</td><td>Faszikel &amp; Handschrift</td></tr>
+<tr><td>31276467</td><td>Faszikel &amp; Handschrift</td></tr>
+<tr><td>31276455</td><td>Einband</td></tr>
+<tr><td>31276461</td><td>Text</td></tr>
+<tr><td>31276476</td><td>Text</td></tr>
+<tr><td>31276478</td><td>Text</td></tr>
+<tr><td>31276477</td><td>Text</td></tr>
+<tr><td>31276457</td><td>Text</td></tr>
+<tr><td>31276474</td><td>Text</td></tr>
+<tr><td>31276472</td><td>Text</td></tr>
+<tr><td>31276471</td><td>Text</td></tr>
+<tr><td>31276470</td><td>Text</td></tr>
+<tr><td>31276469</td><td>Text</td></tr>
+<tr><td>31276468</td><td>Text</td></tr>
+<tr><td>31276466</td><td>Text</td></tr>
+<tr><td>31276480</td><td>Handschrift</td></tr></table>
+
+      CYPHER: MATCH (b:Beschreibungsdokument {id:'31275197'})-[r:ENTHAELT *1..2]-(k) RETURN b,r,k;
+
+
+<img src="./cypher_beschreibung_5.svg" width=650>
 
