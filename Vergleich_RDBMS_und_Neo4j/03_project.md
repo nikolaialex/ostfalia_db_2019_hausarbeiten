@@ -383,12 +383,13 @@ An diesem Beispiel ist bereits zu erkennen, dass die SQL Query etwas aufwendiger
    3. Anzeigen eines Beschreibungsdokumentes und den dazugehörigen Daten, Buchbinder, Ort, Dokumentenelementen.
    
    
-      SQL:  SELECT beschreibungen.id,signatur,titel,koerperschaft.name,orte_name,e.name FROM beschreibungen
-                LEFT JOIN koerperschaft ON buchbinder_name = koerperschaft.name
-                LEFT JOIN beschreibungen_orte on beschreibungen.id = beschreibungen_orte.beschreibungsdokument_id
-                LEFT JOIN beschreibungen_bestandteile bb on beschreibungen.id = bb.beschreibungsdokument_id
-                LEFT JOIN elemente e on bb.bestandteile_id = e.id
-            WHERE beschreibungen.id = '31275197'
+    SQL:  SELECT beschreibungen.id,signatur,titel,koerperschaft.name,orte_name,e.name FROM beschreibungen
+                  LEFT JOIN koerperschaft ON buchbinder_name = koerperschaft.name
+                  LEFT JOIN beschreibungen_orte on beschreibungen.id = beschreibungen_orte.beschreibungsdokument_id
+                  LEFT JOIN beschreibungen_bestandteile bb on beschreibungen.id = bb.beschreibungsdokument_id
+                  LEFT JOIN elemente e on bb.bestandteile_id = e.id
+              WHERE beschreibungen.id = '31275197'
+
 
 <table border="1" style="border-collapse:collapse">
 <tr><th>id</th><th>signatur</th><th>titel</th><th>name</th><th>orte_name</th><th>name</th></tr>
