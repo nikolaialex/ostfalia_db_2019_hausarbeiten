@@ -546,7 +546,7 @@ zum Beschreibungsdokument zu bekommen muss lediglich folgende Abfrage mit Cypher
       Cypher: MATCH (b:Beschreibungsdokument {id:'31275197'})-[r *1..2]-(k) RETURN b,r,k;
 
   
-<img src="./cypher_beschreibung_6.svg" width=650>
+<img src="./cypher_beschreibung_6.svg" width=850>
 
 
 Das Ergebnis zeigt, das beliebige Beziehungen und Knoten mit aufgeführt werden. Eine solche Abfrage via SQL zu formulieren würde einen enorm großen Aufwand bedeuten. 
