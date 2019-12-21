@@ -375,7 +375,7 @@ entsprechenden Spalten im SQL definiert werden. Das Ergebnis der Cypher Abfrage 
     CYPHER: MATCH (b:Beschreibungsdokument {id:'31275197'})-[r:BUCHBINDER]-(k) RETURN b as beschreibung,k;
     
 
-<img src="./cypher_beschreibung_2.png" width=650>
+<img src="./cypher_beschreibung_2.svg" width=550>
 
 An diesem Beispiel ist bereits zu erkennen, dass die SQL Query etwas aufwendiger und umfangreicher ist, als die Cypher Query. 
 
