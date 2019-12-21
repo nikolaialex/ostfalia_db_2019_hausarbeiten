@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/cypher_beschreibung_5.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,8 +57,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="729">
-                <caret line="540" column="33" selection-start-line="540" selection-start-column="33" selection-end-line="540" selection-end-column="33" />
+              <first_editor relative-caret-position="1344">
+                <caret line="483" column="238" selection-start-line="483" selection-start-column="238" selection-end-line="483" selection-end-column="238" />
               </first_editor>
               <second_editor />
             </state>
@@ -244,7 +242,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="6775000" />
+      <workItem from="1576920728886" duration="7141000" />
     </task>
     <task id="LOCAL-00001" summary="Add Table of Content">
       <created>1574515624180</created>
@@ -449,11 +447,25 @@
       <option name="project" value="LOCAL" />
       <updated>1576935053160</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Add fith Query comparison">
+      <created>1576943762613</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1576943762613</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Add fith Query comparison">
+      <created>1576943868737</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1576943868737</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29046000" />
+    <option name="totallyTimeSpent" value="29412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -505,7 +517,8 @@
     <MESSAGE value="Add first Query comparison" />
     <MESSAGE value="Add third Query comparison" />
     <MESSAGE value="Add fourth Query comparison" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fourth Query comparison" />
+    <MESSAGE value="Add fith Query comparison" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fith Query comparison" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Data Science/title.md">
@@ -565,8 +578,8 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="729">
-            <caret line="540" column="33" selection-start-line="540" selection-start-column="33" selection-end-line="540" selection-end-column="33" />
+          <first_editor relative-caret-position="1344">
+            <caret line="483" column="238" selection-start-line="483" selection-start-column="238" selection-end-line="483" selection-end-column="238" />
           </first_editor>
           <second_editor />
         </state>
