@@ -412,13 +412,13 @@ An diesem Beispiel ist bereits zu erkennen, dass die SQL Query etwas aufwendiger
 3. Anzeigen eines Beschreibungsdokumentes und allen dazugehörigen Daten.
 
 
-    SQL:    SELECT DISTINCT beschreibungen.id,signatur,titel,koerperschaft.name,orte_name,e.name, p.von_jahr, p.bis_jahr, p.beteiligte_name FROM beschreibungen
-              LEFT JOIN koerperschaft ON buchbinder_name = koerperschaft.name
-              LEFT JOIN beschreibungen_orte on beschreibungen.id = beschreibungen_orte.beschreibungsdokument_id
-              LEFT JOIN beschreibungen_bestandteile bb on beschreibungen.id = bb.beschreibungsdokument_id
-              LEFT JOIN elemente e on bb.bestandteile_id = e.id
-              LEFT JOIN provenienz p on beschreibungen.id = p.beschreibungsdokument_id
-          WHERE beschreibungen.id = '31275197'
+      SQL:   SELECT DISTINCT beschreibungen.id,signatur,titel,koerperschaft.name,orte_name,e.name, p.von_jahr, p.bis_jahr, p.beteiligte_name FROM beschreibungen
+                LEFT JOIN koerperschaft ON buchbinder_name = koerperschaft.name
+                LEFT JOIN beschreibungen_orte on beschreibungen.id = beschreibungen_orte.beschreibungsdokument_id
+                LEFT JOIN beschreibungen_bestandteile bb on beschreibungen.id = bb.beschreibungsdokument_id
+                LEFT JOIN elemente e on bb.bestandteile_id = e.id
+                LEFT JOIN provenienz p on beschreibungen.id = p.beschreibungsdokument_id
+            WHERE beschreibungen.id = '31275197'
 
 <<table border="1" style="border-collapse:collapse">
  <tr><th>id</th><th>signatur</th><th>titel</th><th>name</th><th>orte_name</th><th>name</th><th>von_jahr</th><th>bis_jahr</th><th>beteiligte_name</th></tr>
