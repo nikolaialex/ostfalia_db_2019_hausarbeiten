@@ -338,7 +338,7 @@ RDBMS Strukturen sind wesentlich starrer und aufwendiger zu betreuen als das Sch
 
 In diesem Kapitel möchten wir Anhand eines konkreten Beispiels die Abfragesprachen beider RDBM System mit einander vergleichen. Dazu werden wir mit einem einfachen Beispiel beginnen und dieses immer weiter ausbauen. 
 
-  1. Anzeigen eines Beschreibungsdokumentes. 
+   1. Anzeigen eines Beschreibungsdokumentes. 
 
 
     SQL: SELECT * FROM  WHERE id = '31275197'
@@ -355,10 +355,28 @@ In diesem Kapitel möchten wir Anhand eines konkreten Beispiels die Abfragesprac
     
     
 Gut zu erkennen ist, dass im Ergebnis der SQL Abfrage der primary key der Tabelle der beteiligten Buchbinder mit enthalten ist. Um ein identisches Ergebnis zu erhalten, müssten mit Hilfe der Selektion die 
-entsprechenden Spalten im SQL definiert werden. Das Ergebnis der Cypher Abfrage enthält hingegen noch zusätzliche Metadaten, welche das Datenbanksystem automatisch angelegt an. Diese sind: 
+entsprechenden Spalten im SQL definiert werden. Das Ergebnis der Cypher Abfrage enthält hingegen noch zusätzliche Metadaten, welche das Datenbanksystem automatisch angelegt hat. Diese sind: 
 
   * label: Kennzeichnung eines Knotentyps 
   * id: Interne Datenbankid
-  * properties: Enthält alle Werte des Knotens. 
+  * properties: Enthält alle Werte des Knotens.
   
+   2. Anzeigen eines Beschreibungsdokumentes und des dazugehörigen Buchbinder.
  
+    SQL: SELECT * FROM beschreibungen INNER JOIN koerperschaft 
+         ON buchbinder_name = koerperschaft.name
+         WHERE beschreibungen.id = '31275197'  
+
+<table border="1" style="border-collapse:collapse">
+<tr><th>id</th><th>signatur</th><th>titel</th><th>buchbinder_name</th><th>name</th><th>bemerkung</th><th>gndid</th><th>id</th><th>ort_name</th></tr>
+<tr><td>31275197</td><td>S 67</td><td>Johannes Versor · Johannes Tinctoris</td><td>Buchbinder Boppard Karmeliten</td><td>Buchbinder Boppard Karmeliten</td><td>NULL</td><td>NULL</td><td>31275175</td><td>Boppard</td></tr></table>
+
+
+    CYPHER: MATCH (b:Beschreibungsdokument {id:'31275197'})-[r:BUCHBINDER]-(k) RETURN b as beschreibung,k;
+    
+
+<img src="./cypher_beschreibung_2.png" width=350>
+
+An diesem Beispiel ist bereits zu erkennen, dass die SQL Query etwas aufwendiger und umfangreicher ist, als die Cypher Query. 
+
+
