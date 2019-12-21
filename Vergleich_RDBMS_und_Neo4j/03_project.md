@@ -351,7 +351,7 @@ In diesem Kapitel möchten wir Anhand eines konkreten Beispiels die Abfragesprac
     
     CYPHER: MATCH (b:Beschreibungsdokument {id:'31275197'}) RETURN b as beschreibung;
     
-![cypher_beschreibung](cypher_beschreibung_1.png)
+![cypher_beschreibung](cypher_beschreibung_1.png =50x)
     
     
 Gut zu erkennen ist, dass im Ergebnis der SQL Abfrage der primary key der Tabelle der beteiligten Buchbinder mit enthalten ist. Um ein identisches Ergebnis zu erhalten, müssten mit Hilfe der Selektion die 
