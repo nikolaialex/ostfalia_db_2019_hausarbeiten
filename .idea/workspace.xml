@@ -59,7 +59,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="593">
-                <caret line="353" column="47" selection-start-line="353" selection-start-column="47" selection-end-line="353" selection-end-column="47" />
+                <caret line="353" column="46" selection-start-line="353" selection-start-column="46" selection-end-line="353" selection-end-column="46" />
               </first_editor>
               <second_editor />
             </state>
@@ -235,7 +235,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="2294000" />
+      <workItem from="1576920728886" duration="2351000" />
     </task>
     <task id="LOCAL-00001" summary="Add Table of Content">
       <created>1574515624180</created>
@@ -342,11 +342,25 @@
       <option name="project" value="LOCAL" />
       <updated>1576923046205</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add first Query comparison">
+      <created>1576923085564</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1576923085564</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add first Query comparison">
+      <created>1576923110932</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1576923110932</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24565000" />
+    <option name="totallyTimeSpent" value="24622000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -454,7 +468,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="593">
-            <caret line="353" column="47" selection-start-line="353" selection-start-column="47" selection-end-line="353" selection-end-column="47" />
+            <caret line="353" column="46" selection-start-line="353" selection-start-column="46" selection-end-line="353" selection-end-column="46" />
           </first_editor>
           <second_editor />
         </state>
