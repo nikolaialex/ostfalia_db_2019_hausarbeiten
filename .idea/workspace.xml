@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/cypher_beschreibung_6.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" afterDir="false" />
     </list>
@@ -59,8 +58,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="831">
-                <caret line="551" column="166" selection-start-line="551" selection-start-column="166" selection-end-line="551" selection-end-column="166" />
+              <first_editor relative-caret-position="171">
+                <caret line="336" column="35" selection-start-line="336" selection-start-column="35" selection-end-line="336" selection-end-column="35" />
               </first_editor>
               <second_editor />
             </state>
@@ -245,7 +244,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="7728000" />
+      <workItem from="1576920728886" duration="7846000" />
     </task>
     <task id="LOCAL-00001" summary="Add Table of Content">
       <created>1574515624180</created>
@@ -478,11 +477,25 @@
       <option name="project" value="LOCAL" />
       <updated>1576944266818</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Add fith Query comparison">
+      <created>1576944819405</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1576944819405</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Add fith Query comparison">
+      <created>1576944858390</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1576944858390</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29999000" />
+    <option name="totallyTimeSpent" value="30117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -598,8 +611,8 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="831">
-            <caret line="551" column="166" selection-start-line="551" selection-start-column="166" selection-end-line="551" selection-end-column="166" />
+          <first_editor relative-caret-position="171">
+            <caret line="336" column="35" selection-start-line="336" selection-start-column="35" selection-end-line="336" selection-end-column="35" />
           </first_editor>
           <second_editor />
         </state>

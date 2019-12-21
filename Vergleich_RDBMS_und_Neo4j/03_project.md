@@ -333,8 +333,8 @@ Automatische Anpassungen am Schema sind sowohl für RDBMS als auch für Graphend
 RDBMS Strukturen sind wesentlich starrer und aufwendiger zu betreuen als das Schema einer Graphendatenbank. Dies gilt auch für den Einsatz mit Hilfe eines OR Mappers. 
 
 
-## 4 Untersuchen ##
-### 4.1 Abfragen, SQL versus Cypher ##
+## 4 Untersuchungen ##
+### 4.1 Abfragen an konkreten Daten, SQL versus Cypher ##
 
 In diesem Kapitel möchten wir Anhand eines konkreten Beispiels die Abfragesprachen beider RDBM System mit einander vergleichen. Dazu werden wir mit einem einfachen Beispiel beginnen und dieses immer weiter ausbauen. 
 
