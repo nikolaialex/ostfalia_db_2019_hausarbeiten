@@ -331,3 +331,34 @@ Automatische Anpassungen am Schema sind sowohl für RDBMS als auch für Graphend
 [Liquibase](https://www.liquibase.org/). Nur das Tool Liqiubase bietet Unterstützung für die Änderungen in einer [Graphendatenbank](https://www.liquigraph.org/).   
 
 RDBMS Strukturen sind wesentlich starrer und aufwendiger zu betreuen als das Schema einer Graphendatenbank. Dies gilt auch für den Einsatz mit Hilfe eines OR Mappers. 
+
+
+## 4 Untersuchen ##
+### 4.1 Abfragen, SQL versus Cypher ##
+
+In diesem Kapitel möchten wir Anhand eines konkreten Beispiels die Abfragesprachen beider RDBM System mit einander vergleichen. Dazu werden wir mit einem einfachen Beispiel beginnen und dieses immer weiter ausbauen. 
+
+  1. Anzeigen eines Beschreibungsdokumentes. 
+
+
+    SQL: SELECT * FROM  WHERE id = '31275197'
+    
+ <table>
+ <tr><th>id</th><th>signatur</th><th>titel</th><th> buchbinder_name</th></tr>
+ <tr><td>31275197</td><td>S 67</td><td>Johannes Versor Johannes Tinctoris</td><td>Buchbinder Boppard Karmeliten</td>
+ </table>
+     
+    
+    CYPHER: MATCH (b:Beschreibungsdokument {id:'31275197'}) RETURN b as beschreibung;
+    
+![cypher_beschreibung](cypher_beschreibung_1.png)
+    
+    
+Gut zu erkennen ist, dass im Ergebnis der SQL Abfrage der primary key der Tabelle der beteiligten Buchbinder mit enthalten ist. Um ein identisches Ergebnis zu erhalten, müssten mit Hilfe der Selektion die 
+entsprechenden Spalten im SQL definiert werden. Das Ergebnis der Cypher Abfrage enthält hingegen noch zusätzliche Metadaten, welche das Datenbanksystem automatisch angelegt an. Diese sind: 
+
+  * label: Kennzeichnung eines Knotentyps 
+  * id: Interne Datenbankid
+  * properties: Enthält alle Werte des Knotens. 
+  
+ 
