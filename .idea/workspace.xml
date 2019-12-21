@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/cypher_beschreibung_6.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +59,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1344">
-                <caret line="483" column="238" selection-start-line="483" selection-start-column="238" selection-end-line="483" selection-end-column="238" />
+              <first_editor relative-caret-position="831">
+                <caret line="551" column="166" selection-start-line="551" selection-start-column="166" selection-end-line="551" selection-end-column="166" />
               </first_editor>
               <second_editor />
             </state>
@@ -158,7 +160,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -171,6 +173,7 @@
       <recent name="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -242,7 +245,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="7141000" />
+      <workItem from="1576920728886" duration="7728000" />
     </task>
     <task id="LOCAL-00001" summary="Add Table of Content">
       <created>1574515624180</created>
@@ -461,11 +464,25 @@
       <option name="project" value="LOCAL" />
       <updated>1576943868737</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add fith Query comparison">
+      <created>1576944166400</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1576944166400</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Add fith Query comparison">
+      <created>1576944266818</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1576944266818</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29412000" />
+    <option name="totallyTimeSpent" value="29999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -575,11 +592,14 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/cypher_beschreibung_5.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/cypher_beschreibung_6.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1344">
-            <caret line="483" column="238" selection-start-line="483" selection-start-column="238" selection-end-line="483" selection-end-column="238" />
+          <first_editor relative-caret-position="831">
+            <caret line="551" column="166" selection-start-line="551" selection-start-column="166" selection-end-line="551" selection-end-column="166" />
           </first_editor>
           <second_editor />
         </state>
