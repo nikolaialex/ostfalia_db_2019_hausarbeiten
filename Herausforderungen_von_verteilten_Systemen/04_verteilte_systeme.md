@@ -1,4 +1,4 @@
-[<< Einleitung](03_einleitung.md) | [Inhaltsverzeichnis](02_toc.md) | [Herausforderungen >>](05_herausforderungen.md)
+|[<< Einleitung](03_einleitung.md) | [Inhaltsverzeichnis](02_toc.md) | [Herausforderungen >>](05_herausforderungen.md)|
 |-|-|-|
 
 ---
@@ -67,9 +67,6 @@ Wie in der Grafik zu sehen ist, ist jeder Knoten mit einem eigenen Betriebssyste
 - der Websphere Application Server von IBM (Laufzeitumgebung für JavaEE-Anwendungen)
 - die SAP Exchange Infrastructure von SAP
 
-**TODO:**
-* Dienste auflisten
-* bekannte / viel verwendete Middleware aufzählen
 
 ---
 [1]: M. van Steen and A. S. Tanenbaum, Distributed systems, Third edition (Version 3.01 (2017)). London: Pearson Education, 2017.

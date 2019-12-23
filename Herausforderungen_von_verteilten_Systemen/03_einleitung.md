@@ -1,5 +1,5 @@
-[<< Inhaltsverzeichnis](02_toc.md) | [Verteilte Systeme >>](04_verteilte_systeme.md)
-|-|-|-|
+|[<< Inhaltsverzeichnis](02_toc.md) | [Verteilte Systeme >>](04_verteilte_systeme.md)|
+|-|-|
 ---
 
 # 1 Einleitung
