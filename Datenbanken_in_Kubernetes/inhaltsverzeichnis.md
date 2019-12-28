@@ -1,29 +1,15 @@
 # Inhaltsverzeichnis
 
-## [1. Thema und Motivation]()
-
-## [2. How to Run DB in Kubernetes]()
-
-### [2.1 Docker]()
-
-#### [2.1.1 Container-Technologie]()
-
-#### [2.1.2 Vergleich zu Virtual Machines]()
-
-### [2.2 Kubernetes]()
-
-#### [2.2.1 Infrastruktur]()
-
-#### [2.2.2 Komponenten und deren Aufgaben]()
-
-#### [2.2.3. Persistenz und Storage]()
-
-### [2.3 Datenbanken-Deployment in Kubernetes]()
-
-#### [2.3.1 Deployment]()
-
-#### [2.3.2 Stateful-Sets]()
-
----
-
-## [3. Auswertung und Fazit]()
+1. [Thema und Motivation](1_intro.md)
+2. [Docker](2_docker.md)
+   - Container-Technologie
+   - Container vs VMs
+3. [Kubernetes](3_k8s.md)
+   - Infrastruktur
+   - Komponenten
+   - Persistenz und Storage
+4. [How to Run DB in Kubernetes](4_dbInK8s.md)
+   - Deployments
+   - Stateful Sets
+   - Vergleich
+5. [Fazit](5_fazit.md)
