@@ -2,7 +2,7 @@
 
 ## Das CAP-Theorem
 
-Das CAP-Theorem von Eric Brewer besagt, dass lediglich zwei der folgenden drei wünschenswerten Eigenschaften in einem verteilten System gleichzeitig vollständig erfüllt seien können.
+Das CAP-Theorem von Eric Brewer besagt, dass lediglich zwei der folgenden drei wünschenswerten Eigenschaften in einem verteilten System gleichzeitig vollständig erfüllt seien können. [1]
 
 - Konsistenz (Consistency): Alle Knoten des verteilten Systems liefern zu einem bestimmten Zeitpunkt die gleichen Daten.
 - Verfügbarkeit (Availability): Das verteilte System als Ganzes ist jederzeit in der Lage Anfragen zu verarbeiten, egal ob es sich um Lese- oder Schreiboperation handelt.
@@ -12,11 +12,11 @@ Ausfalltoleranz (Partition Tolerance) ist für Cloud-Systeme von entscheidender 
 
 Eine Netzwerkpartition bezeichnet eine vorübergehende Aufteilung des Netzwerks in relativ unabhängige Teilnetze z.B. aufgrund des Ausfalls von Netzwerkgeräten. Hierdurch können einzelne Konten des verteilten Systems nicht mehr miteinander kommunizieren.
 
-In [...] zeigt Eric Brewer den Zusammenhang zwischen Netzwerklatenz und -partitionen auf. Er argumentiert, dass es in der Praxis keinen Unterschied macht, ob die Verbindung nun tatsächlich getrennt, oder nur zu langsam ist. Im Fall eines Timeouts muss das System eine fundamentale Entscheidung treffen: Entweder es bricht den Vorgang ab und verringert damit die Verfügbarkeit (C), oder es fährt mit dem Vorgang fort und riskiert damit Inkonsistenzen (A).
+In [2] zeigt Eric Brewer den Zusammenhang zwischen Netzwerklatenz und -partitionen auf. Er argumentiert, dass es in der Praxis keinen Unterschied macht, ob die Verbindung nun tatsächlich getrennt, oder nur zu langsam ist. Im Fall eines Timeouts muss das System eine fundamentale Entscheidung treffen: Entweder es bricht den Vorgang ab und verringert damit die Verfügbarkeit (C), oder es fährt mit dem Vorgang fort und riskiert damit Inkonsistenzen (A).
 
 ## BASE-Konsistenzmodell
 
-Befeuert durch die Erkenntnisse des CAP-Theorem entstanden in den letzten Jahren ein Vielzahl neuer Datenbank-Konzepte und -Systeme, die oft unter dem Begriff NoSQL zusammengefasst werden. Konkrete verteilte Datenbank-Systeme müssen also immer einen Kompromiss zwischen den drei Eigenschaften des CAP-Theorems eingehen. Es können somit drei verschiedene Klassen identifiziert werden:
+Befeuert durch die Erkenntnisse des CAP-Theorem entstanden in den letzten Jahren eine Vielzahl neuer Datenbank-Konzepte und -Systeme, die oft unter dem Begriff NoSQL zusammengefasst werden. Konkrete verteilte Datenbank-Systeme müssen also immer einen Kompromiss zwischen den drei Eigenschaften des CAP-Theorems eingehen. Es können somit drei verschiedene Klassen identifiziert werden:
 
 - CA-Systeme (Konsistenz und Verfügbarkeit)
 - CP-Systeme (Konsistenz und Ausfalltoleranz)
@@ -34,7 +34,7 @@ Da in keinem System völlig auf Konsistenz verzichtet werden kann, führte Eric 
 
 ## "Eventual Consistency"
 
-Der Begriff "Eventual Consistency" beschreibt, dass nicht jeder Knoten zwingend zu jedem Zeitpunkt den aktuellsten Wert zurückliefert. Ein bekanntes Beispiel für ein System das "Eventual Consistency" implementiert, ist das Domain Name System (DNS). Das System ist Hochverfügbarkeit und weist eine hohe Toleranz gegenüber dem Ausfall einzelner DNS-Server auf. Der Datenbestand wird über eine vielzahl von Servern verteilt und repliziert. Bei der Änderung eines DNS-Eintrags kann es eine gewisse Zeit dauern, bis die aktualisierte Information allen Clients zur Verfügung steht.
+Der Begriff "Eventual Consistency" beschreibt, dass nicht jeder Knoten zwingend zu jedem Zeitpunkt den aktuellsten Wert zurückliefert. Ein bekanntes Beispiel für ein System das "Eventual Consistency" implementiert, ist das Domain Name System (DNS). Das System ist Hochverfügbarkeit und weist eine hohe Toleranz gegenüber dem Ausfall einzelner DNS-Server auf. Der Datenbestand wird über eine vielzahl von Servern verteilt und repliziert. Bei der Änderung eines DNS-Eintrags kann es eine gewisse Zeit dauern, bis die aktualisierte Information allen Clients zur Verfügung steht. [3]
 
 Auf das System kann jederzeit sowohl lesend als auch schreibend zugegriffen werden. Unter bestimmten Bedingungen liefert eine lesende Abfrage auf einem Knoten jedoch nicht das Ergebnis einer kürzlich abgeschlossenen schreibenden Operation auf einem anderen Knoten. Wenn keine weiteren Aktualisierungen vorgenommen werden, werden alle Knoten nach Ablauf eines unbestimmten Zeitraums den selben konsistenten Datenbestand aufweisen.
 
@@ -42,4 +42,4 @@ Wenn auf einem Knoten Daten aktualisiert werden, müssen die Replikate über ein
 
 ## "Strong Eventual Consistency"
 
-Nichtsdestotrotz ist das Auflösen von Konflikten nach wie vor schwierig und fehleranfällig. Daher gehen die, in dieser Arbeit betrachteten Conflict-free Replicated Data Types (CRDTs) einen anderen Weg. Ihnen liegt eine Variation der "Eventual Consistency" zugrunde. Die "Strong Eventual Consistency" garantiert, dass alle Knoten, die die selben Änderungsmitteilung verarbeitet haben, sofort den selben konsistenten Datenbestand aufweisen. Konflikte werden demnach grundsätzlich ausgeschlossen. Diese Eigenschaft kann durch die im weiteren Verlauf dieser Arbeit vorgestellten Conflict-free Replicated Data Types (CRDTs) erzielt werden. Obwohl auch hier Änderungen asynchron vorgenommen werden, konvergieren alle Replikaten nachweislich in einen gemeinsamen konsistenten Zustand.
+Nichtsdestotrotz ist das Auflösen von Konflikten nach wie vor schwierig und fehleranfällig. Daher gehen die, in dieser Arbeit betrachteten Conflict-free Replicated Data Types (CRDTs) einen anderen Weg. Ihnen liegt eine Variation der "Eventual Consistency" zugrunde. Die "Strong Eventual Consistency" garantiert, dass alle Knoten, die die selben Änderungsmitteilung verarbeitet haben, sofort den selben konsistenten Datenbestand aufweisen. Konflikte werden demnach grundsätzlich ausgeschlossen. Diese Eigenschaft kann durch die im weiteren Verlauf dieser Arbeit vorgestellten Conflict-free Replicated Data Types (CRDTs) erzielt werden. Obwohl auch hier Änderungen asynchron vorgenommen werden, konvergieren alle Replikaten nachweislich in einen gemeinsamen konsistenten Zustand. [4, 5]

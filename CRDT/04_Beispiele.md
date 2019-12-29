@@ -1,6 +1,6 @@
 # Beispiele für CRDTs
 
-In diesem Kapitel sollen  Beispiele für übliche Umsetzungen von CRDTs aufgeführt werden.
+In diesem Kapitel sollen Beispiele für übliche Umsetzungen von CRDTs aufgeführt werden. [4, 5]
 
 ## Counter
 
@@ -53,3 +53,7 @@ Im Beispiel wird auf dem ersten Knoten das Element b hinzugefügt. Zur gleichen 
 ![Sets with ID CRDT](img/sets-with-id.png)
 
 Wird das gleiche Inhaltselement ein zweites Mal hinzugefügt, erhält es ein neues Identifikationskennzeichen. Das OR-Set enthält dann zwei Tupel mit demselben Inhalt, aber unterschiedlichen Identifikationskennzeichen. Durch diese Sachverhalt ist es möglich, eine bereits gelöschtes Element noch einmal hinzuzufügen. Im oben dargestellten Beispiel wird das Element a ein weiteres Mal hinzugefügt.
+
+## CRDTs höherer Ordnung
+
+Wie bereits oben beschrieben, können CRDTs zu CRDTs höherer Ordnung zusammengesetzt werden. In [8] zeigen Martin Kleppmann and Alastair R. Beresford, wie CRDTs für geordnete Listen, Maps und Register zu einem CRDT für JSON-Datenstrukturen zusammengesetzt werden können. In aktuellen Anwendungen ist die Datenhaltung im JSON-Format stark verbreitet. Der JSON-CRDT unterstützt beliebig verschachtelte Strukturen und erlaubt asynchrone Änderungen an den Daten auf beliebigen Replikaten. Die Replikate senden Änderungsmitteilungen als Operationen an andere Replikate. Gleichzeitige Operationen sind kommutativ. Somit ist sichergestellt, dass die Replikate in Richtung desselben Zustands konvergieren, ohne dass eine anwendungsspezifische Konfliktlösungslogik erforderlich ist. Die formale Semantik des JSON-CRDTs ist so gestaltet, dass kein Daten durch gleichzeitige Änderungen verloren geht. Die Autoren zeigen jedoch, dass die derzeitige Implementierung der Merge-Funktion in speziellen Situationen für Anwendungsprogrammierer, die eher mit sequentiellen Programmen vertraut sind, zu überraschenden Ergebnissen führen kann. Im nächsten Abschnitt wird auf die Java-Script-Implementierung des JSON-CRDTs mit dem Namen Automerge eingegangen.

@@ -1,6 +1,6 @@
 # Ausprägungen
 
-Grundsätzlich lassen sich zwei unterschiedliche Arten von Conflict-free Replicated Data Types (CRDTs) identifizieren.
+Grundsätzlich lassen sich zwei unterschiedliche Arten von Conflict-free Replicated Data Types (CRDTs) identifizieren. [4, 5]
 
 ## State-based Convergent Replicated Data Type (CvRDT)
 
@@ -13,6 +13,9 @@ Damit die Daten der Replikate konvergieren, müssen folgende Bedingungen erfüll
 
 Ein einfaches Beispiel, welches diese Bedingungen erfüllt, wäre eine Ganzzahl, wobei immer der höchste Wert gespeichert werden soll. In diesem Fall wird die partielle Ordnung durch die Größer-Relation (>) definiert. Die Merge-Operation ist das Maximum aus der aktuellen und der neuen Zahl.
 
+![State-based-Replication](img/State-based-Replication.png)
+*State-based Convergent Replicated Data Type (CvRDT) aus [4]*
+
 Im Beispiel wird auf Knoten x1 der Wert auf 1 geändert, während gleichzeitig auf Knoten x2 der Wert auf 4 geändert wird. Unabhängig von der Reihenfolge in der die Änderungsmitteilung eingehen, konvergiert der Wert auf 4 bei allen drei Replikaten aufgrund der Maximum-Operation.
 
 ## Op-based Commutative Replicated Data Type (CmRDT)
@@ -23,6 +26,9 @@ Bei den Op-based Commutative Replicated Data Type (CmRDT) werden Änderungen zun
 2. Die Änderungsmitteilung kommen in der Reihenfolge an, in der sie versendet wurden.
 
 Durch die erste Bedingungen wird sichergestellt, dass die Änderungsmitteilung zuverlässig an alle Replikate zugestellt werden. Damit die CmRDTs auf den Replikaten konvergieren, müssen sie auch über jede Änderung informiert werden. Wenn nicht auf allen Replikaten die gleichen Änderungen durchgeführt werden, wird das System inkonsistent.  Änderungsmitteilung dürfen somit nicht verloren gehen oder mehrfach ankommen. Dieser Forderung kann durch die Wahl eines geeigneten Übertragsprotokoll Rechnung getragen werden.
+
+![Op-based-Replication](img/OP-based-Replication.png)
+*Op-based Commutative Replicated Data Type (CmRDT) aus [4]*
 
 Sämtliche parallel ausführbaren Operationen müssen kommutativ sein. Kommutative Operationen können in beliebiger Reihenfolge ausgeführt werden. Ein einfaches Beispiel ist die Addition. Das Term 1 + 2 + 3 liefert das selbe Ergebnis, wie der Term 1 + 3 + 2. Im Beispiel ist es also egal, ob ein Knoten nun zunächst die Änderung +2 oder die Änderung +3 verarbeitet. Beim Startzustand von 1 konvergiert der Wert bei allen Replikaten auf 6, unabhängig von der Reihenfolge in der die Änderungsmitteilung eingehen. Sofern diese Eigenschaft nicht gegeben ist, spielt die Reihenfolge der Änderungsmitteilung eine  Rolle. In diesem Fall muss das Übertragsprotokoll sicherstellen, dass die zweite Vorbedingung gegeben ist.
 
