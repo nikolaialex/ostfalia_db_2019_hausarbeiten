@@ -5,7 +5,7 @@
 
 # 2 Verteilte Systeme
 
-Für das Konzept der verteilten Systeme gibt es in der Literatur, soweit ersichtlich, keine allgemein anerkannte und gültige Definition. Bei van Steen und Tanenbaum (2017)[1] wird daher eine eher unspezifische Definition verwendet:
+Für das Konzept der verteilten Systeme gibt es in der Literatur, soweit ersichtlich, keine allgemein anerkannte und gültige Definition. Bei [van Steen, 2017] wird daher eine eher unspezifische Definition verwendet:
 > A distributed system is a collection of autonomous computing elements that appears to its users as a single coherent system.
 
 Nach dieser Definition besitzt ein verteiltes System zwei grundlegende Charakteristiken:
@@ -25,7 +25,7 @@ Verteilte Systeme lassen sich zum einen aus Sicht der verwendeten Hardware betra
 
 In **Multicomputersystemen** hingegen haben die einzelnen Prozessoren eigene, private Speicher, welchen sie nicht mit den anderen Prozessoren teilen. Die Kommunikation zwischen den Prozessoren erfolgt hier über ein Verbindungsnetzwerk. Multicomputersysteme lassen sich weiter in homogene und heterogene System unterteilen. **Homogene Systeme** setzen sich aus identischen Systemen zusammen, die alle die gleiche CPU, den gleichen Speicher usw. haben. **Heterogene Systeme** können aus verschiedensten Typen von Computern mit unterschiedlichsten Leistungsmerkmalen bestehen.
 
-In den weiteren Teilen dieser Ausarbeitung wird von heterogenen Systemen ausgegangen, da diese in der Praxis am Häufigsten zu finden sind und für die die betrachteten Probleme die größte Relevanz besitzen. In Multiprozessorsysteme sind weitere Probleme zu finden, auf die hier nicht weiter eingegangen werden soll. Informationen hierzu finden sich u.a. bei Tanenbaum und Bos, 2015[2].
+In den weiteren Teilen dieser Ausarbeitung wird von heterogenen Systemen ausgegangen, da diese in der Praxis am Häufigsten zu finden sind und für die die betrachteten Probleme die größte Relevanz besitzen. In Multiprozessorsysteme sind weitere Probleme zu finden, auf die hier nicht weiter eingegangen werden soll. Informationen hierzu finden sich u.a. bei [Tanenbaum, 2015].
 
 ## 2.2 Software
 
@@ -69,9 +69,9 @@ Wie in der Grafik zu sehen ist, ist jeder Knoten mit einem eigenen Betriebssyste
 
 
 ---
-[1]: M. van Steen and A. S. Tanenbaum, Distributed systems, Third edition (Version 3.01 (2017)). London: Pearson Education, 2017.
+[van Steen, 2017]: M. van Steen and A. S. Tanenbaum, Distributed systems, Third edition (Version 3.01 (2017)). London: Pearson Education, 2017.
 
-[2]: A. S. Tanenbaum, Modern operating systems, Fourth edition. Boston: Pearson, 2015.
+[Tanenbaum, 2015]: A. S. Tanenbaum, Modern operating systems, Fourth edition. Boston: Pearson, 2015.
 
 ---
 [<< Einleitung](03_einleitung.md) | [Inhaltsverzeichnis](02_toc.md) | [Herausforderungen >>](05_herausforderungen.md)
