@@ -151,9 +151,31 @@ Ein grundlegendes Problem in verteilten Systemen ist die Andordnung und Platzier
 
 Die Platzierung der Replika-Server ist heutzutage kein großes Problem mehr aufgrund der Vielzahl großer Datencenter weltweit und der stetig verbesserten Konnektivität.
 
-Schwieriger ist da die angemessene Platzierung der Daten.
+Bei der Platzierung der Daten können drei Typen mit den jeweiligen Eigenschaften unterschieden werden:
 
+* permanente Replikate: 
+  * initiale Menge der Daten im verteilten Data Store
+  * geringe Anzahl
+  * gespiegelt auf verschiedenen Servern 
+* durch Server erzeugte Replikate
+  * Kopien der Daten in der Nähe von / auf Servern zur Steigerung der Leistung
+  * können Nur-lesend konfiguriert werden, wenn permanente Replikate zum Schreiben verwendet werden
+* durch Clients erzeugte Replikate
+  * Cache beim Client
+  * lokale Kopie der angefragten Daten
+  * dienen der Leistungssteigerung.
 
+Ein weiteres Thema des Replica Management ist die Art und Weise, in der Änderungen im Datenbestand zu den Replikaten propagiert werden. So muss geklärt werden, was eigentlich bei einer Änderung übermittelt wird, ob diese Änderungen aktiv oder passiv übermittelt werden und ob die Replikate individuell oder alle zusammen informiert werden.
+
+Bei Änderungen im Datenbestand lassen sich drei mögliche Fälle der Propagierung unterscheiden. Im ersten Fall werden nur Benachrichtigungen über die Änderung verbreitet. Diese Benachrichtigungen enthalten die Information, dass die nachgelagerten / replizierten Datenbestände nicht mehr valide sind und gegebenenfalls, welcher Teil des Data Store geändert wurde. Wenn Nutzer dieses Datenbestandes über die Änderung benachrichtigt werden, obliegt es der nutzenden Stelle, sich eine aktuelle Version der Daten zu holen.
+
+Die zweite Möglichkeit ist, die veränderten Daten zu den Replikaten zu übertragen. Dies ist selbst bei Aggregierung der Änderungen aufgrund der damit einhergehenden Netzwerklast aber nur sinnvoll, wenn nur selten Änderungen vorkommen und die Daten vielmehr gelesen werden.
+
+Die dritte Möglichkeit ist schließlich, den Replikaten mitzuteilen, welche Operation sie zur Änderung der Daten mit den entsprechenden Parametern durchführen sollen (**active replication**). Dies erfordert, dass jedes Replikat in der Lage ist, aktiv seinen Datenbestand zu ändern. Ein Vorteil des Vorgehens ist, dass Änderungen mit nur geringen Auswirkungen auf die Netzwerklast verbreitet werden können, da die Operation mitsamt ihren Parametern meist nur kleine Einheiten sind. Nachteilig ist, dass die Replikate eine gewisse Rechenleistung aufweisen müssen, um die Änderungen zu verarbeiten.
+
+Eine weitere Designentscheidung, die getroffen werden muss, ist, ob Änderungen zu den Replikaten geschoben (**push**) oder von diesen gezogen (**pull**) werden müssen. Bei push-basierten Lösungen werden die Replikate über Änderungen informiert, auch wenn sie die Daten nicht angefragt haben. Diese Möglichkeit wird u.a. dann genutzt, wenn starke Konsistenz gefordert ist, so z.B. zwischen permanenten Replikaten und durch Server erzeugte Replikate. Im Gegensatz dazu gibt es den pull-basierten Ansatz, bei dem Server und Clients bei den entsprechenden Stellen anfragen, welche Daten zur Zeit aktuell sind.
+
+Die letzte Designentscheidung ist die zwischen der individuellen Benachrichtigung (**unicast**) und der Benachrichtigung aller Teilnehmer (**multicast**). Bei unicast muss ein Server eine Änderung jeweils an alle anderen Server / Clients übermitteln. Dies ist dann sinnvoll, wenn nur ein Teilnehmer über die Änderung informiert werden soll. In den anderen Fällen ist die Verwendung von multicast effizienter, da hier der Server nur eine Nachricht erstellen muss, welche vom Netzwerk an alle Teilnehmer weitergeleitet wird.
 
 ### 3.6.4 Consistency Protocols
 
