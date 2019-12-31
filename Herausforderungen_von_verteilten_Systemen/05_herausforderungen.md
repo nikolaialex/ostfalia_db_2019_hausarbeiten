@@ -99,7 +99,7 @@ Ein großes Problem hierbei ist es, die Replikate konsistent zu halten. Sobald e
 Eine mögliche Lösung ist es, anstelle einer sofortigen, unmittelbaren Konsistenz, eine verzögerte Konsistenz in Kauf zu nehmen und diese kontinuierlich wiederherzustellen. Die Unterschiede zwischen dem beabsichtigten und dem tatsächlichen Zustand der Daten können als Abweichungen bezeichnet werden. Diese Abweichungen treten insbesondere in Form von drei Typen auf:
 
 -  numerische Abweichungen: Abweichungen zwischen den Replikas bezogen auf Werte
-- veraltete (für engl. stale) Abweichungen: gemeint sind zeitliche Unterschiede, mit denen Updates auf die verschiedenen Replikas angewendet wurden
+- veraltete (engl. stale) Abweichungen: gemeint sind zeitliche Unterschiede, mit denen Updates auf die verschiedenen Replikas angewendet wurden
 - Abweichungen in der Reihenfolge der Operationen: bezeichnet die Anzahl an ausstehenden Schreiboperationen je Server, welche noch nicht mit den anderen Replika-Servern synchronisiert wurden; hierbei kann es vorkommen, dass zeitlich jüngere Operation vor zeitlich älteren vorgenommen wurden
 
 Um den verschiedenen Anforderungen an die Konsistenz gerecht zu werden, gibt es diverse Konsistenzmodelle und verschiedene Wege, diese zu implementieren. Im Folgenden sollen verschiedene Modell betrachtet werden.
@@ -179,13 +179,29 @@ Die letzte Designentscheidung ist die zwischen der individuellen Benachrichtigun
 
 ### 3.6.4 Konsistenzprotokolle
 
-Die Konsistenzprotokolle stellen die konkrete Implementierung der Konsistenzmodell dar. 
+Die Konsistenzprotokolle stellen die konkrete Implementierung der Konsistenzmodell dar. In Hinblick auf die sequentielle Konsistenz (und ihre Varianten) können die **primary-based** und **replicated-write** Protokolle unterschieden werden. 
 
-- konkrete Implementierung von Konsistenzmodellen in Form von Konsistenzprotokollen
-- continuous consistency
-- Primary-based protocols
-- Replicated-write protocols
-- cache-coherence protocols
+Bei den primary-based Protokollen werden alle Änderungen zu einer primären Kopie weitergeleitet, welche anschließend dafür sorgt, dass die Änderungen in der richtigen Reihenfolge vorgenommen werden und entsprechend propagiert werden.
+
+In den replicated-write Protokollen wird eine Änderung an mehrere Replikate gleichzeitig weitergeleitet. In diesem Fall ist die Sicherstellung der korrekten Reihenfolge häufig schwieriger.
+
+Im Folgenden sollen einige Konsistenzprotokolle weiter vorgestellt werden.
+
+#### Primary-based Protokolle
+
+Bei den primary-based Protokollen hat jeder Dateneintrag *x* im Data Store einen sog. **Primary**, also einen zugeordneten Prozess, welcher für Koordination der Schreiboperationen auf *x* verantwortlich ist. Hierbei kann unterschieden werden zwischen **Primaries**, die fest einem Server zugordnet sind und einer wechselnden Variante, bei der jener Prozess der **Primary** wird, welcher die Schreiboperation initiiert.
+
+In der einfachsten Variante ist der **Primary** einem Server fest zugeordnet. Alle Schreiboperationen, die auf dem Dateneintrag *x* ausgeführt werden sollen, werden zu diesem Server weitergeleitet. Dieser führt dann die Änderung auf seinem lokalem Datenbestand durch und leitet die Änderung anschließend an die übrigen Replikate weiter. Die Aktualisierung der nachgelagerten Replikate wird durch diese dem **Primary** gegenüber bestätigt. Dieser wiederum bestätigt die Änderung gegenüber dem initiierenden Prozess, sobald alle nachgelagerten Änderungen bestätigt wurden. Dieses Verfahren ist in der folgenden Abbildung aus [van Steen, 2017] dargestellt.
+
+![Primary-based protocol](./assets/primary_based_protocol.png)
+
+Wie in der Grafik zu sehen ist, geht die angeforderte Schreiboperation bei einem Replika-Server ein (W1). Dieser leitet sie an den **Primary** weiter (W2). Der Primary aktualisiert seinen Datenbestand entsprechend der Operation und leitet sie an die Replikate / Backups weiter (W3). Dieser führen die Änderung ihrerseits durch und bestätigen die Änderung (W4). Sind alle Änderungen bestätigt, bestätigt der **Primary** seinerseits die Operation (W5). Im Gegenzug zu der Schreiboperation können die Leseoperationen lokal von den Replikaten verarbeitet werden.
+
+Dieses Vorgehen kann unter Umständen sehr lange dauern, sodass der Client in einer blockierenden Implementierung einige Zeit auf die Bestätigung der Schreiboperation warten muss. Dafür kann sich der Client aber sicher sein, dass die Schreiboperationen an die jeweiligen Backups propagiert wurde. In einer nicht-blockierenden Implementierung kann der Client zwar sofort nach der Anfrage weitermachen, er kann aber nicht sicherstellen, dass die Schreiboperation entsprechend gesichert wurde.
+
+Die primary-based Protokolle stellen eine relativ simple Implementierung der sequentiellen Konsistenz dar, weil der **Primary** alle eingehenden Operationen in die gewünschte Reihenfolge bringen kann.
+
+#### Replicated-write Protokolle
 
 
 
@@ -204,6 +220,8 @@ Die Konsistenzprotokolle stellen die konkrete Implementierung der Konsistenzmode
 
 
 ## 3.8 Sicherheit
+
+TODO: weglassen???
 
 ### 3.8.1 Secure channels
 
