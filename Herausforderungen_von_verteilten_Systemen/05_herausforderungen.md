@@ -147,11 +147,21 @@ Die clientzentrierten Modelle wurden im Rahmen von Arbeiten an mobilen Datensyst
 
 ### 3.6.3 Replica Management
 
+Ein grundlegendes Problem in verteilten Systemen ist die Andordnung und Platzierung der Replikate und welche Mechanismen zur Wahrung der Konsistenz eingesetzt werden müssen. Die hierbei auftretenden Probleme lassen sich in zwei Gruppen unterteilen: zum einen kann die Platzierung der Replika-Server betrachtet werden, zum anderen die der eigentlichen Daten.
 
+Die Platzierung der Replika-Server ist heutzutage kein großes Problem mehr aufgrund der Vielzahl großer Datencenter weltweit und der stetig verbesserten Konnektivität.
+
+Schwieriger ist da die angemessene Platzierung der Daten.
 
 
 
 ### 3.6.4 Consistency Protocols
+
+- konkrete Implementierung von Konsistenzmodellen in Form von Konsistenzprotokollen
+- continuous consistency
+- Primary-based protocols
+- Replicated-write protocols
+- cache-coherence protocols
 
 
 
