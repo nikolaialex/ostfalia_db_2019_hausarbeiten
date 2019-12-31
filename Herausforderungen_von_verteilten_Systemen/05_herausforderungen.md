@@ -145,7 +145,7 @@ Die clientzentrierten Modelle wurden im Rahmen von Arbeiten an mobilen Datensyst
 
 
 
-### 3.6.3 Replica Management
+### 3.6.3 Replikatverwaltung
 
 Ein grundlegendes Problem in verteilten Systemen ist die Andordnung und Platzierung der Replikate und welche Mechanismen zur Wahrung der Konsistenz eingesetzt werden müssen. Die hierbei auftretenden Probleme lassen sich in zwei Gruppen unterteilen: zum einen kann die Platzierung der Replika-Server betrachtet werden, zum anderen die der eigentlichen Daten.
 
@@ -165,7 +165,7 @@ Bei der Platzierung der Daten können drei Typen mit den jeweiligen Eigenschafte
   * lokale Kopie der angefragten Daten
   * dienen der Leistungssteigerung.
 
-Ein weiteres Thema des Replica Management ist die Art und Weise, in der Änderungen im Datenbestand zu den Replikaten propagiert werden. So muss geklärt werden, was eigentlich bei einer Änderung übermittelt wird, ob diese Änderungen aktiv oder passiv übermittelt werden und ob die Replikate individuell oder alle zusammen informiert werden.
+Ein weiteres Thema der Replikatverwaltung ist die Art und Weise, in der Änderungen im Datenbestand zu den Replikaten propagiert werden. So muss geklärt werden, was eigentlich bei einer Änderung übermittelt wird, ob diese Änderungen aktiv oder passiv übermittelt werden und ob die Replikate individuell oder alle zusammen informiert werden.
 
 Bei Änderungen im Datenbestand lassen sich drei mögliche Fälle der Propagierung unterscheiden. Im ersten Fall werden nur Benachrichtigungen über die Änderung verbreitet. Diese Benachrichtigungen enthalten die Information, dass die nachgelagerten / replizierten Datenbestände nicht mehr valide sind und gegebenenfalls, welcher Teil des Data Store geändert wurde. Wenn Nutzer dieses Datenbestandes über die Änderung benachrichtigt werden, obliegt es der nutzenden Stelle, sich eine aktuelle Version der Daten zu holen.
 
@@ -177,7 +177,9 @@ Eine weitere Designentscheidung, die getroffen werden muss, ist, ob Änderungen 
 
 Die letzte Designentscheidung ist die zwischen der individuellen Benachrichtigung (**unicast**) und der Benachrichtigung aller Teilnehmer (**multicast**). Bei unicast muss ein Server eine Änderung jeweils an alle anderen Server / Clients übermitteln. Dies ist dann sinnvoll, wenn nur ein Teilnehmer über die Änderung informiert werden soll. In den anderen Fällen ist die Verwendung von multicast effizienter, da hier der Server nur eine Nachricht erstellen muss, welche vom Netzwerk an alle Teilnehmer weitergeleitet wird.
 
-### 3.6.4 Consistency Protocols
+### 3.6.4 Konsistenzprotokolle
+
+Die Konsistenzprotokolle stellen die konkrete Implementierung der Konsistenzmodell dar. 
 
 - konkrete Implementierung von Konsistenzmodellen in Form von Konsistenzprotokollen
 - continuous consistency
