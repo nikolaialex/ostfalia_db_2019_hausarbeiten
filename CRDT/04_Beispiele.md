@@ -14,7 +14,7 @@ In der operations-basierten Umsetzung als CmRDT werden die Inkrement-Operationen
 
 Die Umsetzung als zustandsbasierten CvRDT muss diese Vorbedingungen nicht erfüllen. Anstatt den Wert des Zählers zu speichern, werden die Inkrementierungen jedes Knotens einzeln in einem Vektor abgelegt. Der Wert des Zählers entspricht der Summe aller Einzelwerte. Jeder Knoten aktualisiert nur eine bestimmte Stelle im Vektor. Der erste Knoten verändert nur den Wert an der ersten Stelle; der zweite verändert nur den an zweiter Stelle, usw. Bei der Replikation wird für jeden Einzelwert das Maximum aus dem aktuellen und dem neuen Wert ermittelt. Da der Wert nur wachsen kann, konvergiert er auf allen Replikaten.
 
-![Counter CRDT](img/counter.png)
+![Counter CRDT](img/Counter.png)
 
 *Beispiel A*
 
@@ -48,13 +48,13 @@ Die dem OR-Set (Observed-Remove-Set) zugrundeliegende Idee ähnelt dem zuvor vor
 
 Jedes Element bekommt ein eindeutiges internes Identifikationskennzeichen, z.B. eine GUID. Gespeichert wird also ein Tupel aus dem eigentlichen Inhaltselement und dem Identifikationskennzeichen. Die add-Operation fügt dieses Tupel in das G-Set A ein. Die remove-Operation fügt das Element in das G-Set R ein. Der Wert des OR-Set wird durch die Differenzmenge von A und R ermittelt. Anschließend wird die Replikation der beiden G-Sets, wie oben beschrieben, ausgeführt.
 
-![Set CRDT](img/sets.png)
+![Set CRDT](img/Sets.png)
 
 *Beispiel B1*
 
 Im Beispiel B1 wird auf dem ersten Knoten das Element b hinzugefügt. Zur gleichen Zeit wird auf dem zweiten Knoten das Element c hinzugefügt und das Element a entfernt. Die Operationen werden zunächst lokal ausgeführt. Bei der Replikation wird der neue Zustand an den jeweils anderen Knoten gesendet. Mithilfe der Vereinigung als Merge-Operation konvergieren die Werte beider G-Sets A und R auf allen Replikaten. Im Fall des G-Sets A wird {a0,b1} mit {a0,c2} zu {a0,b1,c2} vereinigt. Dasselbe geschieht für das G-Set R, indem die leere Menge {} mit {a0} vereinigt wird. Der Wert des OR-Sets wird durch die Differenzmenge {a0,b1,c2} und {a0} gebildet. Somit enthält das G-Set nach der Replikation den Wert {b1,c2}.
 
-![Sets with ID CRDT](img/sets-with-id.png)
+![Sets with ID CRDT](img/Sets-with-id.png)
 
 *Beispiel B2*
 
