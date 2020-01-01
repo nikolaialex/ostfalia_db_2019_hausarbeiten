@@ -44,3 +44,5 @@ Wenn auf einem Knoten Daten aktualisiert werden, müssen die Replikate über ein
 ## "Strong Eventual Consistency"
 
 Nichtsdestotrotz ist das Auflösen von Konflikten nach wie vor schwierig und fehleranfällig. Daher gehen die in dieser Arbeit betrachteten Conflict-free Replicated Data Types (CRDTs) einen anderen Weg. Ihnen liegt eine Variation der "Eventual Consistency" zugrunde. Die "Strong Eventual Consistency" garantiert, dass alle Knoten, die die selben Änderungsmitteilungen verarbeitet haben, sofort den selben konsistenten Datenbestand aufweisen. Konflikte werden demnach grundsätzlich ausgeschlossen. Obwohl auch hier Änderungen asynchron vorgenommen werden, konvergieren alle Replikaten schlussendlich und nachweislich. [4, 5]
+
+[Nächstes Kapitel](03_Auspaegungen.md)  

@@ -75,3 +75,5 @@ console.log(replikat2);
 ```
 
 Nach der Replikation enthalten beide Einkauflisten die richtigen Einträge Eier und Mehl. Die *Automerge*-Bibliothek zeigt den praktischen Nutzen von CRDTs, da die Datenhaltung im JSON-Format in aktuellen Anwendungen und Datenbanken stark verbreitet ist. Für derartige Anwendungen bieten CRDTs eine transparante Möglichkeit mit dem Herausforderungen von "Eventual Consistency" umzugehen.
+
+[Nächstes Kapitel](06_Fazit.md)  

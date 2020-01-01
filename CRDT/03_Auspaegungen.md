@@ -35,3 +35,5 @@ Sämtliche parallel ausführbaren Operationen müssen kommutativ sein. Kommutati
 ## Vergleich CvRDT und CmRDT
 
 Op-based Commutative Replicated Data Type (CmRDT) und State-based Convergent Replicated Data Type (CvRDT) sind gegeneinander austauschbar. Jede Anforderung, die mithilfe eines operations-basierten CmRDT umgesetzt wird, kann auch als zustandsbasierten CvRDT umgesetzt werden. Diese beiden Typen unterscheiden sich in der Praxis jedoch erheblich. Während bei den zustandsbasierten CvRDT der Ressourcenbedarf aufgrund der permanenten Übertragung des gesamten Zustands höher ist, haben die operations-basierten CmRDT höhere Anforderungen an das Übertragsprotokoll. Es hängt demnach sehr vom Anwendungsfall ab, welcher Typ in einem konkreten Fall vorzuziehen ist. Umso vorteilhafter erscheint dabei die Tatsache, dass prinzipiell beide Vorgehensweisen zum Ziel führen.
+
+[Nächstes Kapitel](04_Beispiele.md)  
