@@ -17,3 +17,5 @@
 [8]	Kleppmann, M. and Beresford, A. R. 2017. A Conflict-Free Replicated JSON Datatype. IEEE Trans. Parallel Distrib. Syst. 28, 10, 2733–2746.
 
 [9]	Automerge auf Github. https://github.com/automerge/automerge. Stand: 27 November 2019
+
+[10] heise developer: Verteilte Daten ohne Mühe: Conflict-Free Replicated Data Types. https://www.heise.de/developer/artikel/Verteilte-Daten-ohne-Muehe-Conflict-Free-Replicated-Data-Types-3944421.html?seite=all. Stand: 27 November 2019
