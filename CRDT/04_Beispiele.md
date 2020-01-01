@@ -54,7 +54,7 @@ Jedes Element bekommt ein eindeutiges internes Identifikationskennzeichen, z.B. 
 
 Im Beispiel B1 wird auf dem ersten Knoten das Element b hinzugefügt. Zur gleichen Zeit wird auf dem zweiten Knoten das Element c hinzugefügt und das Element a entfernt. Die Operationen werden zunächst lokal ausgeführt. Bei der Replikation wird der neue Zustand an den jeweils anderen Knoten gesendet. Mithilfe der Vereinigung als Merge-Operation konvergieren die Werte beider G-Sets A und R auf allen Replikaten. Im Fall des G-Sets A wird {a0,b1} mit {a0,c2} zu {a0,b1,c2} vereinigt. Dasselbe geschieht für das G-Set R, indem die leere Menge {} mit {a0} vereinigt wird. Der Wert des OR-Sets wird durch die Differenzmenge {a0,b1,c2} und {a0} gebildet. Somit enthält das G-Set nach der Replikation den Wert {b1,c2}.
 
-![Sets with ID CRDT](img/Sets-with-id.png)
+![Sets with ID CRDT](img/Sets-with-Id.png)
 
 *Beispiel B2*
 
