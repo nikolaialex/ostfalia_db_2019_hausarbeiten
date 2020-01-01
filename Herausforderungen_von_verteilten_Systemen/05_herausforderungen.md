@@ -189,7 +189,7 @@ Im Folgenden sollen einige Konsistenzprotokolle weiter vorgestellt werden.
 
 #### Primary-based Protokolle
 
-Bei den primary-based Protokollen hat jeder Dateneintrag *x* im Data Store einen sog. **Primary**, also einen zugeordneten Prozess, welcher für Koordination der Schreiboperationen auf *x* verantwortlich ist. Hierbei kann unterschieden werden zwischen **Primaries**, die fest einem Server zugordnet sind und einer wechselnden Variante, bei der jener Prozess der **Primary** wird, welcher die Schreiboperation initiiert.
+Bei den primary-based Protokollen hat jeder Dateneintrag *x* im Data Store einen sog. **Primary**, also einen zugeordneten Prozess mit der primären Kopie der Daten, welcher für Koordination der Schreiboperationen auf *x* verantwortlich ist. Hierbei kann unterschieden werden zwischen **Primaries**, die fest einem Server zugordnet sind und einer wechselnden Variante, bei der jener Prozess der **Primary** wird, welcher die Schreiboperation initiiert.
 
 In der einfachsten Variante ist der **Primary** einem Server fest zugeordnet. Alle Schreiboperationen, die auf dem Dateneintrag *x* ausgeführt werden sollen, werden zu diesem Server weitergeleitet. Dieser führt dann die Änderung auf seinem lokalem Datenbestand durch und leitet die Änderung anschließend an die übrigen Replikate weiter. Die Aktualisierung der nachgelagerten Replikate wird durch diese dem **Primary** gegenüber bestätigt. Dieser wiederum bestätigt die Änderung gegenüber dem initiierenden Prozess, sobald alle nachgelagerten Änderungen bestätigt wurden. Dieses Verfahren ist in der folgenden Abbildung aus [van Steen, 2017] dargestellt, welche ein primary-based Protokoll in Form eines primary-backup Protokolls wiedergibt.
 
@@ -201,9 +201,7 @@ Dieses Vorgehen kann unter Umständen sehr lange dauern, sodass der Client in ei
 
 Die primary-based Protokolle stellen eine relativ simple Implementierung der sequentiellen Konsistenz dar, weil der **Primary** alle eingehenden Operationen in die gewünschte Reihenfolge bringen kann.
 
-
-
-// TODO: primary-based local-write Variante darstellen
+In einer als **local-write** bezeichneten Variante der Protokolle sucht der anfragende Prozess auch zunächst den Primary und verlagert diesen anschließend in seine lokale Umgebung. Der Vorteil hierbei ist, dass diese und nachfolgende Schreiboperationen lokal ausgeführt werden können. Dies ist vor allem in Situationen sinnvoll, in denen der Computer vom Netzwerk getrennt ist. Alle Änderungen können lokal ausgeführt werden, solange der Computer offline ist, um dann später an die Replikate propagiert zu werden.
 
 #### Replicated-write Protokolle
 
@@ -219,6 +217,30 @@ Dies soll am Beispiel eines verteilten Dateiservers erläutert werden. Um eine D
 2. $N_W > N / 2$
 
 Nur wenn die benötigte Anzahl von Servern der Operation zugestimmt hat, kann die Datei gelesen oder verändert werden.
+
+#### Clientzentrierte Konsistenzprotokolle
+
+Neben der oben beschriebenen Implementierung der datenzentrierten Konsistenzmodell gibt es auch Implementierungen der clientzentrierten Konsistenzmodelle.
+
+Grundlegend für diese Protokolle ist, dass jeder Schreiboperation eine global eindeutiger ID zugewiesen wird. Diese weist der Server zu, der die Schreibanfrage erhalten hat. Dieser Server ist dann der Ursprung der Operation. Dann werden für jeden Client zwei Mengen an Schreiboperationen vorgehalten. Die eine Menge besteht aus den Schreiboperationen, die für die lesenden Operationen relevant sind (**read set**), die andere besteht aus den Schreiboperationen, welche der Client durchgeführt hat (**write set**).
+
+Auf dieser Basis können die vier oben genannten Konsistenzmodelle implementiert werden.
+
+##### Monotonic Reads
+
+Wenn ein Client eine Leseoperation auf einem Server durchführt, erhält der Server das **read set** des Clients um zu prüfen, ob alle Schreiboperationen in der Menge lokal ausgeführt wurden. Wenn nicht, wird zunächst der Datenbestand mithilfe der anderen Server aktualisiert. Hierzu kann die ID der Operation verwendet werden, die idealerweise eine Referenz auf den ausstellenden Server enthält.
+
+##### Monotonic Writes
+
+Die monotonic write-Konsistenz wird analog zu monotonic reads implementiert. Wenn ein Client eine Schreiboperation initiiert, wird dem angefragten Server das **write set** des Clients übergeben. Damit wird sichergestellt, dass die enthaltenen Schreiboperationen lokal ausgeführt wurden. Anschließend wird die neue Operation dem **write set** hinzugefügt.
+
+##### Read-your-writes
+
+Ähnlich zu den vorherigen Protokollen ist es hier notwendig, dass der Server, auf dem die Leseoperation ausgeführt wird, alle Schreiboperationen des **write sets** dieses Clients lokal ausgeführt hat. Die Schreiboperationen können hierbei ebenfalls von den anderen Servern geladen werden, bevor die Leseoperation ausgeführt wird.
+
+##### Writes-follow-reads
+
+Hierbei wird der angefragte Server zunächst anhand der Schreiboperationen im **read set** aktualisiert. Anschließend wird die Schreiboperation zusammen mit den Operationen aus dem **read set** in das **write set** eingefügt, da die Operationen aus dem **read set** nun ebenfalls relevant für die Schreiboperation sind.
 
 ## 3.7 Fehlertoleranz
 
