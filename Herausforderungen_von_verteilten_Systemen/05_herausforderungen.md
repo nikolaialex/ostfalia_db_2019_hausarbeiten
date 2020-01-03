@@ -50,8 +50,6 @@ Während in herkömmlichen verteilten Systemen die Netzwerkkommunikation noch ü
 
 ### 3.3.1 Remote Procedure Calls
 
-
-
 ### 3.3.2 Message-Oriented Communication
 
 ### 3.3.3 Multicast Communication
@@ -128,8 +126,6 @@ Eine weitere Form der datenzentrierten Konsistenz ist die der **letztendlichen K
 
 Dieses Modell kann aus Client-Sicht Nachteile haben. Ein Client wird bei Benutzung des Systems mit einem Replikat verbunden sein und Änderungen veranlassen. Verbindet sich der Client dann über ein anderes Gerät oder an einem anderen Ort mit dem Systems, kann der Client mit einem anderen Replikat verbunden sein, auf dem die Änderungen noch nicht angelangt sind. Dies kann zu inkonsistentem Verhalten führen.
 
-
-
 ### 3.6.2 Clientzentrierte Konsistenzmodelle
 
 Um die Nachteile der *eventual consistency* aufzuwiegen, wurden clientzentrierte Konsistenzmodelle entwickelt. Diese garantieren im Kern dafür, dass Zugriffe eines einzelnen Clients auf den Data Store konsistent sind. Diese Garantie gilt jedoch *nicht* für nebenläufige Zugriffe mehrerer Clients.
@@ -141,8 +137,6 @@ Die clientzentrierten Modelle wurden im Rahmen von Arbeiten an mobilen Datensyst
 * **read-your-writes**: hat ein Prozess einen Eintrag mit einer bestimmten Version geschrieben, dann werden nachfolgende Lesezugriffe garantiert keine ältere als diese Version lesen
 * **writes follow reads**: hat ein Prozess einen Wert für einen Eintrag gelesen, so werden nachfolgende Schreiboperationen garantiert auf dem gelesenen Wert oder einem jüngeren Wert ausgeführt
 
-
-
 ### 3.6.3 Replikatverwaltung
 
 Ein grundlegendes Problem in verteilten Systemen ist die Andordnung und Platzierung der Replikate und welche Mechanismen zur Wahrung der Konsistenz eingesetzt werden müssen. Die hierbei auftretenden Probleme lassen sich in zwei Gruppen unterteilen: zum einen kann die Platzierung der Replika-Server betrachtet werden, zum anderen die der eigentlichen Daten.
@@ -151,10 +145,10 @@ Die Platzierung der Replika-Server ist heutzutage kein großes Problem mehr aufg
 
 Bei der Platzierung der Daten können drei Typen mit den jeweiligen Eigenschaften unterschieden werden:
 
-* permanente Replikate: 
+* permanente Replikate:
   * initiale Menge der Daten im verteilten Data Store
   * geringe Anzahl
-  * gespiegelt auf verschiedenen Servern 
+  * gespiegelt auf verschiedenen Servern
 * durch Server erzeugte Replikate
   * Kopien der Daten in der Nähe von / auf Servern zur Steigerung der Leistung
   * können Nur-lesend konfiguriert werden, wenn permanente Replikate zum Schreiben verwendet werden
@@ -177,7 +171,7 @@ Die letzte Designentscheidung ist die zwischen der individuellen Benachrichtigun
 
 ### 3.6.4 Konsistenzprotokolle
 
-Die Konsistenzprotokolle stellen die konkrete Implementierung der Konsistenzmodell dar. In Hinblick auf die sequentielle Konsistenz (und ihre Varianten) können die **primary-based** und **replicated-write** Protokolle unterschieden werden. 
+Die Konsistenzprotokolle stellen die konkrete Implementierung der Konsistenzmodell dar. In Hinblick auf die sequentielle Konsistenz (und ihre Varianten) können die **primary-based** und **replicated-write** Protokolle unterschieden werden.
 
 Bei den primary-based Protokollen werden alle Änderungen zu einer primären Kopie weitergeleitet, welche anschließend dafür sorgt, dass die Änderungen in der richtigen Reihenfolge vorgenommen werden und entsprechend propagiert werden.
 
