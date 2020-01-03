@@ -3,7 +3,7 @@
 
 ---
 
-# 2 Verteilte Systeme
+# 2. Verteilte Systeme
 
 Für das Konzept der verteilten Systeme gibt es in der Literatur, soweit ersichtlich, keine allgemein anerkannte und gültige Definition. Bei [van Steen, 2017] wird daher eine eher unspezifische Definition verwendet:
 > A distributed system is a collection of autonomous computing elements that appears to its users as a single coherent system.
@@ -66,7 +66,6 @@ Wie in der Grafik zu sehen ist, ist jeder Knoten mit einem eigenen Betriebssyste
 - MQSeries von IBM ( plattformunabhängige Message orientierte Middleware-Software)
 - der Websphere Application Server von IBM (Laufzeitumgebung für JavaEE-Anwendungen)
 - die SAP Exchange Infrastructure von SAP
-
 
 ---
 [van Steen, 2017]: M. van Steen and A. S. Tanenbaum, Distributed systems, Third edition (Version 3.01 (2017)). London: Pearson Education, 2017.

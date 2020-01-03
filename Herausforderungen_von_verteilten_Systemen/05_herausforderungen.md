@@ -11,24 +11,20 @@ In diesem Kapitel sollen die Herausforderungen erläutert werden, denen man bei 
 
 In verteilten Systemen werden die beteiligten Komponenten per Definition häufig auf mehreren, unterschiedlichen Knoten ausgeführt. Mit wachsender Anzahl von Komponenten und Knoten steigt die Komplexität dieser Systeme massiv an.
 
-Um diese Komplexität angemessen zu handhaben, wird bei den verteilten Komponenten neben der rein physischen Verteilung die logische Organisation der Komponenten betrachtet. Diese logische Organisation der Komponenten und deren Interaktionen untereinander werden auch als **Software-Architekturen** bezeichnet.
+Um diese Komplexität angemessen zu handhaben, wird bei den verteilten Komponenten neben der rein physischen Verteilung die logische Organisation der Komponenten, genannt **Systemarchitektur**, betrachtet. Diese logische Organisation der Komponenten und deren Interaktionen untereinander werden auch als **Softwarearchitekturen** bezeichnet.
 
 Ein wichtiges Ziel bei der Erstellung von Software-Architekturen in verteilten Systemen ist die Trennung der Applikationen von der zugrunde liegenden Plattform. Hierzu wird häufig eine Schicht eingeführt, die als **middleware** bezeichnet wird und welche der Erlangung von Transparenz dient (siehe dazu den Absatz "Ziele" in [Verteilte Systeme](04_verteilte_systeme.md)).
 
-### 3.1.1 Architectural styles
+Verteilte Systeme folgen oft einem Architekturstil. Ein Stil reflektiert dabei die grundlegenden Prinzipien, anhand derer die Interaktion der verschiedenen Softwarekomponenten ausgestaltet ist. Wichtige und weit verbreitete Stile sind die Anordnung in Schichten sowie objektbasierte, ressourcenbasierte und ereignisbasierte Stile.
 
+Ein verteiltes System kann auf verschiedenen Wegen zusammengesetzt werden. Eine der wichtigsten Klassen von verteilten Systemen ist die Aufteilung in Clients und Server. Ein Client sendet hierbei Anfragen an einen Server, welcher dann (idealerweise) eine Antwort errechnet und an den Client zurücksendet. Diese Aufteilung entspricht der üblichen Art und Weise, wie ein Modul Funktionen eines anderen Moduls aufruft. Durch die Anordnung verschiedener Komponenten auf verschiedenen Computern wird eine physikalische Verteilung der Funktionen über die beteiligten Computer / Maschinen erreicht.
 
+Während Client-Server-Architekturen meist sehr zentralisiert und hierarchisch sind, gibt es auch denzentraliserte Architekturen, in denen die verschiedenen Prozesse der verschiedenen Computer eher gleichberechtigt angeordnet sind. Diese auch als peer-to-peer-Systeme bekannten verteilten Systeme organisieren ihre Prozesse meist in Form eines logischen Netzwerkes in welcher jeder Prozess eine lokale Liste von Prozessen pflegt, mit welchen Prozessen er kommunizieren kann.
 
-### 3.1.2 Middleware organization
-
-### 3.1.3 System architecture
-
-### 3.1.4 Example architectures
-
-
-
+Es gibt zudem hybride Architekturen, die Elemente der zentraliserten und dezentralisierten Formen kombinieren. So gibt es etwa eine zentrale Stelle, um initiale Anfragen von Clients entgegen zu enhmen. Im weiteren Verlauf wird die Verarbeitung dann von anderen Servern übernommen, welche Teil eines peer-to-peer-Systems sein können.
 
 ## 3.2 Prozesse
+
 Prozesse sind, wie in Betriebssystemen, auch in verteilten Systemen ein wesentlicher Bestandteil und bilden die Basis für die Kommunikation zwischen verschiedenen Maschinen. Entscheidend ist hierbei die Klärung der Frage, wie die Prozesse organisert sind und ob sie das Konzept von Threads unterstützen.
 
 Threads sind in verteilten Systemen eine Möglichkeit effiziente und performante Server zu entwickeln, die auch bei blockierenden I/O-Operationen die Nutzung der CPU durch mehrere Threads ermöglichen.

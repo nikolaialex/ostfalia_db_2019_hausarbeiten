@@ -2,7 +2,7 @@
 |-|-|
 ---
 
-# 1 Einleitung
+# 1. Einleitung
 
 **TODO: Überarbeiten**
 
