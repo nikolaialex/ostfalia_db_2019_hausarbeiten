@@ -491,7 +491,7 @@ An diesem Beispiel ist bereits zu erkennen, dass die SQL Query etwas aufwendiger
 Je mehr Beziehungen abgefragt werden müssen, desdo einfacher wird die Anfrageformulierung mit Hilfe von Cypher.
 
 
-4. Anzeigen eines Beschreibungsdokumentes und allen Dokumentenelemente aller Hierarchien.
+5. Anzeigen eines Beschreibungsdokumentes und allen Dokumentenelemente aller Hierarchien.
 
         SQL:    WITH RECURSIVE  q as (
                 
@@ -550,3 +550,29 @@ zum Beschreibungsdokument zu bekommen muss lediglich folgende Abfrage mit Cypher
 
 
 Das Ergebnis zeigt, das beliebige Beziehungen und Knoten mit aufgeführt werden. Eine solche Abfrage via SQL zu formulieren würde einen enorm großen Aufwand bedeuten. 
+
+Zusammendfassend zeigen diese Beispiele, dass steigender Anfragekomplexität die Cypher Anfrage leichter zu formulieren ist als die SQL Abfrage. Zusätzlich ist bei SQL eine genaue Kenntnis der Datenbankstruktur notwendig um die Anfrage formulieren zu können. 
+Für die Formulierung einer Cypher Anfrage hingegen, benötigt man nicht zwingend genaue Kenntnisse der Knoten und Beziehungsstrukturen. Dies bietet unter anderem eine gute Möglichkeit um neue Erkenntnisse aus den Daten gewinnen zu können. 
+
+### 4.1 Performance ##
+
+Im Rahmen dieser Arbeit möchten wir die Untersuchungen zu rekursiven Abfragen zwischen einer MySQL und einer Neo4J Datenbank hinsichtlich der Abfragegeschwindigkeit evaluieren. Im Kapitel 1.4 "SQL JOINS VERSUS GRAPH TRAVERSAL ON A LARGE SCALE" wird ein Datenexperiment vorgestellt, welches SQL Join Queries mit Graph Traversal Queries vergleicht. 
+
+    MATCH (b:Beschreibungsdokument)-[r:ENTHAELT *1..2]-(k) RETURN k
+    
+    WITH RECURSIVE  q as (
+    
+        SELECT bb.bestandteile_id,e.name FROM beschreibungen
+        LEFT JOIN beschreibungen_bestandteile bb on beschreibungen.id = bb.beschreibungsdokument_id
+        LEFT JOIN elemente_bestandteile on elemente_bestandteile.bestandteile_id = bb.bestandteile_id
+        LEFT JOIN elemente e on e.id = bb.bestandteile_id
+    
+        UNION ALL
+    
+        SELECT el.bestandteile_id, e.name from elemente_bestandteile el
+        left join elemente e on e.id = el.bestandteile_id
+        LEFT JOIN beschreibungen_bestandteile on e.id = beschreibungen_bestandteile.bestandteile_id
+        LEFT JOIN beschreibungen ON beschreibungen_bestandteile.beschreibungsdokument_id = beschreibungen.id
+        join q on q.bestandteile_id = el.dokument_element_id
+    
+        ) SELECT * from q 
