@@ -17,9 +17,15 @@ Mittlerweile haben Softwareanbieter ihre Entwicklungsarbeiten an eigenen Cloud-P
 
 Alternativen zu Kubernetes sind beispielsweise Docker Swarm, Apache Mesos und Azure Container Service. Auf diese wird aber nicht weiter eingegangen in dieser Ausarbeitung.
 
+---
+
+[Inhaltsverzeichnis](inhaltsverzeichnis.md) | [Docker >>](2_docker.md)
+
+---
+
 ## Literaturverzeichnis
 
-|     |                                                                                                                                                                                                                            |
+| #   | Literatur                                                                                                                                                                                                                  |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [1] | Drei gute Gründe sprechen für Kubernetes, Container Days in Hamburg, 19.06.2019, https://line-of.biz/it-infrastruktur-und-rechenzentren/drei-gute-gruende-sprechen-fuer-kubernetes/, aufgerufen 25.11.2019                 |
 | [2] | Jan Mahn, Merlin Schumacher, Container à la K, c’t 2019, Heft 18, Heise Medien, Seite 156 ff                                                                                                                               |
