@@ -14,6 +14,7 @@ Damit die Daten der Replikate konvergieren, müssen folgende Bedingungen erfüll
 Ein einfaches Beispiel, welches diese Bedingungen erfüllt, wäre eine Ganzzahl, wobei immer der höchste Wert gespeichert werden soll. In diesem Fall wird die partielle Ordnung durch die Größer-Relation (>) definiert. Die Merge-Operation ist das Maximum aus der aktuellen und der neuen Zahl.
 
 ![State-based-Replication](img/State-based-Replication.png)
+
 *State-based Convergent Replicated Data Type (CvRDT) aus [4]*
 
 Im Beispiel wird auf Knoten x1 der Wert auf 1 geändert, während gleichzeitig auf Knoten x2 der Wert auf 4 geändert wird. Unabhängig von der Reihenfolge in der die Änderungsmitteilungen eingehen, aktualisiert sich der Wert aufgrund der Maximum-Operation auf allen drei Knoten auf 4.
@@ -28,6 +29,7 @@ Bei den Op-based Commutative Replicated Data Type (CmRDT) werden Änderungen zun
 Durch die erste Bedingungen wird sichergestellt, dass Änderungsmitteilungen zuverlässig an alle Knoten zugestellt werden. Damit die Daten auf den Replikaten übereinstimmen, müssen sie auch über jede Änderung informiert werden. Wenn nicht auf allen Knoten die gleichen Änderungen durchgeführt werden, wird das System inkonsistent. Änderungsmitteilungen dürfen somit nicht verloren gehen oder mehrfach ankommen. Dieser Forderung kann durch die Wahl eines geeigneten Übertragsprotokoll Rechnung getragen werden.
 
 ![Op-based-Replication](img/OP-based-Replication.png)
+
 *Op-based Commutative Replicated Data Type (CmRDT) aus [4]*
 
 Sämtliche parallel ausführbaren Operationen müssen kommutativ sein. Kommutative Operationen können in beliebiger Reihenfolge ausgeführt werden. Ein einfaches Beispiel ist die Addition. Das Term 1 + 2 + 3 liefert dasselbe Ergebnis, wie der Term 1 + 3 + 2. Im Beispiel ist es also egal, ob ein Knoten nun zunächst die Änderung +2 oder die Änderung +3 verarbeitet. Beim Startzustand von 1 aktualisiert sich der Wert von allen Replikaten auf 6, unabhängig von der Reihenfolge in der die Änderungsmitteilungen eingehen. Sofern diese Eigenschaft nicht gegeben ist, spielt die Reihenfolge der Änderungsmitteilung eine  Rolle. In diesem Fall muss das Übertragsprotokoll sicherstellen, dass die zweite Vorbedingung gegeben ist.
