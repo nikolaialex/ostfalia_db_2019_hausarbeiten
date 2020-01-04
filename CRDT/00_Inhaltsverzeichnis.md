@@ -17,8 +17,9 @@ Erstellt von:   Andreas Breer (Hochschule Emden/Leer)
   * Counter
   * Register
   * Set
+  * CRDTs höherer Ordnung
 * [Implementierungen von CRDTs](05_Implementierungen.md)  
-  * Riak
-  * Ruby
+  * Industrieeinsatz
+  * JSON-CRDT
 * [Fazit](06_Fazit.md)  
 * [Literatur](07_Literatur.md)  
