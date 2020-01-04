@@ -1,10 +1,15 @@
 # Run Databases in Kubernetes
 
-Erst mit der Einführung von Docker hat sich die Containerisierung durchgesetzt. Mit zunehmender Anzahl von Containern wurde eine Orchestrierung notwendig. Orchestrierung bedeutet, dass Container organisiert, gestartet und gestoppt werden müssen. Für diese Aufgabe wurde Kubernetes erstellt. Die Orchestrierung von Datenbanken ist technisch möglich aber auch für jede Datenbank individuell. Die Funktionsfähigkeit der eingesetzten Datenbanken muss für jeden einzelnen Hersteller sorgfältig getestet werden [1].
+Erst mit der Einführung von Docker hat sich die Containerisierung durchgesetzt. Durch Docker als größtenteils verwendeten Standard von Containertechnologien ist es nämlich leicht Container zu erstellen, auszuliefern und in geringer Anzahl zu betreiben. [1] Aber gerade durch die Vozüge von Docker hat sich die Anzahl von produktiven Applikationen auf Dockerbasis schnell erhöht und ein manueller Betrieb ist nicht mehr effizient. Aus diesem Grund wurde der Einsatz von Orchestrator vorrangetrieben, der automatisiert eine Vielzahl von Container in unterschiedlichen Umgebungen organisiern, starten, stoppen und über Netzwerke hinweg zusammen arbeiten lassen kann. [1] Kubernetes ist so ein Orchestrator und kann Container unterschiedlichester Art betreiben.
 
-Grundsätzlich eignet sich das Dateisystem eines Containers nicht für die dauerhafte Speicherung von Daten. Die durch Kubernetes ausgeführten Container können gelöscht, entfernt oder neu erstellt werden. Der Cluster-Manager kann diese Aktionen jederzeit auslösen. Dies kann aufgrund von Knotenausfällen oder nicht mehr benötigten Ressourcen erfolgen. In einem solchen Fall gehen alle im Container gespeicherten Daten verloren. Sollen die Daten erhalten bleiben müssen diese auf persistenten Festplatten außerhalb der Container gespeichert werden [2].
+Grundsätzlich eignet sich das Dateisystem eines Containers nicht für die dauerhafte Speicherung von Daten, Container sind i.A. zustandslos und werden im RAM der ausführenden Maschine ausgeführt. Eine erstellte Datei in dem Container ist also flüchtig und geht beim Stoppen des Containers verloren.
+Besonders beim Einsatz einers Orchestartors wie Kubernetes, der beliebig Container z.B. je nach Auslastung der ausführenden Maschinen verschieben, starten und stoppen kann oder beim Ausfall einer ausführenden Maschine sogar muss, muss die Persistenz beim Betreiben von Datenbanken in Container besonders berücksichtigt werden.
+Man spricht bei Betrieb von Datenbanken in Containern aufgrund ihrer Natur Daten persistent ablegen zu müssen von _Stateful Applications_, _Stateless Applications_ sind der weitaus einfachere Fall wie z.B. schon eine fertig als HTML-Dokument gebündelte Webseite, die über einen NGINX-Container ausgeliefert wird. Alles relevante in dem NGINX-Container ist statisch und ändert sich nicht. Es werden keine neuen wichtigen Dokumente in dem Container erstellt, die persistiert werden müssen. Sollen aber in einem Container zur Laufzeit erstellte Daten persistiert werden, so müssen diese auf externe Speicherorte außerhalb des Containers abgelegt werden. [2]
 
-Seit der Version 1.9 von Kubernetes sind die StatefulSets in einer stabilen Form verfügbar. Sie ermöglichen in einem Kubernetes-Cluster die Bereitstellung von stateful-Anwendungen, welche die Nutzung von Datenbanken ermöglichen. Im Gegensatz zu Webanwendungen besitzen Transaktionsdatenbanken und deren Daten verschiedene Zustände. Diese Zustände müssen bei der Verwendung in Kubernetes bei allen Aktionen im Cluster berücksichtigt werden [3]. Als Cluster bezeichnet man alle Dienste, Container und Server.
+In einer gängigen Cloud-Umgebung wie z.B. Google Cloud oder Amazon Web Services hat man für die Persistierung von Daten i.d.R. zwei Möglichkeiten:
+
+1. HDD/SSD der ausführende Maschine
+2. Cloud-Speicher
 
 ## Deployments
 
@@ -45,6 +50,8 @@ spec:
 ```
 
 ## Stateful Sets
+
+Seit der Version 1.9 von Kubernetes sind die StatefulSets in einer stabilen Form verfügbar. Sie ermöglichen in einem Kubernetes-Cluster die Bereitstellung von stateful-Anwendungen, welche die Nutzung von Datenbanken ermöglichen. Im Gegensatz zu Webanwendungen besitzen Transaktionsdatenbanken und deren Daten verschiedene Zustände. Diese Zustände müssen bei der Verwendung in Kubernetes bei allen Aktionen im Cluster berücksichtigt werden [3]. Als Cluster bezeichnet man alle Dienste, Container und Server.
 
 ## Vergleich
 
