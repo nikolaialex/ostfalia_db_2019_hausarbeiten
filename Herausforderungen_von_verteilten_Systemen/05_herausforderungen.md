@@ -167,7 +167,7 @@ Die dritte Möglichkeit ist schließlich, den Replikaten mitzuteilen, welche Ope
 
 Eine weitere Designentscheidung, die getroffen werden muss, ist, ob Änderungen zu den Replikaten geschoben (**push**) oder von diesen gezogen (**pull**) werden müssen. Bei push-basierten Lösungen werden die Replikate über Änderungen informiert, auch wenn sie die Daten nicht angefragt haben. Diese Möglichkeit wird u.a. dann genutzt, wenn starke Konsistenz gefordert ist, so z.B. zwischen permanenten Replikaten und durch Server erzeugte Replikate. Im Gegensatz dazu gibt es den pull-basierten Ansatz, bei dem Server und Clients bei den entsprechenden Stellen anfragen, welche Daten zur Zeit aktuell sind.
 
-Die letzte Designentscheidung ist die zwischen der individuellen Benachrichtigung (**unicast**) und der Benachrichtigung aller Teilnehmer (**multicast**). Bei unicast muss ein Server eine Änderung jeweils an alle anderen Server / Clients übermitteln. Dies ist dann sinnvoll, wenn nur ein Teilnehmer über die Änderung informiert werden soll. In den anderen Fällen ist die Verwendung von multicast effizienter, da hier der Server nur eine Nachricht erstellen muss, welche vom Netzwerk an alle Teilnehmer weitergeleitet wird.
+Die letzte Designentscheidung ist die zwischen der individuellen Benachrichtigung (**unicast**) und der Benachrichtigung mehrerer Teilnehmer (**multicast**). Bei unicast muss ein Server eine Änderung jeweils an alle anderen Server / Clients übermitteln. Dies ist dann sinnvoll, wenn nur ein Teilnehmer über die Änderung informiert werden soll. In den anderen Fällen ist die Verwendung von multicast effizienter, da hier der Server nur eine Nachricht erstellen muss, welche vom Netzwerk an alle (relevanten) Teilnehmer weitergeleitet wird.
 
 ### 3.6.4 Konsistenzprotokolle
 
@@ -236,17 +236,48 @@ Hierbei wird der angefragte Server zunächst anhand der Schreiboperationen im **
 
 ## 3.7 Fehlerrobustheit
 
+Eine kennzeichnende Eigenschaft von verteilten Systemen, die sie von Einzel-Computer-Systemen unterscheidet, ist das Konzept des teilweisen Ausfalls: ein Teil des Systemes kann ausfallen, während die übrigen Teile zumindest scheinbar korrekt weiterarbeiten.
 
+Ein wichtiges Ziel beim Entwurf verteilter Systeme ist es, das System so zu entwerfen, dass es sich automatisch bei teilweisen Ausfällen erholen kann und dies ohne die Gesamtleistung des Systems zu beeinträchtigen. Dies bedeutet insbesondere, dass das System im Fehlerfall in angemessener Weise weiterarbeitet, während es repariert wird. Das verteilte System soll in dem Sinne tolerant gegenüber Fehlern, also robust sein.
 
-### 3.7.1 Process resilience
+Die Robustheit und Zuverlässigkeit eines verteilten Systems ergibt sich aus dem Zusammenspiel verschiedener, nützlicher Anforderungen, die an ein solches System zu stellen sind, nämlich
 
-### 3.7.2 Reliable client-server communication
+* Verfügbarkeit
+* Verlässlichkeit
+* Sicherheit
+* Wartbarkeit.
 
-### 3.7.3 Reliable group communication
+Die **Verfügbarkeit** (engl. availability) eines Systems ist definiert durch die Eigenschaft, sofort verwendbar zu sein. Allgemein ist damit die Wahrscheinlichkeit gemeint, dass ein System zu einem bestimmten Zeitpunkt korrekt arbeitet und für die Nutzer funktioniert.
 
-### 3.7.4 Distributed commit
+Mit der **Verlässlichkeit** (engl. reliability) ist die Eigenschaft eines Systems gemeint, kontinuierlich ohne Ausfälle zu arbeiten. Im Gegensatz zur Verfügbarkeit ist die Verlässlichkeit über einen Zeitraum und nicht für einen Zeitpunkt definiert.
 
-### 3.7.5 Recovery
+Die **Sicherheit** (engl. safety) ist die Eigenschaft eines Systems, auch im Falle eines Fehlers bzw. Ausfalls keine katastrophalen Folgen zu bewirken. Die Wichtigkeit dieser Anforderung wird vor allem im Hinblick auf den Betrieb von Kernkraftwerken oder in der Raumfahrt deutlich.
+
+Schließlich beschreibt die **Wartbarkeit**, wie einfach ein fehlerhaftes System repariert werden kann. Ein sehr wartbares System zeigt häufig auch ein hohes Maß an Verfügbarkeit, wenn Fehler schnell entdeckt und, wenn möglich automatisch, behoben werden können.
+
+Ein System ist **fehlerhaft** bzw. es **versagt**, wenn es die versprochenen Dienste den Nutzern gegenüber nicht (vollständig) erbringen kann. Ein **Fehler** ist ein Zustand (eines Teils) des Systems, welcher zu einem Versagen (eines Teils) des Systems führen kann. Der Grund für einen Fehler ist ein **Mangel** oder eine **Störung**. Die Robustheit eines verteilten Systems spiegelt damit auch die Fähigkeit wieder, gegenüber Störungen kontrolliert zu reagieren.
+
+Im Folgenden werden Techniken betrachtet, mit denen diese Robustheit erreicht werden soll. Hierbei handelt es sich um Prozessgruppen, verlässliche Kommunikation sowie verteilte Commit-Protokolle.
+
+### 3.7.1 Prozessgruppen
+
+Um die Gefahr einzelner, ausfallender Prozesse zu mindern, können mehrere identische Prozesse in Gruppen organisiert werden. Gesendete Nachrichten an die jeweilige Gruppe werden von jedem der Prozesse in der Gruppe empfangen. Sollte ein Prozess dieser Gruppe ausfallen, können die Nachrichten von den übrigen Prozessen verarbeitet werden.
+
+### 3.7.2 Verlässliche Kommunikation
+
+...
+
+### 3.7.3 Verteilte Commit-Protokolle
+
+Ein immer wieder zu lösendes Problem ist der verteilten Commits. Gemeint ist das Problem, dass eine Operation von allen Teilnehmern einer Prozessgruppe ausgeführt wurde oder gar nicht. Bei dieser Operation kann es sich um die zuverlässige Übermittlung der Nachrichten oder um verteilte Operationen handeln.
+
+Verteilte Commits werden häufig durch das Zusammenspiel mit einem sog. Koordinator ermöglicht. Dieser Koordinator teilt den beteiligten Prozessen mit, ob sie eine lokale Operation durchführen sollen. In dieser einfachen Form des **one-phase commit protocol** gibt es den Nachteil, dass der Koordinator nicht darüber informiert wird, wenn einer oder mehrere der beteiligten Prozesse die Operation nicht ausführen kann.
+
+In der Praxis kommen daher komplexere Protokolle zum Einsatz. Eines dieser Protokolle ist das **two-phase commit protocol (2PC)** . Das Protokoll ist in der nachfolgenden Grafik aus [van Steen, 2017] als endlicher Automat dargestellt.
+
+![Two-Phase Commit Protocol](./assets/two_phase_commit.png)
+
+Der Koordinator (a) sendet zunächst ein VOTE-REQUEST an alle Teilnehmer der Gruppe. Wenn ein Prozess (b) ein VOTE-REQUEST empfängt, sendet er entweder ein VOTE-COMMIT zurück, wenn er bereit ist die Operation auszuführen. Anderenfalls sendet er ein VOTE-ABORT an den Koordinator. Der Koordinator sammelt alle Antworten der Teilnehmer. Haben alle Teilnehmer mit VOTE-COMMIT geantwortet, sendet der Koordinator ein GLOBAL-COMMIT an die Teilnehmer. Gibt es jedoch auch nur ein VOTE-ABORT, so sendet der Koordinator ein GLOBAL-ABORT an die Teilnehmer. Die Teilnehmer warten auf die finale Nachricht des Koordinators und reagieren entsprechend der empfangene Nachricht mit dem Ausführen der Operation (GLOBAL-COMMIT) oder mit deren Abbruch (GLOBAL-ABORT).
 
 
 
