@@ -1,4 +1,5 @@
 # Grundlagen
+
 Das Ziel dieses Kapitels ist es nicht die vorgestellten Konzepte vollständig und lehrbuchartig zu beschreiben, sondern vielmehr eine Grundlage für ein gemeinsames Verständnis dieses Beitrags zu schaffen.
 
 ## Das CAP-Theorem
@@ -22,6 +23,7 @@ Befeuert durch die Erkenntnisse des CAP-Theorem entstanden in den letzten Jahren
 - CA-Systeme (Konsistenz und Verfügbarkeit)
 - CP-Systeme (Konsistenz und Ausfalltoleranz)
 - PA-Systeme (Ausfalltoleranz und Verfügbarkeit)
+
 
 Die meisten NoSQL-Datenbanken können als PA-Systeme klassifiziert werden. Beispiele hierfür sind *Amazon Dynamo*, *Riak* oder *Cassandra*. Der Datenbestand wird auf viele Knoten verteilt und repliziert. Die Systeme sind hochverfügbar, da sie den Ausfall einzelner Knoten kompensieren können.
 
