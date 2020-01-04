@@ -556,7 +556,24 @@ Für die Formulierung einer Cypher Anfrage hingegen, benötigt man nicht zwingen
 
 ### 4.1 Performance ##
 
-Im Rahmen dieser Arbeit möchten wir die Untersuchungen zu rekursiven Abfragen zwischen einer MySQL und einer Neo4J Datenbank hinsichtlich der Abfragegeschwindigkeit evaluieren. Im Kapitel 1.4 "SQL JOINS VERSUS GRAPH TRAVERSAL ON A LARGE SCALE" wird ein Datenexperiment vorgestellt, welches SQL Join Queries mit Graph Traversal Queries vergleicht. 
+Im Rahmen dieser Arbeit möchten wir die Untersuchungen zu rekursiven Abfragen zwischen einer MySQL und einer Neo4J Datenbank hinsichtlich der Abfragegeschwindigkeit evaluieren. Im Buch Neo4J in Action im Kapitel 1.4 "SQL JOINS VERSUS GRAPH TRAVERSAL ON A LARGE SCALE" wird ein Datenexperiment vorgestellt, welches SQL Join Queries mit Graph Traversal Queries vergleicht. Das Testdatenset ist
+in diesem Beispiel shr einfach aufgebaut. Es gibt eine Tabelle mit den Daten der Personen und eine Tabelle in welcher die Freundschaftsbeziehung zur jeweiligen Person festgehalten ist. 
+
+![Testdata Neo4J in Action](neo4jinaction-testdataset.png)
+
+In der hier aufgeführten Tabelle sind jeweils freundschiftliche Beziehungen der Tiefe 2 festgehalten. Um nun alle Beziehungen einer Person heraus zubekommen muss folgendes SQL Statement formuliert werden: 
+
+    select count(distinct uf3.*) from t_user_friend uf1
+      inner join t_user_friend uf2 on uf1.user_1 = uf2.user_2
+      inner join t_user_friend uf3 on uf2.user_1 = uf3.user_2
+      where uf1.user_1 = ?
+
+
+Für jedes weiteres freundschaftliches Beziehungslevel erhält die Tabelle eine weitere Spalte und die Abfrage muss um ein weiteres Join erweitert werden. Bei einem 
+Testdatenset von 1000 Personen mit ca. 50 Beziehungen enthält die Beziehungstabelle ca. 50.000 Einträge.  
+
+ 
+
 
     MATCH (b:Beschreibungsdokument)-[r:ENTHAELT *1..2]-(k) RETURN k
     
