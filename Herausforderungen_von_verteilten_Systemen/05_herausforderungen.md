@@ -58,19 +58,39 @@ Während in herkömmlichen verteilten Systemen die Netzwerkkommunikation noch ü
 
 ## 3.4 Namensgebung
 
-TODO: Vllt rauslassen???
+Was in Einzelcomputersystemen noch relativ simpel ist, führt in verteilten Systemen zu Schwierigkeiten: die Lokalisierung und Referenzierung von Entitäten sowie dabei die Namensauflösung. In verteilten Systemen ist das System der Namensgebung meist auch verteilt implementiert und über mehrerer Computer verteilt.
 
-### 3.4.1 Flat naming
+Über einen Namen kann eine Entität referenziert werden. Im Grunde gibt es drei Arten von Namen:
 
-### 3.4.2 Structured naming
+* Adressen
+* Identifier
+* menschenfreundliche/-lesbare Namen
 
-### 3.4.3 Attributed based naming
+Eine **Adresse** ist der Name eines Zugriffspunktes, welcher mit einer Entität verbunden ist. 
+
+Ein **Identifier** ist eineindeutig, hat also eine eins-zu-eins-Beziehung zu einer Entität und wird nie einer anderen Entität zugewiesen.
+
+**Menschenfreundliche Namen** bzw. von Menschen lesbare Namen sind auf die Nutzung durch Menschen ausgerichtet und werden durch Aneinanderreihung von Buchstaben repräsentiert.
+
+Basierend auf diesen drei Arten von Namen können die folgenden Systeme der Namengebung unterschieden werden.
+
+Beim **flat naming** wird hauptsächlich die Auflösung eines Identifiers zu einer Adresse der zugeordneten Entität vorgenommen. Diese Lokalisierung einer Entität kann auf verschiedenen Wegen erfolgen.
+
+1. Broadcasting / Multicasting: der Identifier wird an alle Prozesse bekanntgegeben. Der Prozess, welcher eine Zugriffsmöglichkeit auf die Entität hat, antwortet mit der korrespondieren Adresse.
+2. Weiterleitungen: sobald eine Entität den Ort wechselt, hinterlässt sie eine Weiterleitung, die den neuen Ort enthält. Die Lokaliserung der Entität erfolgt dann über die Traversierung / Nachverfolgung der Weiterleitungen.
+3. Einer Entität kann ein sog. Zuhause zugewiesen sein. Jedes mal, wenn eine Entität den Ort wechselt, teilt sie ihren neuen Ort dem Zuhause mit. Die Lokalisierung erfolgt dann über die Abfrage des aktuellen Ortes beim Zuhause.
+4. Alle Knoten im System können als peer-to-peer-Netzwerk strukturiert sein, wobei die Knoten systematisch den Entitäten anhand der Identifier zugewiesen werden. Über einen entsprechenden Routing-Algorithmus kann eine Anfrage dann an den verantwortlichen Knoten weitergeleitet werden.
+5. Verwendung eines hierarchischen Suchbaumes: die einzelnen, disjunkten Netzwerke des verteilten Systems können in immer abstraktere Domänen gruppiert werden. Jeder Domäne ist Knoten mit einem Verzeichnis zugeordnet, in welchem Verweise auf die Entitäten gespeichert sind. Auf der untersten Ebene sind schließlich die Adressen der Entitäten gespeichert. Nach diesem Muster ist das **Domain-Name-System** aufgebaut.
+
+Bei der **strukturierten Namensgebung** können die Namen in einem Namensraum organisiert sein. Dieser kann durch einen Graphen repräsentiert werden. Hierin stehen die Knoten für eine benannte Entität, während die benannte Kante für den Namen steht, unter welchem die Entität bekannt ist. Ein Knoten mit mehreren ausgehenden Kanten repräsentiert eine Sammlung von Entitäten und wird als Kontextknoten oder Verzeichnis bezeichnet.
+
+Mithilfe solcher Graphen können bequem menschenfreundliche Namen in strukturierter Weise erstellt werden. Eine Entität kann dann über den Pfadnamen referenziert werden. Die Namensauflösung erfolgt über die Traversierung des Graphen.
 
 
 
 ## 3.5 Koordination
 
-Eine weiterer Herausforderung ist die Synchronisation von Prozessen, also dass alle Prozesse zur richtigen Zeit das richtige tun. Erschwert wird dieses Problem dadurch, dass es in verteilten Systemen kein globale Uhr gibt, die für alle beteiligten Computer gilt. Für jedem Computer und die daruaf befindlichen Prozesse gilt daher die jeweilig Systemzeit.
+Eine weitere Herausforderung ist die Synchronisation von Prozessen, also dass alle Prozesse zur richtigen Zeit das richtige tun. Erschwert wird dieses Problem dadurch, dass es in verteilten Systemen kein globale Uhr gibt, die für alle beteiligten Computer gilt. Für jedem Computer und die daruaf befindlichen Prozesse gilt daher die jeweilig Systemzeit.
 
 Um diesem Problem zu begegnen, gibt es verschiedene Wege, die Uhren der Computer zu synchronisieren. Diese Methoden basieren im Kern aber alle auf dem Austausch von Zeiten zwischen den Computern, wobei die Zeit zum Senden und Empfangen dieser Nachrichten entsprechend berücksichtigt wird.
 
