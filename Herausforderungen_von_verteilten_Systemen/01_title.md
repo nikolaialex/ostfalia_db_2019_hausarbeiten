@@ -10,5 +10,6 @@ Abstract
 | Andreas Willems  | 7003102       | Hochschule Emden/Leer   |
 
 ***
-[Inhaltsverzeichnis >>](02_toc.md)
+|[Inhaltsverzeichnis >>](02_toc.md)|
+|----------------------------------|
 ***
