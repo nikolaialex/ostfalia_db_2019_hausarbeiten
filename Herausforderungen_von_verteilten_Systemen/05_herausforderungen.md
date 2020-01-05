@@ -7,6 +7,8 @@
 
 In diesem Kapitel sollen die Herausforderungen erläutert werden, denen man bei Entwicklung und Betrieb verteilter Systeme üblicherweise begegnet.
 
+
+
 ## 3.1 Architektur
 
 In verteilten Systemen werden die beteiligten Komponenten per Definition häufig auf mehreren, unterschiedlichen Knoten ausgeführt. Mit wachsender Anzahl von Komponenten und Knoten steigt die Komplexität dieser Systeme massiv an.
@@ -23,6 +25,8 @@ Während Client-Server-Architekturen meist sehr zentralisiert und hierarchisch s
 
 Es gibt zudem hybride Architekturen, die Elemente der zentraliserten und dezentralisierten Formen kombinieren. So gibt es etwa eine zentrale Stelle, um initiale Anfragen von Clients entgegen zu enhmen. Im weiteren Verlauf wird die Verarbeitung dann von anderen Servern übernommen, welche Teil eines peer-to-peer-Systems sein können.
 
+
+
 ## 3.2 Prozesse
 
 Prozesse sind, wie in Betriebssystemen, auch in verteilten Systemen ein wesentlicher Bestandteil und bilden die Basis für die Kommunikation zwischen verschiedenen Maschinen. Entscheidend ist hierbei die Klärung der Frage, wie die Prozesse organisert sind und ob sie das Konzept von Threads unterstützen.
@@ -36,6 +40,8 @@ Die Organisation von verteilten Anwendungen in Clients und Server hat sich als n
 Die Server sind in verteilten Systemen meist komplexer als die Clientsoftware. Für sind Fragen des Softwaredesigns zu klären betreffend die Anzahl der angebotenen Dienste, der Zustandslosigkeit der Dienste und ähnliches. Insbesondere bei der Anordnung der Dienste in einem Cluster aus Servern ist Achtung geboten, um die Ausprägung des Systems als Cluster vor den Clients zu verbergen. Hierzu verwenden die Cluster meist einen einzelnen Zugangspunkt, von dem aus die Nachrichten mit den Servern im Cluster ausgetauscht werden. Eine Herausforderung ist es, hierfür eine vollständig verteilte Lösung zufinden.
 
 Eine weiterer wichtiger Aspekt in verteilten Systemen ist die Migration von Code zwischen verschiedenen Computern. Dies umfasst zum Beispiel die Möglichkeit, rechenintensive Anwendungen von den Servern hin zu den Clients zu verlagern, um so die Leistung und Flexibilität zu steigern. Insbesondere in Situationen, in denen die Kommunikation zwischen den Computern teuer und / oder langsam ist, bietet sich dieses Vorgehen an. Ein aktuelles Beispiel für dieses Vorgehen sind moderne Webanwendungen geschrieben in JavaScript, die komplexe Anwendungen bei Aufruf der Website an die Clients ausliefern und dort im Browser ausführen.
+
+
 
 ## 3.3 Kommunikation
 
@@ -252,6 +258,8 @@ Die monotonic write-Konsistenz wird analog zu monotonic reads implementiert. Wen
 
 Hierbei wird der angefragte Server zunächst anhand der Schreiboperationen im **read set** aktualisiert. Anschließend wird die Schreiboperation zusammen mit den Operationen aus dem **read set** in das **write set** eingefügt, da die Operationen aus dem **read set** nun ebenfalls relevant für die Schreiboperation sind.
 
+
+
 ## 3.7 Fehlerrobustheit
 
 Eine kennzeichnende Eigenschaft von verteilten Systemen, die sie von Einzel-Computer-Systemen unterscheidet, ist das Konzept des teilweisen Ausfalls: ein Teil des Systemes kann ausfallen, während die übrigen Teile zumindest scheinbar korrekt weiterarbeiten.
@@ -294,18 +302,6 @@ In der Praxis kommen daher komplexere Protokolle zum Einsatz. Eines dieser Proto
 Der Koordinator (a) sendet zunächst ein VOTE-REQUEST an alle Teilnehmer der Gruppe. Wenn ein Prozess (b) ein VOTE-REQUEST empfängt, sendet er entweder ein VOTE-COMMIT zurück, wenn er bereit ist die Operation auszuführen. Anderenfalls sendet er ein VOTE-ABORT an den Koordinator. Der Koordinator sammelt alle Antworten der Teilnehmer. Haben alle Teilnehmer mit VOTE-COMMIT geantwortet, sendet der Koordinator ein GLOBAL-COMMIT an die Teilnehmer. Gibt es jedoch auch nur ein VOTE-ABORT, so sendet der Koordinator ein GLOBAL-ABORT an die Teilnehmer. Die Teilnehmer warten auf die finale Nachricht des Koordinators und reagieren entsprechend der empfangene Nachricht mit dem Ausführen der Operation (GLOBAL-COMMIT) oder mit deren Abbruch (GLOBAL-ABORT).
 
 
-
-## 3.8 Sicherheit
-
-TODO: weglassen???
-
-### 3.8.1 Secure channels
-
-### 3.8.2 Access control
-
-### 3.8.3 Secure naming
-
-### 3.8.4 Security management
 
 ---
 

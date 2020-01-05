@@ -13,8 +13,7 @@
     5. [Koordination](05_herausforderungen.md)
     6. [Konsistenz und Replikation](05_herausforderungen.md)
     7. [Fehlertoleranz](05_herausforderungen.md)
-    8. [Sicherheit](05_herausforderungen.md)
-
+    
 3. [Fallbeispiele](06_fallbeispiele.md)
     1. [Graphen in verteilten Systemen](06_fallbeispiele.md)
     2. [Virtuelle commodity/economy in Verteilten System](06_fallbeispiele.md)
