@@ -70,19 +70,17 @@ TODO: Vllt rauslassen???
 
 ## 3.5 Koordination
 
-### 3.5.1 Clock Synchronization
+Eine weiterer Herausforderung ist die Synchronisation von Prozessen, also dass alle Prozesse zur richtigen Zeit das richtige tun. Erschwert wird dieses Problem dadurch, dass es in verteilten Systemen kein globale Uhr gibt, die für alle beteiligten Computer gilt. Für jedem Computer und die daruaf befindlichen Prozesse gilt daher die jeweilig Systemzeit.
 
-### 3.5.2 Logical Clocks
+Um diesem Problem zu begegnen, gibt es verschiedene Wege, die Uhren der Computer zu synchronisieren. Diese Methoden basieren im Kern aber alle auf dem Austausch von Zeiten zwischen den Computern, wobei die Zeit zum Senden und Empfangen dieser Nachrichten entsprechend berücksichtigt wird.
 
-### 3.5.3 Mutual Exclusion
+In vielen Fällen ist die absolute, global bekannte Zeit jedoch auch nicht notwendig. Wichtiger ist es, dass zusammengehörige Ereignisse in der korrekten Reihenfolge geschehen. Durch das Konzept von logischen Uhren und Vektor-Uhren ist es möglich, dass eine gewisse Menge an beteiligten Prozessen eine globale Übereinkunft hinsichtlich der korrekten Reihenfolge der Ereignisse erreichen kann.
 
-### 3.5.4 Election Algorithms
+Eine wichtige Klasse von Algorithmen zur Synchronisation ist die des verteilten gegenseitigen Ausschlusses (engl. **distributed mutual exclusion**). Diese sorgen über die Grenzen eines Computers hinaus dafür, dass in einer Menge von Prozessen nur einer zu einem bestimmten Zeitpunkt Zugriff auf eine gemeinsame Ressource hat. Eine einfache Implementierung kann hier durch Verwendung von Koordinatoren erreicht werden, welche nachverfolgen, welcher Prozess zur Zeit für den Zugriff berechtigt ist. Demgegenüber gibt es auch vollständig verteilte Algorithmen, welche jedoch komplexer zu implementieren und anfälliger gegenüber Prozess- und Kommunikationsausfällen sind.
 
-### 3.5.5 Location Systems
+Die Synchronisation zwischen Prozessen benötigt häufig einen Koordinator. Sofern dieser nicht fest einer Instanz zugeordnet ist, ist es erforderlich, dass die beteiligten Prozesse in der Lage sind, sich auf einen gemeinsamen Koordinator zu einigen. Hierfür wurden Algorithmen zur Auswahl entwickelt, welche meistens dann zum Einsatz kommen, wenn der Koordinator selber ausfallen kann.
 
-### 3.5.6 Distributed Event Matching
-
-### 3.5.7 Gossip-based Communication
+Eine besondere Herausforderung ist die Koordination hinsichtlich des verteilten Filterns von Benachrichtigungen (auch: **distributed event matching**), welches die Grundlage von Pub-Sub-Systemen ist. Während es noch relativ simpel ist, für alle Subscriptions schlichte eins-zu-eins-Vergleiche vornehmen zu lassen, ist eine Lastverteilung der Nachrichten schon wesentlich schwieriger zu implementieren. Ein Problem ist dabei, dass es schwer ist, von vornherein zu entscheiden, welcher Subscriber nun für welche Teile zuständig sein soll. Solange das System nicht zu groß wird, lassen sich diese Probleme durch den Einsatz von mehreren Brokern und entsprechenden Algorithmen (**flooding**, **routing**) sinnvoll handhaben.
 
 
 
@@ -120,7 +118,7 @@ In der linken Abbildung (a) wird ein sequentiell konsistenter Zustand angezeigt.
 
 Im Gegensatz dazu verdeutlicht die rechte Abbildung (b) einen inkonsistenten Zustand. Prozess 3 und Prozess 4 haben eine unterschiedliche Sicht auf die Daten und gehen von unterschiedlichen Werten aus.
 
-#### Letztendliche Konsistenz
+#### Eventual Consistency
 
 Eine weitere Form der datenzentrierten Konsistenz ist die der **letztendlichen Konsistenz** (engl. eventual consistency) nach [Vogels, 2009]. Hiermit ist gemeint, dass alle Replikate im Data Store letztendlich den zuletzt geänderten Wert zurückgeben, solange dieser nicht verändert wird. Im Kern bedeutet dies, dass eine Änderung eines Objektes garantiert irgendwann an alle Replikate propagiert wird, also dass alle Replikate letztendlich zu einem Zustand konvergieren.
 
@@ -259,15 +257,11 @@ Ein System ist **fehlerhaft** bzw. es **versagt**, wenn es die versprochenen Die
 
 Im Folgenden werden Techniken betrachtet, mit denen diese Robustheit erreicht werden soll. Hierbei handelt es sich um Prozessgruppen, verlässliche Kommunikation sowie verteilte Commit-Protokolle.
 
-### 3.7.1 Prozessgruppen
-
 Um die Gefahr einzelner, ausfallender Prozesse zu mindern, können mehrere identische Prozesse in Gruppen organisiert werden. Gesendete Nachrichten an die jeweilige Gruppe werden von jedem der Prozesse in der Gruppe empfangen. Sollte ein Prozess dieser Gruppe ausfallen, können die Nachrichten von den übrigen Prozessen verarbeitet werden.
 
-### 3.7.2 Verlässliche Kommunikation
+Neben der Behandlung ausfallenender Prozesse ist in verteilten Systemen eine weitere Herausforderung die der fehlerhaften oder versagenden Kommunikation. Je nach Anforderung muss also ein entsprechender Aufwand betrieben werden, um Fehlern in der Kommunikation angemessen zu begegnen und diese soweit möglich zu verstecken.
 
-...
-
-### 3.7.3 Verteilte Commit-Protokolle
+Bei Punkt-zu-Punkt-Verbindungen werden häufig verlässliche Protokolle wie TCP verwendet. Durch TCP ist es möglich, Fehler in Form verlorener Nachrichten durch Bestätigungen und das erneute Senden von Nachrichten zu maskieren. Der kompletten Wegfall einer Verbindung kann durch TCP jedoch nicht kompensiert werden, sodass auf Anwendungsebene entsprechend eine Neuverbindung vorgenommen werden muss.
 
 Ein immer wieder zu lösendes Problem ist der verteilten Commits. Gemeint ist das Problem, dass eine Operation von allen Teilnehmern einer Prozessgruppe ausgeführt wurde oder gar nicht. Bei dieser Operation kann es sich um die zuverlässige Übermittlung der Nachrichten oder um verteilte Operationen handeln.
 
