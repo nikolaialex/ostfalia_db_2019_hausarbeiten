@@ -11,7 +11,7 @@ In diesem Kapitel sollen die Herausforderungen erläutert werden, denen man bei 
 
 In verteilten Systemen werden die beteiligten Komponenten per Definition häufig auf mehreren, unterschiedlichen Knoten ausgeführt. Mit wachsender Anzahl von Komponenten und Knoten steigt die Komplexität dieser Systeme massiv an.
 
-Um diese Komplexität angemessen zu handhaben, wird bei den verteilten Komponenten neben der rein physischen Verteilung die logische Organisation der Komponenten, genannt **Systemarchitektur**, betrachtet. Diese logische Organisation der Komponenten und deren Interaktionen untereinander werden auch als **Softwarearchitekturen** bezeichnet.
+Um diese Komplexität angemessen zu handhaben, wird bei den verteilten Systemen neben der rein physischen Verteilung der Komponenten,  genannt **Systemarchitektur**, auch deren logische Organisation betrachtet. Diese logische Organisation der Komponenten und deren Interaktionen untereinander werden auch als **Softwarearchitekturen** bezeichnet.
 
 Ein wichtiges Ziel bei der Erstellung von Software-Architekturen in verteilten Systemen ist die Trennung der Applikationen von der zugrunde liegenden Plattform. Hierzu wird häufig eine Schicht eingeführt, die als **middleware** bezeichnet wird und welche der Erlangung von Transparenz dient (siehe dazu den Absatz "Ziele" in [Verteilte Systeme](04_verteilte_systeme.md)).
 
