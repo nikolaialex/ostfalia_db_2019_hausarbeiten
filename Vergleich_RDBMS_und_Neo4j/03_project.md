@@ -570,10 +570,20 @@ In der hier aufgeführten Tabelle sind jeweils freundschiftliche Beziehungen der
 
 
 Für jedes weiteres freundschaftliches Beziehungslevel erhält die Tabelle eine weitere Spalte und die Abfrage muss um ein weiteres Join erweitert werden. Bei einem 
-Testdatenset von 1000 Personen mit ca. 50 Beziehungen enthält die Beziehungstabelle ca. 50.000 Einträge.  
+Testdatenset von 1000 Personen mit ca. 50 Beziehungen enthält die Beziehungstabelle ca. 50.000 Einträge. In einem Experiment mit 1000 Benutzerdaten und jeweils 10 SQL Abfragen auf die 
+entsprechenden Freundeanzahl wird aufgezeigt, dass die Performance mit steigender Anzahl an Join-Verbindungen stark abfällt obwohl die Anzahl des Ergebnisses gleich bleibt. 
 
- 
+![Table 1 Performance](neo4jinaction_table1.png) 
 
+Ursache dafür ist nach Ansicht der Autoren, dass für jede Join Abfrage das kartesische Produkt der relevanten Tabelle durchgeführt wird bevor anschließend die relevanten Daten gefiltert werden. 
+In dem oben dargestellt Fall bedeutet dies, das ein 5 maliges Join mit derselben Tabelle mit 50.0000 Einträgen zu einer Tabelle mit 102.4 x 10 ^21 führt.  
+
+Ein Vergleich mit denselben Daten und Abfragen auf Basis einer Neo4J Graphendatenbank zeigt folgendes Ergebnis. 
+
+![Table 2 Performance](neo4jinaction_table2.png)
+
+Ursache für die nahzu gleichbleibende gute Performance ist die Tatsache, dass innerhalb der Graphendatenbank zur Ermittlung des Ergebnisses Knoten abgelaufen werden. Nicht relevante Knoten werden wieder verworfen. So bleibt bei gleicher Ergebnissmenge die Abfragegeschwindigkeit 
+nahzu gleich obwohl mehr Knoten überprüft werden müssen. 
 
     MATCH (b:Beschreibungsdokument)-[r:ENTHAELT *1..2]-(k) RETURN k
     
