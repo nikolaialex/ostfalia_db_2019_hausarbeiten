@@ -589,10 +589,15 @@ Um nun f체r unser praktisches Beispiel vergleichbare Untersuchungen machen zu k�
 
 <img src="./testdaten_performance.svg" width=850>
 
-So kann eine 채hnliche Hierarchische Struktur aufgebaut werden. In nachfolgendem Beispiel sind die jeweiligen Abfragen aufgef체hrt. 
+Diese Datenstruktur ist mit den Testdatenstrukturen aus dem Buch Neo4J vergleichbar. Um hier die Beziehungen der Dokumentenelemente abzufragen m체ssen f체r SQL ebenfalls Joins auf dieselbe Tabelle angewendet werden. In nachfolgendem Beispiel sind die jeweiligen Abfragen aufgef체hrt. 
 
-    MATCH (b:Beschreibungsdokument)-[r:ENTHAELT *1..2]-(k) RETURN count(k)
+
+Cypher
+
+    MATCH (b:Beschreibungsdokument)-[r:ENTHAELT *1..7]-(k) RETURN count(k)
     
+SQL 
+
     WITH RECURSIVE  q as (
     
         SELECT bb.bestandteile_id,e.name FROM beschreibungen
@@ -609,3 +614,4 @@ So kann eine 채hnliche Hierarchische Struktur aufgebaut werden. In nachfolgendem
         join q on q.bestandteile_id = el.dokument_element_id
     
         ) SELECT count(*) from q 
+
