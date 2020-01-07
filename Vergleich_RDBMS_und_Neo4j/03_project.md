@@ -557,7 +557,7 @@ Für die Formulierung einer Cypher Anfrage hingegen, benötigt man nicht zwingen
 ### 4.1 Performance ##
 
 Im Rahmen dieser Arbeit möchten wir die Untersuchungen zu rekursiven Abfragen zwischen einer MySQL und einer Neo4J Datenbank hinsichtlich der Abfragegeschwindigkeit evaluieren. Im Buch Neo4J in Action im Kapitel 1.4 "SQL JOINS VERSUS GRAPH TRAVERSAL ON A LARGE SCALE" wird ein Datenexperiment vorgestellt, welches SQL Join Queries mit Graph Traversal Queries vergleicht. Das Testdatenset ist
-in diesem Beispiel shr einfach aufgebaut. Es gibt eine Tabelle mit den Daten der Personen und eine Tabelle in welcher die Freundschaftsbeziehung zur jeweiligen Person festgehalten ist. 
+in diesem Beispiel sehr einfach aufgebaut. Es gibt eine Tabelle mit den Daten der Personen und eine Tabelle in welcher die Freundschaftsbeziehung zur jeweiligen Person festgehalten ist. 
 
 ![Testdata Neo4J in Action](neo4jinaction-testdataset.png)
 
@@ -583,9 +583,15 @@ Ein Vergleich mit denselben Daten und Abfragen auf Basis einer Neo4J Graphendate
 ![Table 2 Performance](neo4jinaction_table2.png)
 
 Ursache für die nahzu gleichbleibende gute Performance ist die Tatsache, dass innerhalb der Graphendatenbank zur Ermittlung des Ergebnisses Knoten abgelaufen werden. Nicht relevante Knoten werden wieder verworfen. So bleibt bei gleicher Ergebnissmenge die Abfragegeschwindigkeit 
-nahzu gleich obwohl mehr Knoten überprüft werden müssen. 
+nahzu gleich obwohl mehr Knoten überprüft werden müssen.
 
-    MATCH (b:Beschreibungsdokument)-[r:ENTHAELT *1..2]-(k) RETURN k
+Um nun für unser praktisches Beispiel vergleichbare Untersuchungen machen zu können mussten wir Testdaten erzeugen. Dafür haben wir 1000 Beschreibungsdokumente erzeugt, welche wir mit jeweils 10 Dokumentelementen mit jeweils 5 Kindelementen erzeugt haben. Jedes Dokumentenelement ist dabei wiederum ein Kindelement des vorherigen Elementes. Eine Testbeschreibung ist in nachfolgender Grafik dargestellt: 
+
+<img src="./testdaten_performance.svg" width=850>
+
+So kann eine ähnliche Hierarchische Struktur aufgebaut werden. In nachfolgendem Beispiel sind die jeweiligen Abfragen aufgeführt. 
+
+    MATCH (b:Beschreibungsdokument)-[r:ENTHAELT *1..2]-(k) RETURN count(k)
     
     WITH RECURSIVE  q as (
     
@@ -602,4 +608,4 @@ nahzu gleich obwohl mehr Knoten überprüft werden müssen.
         LEFT JOIN beschreibungen ON beschreibungen_bestandteile.beschreibungsdokument_id = beschreibungen.id
         join q on q.bestandteile_id = el.dokument_element_id
     
-        ) SELECT * from q 
+        ) SELECT count(*) from q 
