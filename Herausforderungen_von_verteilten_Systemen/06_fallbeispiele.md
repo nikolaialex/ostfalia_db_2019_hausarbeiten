@@ -6,7 +6,7 @@
 
 ## 4.1 Optimierung der Replikation für Echtzeit Simulationen (mit Hilfe von Aspekten, Graphen, Räumliche-Partitionierungen und weiteren)
 
-Als herausfordernde Fallbeispiele sollen die Replikation und das Persistieren von Echtzeit Simulationen in Computerspiele mit Einsatz diversen Technologien dienen. Hierbei werden virtuelle bewegliche Entitäten mit individuellen Zuständen in mehreren Schachtelungstiefen ineinander und Abhängigkeiten zueinander gespeichert. Zusätzlich werden stationäre nutzergenerierte Strukturen auch direkt in der Welt platziert. Oder auch die Kombination aus beweglichen Entitäten mit relativ zu Ihnen gespeicherten nutzergenerierte Strukturen.
+Als herausfordernde Fallbeispiele sollen die Replikation und das Persistieren von Echtzeit Simulationen in Computerspiele mit Einsatz diversen Technologien dienen. Hierbei werden virtuelle bewegliche Entitäten mit individuellen Zuständen in mehreren Schachtelungstiefen ineinander und mit Abhängigkeiten zueinander gespeichert. Zusätzlich werden stationäre nutzergenerierte Strukturen auch direkt in der Welt platziert. Oder auch die Kombination aus beweglichen Entitäten mit relativ zu Ihnen gespeicherten nutzergenerierte Strukturen.
 
 Entitäten enthalten neben Ihrer räumlichen Lage eine Vielzahl an Zuständen, welche in Aspekte separiert werden können. Die Abhängigkeiten und Schachtelungen dieser Entitäten und Strukturen miteinander wird über Eltern-Kind Relationen als Graph abgebildet. 
 
