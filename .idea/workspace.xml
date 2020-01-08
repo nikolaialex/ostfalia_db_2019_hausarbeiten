@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/testdaten_perfrormance.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" afterDir="false" />
     </list>
@@ -59,8 +58,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="486">
-                <caret line="589" column="33" selection-start-line="589" selection-start-column="33" selection-end-line="589" selection-end-column="33" />
+              <first_editor relative-caret-position="797">
+                <caret line="629" column="87" selection-start-line="629" selection-start-column="87" selection-end-line="629" selection-end-column="87" />
               </first_editor>
               <second_editor />
             </state>
@@ -101,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -245,7 +244,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="15796000" />
+      <workItem from="1576920728886" duration="18630000" />
     </task>
     <task id="LOCAL-00001" summary="Add Table of Content">
       <created>1574515624180</created>
@@ -520,17 +519,38 @@
       <option name="project" value="LOCAL" />
       <updated>1578339877964</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Add Testdata Image">
+      <created>1578423856934</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1578423856934</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Add Testdata Image">
+      <created>1578423916528</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1578423916528</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Add Testdata Image">
+      <created>1578429397912</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1578429397912</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38067000" />
+    <option name="totallyTimeSpent" value="40901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12787926" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12787926" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -578,7 +598,8 @@
     <MESSAGE value="Add fourth Query comparison" />
     <MESSAGE value="Add fith Query comparison" />
     <MESSAGE value="Add Example from Neo4J in Action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Example from Neo4J in Action" />
+    <MESSAGE value="Add Testdata Image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Testdata Image" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Data Science/title.md">
@@ -628,7 +649,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -638,14 +659,14 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/cypher_beschreibung_6.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/testdaten_perfrormance.svg">
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/testdaten_performance.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="486">
-            <caret line="589" column="33" selection-start-line="589" selection-start-column="33" selection-end-line="589" selection-end-column="33" />
+          <first_editor relative-caret-position="797">
+            <caret line="629" column="87" selection-start-line="629" selection-start-column="87" selection-end-line="629" selection-end-column="87" />
           </first_editor>
           <second_editor />
         </state>

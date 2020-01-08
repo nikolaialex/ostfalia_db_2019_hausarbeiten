@@ -615,3 +615,18 @@ SQL
     
         ) SELECT count(*) from q 
 
+
+Alle Abfragen wurden auf einem iMac Intel Core i7 mit 32 GByte RAM durchgeführt. Beide Abfragen nativ ohne ORM bzw. OMG Mapper durchgeführt. Beide DBMS Systeme laufen in der Standardkonfiguration in einem Docker Container.
+
+Nachfolgende Tabelle stellt die Ergebnisse dies Abfragetest dar. 
+
+<table>
+<thead>
+<tr><th>Anzahl Beschreibungen </th><th>Anzahl Dokumentenelemente</th><th>Anzahl Treffer</th><th>RDBMS Zeit</th><th>GraphDB Zeit</th></tr>
+</thead>
+<tbody>
+<tr><td>1000</td><td>41892</td><td>41892</td><td>ca. 160 ms</td><td>ca. 64 ms</td></tr>
+<tr><td>1000</td><td>41892</td><td>41892</td><td>ca. 160 ms</td><td>ca. 64 ms</td></tr>
+<tr><td>1000</td><td>41892</td><td>41892</td><td>ca. 160 ms</td><td>ca. 64 ms</td></tr>
+</tbody>
+</table>
