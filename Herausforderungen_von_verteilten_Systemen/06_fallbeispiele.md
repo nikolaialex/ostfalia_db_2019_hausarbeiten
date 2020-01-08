@@ -37,7 +37,7 @@ Die beiden ersten Techniken waren Stand der Technik bis vor etwa 10 Jahren, sie 
 
 Die Puffer Wiederverwendung machen den Einsatz von Kompressionstechniken sinnvoll, die bei stark Individualisierten Übertragungspuffern nicht effizient wären. Die Kompression des Datenstroms ermöglicht nach Performance und Speicher Profiling Tests auch wieder eine Erhöhung der Client- und Entitäten-Anzahl.
 
-Neben der erhöhten Bandbreiten Nutzung hat die Technik den Nachteil das die Clients Informationen zu viele oder gar alle Informationen empfangen was für Computerspiele bedeutet das Betrugssoftware clientseitig auch auf diese Informationen zugreifen kann.
+Neben der erhöhten Bandbreiten Nutzung hat die Technik den Nachteil das die Clients zu viele oder gar alle Informationen empfangen. Was für Computerspiele bedeutet das Betrugssoftware clientseitig auch auf diese Informationen zugreifen kann.
 
 Die zweite Technik führt Individualisierung der Puffer ein, verzichtet jedoch noch auf aufwendigere Relevanzprüfungen. Es wird davon ausgegangen, dass die meisten Entitäten zueinander immer relevant sind. Diese Technik wird stark bei kurzweiligen rundenbasierten Simulationen mit kleiner Entitäten Anzahl eingesetzt, in diesem Szenario ist die Simulationswelt eingeschränkt teils mit schlauchartigen Designs und zu klein, um eine Optimierung nach räumlichen Kriterien sinnvoll zu machen.
 
