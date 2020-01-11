@@ -33,28 +33,32 @@ Kubernetes führt eine Lastverteilung der laufenden Applikationen auf den zur Ve
 
 Die zweite Variante ist die Verwendung von externen Cloud-Speicher, die wie eine externe Festplatte für verschiedene Anwendungen per _"Plug and Play"_ verwendbar gemacht werden kann. In Kubernetes sind diese Speicherorte unter dem Konzept _Volumes_ bekannt.
 
-- Wie funktioniert wenn Container Volume braucht (Persistent volume claim)
+- Wie funktioniert wenn Container Volume braucht (Persistent volume claim) => nur ein PVC pro Volume, ein PVC aber für viele Container
+- Beispiel von Pod-Deployment bringen, wo Volume Mount im Skript beschrieben wird
 - Was passiert mit dem Volume wenn Container stirbt?
 
 ```
 Mit Kubernetes 1.3 wurde die automatische Speicherplatzzuordnung (Provisioning von Storage) für Container bereitgestellt. Der Storage wird als Persistent Volumes von Kubernetes bereitgestellt. Abhängig von der zugrunde liegenden Plattform, gibt es diese in verschieden Ausführungen. Läuft Kubernetes in der Google Cloud, bietet es die GCEPersistentDisk, bei Amazon den ElasticBlockStore und auf Azure das AzureFile oder die AzureDisk. Nachteilig dabei ist, dass sie die Abstraktion und Orchestrierung durch Kubernetes zunichtemachen und an den jeweiligen Cloudprovider binden. Es existieren Projekte wie bespielsweise “Rook"ein, die ebenfalls ein verteiltes Dateisystem betreiben, dies aber direkt auf dem Kubernetes-Cluster aufsetzen und somit weiteres Management überflüssig machen.
-
 ```
 
-## TODO: Arten Container in einem Kubernetes-Umfeld zu starten
+## Arten Container in einem Kubernetes-Umfeld zu starten
 
 - Text ergänzen!
+- 3 Beispiele (ganz simpel = Pod, komplexer stateless oder simple stateful = Deployment, komplexe und ausfallsicherer stateful = StatefulSets)
+
+### Pods
+
+- Einfaches Pod-Deployment erläutern + Beispiel von oben
 
 ### Deployments
 
-```
-Welche Arten gibt es Container insb. Datenbanken-Container mittels Kubernetes zu betreiben. Wie sieht sowas aus, z.B. anhand Definitions-Skripte? Welche Vor- und Nachteile ergeben sich daraus.
-```
+- Was passiert beim Absturz mit den Container und den Volumes?
+- eigentlich für stateless applicationen gedacht, wenn stirbt dann downtime, duplikate möglich aber keine Replikationsmechanismen oder Koordinierungmechanismen, als ob zwei oder mehrere getrennte Instanzen aufsetzt (im Allgemeinen, es gibt Außnahmen, je nach verwendeter DB-Art wie z.B. MongoDB => Container/Pod sagen, suche im aktuellen Netzt nach weiteren MongoDB und steuere darüber eine Replikation und Prinzip aus Skript => nachschauen wie das heißt)
 
 Via Deployments können Applikationen gestartet werden. Spezifizieren kann man die Art der Applikation, also das Docker Image und deren Anzahl per Replica Set. Das ist ein Controller, der stetig dafür sorgt, dass immer die spezifizierte Anzahl an Pods mit den Applikationen läuft.
 
-> You describe a desired state in a Deployment, and the Deployment Controller
-> changes the actual state to the desired state at a controlled rate. [4]
+> _"You describe a desired state in a Deployment, and the Deployment Controller
+> changes the actual state to the desired state at a controlled rate."_ [4]
 
 Deployments werden in Skripten spezifiziert, ein Beispiel dafür ist.
 
@@ -87,7 +91,28 @@ spec:
 
 Seit der Version 1.9 von Kubernetes sind die StatefulSets in einer stabilen Form verfügbar. Sie ermöglichen in einem Kubernetes-Cluster die Bereitstellung von stateful-Anwendungen, welche die Nutzung von Datenbanken ermöglichen. Im Gegensatz zu Webanwendungen besitzen Transaktionsdatenbanken und deren Daten verschiedene Zustände. Diese Zustände müssen bei der Verwendung in Kubernetes bei allen Aktionen im Cluster berücksichtigt werden [3]. Als Cluster bezeichnet man alle Dienste, Container und Server.
 
+- Text ergänzen!
+- für Stateful Applicationen gedacht
+- Unterschiede in der Bennennung und Handhabung der Container
+- Beispiel 1: Operator bei MongoDB
+- Beispiel 2: Cassandra oder ähnliches
+
 ### Vergleich
+
+- Text ergänzen!
+- Tabelle mit Kombinationsmatrix mit Bewertungskriterien (CAP-Theorem)
+
+Kominationsmatrix - CAP-Theorem
+Laut dem CAP-Theorem kann ein verteiltes System zwei der folgenden Eigenschaften gleichzeitig erfüllen, jedoch nicht alle drei.[3]
+
+**Konsistenz (C consistency)**
+Die Konsistenz der gespeicherten Daten. In verteilten Systemen mit replizierten Daten muss sichergestellt sein, dass nach Abschluss einer Transaktion auch alle Replikate des manipulierten Datensatzes aktualisiert werden. Diese Konsistenz sollte nicht verwechselt werden mit der Konsistenz aus der ACID-Transaktionen, die nur die innere Konsistenz eines Datenbestandes betrifft.
+
+**Verfügbarkeit (A availability)**
+Die Verfügbarkeit im Sinne akzeptabler Antwortzeiten. Alle Anfragen an das System werden stets beantwortet.
+
+**Partitionstoleranz (P partition tolerance)**
+Die Ausfalltoleranz der Rechner-/Servernetze. Das System arbeitet auch weiter, wenn es partitioniert wird, d. h., wenn Knoten nicht mehr miteinander kommunizieren können (z. B., um die Daten untereinander konsistent zu halten). Dies kann durch den Verlust von Nachrichten, den Ausfall einzelner Netzknoten oder den Abbruch von Verbindungen im Netz (der Partition des Netzes) auftreten.
 
 | #   | Literatur                                                                                                                                                                                                                                                |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

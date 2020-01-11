@@ -86,6 +86,9 @@ Die Einsatzmöglichkeiten wie in dem Beispiel nicht nur auf das Ausführen von A
 
 Der Vergleich Container vs. virtueller Maschinen ist nicht ganz einfach zu gestalten. Beide Technologien überschneiden sich nur in kleinen Teilen und die eine ist sogar von der anderen abhängig. Unabhängig davon soll in der nachfolgenden Tabelle ein kleiner Vergleich gewagt werden.
 
+- Worin vergleicht man hier die beiden Technologien?
+- Sinnvoll wäre nur ein Vergleich hinsichtlich dem Betrieb einer Applikation, also was braucht man für den Betrieb einer identischen Applikation beim Einsatz von VM und beim Einsatz von Docker? Wie skaliert man?
+
 | Bereich           | VM                                                   | Container                                                                             |
 | ----------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | Persistenz        | voll gegeben                                         | nicht vorhanden, nach einem Neustart sind die Daten, die nicht zum Image gehören, weg |
@@ -93,7 +96,7 @@ Der Vergleich Container vs. virtueller Maschinen ist nicht ganz einfach zu gesta
 | Sicherheit        | Hypervisor haben in der Regel weniger Angriffsfläche | Ist der Kernel des Hosts kompromittiert, sind auch alle Container betroffen           |
 | Voraussetzung     | Hypervisor muss auf dem Host installiert sein        | Betriebsystem mit entsprechender Container-Software muss installiert sein             |
 
-Anhand der Tabelle und der Abbildung kann man sehr gut erkennen, dass die Container-Technologie ohne die virtuellen Maschinen zum aktuellen Stand nicht hochverfügbar und somit für viele Einsatzgebiete nicht zu gebrauchen ist. Will man jedoch entscheiden, auf welchem System die Applikation aufgesetzt werden soll, so muss man von Fall zu Fall entscheiden. Müssen Daten dauerhaft gespeichert und verändert werden können, so ist momentan die VM den Containern an sich (!) einiges voraus. [7] Bettet man die Technologie der Containerisierung in einen größeren übergrordneten Kontext ein, z.B. einem Orchestrator wie Kubernetes, können Schwächen von Container an sich ausgeglichen werden.
+Anhand der Tabelle und der Abbildung kann man sehr gut erkennen, dass die Container-Technologie ohne die virtuellen Maschinen zum aktuellen Stand nicht hochverfügbar und somit für viele Einsatzgebiete nicht zu gebrauchen ist. Will man jedoch entscheiden, auf welchem System die Applikation aufgesetzt werden soll, so muss man von Fall zu Fall entscheiden. Müssen Daten dauerhaft gespeichert und verändert werden können, so ist momentan die VM den Containern an sich , d.h. z.B. bei reiner Verwendung von Docker (!), einiges voraus. [7] Bettet man die Technologie der Containerisierung in einen größeren übergrordneten Kontext ein, z.B. einem Orchestrator wie Kubernetes, können Schwächen von Container an sich ausgeglichen werden und mehr Flexibilität und Skalierbarkeit gegenüber von VM als Medium zum Ausführen von Applikationen erreicht werden. Orchestartor wie Kubernetes erweitern die Containertechnologie und können außerdem hohe Anforderungen an Hochverfügbarkeit und eine Persistenz der Daten gewährleisten.
 
 ![Vergleich VM <-> Container](https://jaxenter.de/wp-content/uploads/2017/03/wurbs_container_1-768x453.jpg)
 
@@ -112,3 +115,7 @@ Anhand der Tabelle und der Abbildung kann man sehr gut erkennen, dass die Contai
 [<< Thema und Motviation](1_intro.md) | [Inhaltsverzeichnis](0_title.md) | [K8s >>](3_k8s.md)
 
 ---
+
+# TODO
+
+- Literaturtabelle vervollständigen mit Titel und Aufruf der Webseite
