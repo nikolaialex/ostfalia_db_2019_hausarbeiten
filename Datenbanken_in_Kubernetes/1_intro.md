@@ -15,15 +15,7 @@ Kubernetes ist ein Container-Management-System welches zur Verwaltung von contai
 
 Mittlerweile haben Softwareanbieter ihre Entwicklungsarbeiten an eigenen Cloud-Plattformen zugunsten von Kubernetes aufgegeben. Beispielsweise hat der Linux-Anbieter SUSE zugunsten von Kubernetes die Entwicklung seiner OpenStack Cloud eingestellt. Neben Suse haben aber auch Cloud Provider wie beispielsweise AWS oder Microsoft Azure ihre Unterstützung für Kubernetes erweitert. Banken und Versicherungen gehören laut Umfragen dabei zu der größten Nutzergruppe von Kubernetes [4].
 
-Alternativen zu Kubernetes sind beispielsweise Docker Swarm, Apache Mesos und Azure Container Service. Auf diese wird aber nicht weiter eingegangen in dieser Ausarbeitung.
-
----
-
-[Inhaltsverzeichnis](inhaltsverzeichnis.md) | [Docker >>](2_docker.md)
-
----
-
-## Literaturverzeichnis
+Alternativen zu Kubernetes sind beispielsweise Docker Swarm, Apache Mesos und Azure Container Service. Auf diese wird in dieser Ausarbeitung aber nicht weiter eingegangen.
 
 | #   | Literatur                                                                                                                                                                                                                  |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -32,3 +24,9 @@ Alternativen zu Kubernetes sind beispielsweise Docker Swarm, Apache Mesos und Az
 | [3] | Was ist Kubernetes?, https://kubernetes.io/de/docs/concepts/overview/, aufgerufen 05.12.2019                                                                                                                               |
 | [4] | Harald Weiß, Wie Kubernetes die Anwendungsentwicklung revolutioniert, 10.11.2019, https://www.computerweekly.com/de/feature/Wie-Kubernetes-die-Anwendungsentwicklung-revolutioniert?vgnextfmt=print, aufgerufen 15.11.2019 |
 | [5] | David Ramel, Research Firm's Hype Cycle Report: 'SDN Has Become Obsolete, 14.10.2019, https://virtualizationreview.com/articles/2019/10/14/enterprise-networking-report.aspx, aufgerufen 01.11.2019                        |
+
+---
+
+[Inhaltsverzeichnis](0_title.md) | [Docker >>](2_docker.md)
+
+---
