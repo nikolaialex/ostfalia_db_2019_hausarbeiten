@@ -694,3 +694,13 @@ Dieser Wert bestimmt die Datenmenge, welche Neo4J nicht von der Platte laden mus
 
 <img src="./neo4j_performance_tuning_1.png" width=250>  
 
+Optimierung Postgres Datenbank
+
+Anpassung der Speicherwerte für die Postgresdatenbank. 
+
+shared_buffers = 4096MB
+
+Dieser Wert bestimmt den Cache welcher im Arbeitsspeicher des Systems für die Postgres Datenbank verwendet wird. Der Standardwertvon 128KByte ist sehr gering. Der Wert ist vergleichbar mit dem Wert der Grahpendatenbank
+dbms.memory.pagecache.size. 
+
+
