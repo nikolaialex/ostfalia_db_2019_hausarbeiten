@@ -642,8 +642,10 @@ Für beide Datenbanksysteme gibt es Möglichkeiten die Performance des Systems z
   * Einstellungen für das DBMS für Speicherbedarf, Verbindungsmanagement und Handling setzen. 
   * Einstellungen des ORM / OGM setzen. 
 
-Beim Performancetuning eines Datenbankmanagementsystem muss man sehr dediziert und analytisch vorgehen. Im ersten Schritt ist zu prüfen welche Aktionen zu viel Zeit benötigen. Im Falle von Abfragen sollte die Ausfhrung auf dem DBMS analysiert werden. 
-In der Regel stellen die Entwickler der entsprechenden Systeme dazu Werkzeuge zur Verfügung. Um zum Beispiel die Abfrageperfroamnce im Allgemeinen zu erhöhen können bestimmte Werte einer Tabelle oder eines Graphens indiziert werden. 
+Beim Performancetuning eines Datenbankmanagementsystem muss man sehr dediziert und analytisch vorgehen. Im ersten Schritt ist zu prüfen welche Aktionen zu viel Zeit benötigen. Im Falle von Abfragen sollte die Ausführung auf dem DBMS analysiert werden. 
+In der Regel stellen die Entwickler der entsprechenden Systeme dazu Werkzeuge zur Verfügung. Um zum Beispiel die Abfragegeschwindigkeit im Allgemeinen zu erhöhen können bestimmte Werte einer Tabelle oder eines Graphens indiziert werden. 
+
+#### 4.1.1 Indizes erstellen ####
 
 Um einen Index auf einer relationalen Datenbank anzulegen geht man bezogen auf unser Projekt wie folgt vor: 
 
@@ -669,4 +671,26 @@ Um einen Index für unsere Graphendatenbank anzulegen ist folgendes notwendig:
 
 Für beide Systeme muss festgelegt werden, welche Elemente mit einem zusätzlich Index ausgestattet werden. Dies verbessert die Lesegeschwindigkeit verringert allerdings die Schreibgeschwindigkeit. Wie im vorherigen Abschnitt bereits erwähnt war die Schreibgeschwindigkeit 
 der Postgres Datenbank signifikant schlechter als die der Neo4J Datenbank. 
+
+#### 4.1.1 DBMS Konfiguration anpassen ####
+
+Beide Systeme lassen sich über Konfigurationsdateien im Dateisystem anpassen. Für die Graphendatenbank heisst die Datei neo4j.conf und die Postgresdatenbank postgresql.conf. 
+
+Optimierungen für die Graphendatenbank
+
+Da die Neo4J Datenbank auf Java basiert können über die folgenden beiden Werte der Java Virtual Machine mehr Arbeitsspeicher zur Verfügung gestellt werden. 
+
+      dbms.memory.heap.initial_size=2g
+      dbms.memory.heap.max_size=2g
+      
+So steht der Grahpendatenbank 2 GByte schneller Arbeitsspeicher zur Verfügung um die Anfrage- und Schreiboperationen durchzuführen. Allerdings muss bei der Einstellung der Werte 
+darauf geachtet werden, wieviel Arbeitsspeicher das physikalische System zur Verfügung stellt. Wird der Wert zu groß gewählt kommt es zum Absturz der Datenbank, da mehr Speicher versucht wird zu allokieren, als dem System zur Verfügung steht. 
+
+Ein weiterer wichtiger Wert ist: 
+
+    dbms.memory.pagecache.size=1g
+
+Dieser Wert bestimmt die Datenmenge, welche Neo4J nicht von der Platte laden muss,sondern aus dem Arbeitsspeicher laden kann. Die nachfolgende Abbildung verdeutlicht den Sachverhalt. 
+
+<img src="./neo4j_performance_tuning_1.png" width=250>  
 
