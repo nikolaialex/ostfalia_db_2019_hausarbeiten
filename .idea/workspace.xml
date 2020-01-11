@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
+    <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="Several Enhanecments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" afterDir="false" />
     </list>
@@ -57,9 +57,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-433">
-                <caret line="645" column="166" selection-start-line="645" selection-start-column="166" selection-end-line="645" selection-end-column="166" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="684">
+                <caret line="630" column="41" selection-start-line="630" selection-start-column="41" selection-end-line="630" selection-end-column="41" />
               </first_editor>
               <second_editor />
             </state>
@@ -253,21 +253,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="33553000" />
-    </task>
-    <task id="LOCAL-00008" summary="Add more Information to Domain Model">
-      <created>1575801743319</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1575801743319</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Add more Information to Domain Model">
-      <created>1575802934651</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1575802934651</updated>
+      <workItem from="1576920728886" duration="35258000" />
     </task>
     <task id="LOCAL-00010" summary="Adjust Headlines">
       <created>1575803306230</created>
@@ -598,17 +584,31 @@
       <option name="project" value="LOCAL" />
       <updated>1578771738424</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Several Enhanecments">
+      <created>1578773584375</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1578773584375</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Several Enhanecments">
+      <created>1578775843135</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1578775843135</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55824000" />
+    <option name="totallyTimeSpent" value="57529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10802224" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10802224" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -623,7 +623,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.27226278" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.27226278" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.33430657" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -660,7 +660,8 @@
     <MESSAGE value="Add Test Results" />
     <MESSAGE value="Add Vicents Result" />
     <MESSAGE value="Add Performance Tuning" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Performance Tuning" />
+    <MESSAGE value="Several Enhanecments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Several Enhanecments" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Data Science/title.md">
@@ -725,9 +726,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-433">
-            <caret line="645" column="166" selection-start-line="645" selection-start-column="166" selection-end-line="645" selection-end-column="166" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="684">
+            <caret line="630" column="41" selection-start-line="630" selection-start-column="41" selection-end-line="630" selection-end-column="41" />
           </first_editor>
           <second_editor />
         </state>
