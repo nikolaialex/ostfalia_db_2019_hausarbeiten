@@ -672,9 +672,9 @@ Um einen Index für unsere Graphendatenbank anzulegen ist folgendes notwendig:
 Für beide Systeme muss festgelegt werden, welche Elemente mit einem zusätzlich Index ausgestattet werden. Dies verbessert die Lesegeschwindigkeit verringert allerdings die Schreibgeschwindigkeit. Wie im vorherigen Abschnitt bereits erwähnt war die Schreibgeschwindigkeit 
 der Postgres Datenbank signifikant schlechter als die der Neo4J Datenbank. 
 
-#### 4.1.1 DBMS Konfiguration anpassen ####
+#### 4.1.2 DBMS Konfiguration anpassen ####
 
-Beide Systeme lassen sich über Konfigurationsdateien im Dateisystem anpassen. Für die Graphendatenbank heisst die Datei neo4j.conf und die Postgresdatenbank postgresql.conf. 
+Beide Systeme lassen sich über Konfigurationsdateien im Dateisystem anpassen. Für die Graphendatenbank heisst die Datei **neo4j.conf** und die Postgresdatenbank **postgresql.conf**. 
 
 **Optimierungen Neo4J Graphendatenbank**
 
@@ -703,4 +703,18 @@ Anpassung der Speicherwerte für die Postgresdatenbank.
 Dieser Wert bestimmt den Cache welcher im Arbeitsspeicher des Systems für die Postgres Datenbank verwendet wird. Der Standardwertvon 128KByte ist sehr gering. Der Wert ist vergleichbar mit dem Wert der Grahpendatenbank
 dbms.memory.pagecache.size. 
 
+Nachfolgende Werte stellen dem System mehr Arbeitsspeicher für Sortierung von Ergebnisse und Wartungsaufgaben wie Index anlegen, Tabellen ändern, Schlüsselbeziehungen anlegen. 
 
+    work_mem = 4000MB 
+    maintenance_work_mem = 6400MB
+
+
+#### 4.1.3 Objektmapper Konfiguration anpassen ####
+
+Für die OMG Bibliothek gibt es hierbei kaum Werte die eingestellt werden können. Für den OR Mapper haben wir folgende Werte gesetzt: 
+
+    spring.jpa.properties.hibernate.jdbc.batch_size=50
+    spring.jpa.properties.hibernate.order_inserts=true
+    spring.jpa.properties.hibernate.order_updates=true
+    
+Mit Hilfe dieser Einstellungen können Massendaten schneller in das RDBMS geladen werden, da diese im Batch Modus verarbeitet werden. 

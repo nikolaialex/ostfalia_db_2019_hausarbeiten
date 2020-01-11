@@ -58,8 +58,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="831">
-                <caret line="705" selection-start-line="705" selection-end-line="705" />
+              <first_editor relative-caret-position="814">
+                <caret line="719" column="133" selection-start-line="719" selection-start-column="133" selection-end-line="719" selection-end-column="133" />
               </first_editor>
               <second_editor />
             </state>
@@ -253,21 +253,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="28578000" />
-    </task>
-    <task id="LOCAL-00004" summary="Add more information for ORM Mapping">
-      <created>1575730917401</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1575730917401</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Add more information for ORM Mapping">
-      <created>1575731444561</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1575731444561</updated>
+      <workItem from="1576920728886" duration="31486000" />
     </task>
     <task id="LOCAL-00006" summary="Add more Information to Domain Model">
       <created>1575733291748</created>
@@ -598,11 +584,25 @@
       <option name="project" value="LOCAL" />
       <updated>1578755698141</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Add Performance Tuning">
+      <created>1578756024730</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1578756024730</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Add Performance Tuning">
+      <created>1578760740657</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1578760740657</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50849000" />
+    <option name="totallyTimeSpent" value="53757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -726,8 +726,8 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="831">
-            <caret line="705" selection-start-line="705" selection-end-line="705" />
+          <first_editor relative-caret-position="814">
+            <caret line="719" column="133" selection-start-line="719" selection-start-column="133" selection-end-line="719" selection-end-column="133" />
           </first_editor>
           <second_editor />
         </state>
