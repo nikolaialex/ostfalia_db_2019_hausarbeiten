@@ -632,7 +632,10 @@ Nachfolgende Tabelle stellt die Ergebnisse dies Abfragetest dar.
 </tbody>
 </table>
 
-### 4.1 Performance Tuning ##
+Bei unserem Test ist aufgefallen, dass die Schreibgeschwindigkeit zwischen dem RDBMS Postgres und Neo4J stark unterschiedlich war. Für ein Testdatenset von 50 Beschreibungsdokumenten benötigte die
+Graphendatenbnk ca. 500 Millisekunden und das RDBMS Postgres 20 Sekunden. Die Ursache für die 4fach langsamere Schreibgeschwindigkeit konnten wir im Rahmen dieses Projektes nicht evaluieren. 
+
+### 4.1 Performance Optimierungsmaßnahmen ##
 
 Für beide Datenbanksysteme gibt es Möglichkeiten die Performance des Systems zu beeinflussen. Folgende Möglichkeiten können dabei genutzt werden: 
 
