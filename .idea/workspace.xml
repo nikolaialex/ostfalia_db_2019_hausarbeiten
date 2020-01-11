@@ -58,8 +58,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="780">
-                <caret line="667" column="196" selection-start-line="667" selection-start-column="196" selection-end-line="667" selection-end-column="196" />
+              <first_editor relative-caret-position="808">
+                <caret line="672" selection-start-line="672" selection-end-line="672" />
               </first_editor>
               <second_editor />
             </state>
@@ -106,6 +106,15 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>OMG</find>
+      <find>OGM</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>OGM</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -244,7 +253,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="25094000" />
+      <workItem from="1576920728886" duration="26319000" />
     </task>
     <task id="LOCAL-00001" summary="Add Table of Content">
       <created>1574515624180</created>
@@ -568,11 +577,25 @@
       <option name="project" value="LOCAL" />
       <updated>1578599885547</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Add Performance Tuning">
+      <created>1578750884974</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1578750884974</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Add Performance Tuning">
+      <created>1578753147900</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1578753147900</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47365000" />
+    <option name="totallyTimeSpent" value="48590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -629,7 +652,8 @@
     <MESSAGE value="Add Testdata Image" />
     <MESSAGE value="Add Test Results" />
     <MESSAGE value="Add Vicents Result" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Vicents Result" />
+    <MESSAGE value="Add Performance Tuning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Performance Tuning" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Data Science/title.md">
@@ -695,8 +719,8 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="780">
-            <caret line="667" column="196" selection-start-line="667" selection-start-column="196" selection-end-line="667" selection-end-column="196" />
+          <first_editor relative-caret-position="808">
+            <caret line="672" selection-start-line="672" selection-end-line="672" />
           </first_editor>
           <second_editor />
         </state>

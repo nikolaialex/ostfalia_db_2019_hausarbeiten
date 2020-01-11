@@ -10,7 +10,7 @@ Um in kurzer Zeit eine lauffähige Serverumgebung zu bekommen wurde [Spring Boot
 kommt [Gradle](https://gradle.org/) zum Einsatz. Der gesamte Quellcode wird mit Hilfe des Versionierungssystem [Git](https://git-scm.com/) auf der Github Platform verwaltet.  
 
 Um die relevanten Datenbanksystem zur Verfügung zu stellen haben wir uns entschieden [Docker](https://www.docker.com/) als Container Technologie zu verwenden. So konnten wir sehr leicht eine relationale Postgres Datenbank
-und eine NEO4J Graphendatenbank anbinden. Um die Daten in diesen System zu persistieren wurden die ORM Bibliotheken [Spring NEO4J](https://spring.io/guides/gs/accessing-data-neo4j/) und [Spring Data](https://spring.io/projects/spring-data) verwendet. 
+und eine Neo4J Graphendatenbank anbinden. Um die Daten in diesen System zu persistieren wurden die Objekt Graph Mapper (OGM) Bibliothek [Spring NEO4J](https://spring.io/guides/gs/accessing-data-neo4j/) und Objekt Relational Mapper (ORM) Bibliothek [Spring Data](https://spring.io/projects/spring-data) verwendet. 
 
 ## 3.3 Domainmodell 
 
@@ -92,7 +92,7 @@ Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der 
       private Set<DokumentElement> bestandteile;
       
 
-**Annotation für GRAPH Datenbank** 
+**OGM Annotation für GRAPH Datenbank** 
 
 Ein Neo4J Knoten wird durch die Annotation **@NodeEntity** gekennzeichnet. Zusätzlich benötigt ein Knoten eine eindeutige Identifikationsnummer. Eine Beziehung zu anderen Knoten wird 
 mit Hilfe der Annotation **@Relationship** gekennzeichnet. Mit Hilfe dieser Annotationen kann ein Objekt Graph Mapper, wie er im Spring Data Neo4J verwendet wird dieses Objekt in einer Graphendatenbank persistieren. 
@@ -162,14 +162,13 @@ im RDBMS abzulegen sind:
   
 Für die Graphendatenbank werden hier keine Steuerungsangaben benötigt. Jeder Knoten ist lediglich von dem konkreten Typ und der abstrakte Typ Beteiligte findet keine Verwendung. 
 
-**Annotationen für RDBMS** 
+**ORM Annotationen für RDBMS** 
 
 Ein Objekt welches in eine relationale Datenbank persistiert werden soll, muss mit der Annotation **@Entity** gekennzeichnet werden. Genau wie bei Neo4J muss dieses Objekt ein Attribute mit der **@Id** Annotation als primäry Key kennzeichnen. 
 Für Beziehungen zu anderen Objekten stehen folgende Annotationen zur Verfügung: **@OneToOne**, **@OneToMany**, **@ManyToOne**, **@ManyToMany**. Für diese Annotationen müssen noch Werte für das Verhalten beim Laden angegeben werden. Zusätzlich können Daten zusammenhänged 
 gespeichert, gelöscht oder geladen werden was die Arbeit mit Objekten des ORM in der Praxis oft komplex werden lässt. 
 
-Bei der Konfiguration der Objekt Mapper scheint das relationale Datenbankmanagementsystem mehr Steuerung zu benötigen als die Graphendatenbank.
-
+Bei der Konfiguration des Objekt Mappers benötigt das relationale Datenbankmanagementsystem mehr Steuerung als die Graphendatenbank.
 
 
 ### 3.4.2 CREAD, READ, UPDATE and DELETE (CRUD) für RDBMS und Graphdatenbank
@@ -177,13 +176,13 @@ Bei der Konfiguration der Objekt Mapper scheint das relationale Datenbankmanagem
 Mit Spring Data bekommt der Entwickler eine der einfachsten Möglichkeiten für die Umsetzung der CRUD Operation an die Hand die es meiner Meinung nach gibt. Für jede Entität die durch Spring Data verwaltet werden soll muss lediglich 
 ein CRUDRepository erweitert werden. 
 
-**Beispiel NEO4J**
+**Beispiel Neo4J**
 
     public interface BeschreibungsdokumentGraphRepository extends Neo4jRepository<Beschreibungsdokument,String> {
     
     }
 
-**Beispiel RDBMS**
+**Beispiel Postgres**
   
     public interface BeschreibungsdokumenteRDBMSRepository extends CrudRepository<Beschreibungsdokument,String> {
     
@@ -313,7 +312,7 @@ einer Graphendatenbank sehr leicht beliebige Ergebnisobjekte zu erschaffen. So k
 
 ### 3.4.3 Schema Management für RDBMS und Graphdatenbank
 
-Beide OR Mapper können das Schema automatisch verwalten. Dies bedeutet, dass sowohl die Tabellen als auch die Knoten und Beziehungen automatische angelegt werden. Allerdings benötigt der RDBMS OR Mapper 
+Beide Ojektmapper können das Schema automatisch verwalten. Dies bedeutet, dass sowohl die Tabellen als auch die Knoten und Beziehungen automatische angelegt werden. Allerdings benötigt der RDBMS OR Mapper 
 eine Einstellung zur Steuerung ob das Schema der Datenbank automatisch oder manuell angelegt werden soll. 
 
     spring.jpa.hibernate.ddl-auto=update
@@ -616,7 +615,7 @@ SQL
         ) SELECT count(*) from q 
 
 
-Alle Abfragen wurden auf einem iMac Intel Core i7 mit 32 GByte RAM durchgeführt. Beide Abfragen nativ ohne ORM bzw. OMG Mapper durchgeführt. Beide DBMS Systeme laufen in der Standardkonfiguration in einem Docker Container.
+Alle Abfragen wurden auf einem iMac Intel Core i7 mit 32 GByte RAM durchgeführt. Beide Abfragen nativ ohne ORM bzw. OGM Mapper durchgeführt. Beide DBMS Systeme laufen in der Standardkonfiguration in einem Docker Container.
 
 Nachfolgende Tabelle stellt die Ergebnisse dies Abfragetest dar. 
 
@@ -641,7 +640,7 @@ Für beide Datenbanksysteme gibt es Möglichkeiten die Performance des Systems z
 
   * Erstellen von Indizes. 
   * Einstellungen für das DBMS für Speicherbedarf, Verbindungsmanagement und Handling setzen. 
-  * Einstellungen des ORM / OMG setzen. 
+  * Einstellungen des ORM / OGM setzen. 
 
 Beim Performancetuning eines Datenbankmanagementsystem muss man sehr dediziert und analytisch vorgehen. Im ersten Schritt ist zu prüfen welche Aktionen zu viel Zeit benötigen. Im Falle von Abfragen sollte die Ausfhrung auf dem DBMS analysiert werden. 
 In der Regel stellen die Entwickler der entsprechenden Systeme dazu Werkzeuge zur Verfügung. Um zum Beispiel die Abfrageperfroamnce im Allgemeinen zu erhöhen können bestimmte Werte einer Tabelle oder eines Graphens indiziert werden. 
@@ -661,11 +660,13 @@ Um einen Index für unsere Graphendatenbank anzulegen ist folgendes notwendig:
        @org.neo4j.ogm.annotation.Index;
        private String id;
   
-  2.) Konfiguration des OMG anpassen: 
+  2.) Konfiguration des OGM anpassen: 
   
       spring.data.neo4j.auto-index=assert
       
   3.) Alle Werte neu in die Datenbank schreiben. 
   
 
-Für beide Systeme muss festgelegt werden, welche Elemente mit einem zusätzlich Index ausgestattet werden. Dies verbessert die Lesegeschwindigkeit verringert allerdings die Schreibgeschwindigkeit. 
+Für beide Systeme muss festgelegt werden, welche Elemente mit einem zusätzlich Index ausgestattet werden. Dies verbessert die Lesegeschwindigkeit verringert allerdings die Schreibgeschwindigkeit. Wie im vorherigen Abschnitt bereits erwähnt war die Schreibgeschwindigkeit 
+der Postgres Datenbank signifikant schlechter als die der Neo4J Datenbank. 
+
