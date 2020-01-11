@@ -632,6 +632,10 @@ Nachfolgende Tabelle stellt die Ergebnisse unseres Abfragetests dar.
 </tbody>
 </table>
 
+Die Tabelle zeigt, dass wir die Ergebnisse aus dem Buch "Neo4J in Action" nicht reproduzieren können. Dies kann verschiedenste Ursachen haben. Der größte Unterschied zu dem Test von Aleksa Vukotic und Nicki Watt sind sicherlich die unterschiedlichen Abfragen.
+Für die Graphendatenbank haben wir Cypher verwendet und das SQL Statement ist eine rekursive Abfrage. Die rekursive Abfrage enthält zwar Joins allerdings könnte das wiederholen der zweiten Abfrage nicht zu einem kartesischen Produkt aller Daten führen. Ein weiterer Unterschied ist, dass 
+wir als RDBMS Postgres und nicht MySQL verwendet haben. Ein Reproduzieren dass Ergenis war uns hier allerdings nicht unser primäres Ziel. Vielmehr wollten wir untersuchen, wie die beiden Systeme tief verschachtelte Datenstrukturen mit vielen Beziehungen zueinander behandeln. 
+
 Bei unserem Test ist aufgefallen, dass die Schreibgeschwindigkeit zwischen dem RDBMS Postgres und Neo4J stark unterschiedlich war. Für ein Testdatenset von 50 Beschreibungsdokumenten benötigte die
 Graphendatenbnk ca. 500 Millisekunden und das RDBMS Postgres 20 Sekunden. Die Ursache für die 4fach langsamere Schreibgeschwindigkeit der Postgres Datenbank konnten wir im Rahmen dieses Projektes nicht evaluieren. 
 
