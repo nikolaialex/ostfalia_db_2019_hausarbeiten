@@ -1,18 +1,21 @@
 # 3. Projektvorstellung / Bibliothek mittelalterliche Handschriften
 Die Staatsbibliothek zu Berlin ermöglicht den ortsunabhängigen und kostenfreien Zugang zu den Ergebnissen der Handschriftenkatalogisierung im deutschen Sprachraum. Alle Metadaten der abendländischen mittelalterlichen Handschriften
 sollen in diesem Projekt als Datengrundlage verwendet werden. Die Metadaten beschreiben den Handschriftenbestand und liegen in Form von XML Dateien vor. Diese Daten sollen in ein sehr vereinfachtes Datenmodell überführt und 
-in den entsprechenden Datenbanksystemen persitiert werden. 
+in den entsprechenden Datenbanksystemen persitsiert werden. Anschließend sollen verschiedene Aspekte im Rahmen der Anwendungsentwicklung für beide Datenbanktechnologien verglichen werden. Wir möchten damit anhand eines konkreten Anwendungsfalls 
+zeigen, worin die Unterschiede und Gemeinsamkeiten beim Entwickeln einer Anwendungen sind. 
 
 ## 3.2 Technologie Stack
 
 Um die theoretischen Fragestellungen praktisch evaluieren zu können wurde ein Java Enterprise Projekt mit Hilfe des [Spring Frameworks](https://spring.io/) aufgesetzt. 
 Um in kurzer Zeit eine lauffähige Serverumgebung zu bekommen wurde [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/) mit einem integriertem Tomcat Servlet Container als Laufzeitumgebung eingesetzt. Als Build Werkzeug 
-kommt [Gradle](https://gradle.org/) zum Einsatz. Der gesamte Quellcode wird mit Hilfe des Versionierungssystem [Git](https://git-scm.com/) auf der Github Platform verwaltet.  
+kommt [Gradle](https://gradle.org/) zum Einsatz. Der gesamte Quellcode wird mit Hilfe des Versionierungssystem [Git](https://git-scm.com/) auf der Github Platform verwaltet.Das Projekt ist öffentich [hier](https://github.com/eichstaedtk/handschriften-graphviewer/tree/master/src/main/java/de/eichstaedt/handschriftengraphviewer) verfügbar.  
 
 Um die relevanten Datenbanksystem zur Verfügung zu stellen haben wir uns entschieden [Docker](https://www.docker.com/) als Container Technologie zu verwenden. So konnten wir sehr leicht eine relationale Postgres Datenbank
-und eine Neo4J Graphendatenbank anbinden. Um die Daten in diesen System zu persistieren wurden die Objekt Graph Mapper (OGM) Bibliothek [Spring NEO4J](https://spring.io/guides/gs/accessing-data-neo4j/) und Objekt Relational Mapper (ORM) Bibliothek [Spring Data](https://spring.io/projects/spring-data) verwendet. 
+und eine Neo4J Graphendatenbank anbinden. Um die Daten in diesen Systemen zu persistieren, wurden die Objekt Graph Mapper (OGM) Bibliothek [Spring Data Neo4J](https://spring.io/guides/gs/accessing-data-neo4j/) und Objekt Relational Mapper (ORM) Bibliothek [Spring Data JPA](https://spring.io/projects/spring-data) verwendet. 
 
 ## 3.3 Domainmodell 
+
+Das fachliche Modell stellt Handschriftenbeschreibungen von mittelalterlichen Handschriften dar. Diese stellen gesammelte Metadaten, welche durch Bibliothekare identifiziert worden sind dar. Nachfolgende Abbildung zeigt eine Handschrift aus dem 15. Jahrhundert.
 
 ![Johannes Versor Handschrift 15 Jahrhundert](johannesversorbuch.jpeg)
 
@@ -48,12 +51,12 @@ Beispiel: Dokumentenelement Text
 
 ![Beispiel Handschrift aus dem 15 Jahrhundert Inhalt](dokumentenelement.png) 
 
-Anhand dieses Beispiel wurde kurz die fachliche Struktur einer Handschriftenbeschreibung dargestellt. Zu erkennen ist, das ein Dokument viele Beziehungen zu Orten, Personen, Instiutionen mit zeitlicher Varianz haben kann. 
+Anhand dieses Beispiel wurde kurz die fachliche Struktur einer Handschriftenbeschreibung dargestellt. Zu erkennen ist, das ein Beschreibungsdokument viele Beziehungen zu Orten, Personen, Instiutionen mit zeitlicher Varianz haben kann. 
   
 ## 3.4 Unterschiede in der Implementierung 
 
 ### 3.4.1 Objekt Mapping für RDBMS und Graphdatenbank
-Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der der ORM Frameworks ausgezeichnet, sodass der OR - Mapper diese persistieren kann. Nachfolgende soll die Beschreibungsentität kurz erläutert werden: 
+Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der der Objektmapper Frameworks ausgezeichnet, sodass der Mapper diese persistieren kann. Nachfolgende soll die Beschreibungsentität kurz erläutert werden: 
 
     @Entity
     @Table(name = "beschreibungen")
@@ -95,11 +98,11 @@ Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der 
 **OGM Annotation für GRAPH Datenbank** 
 
 Ein Neo4J Knoten wird durch die Annotation **@NodeEntity** gekennzeichnet. Zusätzlich benötigt ein Knoten eine eindeutige Identifikationsnummer. Eine Beziehung zu anderen Knoten wird 
-mit Hilfe der Annotation **@Relationship** gekennzeichnet. Mit Hilfe dieser Annotationen kann ein Objekt Graph Mapper, wie er im Spring Data Neo4J verwendet wird dieses Objekt in einer Graphendatenbank persistieren. 
+mit Hilfe der Annotation **@Relationship** gekennzeichnet. Mit Hilfe dieser Annotationen kann ein Objekt Graph Mapper, wie er im Spring Data Neo4J verwendet wird dieses Java Objekt in einer Graphendatenbank persistieren. 
 
 #### 3.4.1.1 Objekt Mapping, Besonderheit RelationshipEntity
 
-Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Provienz dar. Dieses Objekt ist ein Relationsobjekt **@RelationshipEntity()** welches zwei Entitäten miteinander verbindet. Ein solches Objekt gibt es im Kontext des RDBMS nicht. 
+Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Provienz dar. Dieses Objekt ist ein Relationsobjekt **@RelationshipEntity()** welches zwei Entitäten miteinander verbindet. Eine solche Objektannotation gibt es im Kontext des RDBMS nicht. 
 
     @Entity
     @RelationshipEntity()
@@ -141,7 +144,7 @@ Die Provienz verbindet hierbei die Entitäten Beschreibungsdokument und Beteilig
 
 #### 3.4.1.2 Objekt Mapping, Besonderheit Vererbung 
 
-In unserem Beispiel spielt für folgende Objekt die Vererbung im Sinne der Objektorientierten Programmierung eine Rolle. Die Objekte Ort, Koerperschaft und Person sind alle vom Typ Beteiligte. 
+In unserem Beispiel spielt für folgende Objekt die Vererbung im Sinne der objektorientierten Programmierung eine Rolle. Die Objekte Ort, Koerperschaft und Person sind alle vom Typ Beteiligte. 
 
     public class Ort extends Beteiligte
     public class Koerperschaft extends Beteiligte
@@ -154,7 +157,7 @@ Für ein relationales Datenbanksystem muss eine Strategie festgelegt werden, in 
     @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
     public abstract class Beteiligte {
 
-In unserem Beispiel wird für jede Entität vom konkreten Typ eine Tabelle angelegt. So enthät die spätere Datenbank eine Tabelle Person, Ort und Körperschaft. Weitere Möglichkeiten die Daten 
+In unserem Beispiel wird für jede Entität vom konkreten Typ eine Tabelle angelegt. So enthält die spätere Datenbank eine Tabelle Person, Ort und Körperschaft. Weitere Möglichkeiten die Daten 
 im RDBMS abzulegen sind: 
 
   * SINGLE_TABLE, Eine Tabelle für alle Typen von Beteiligte 
@@ -164,17 +167,15 @@ Für die Graphendatenbank werden hier keine Steuerungsangaben benötigt. Jeder K
 
 **ORM Annotationen für RDBMS** 
 
-Ein Objekt welches in eine relationale Datenbank persistiert werden soll, muss mit der Annotation **@Entity** gekennzeichnet werden. Genau wie bei Neo4J muss dieses Objekt ein Attribute mit der **@Id** Annotation als primäry Key kennzeichnen. 
+Ein Java Objekt, welches in eine relationale Datenbank persistiert werden soll, muss mit der Annotation **@Entity** gekennzeichnet werden. Genau wie bei Neo4J muss dieses Objekt ein Attribute mit der **@Id** Annotation als primäry Key kennzeichnen. 
 Für Beziehungen zu anderen Objekten stehen folgende Annotationen zur Verfügung: **@OneToOne**, **@OneToMany**, **@ManyToOne**, **@ManyToMany**. Für diese Annotationen müssen noch Werte für das Verhalten beim Laden angegeben werden. Zusätzlich können Daten zusammenhänged 
-gespeichert, gelöscht oder geladen werden was die Arbeit mit Objekten des ORM in der Praxis oft komplex werden lässt. 
-
-Bei der Konfiguration des Objekt Mappers benötigt das relationale Datenbankmanagementsystem mehr Steuerung als die Graphendatenbank.
+gespeichert, gelöscht oder geladen werden was die Arbeit mit Objekten des ORM in der Praxis oft komplex werden lässt. Bei der Konfiguration des Objekt Mappers benötigt das relationale Datenbankmanagementsystem mehr Steuerung als die Graphendatenbank.
 
 
 ### 3.4.2 CREAD, READ, UPDATE and DELETE (CRUD) für RDBMS und Graphdatenbank
 
-Mit Spring Data bekommt der Entwickler eine der einfachsten Möglichkeiten für die Umsetzung der CRUD Operation an die Hand die es meiner Meinung nach gibt. Für jede Entität die durch Spring Data verwaltet werden soll muss lediglich 
-ein CRUDRepository erweitert werden. 
+Mit Spring Data bekommt der Entwickler eine der einfachsten Möglichkeiten für die Umsetzung der CRUD Operation an die Hand, die es meiner Meinung nach gibt. Für jede Entität die durch Spring Data verwaltet werden soll muss lediglich 
+ein Spring Data CRUDRepository erweitert werden. 
 
 **Beispiel Neo4J**
 
@@ -221,9 +222,9 @@ In einem relationalen Datenbankmanagementsystem wird [Structured Query Language]
 In diesem Kapitel sollen primär die Befehle zur Abfrage mit den der Graphendatenbank verglichen werden. 
 
 Eine Graphdatenbank wie Neo4j kann mit Hilfe der Graphdatenbanksprache [Cypher](https://neo4j.com/cypher-graph-query-language/) abgefragt und manipuliert werden. Cypher ist SQL sehr ähnlich 
-und für einen Entwickler mit RDBMS Erfahrung sehr leicht zu lernen. 
+und für einen Entwickler mit SQL Erfahrung sehr leicht zu lernen. 
 
-Grundsätzlich müssen mit dem Einsatz von Spring Data die einfachen Befehle zur Abfragen und Manipulation nicht mehr selbst geschrieben werden. Wie im vorhergehenden Kapitel beschrieben steht dafüt das CRUDRepository zur Verfügung. Allerdings bietet Spring Data 
+Grundsätzlich müssen mit dem Einsatz von Spring Data die einfachen Befehle zur Abfragen und Manipulation nicht mehr selbst geschrieben werden. Wie im vorhergehenden Kapitel beschrieben steht dafür das CRUDRepository zur Verfügung. Allerdings bietet Spring Data 
 für beide Datenbanksysteme die Möglichkeit eigene Queries zu formulieren. 
 
 Nachfolgendes Codebeispiel zeigt die Implementierung einer CRUD und einer nativen Query einmal für ein RDBMS und einmal für ein Graphendatenbanksystem. 
@@ -307,7 +308,7 @@ mit Hilfe des Return Statements noch eine Möglichkeit individuelle Ergebnisse z
       }
     }
 
-Diese Abfrage gibt als Ergebnis ein Objekt zurück welches die Knoten Beteiligte und Beschreibungsdokument sowie die Beziehung Provienz enthält. Diese Flexibilität ermöglicht es für den Einsatz 
+Diese Abfrage gibt als Ergebnis ein Objekt zurück, welches die Knoten Beteiligte und Beschreibungsdokument sowie die Beziehung Provienz enthält. Diese Flexibilität ermöglicht es für den Einsatz 
 einer Graphendatenbank sehr leicht beliebige Ergebnisobjekte zu erschaffen. So können sehr leicht neue Informationen aus den Daten gewonnen werden ohne die Datenbankstruktur anpassen zu müssen.
 
 ### 3.4.3 Schema Management für RDBMS und Graphdatenbank
@@ -329,7 +330,7 @@ Der OR Graphmapper benötigt diese Einstellungen nicht. Ein Schmema der Graphend
 Automatische Anpassungen am Schema sind sowohl für RDBMS als auch für Graphendatenbanken nicht für produktive Datenbanken empfohlen. Daher sollten die Schema Änderungen mit Hilfe eines Tools oder manuell durchgeführt werden. Populäre Werkzeuge sind das Google Tool [Flyway](https://flywaydb.org/getstarted/) oder 
 [Liquibase](https://www.liquibase.org/). Nur das Tool Liqiubase bietet Unterstützung für die Änderungen in einer [Graphendatenbank](https://www.liquigraph.org/).   
 
-RDBMS Strukturen sind wesentlich starrer und aufwendiger zu betreuen als das Schema einer Graphendatenbank. Dies gilt auch für den Einsatz mit Hilfe eines OR Mappers. 
+RDBMS Strukturen sind wesentlich starrer und aufwendiger zu betreuen als das Schema einer Graphendatenbank. Dies gilt auch für den Einsatz mit Hilfe eines Objektmappers. 
 
 
 ## 4 Untersuchungen ##
@@ -353,7 +354,7 @@ In diesem Kapitel möchten wir Anhand eines konkreten Beispiels die Abfragesprac
 <img src="./cypher_beschreibung_1.png" width=350>
     
     
-Gut zu erkennen ist, dass im Ergebnis der SQL Abfrage der primary key der Tabelle der beteiligten Buchbinder mit enthalten ist. Um ein identisches Ergebnis zu erhalten, müssten mit Hilfe der Selektion die 
+Gut zu erkennen ist, dass im Ergebnis der SQL Abfrage der Primärschlüssel der Tabelle der beteiligten Buchbinder mit enthalten ist. Um ein identisches Ergebnis zu erhalten, müssten mit Hilfe der Selektion die 
 entsprechenden Spalten im SQL definiert werden. Das Ergebnis der Cypher Abfrage enthält hingegen noch zusätzliche Metadaten, welche das Datenbanksystem automatisch angelegt hat. Diese sind: 
 
   * label: Kennzeichnung eines Knotentyps 
@@ -538,7 +539,7 @@ Je mehr Beziehungen abgefragt werden müssen, desdo einfacher wird die Anfragefo
 <img src="./cypher_beschreibung_5.svg" width=650>
 
 Durch den einfachen Ausdruck einer rekursiven Abfragen mit Hilfe der Cypher Query im Vergleich zur SQL Anfragen wird sehr deutlich, dass SQL für rekursiv strukturierte Daten nicht sehr komfortable ist.
-Darüberhinaus muss der Entwickler solcher Queries bei SQL sehr genau die Datenstrukturen kennen, was für eine Graphenabfrage mit Hilfe von Cypher nicht zwingend notwnedig ist. Um zum Beispiel alle Daten, welche in einem einstufigen rekursiven Bezug 
+Darüber hinaus muss der Entwickler solcher Queries bei SQL sehr genau die Datenstrukturen kennen, was für eine Graphenabfrage mit Hilfe von Cypher nicht zwingend notwnedig ist. Um zum Beispiel alle Daten, welche in einem einstufigen rekursiven Bezug 
 zum Beschreibungsdokument zu bekommen muss lediglich folgende Abfrage mit Cypher formuliert werden: 
 
 
@@ -615,7 +616,7 @@ SQL
         ) SELECT count(*) from q 
 
 
-Alle Abfragen wurden auf einem iMac Intel Core i7 mit 32 GByte RAM durchgeführt. Beide Abfragen nativ ohne ORM bzw. OGM Mapper durchgeführt. Beide DBMS Systeme laufen in der Standardkonfiguration in einem Docker Container.
+Alle Abfragen wurden auf einem iMac Intel Core i7 mit 32 GByte RAM durchgeführt. Beide Abfragen wurden nativ ohne Objektmapper durchgeführt. Beide DBMS Systeme laufen in der Standardkonfiguration in einem Docker Container.
 
 Nachfolgende Tabelle stellt die Ergebnisse unseres Abfragetests dar. 
 
@@ -632,7 +633,7 @@ Nachfolgende Tabelle stellt die Ergebnisse unseres Abfragetests dar.
 </table>
 
 Bei unserem Test ist aufgefallen, dass die Schreibgeschwindigkeit zwischen dem RDBMS Postgres und Neo4J stark unterschiedlich war. Für ein Testdatenset von 50 Beschreibungsdokumenten benötigte die
-Graphendatenbnk ca. 500 Millisekunden und das RDBMS Postgres 20 Sekunden. Die Ursache für die 4fach langsamere Schreibgeschwindigkeit konnten wir im Rahmen dieses Projektes nicht evaluieren. 
+Graphendatenbnk ca. 500 Millisekunden und das RDBMS Postgres 20 Sekunden. Die Ursache für die 4fach langsamere Schreibgeschwindigkeit der Postgres Datenbank konnten wir im Rahmen dieses Projektes nicht evaluieren. 
 
 ### 4.1 Performance Optimierungsmaßnahmen ##
 
@@ -642,7 +643,7 @@ Für beide Datenbanksysteme gibt es Möglichkeiten die Performance des Systems z
   * Einstellungen für das DBMS für Speicherbedarf, Verbindungsmanagement und Handling setzen. 
   * Einstellungen des ORM / OGM setzen. 
 
-Beim Performancetuning eines Datenbankmanagementsystem muss man sehr dediziert und analytisch vorgehen. Im ersten Schritt ist zu prüfen welche Aktionen zu viel Zeit benötigen. Im Falle von Abfragen sollte die Ausführung auf dem DBMS analysiert werden. 
+Beim Performanceoptimieren eines Datenbankmanagementsystem muss man sehr dediziert und analytisch vorgehen. Im ersten Schritt ist zu überprüfen welche Aktionen genau zu viel Zeit benötigen. Im Falle von Abfragen sollte die Ausführung auf dem DBMS analysiert werden. 
 In der Regel stellen die Entwickler der entsprechenden Systeme dazu Werkzeuge zur Verfügung. Um zum Beispiel die Abfragegeschwindigkeit im Allgemeinen zu erhöhen können bestimmte Werte einer Tabelle oder eines Graphens indiziert werden. 
 
 #### 4.1.1 Indizes erstellen ####
