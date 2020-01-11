@@ -627,6 +627,42 @@ Nachfolgende Tabelle stellt die Ergebnisse dies Abfragetest dar.
 <tbody>
 <tr><td>1000</td><td>41892</td><td>41892</td><td>ca. 160 ms</td><td>ca. 64 ms</td></tr>
 <tr><td>5000</td><td>293892</td><td>293892</td><td>ca. 950 ms</td><td>ca. 450 ms</td></tr>
-<tr><td>1000</td><td>41892</td><td>41892</td><td>ca. 160 ms</td><td>ca. 64 ms</td></tr>
+<tr><td>10000</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>50000</td><td></td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
+
+### 4.1 Performance Tuning ##
+
+Für beide Datenbanksysteme gibt es Möglichkeiten die Performance des Systems zu beeinflussen. Folgende Möglichkeiten können dabei genutzt werden: 
+
+  * Erstellen von Indizes. 
+  * Einstellungen für das DBMS für Speicherbedarf, Verbindungsmanagement und Handling setzen. 
+  * Einstellungen des ORM / OMG setzen. 
+
+Beim Performancetuning eines Datenbankmanagementsystem muss man sehr dediziert und analytisch vorgehen. Im ersten Schritt ist zu prüfen welche Aktionen zu viel Zeit benötigen. Im Falle von Abfragen sollte die Ausfhrung auf dem DBMS analysiert werden. 
+In der Regel stellen die Entwickler der entsprechenden Systeme dazu Werkzeuge zur Verfügung. Um zum Beispiel die Abfrageperfroamnce im Allgemeinen zu erhöhen können bestimmte Werte einer Tabelle oder eines Graphens indiziert werden. 
+
+Um einen Index auf einer relationalen Datenbank anzulegen geht man bezogen auf unser Projekt wie folgt vor: 
+
+  1.) Erstellen eines Index auf einer Tabelle mit Hilfe einer Annotation. 
+  
+      @Table(name = "beschreibungen", indexes = { @javax.persistence.Index(name = "BESCHREIBUNGGS_INDEX", columnList = "id") })
+      
+  2.) Alle Werte müssen anschließend neu in diese Tabelle geschrieben werden. 
+  
+Um einen Index für unsere Graphendatenbank anzulegen ist folgendes notwendig: 
+
+  1.) Annotation der Werte des Knotens bzw. der Relation
+
+       @org.neo4j.ogm.annotation.Index;
+       private String id;
+  
+  2.) Konfiguration des OMG anpassen: 
+  
+      spring.data.neo4j.auto-index=assert
+      
+  3.) Alle Werte neu in die Datenbank schreiben. 
+  
+
+Für beide Systeme muss festgelegt werden, welche Elemente mit einem zusätzlich Index ausgestattet werden. Dies verbessert die Lesegeschwindigkeit verringert allerdings die Schreibgeschwindigkeit. 
