@@ -626,7 +626,7 @@ Nachfolgende Tabelle stellt die Ergebnisse dies Abfragetest dar.
 <tbody>
 <tr><td>1000</td><td>41892</td><td>41892</td><td>ca. 160 ms</td><td>ca. 64 ms</td></tr>
 <tr><td>5000</td><td>293892</td><td>293892</td><td>ca. 950 ms</td><td>ca. 450 ms</td></tr>
-<tr><td>10000</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>10000</td>608692<td>608692</td>ca. 1500 ms<td>ca. 950 ms</td></tr>
 <tr><td>50000</td><td></td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
