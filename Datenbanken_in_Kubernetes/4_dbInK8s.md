@@ -1,5 +1,7 @@
 # Run Databases in Kubernetes
 
+> Hinweis: Die in diesem Abschnitt dargestellten Skripte sind gekürzt und enthalten nur für den Kontext relevante Inhalte. Für einen reibungslosen Betrieb sind jeweils weitere Attribute in den Skripten zu ergänzen.
+
 Erst mit der Einführung von Docker hat sich die Containerisierung durchgesetzt. Durch Docker als größtenteils verwendeten Standard von Containertechnologien ist es nämlich leicht Container zu erstellen, auszuliefern und in geringer Anzahl zu betreiben. [1] Aber gerade durch die Vozüge von Docker hat sich die Anzahl von produktiven Applikationen auf Dockerbasis schnell erhöht und ein manueller Betrieb ist nicht mehr effizient. Aus diesem Grund wurde der Einsatz von Orchestrator vorrangetrieben, der automatisiert eine Vielzahl von Container in unterschiedlichen Umgebungen organisiern, starten, stoppen und über Netzwerke hinweg zusammen arbeiten lassen kann. [1] Kubernetes ist so ein Orchestrator und kann Container unterschiedlichester Art betreiben.
 
 Grundsätzlich eignet sich das Dateisystem eines Containers nicht für die dauerhafte Speicherung von Daten, Container sind i.A. zustandslos und werden im RAM der ausführenden Maschine ausgeführt. Eine erstellte Datei in dem Container ist also flüchtig und geht beim Stoppen des Containers verloren.
@@ -112,10 +114,10 @@ Dabei wird lediglich nur der bevorzugte Fall, die Verwendung von Cloud-Speichern
 
 ### Deployments
 
-Der Typ `deployment` ist generell für komplexere Stateless oder einfache Stateful Applications gedacht. Ein Replication Controller sorgt dafür, dass eine bestimmte Anzahl von identischen Pods laufen. Die Pods werden analog zu dem `pod` Deployment spezifiziert.
+Der Typ `deployment` ist generell für komplexere Stateless oder einfache Stateful Applications gedacht. Ein Replication Controller sorgt dafür, dass eine bestimmte Anzahl von identischen Pods, ein _Replica Set_, laufen. Die Pods werden analog zu dem `pod` Deployment spezifiziert.
 
 > _"You describe a desired state in a Deployment, and the Deployment Controller
-> changes the actual state to the desired state at a controlled rate."_ [4]
+> changes the actual state to the desired state at a controlled rate."_ [3]
 
 Für kleine Anwendungen, z.B. eine Website (klassischer WordPress-Stack) bestehenden aus PHP-Server in einem Pod und einer Datenbank in einem anderen Pod kann dieser Typ `deployment` sehr gut verwendet werden. Es werden keine sehr hohen Ansprüche an eine 100%-Verfügbarkeit noch an die Partitionstoleranz gemäß CAP-Theorem gestellt, da das Cluster an sich meist sowieso nicht hochverfübar gestaltet ist und nur aus wenigen Nodes besteht. Die Konsistenz ist allerdings gewährleistet, es gibt nur eine schreibende bzw. lesende Instanz, ein Pod mit dem PHP-Server. Nachfolgend ist ein Beispiel für ein MySQL-Deplyoment für eine WordPress-Anwendung dargestellt. [4]
 
@@ -128,42 +130,155 @@ spec:
   replicas: 1
   template:
     spec:
+      # 1. Container in Pod
       containers:
         - image: mysql:5.6
           name: mysql
           ports:
             - containerPort: 3306
               name: mysql
+          # Volume Mapping from Container to Kubernetes Volume via PVC
           volumeMounts:
             - name: mysql-persistent-storage
               mountPath: /var/lib/mysql
+      # Kubernetes Volume Spec via PVC
       volumes:
         - name: mysql-persistent-storage
           persistentVolumeClaim:
             claimName: mysql-pv-claim
 ```
 
-Stürzt einmal der Pod mit der Datenbank ab, so wird diese in kurzer Zeit neu gestartet, dafür sorgt der Replication Controller, aber es gibt eine Downtime. Die Daten sind allerdings über das externe Volume sicher.
+Stürzt einmal der Pod mit der Datenbank ab, so wird diese in kurzer Zeit neu gestartet, dafür sorgt der Replication Controller als Teil des im `deployment` sepezifizierten Replica Set, aber es gibt eine Downtime. Die Daten sind allerdings über das externe Volume sicher.
 
-Mit einem `deployment` kann man aufgrund des Replication Controllers auch mehrere Pods gleichen Typs über `replicas: n` im Skript spezifizieren. Das bedeutet allerdings nicht gleich, dass n Duplikate von Datenbanken in n Pods auch miteinander kommunizieren. Kubernetes würde lediglich beim Einsatz einer Service-Ressource als vereinfacht ausgedrückt interner DNS und LoadBalancer für alle Datenbanken-Pods fungieren und eingehenden Traffic auf die n-Pods verteilen. Dieser Fall ist i.A. nicht für den Betrieb von Datenbanken zu empfehlen, denn gemäß CAP-Theorem steigt dadurch zwar die Verfügbarkeit bei steigendem Traffic, die Konsistenz wird bei einer Vielzahl von Schreibvorgängen aber nicht mehr gewährleistet sein. Stateless Applications können im Gegensatz zu Datenbanken als Stateful Applications so wunderbar betrieben und von Kubernetes automatisch lastverteilt werden.
+Mit einem `deployment` kann man aufgrund des Replication Controllers auch mehrere Pods gleichen Typs über `replicas: n` im Skript spezifizieren. Das bedeutet allerdings nicht gleich, dass n Duplikate von Datenbanken in n Pods auch miteinander kommunizieren. Kubernetes würde lediglich beim Einsatz einer Service-Ressource als vereinfacht ausgedrückt interner DNS und LoadBalancer für alle Datenbanken-Pods fungieren und eingehenden Traffic auf die n-Pods verteilen. Dieser Fall ist i.A. nicht für den Betrieb von Datenbanken zu empfehlen, denn gemäß CAP-Theorem steigt dadurch zwar die Verfügbarkeit bei steigendem Traffic, die Konsistenz wird bei einer Vielzahl von Schreibvorgängen aber nicht mehr gewährleistet sein. Stateless Applications können im Gegensatz zu Datenbanken als Stateful Applications so allerdings optimal betrieben und von Kubernetes automatisch lastverteilt und beliebig skaliert werden.
 
-Je nach Art der zu betreibenden Anwendung ergeben sich evtl. auch Einsatzmöglichkeiten für Datenbanken. Ein Beispiel wäre ein Datenbestand in einem Volume, der nur von einer Admin-Seite über ein separates Datenbank-Deployment schreibend verändert werden kann und über einen parallel dazu laufendes `deployment` aus mehreren Datenbanken nur gelesen werden darf. So eine Trennung führt zwar auch zu einer verminderten Konsistenz, aber auch zur einer hohen Verfügbarkeit. Aus administrativer Sicht ist dieser Fall natürlich auch mit mehr manuellem Aufwand verbunden. Um einen generellen Einsatz von Stateful Applikationen in Kubernetes zu vereinfachen wurden die Stateful Sets eingeführt.
+Je nach Art der zu betreibenden Anwendung ergeben sich evtl. auch Einsatzmöglichkeiten für Datenbanken. Ein Beispiel wäre ein Datenbestand in einem Volume, der nur von einer Admin-Seite über ein separates Datenbank-Deployment schreibend verändert werden kann und über einen parallel dazu laufendes `deployment` aus mehreren Datenbanken nur gelesen werden darf. So eine Trennung der Verantwortlichkeiten führt zwar auch zu einer verminderten Konsistenz, aber auch zur einer hohen Verfügbarkeit, im Gegenteil zu dem eben genannten Negativ-Beispiel einer Stateful Application. Aus administrativer Sicht ist dieser Fall natürlich auch mit mehr manuellem Aufwand verbunden. Um einen generellen Einsatz von Stateful Applikationen in Kubernetes zu vereinfachen wurden die Stateful Sets eingeführt.
 
 ### Stateful Sets
 
-- komplexe und ausfallsicherer stateful = StatefulSets
-- für Stateful Applicationen gedacht
-- Unterschiede in der Bennennung und Handhabung der Container
-- Beispiel 1: Operator bei MongoDB
-- Beispiel 2: Cassandra oder ähnliches
+> Conventional wisdom says you can’t run a database in a container. “Containers are stateless!” they say, and “databases are pointless without state!” Of course, this is not true at all. At Google, everything runs in a container, including databases. You just need the right tools. Kubernetes 1.5 includes the new StatefulSet API object [...] With StatefulSets, Kubernetes makes it much easier to run stateful workloads such as databases. [5]
+
+Stateful Sets sind überwiegend für den Einsatz von komplexen und ausfallsicherer Stateful Applications gedacht. Selbst Google verwendet Kubernetes für ihre gigantischen Mengen an Datenbanken und Anwendungen.
+
+In einem Stateful Set wird ein anderer Controller verwendet, dieser startet die Pods nacheinander und gibt diesen im Gegenteil zu einem Replication Controller eindeutige Namen und behält diese auch bei Neustart eines Pods.
+
+> Like a Deployment, a StatefulSet manages Pods that are based on an identical container spec. Unlike a Deployment, a StatefulSet maintains a sticky identity for each of their Pods. These pods are created from the same spec, but are not interchangeable: each has a persistent identifier that it maintains across any rescheduling. [6]
+
+### 1. Beispiel: MongoDB
+
+Am folgenden Beispiel von einer Mongo Datenbank wird ein Sidecar-Container neben dem MongoDB-Container in einem Pod verwendet, der bei Start des Pods die Datenbank mit den anderen im Stateful Set zu einem gemeinsamen Cluster verknüpft. Im Falle vom MongoDB erfolgt da auch die gegenseitige Zuweisung als _Primary_ und _Secondary Nodes_ der MongoDB-Container in den Pods. Diese Synchronisation beim Start wird durch den im Skript dargestellten `command` bei Containererstellung initiiert. MongoDB besitzt diesen Mechanismus von sich aus, andere Datenbankentypen sind schwieriger als Cluster auzusetzen und erfordern meist ein manuelles Eingreifen durch einen Administrator.
+
+```yaml
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: mongo
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: mongo
+          image: mongo
+          # Start Command on Container Creation
+          command:
+            - mongod
+            - "--replSet"
+            - rs0
+            - "--smallfiles"
+            - "--noprealloc"
+          ports:
+            - containerPort: 27017
+          # Volume Mapping from Container to Kubernetes Volume via PVC
+          volumeMounts:
+            - name: mongo-persistent-storage
+              mountPath: /data/db
+          # Sidecar Container for Initial Synchronisation and Integration in MongoDB-Cluster
+        - name: mongo-sidecar
+          image: cvallance/mongo-k8s-sidecar
+  # Volume Claim Template for every Pod of Stateful Set
+  volumeClaimTemplates:
+    - metadata:
+        name: mongo-persistent-storage
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 10Gi
+```
+
+Nachdem das Stateful Set alle MongoDB-Nodes erfolgreich gestartet und die Synchronisierung abgeschlossen wurde, ist das nun entstandende Cluster erreichbar. Jeder MongoDB-Node hat sein eigenes Volume und ist beim Ausfall eines anderen Nodes des Cluster nicht auf die anderen angewiesen. Das Volume wird im Gegensatz zu Replic Set als Teil des `deployment` via `volumeClaimTemplates` spezifiziert. Wie im Abschnitt _Persistent Volume Claim_ beschrieben kann ein Volume via ein PVC von mehreren Containern in Pods verwendet werden, das ist hier allerdings nicht das Ziel. Hier will gerade eine Redundanz erzeugt werden, jede Datenbank in einem Pod soll ihr eigenes Volume erhalten. Ein `volumeClaimTemplates` unterscheidet sich darin, dass Kubernetes für jeden Pod ein neues PVC nach diesem Template anlegt, damit jeder Pod nach Partitionierung sein eigenes Volume bekommt.
+
+Das Stateful Set sorgt bei Ausfall eine MongoDB-Nodes, dass der betroffene Node bzw. Pod neu gestartet wird und die gleiche Identifikation, u.a. Namen, wie der zuvor ausgefallenen Pod erhält. Die Schreib- und Leseanfragen werden genauso beantwortet wie es ein manuell auf mehreren VMs aufgesetztes MongoDB-Cluster tun würde. Skalieren kann man ein Stateful Set analog zu einem Replica Set, indem die Replicas hoch oder runterskaliert werden. Kubernetes bzw. der Stateful Set Controller erstellt oder stoppt dann nacheinander MongoDB-Nodes bis die gewünschte Anzahl läuft. Beim Hochskalieren werden neue MongoDB-Nodes analog wie beschrieben gestartet und gliedern sich durch den Sidecar-Container in jedem Pod automatisch in das Cluster ein.
+
+Neben dem Einsatz eines Sidecars als zusätzlicher Container in jedem Pod gibt es am Beispiel der Mongo-Datenbank auch einen weiteren Mechanismus, um ein MongoDB-Cluster aufzubauen, die Verwendung eines weiteren Pod mit einem MongoDB-Operator. Dieser ist Schnittstelle und übernimmt u.a. die Aufgaben des Sidecars.
+
+### 2. Beispiel: Cassandra DB
+
+Ein weiteres Beispiel für das Deployment eines CassandraDB-Rings bestehend aus drei Nodes ist nachfolgend dargestellt und den offiziellen Kubernetes Dokumentation entnommen. Es wurde auf die wesentlichen Attribute gekürzt. [7] Neben vielen weiteren Einstellungen wird eine in den Cassandra-Container integrierter Seed-Mechanismus genutzt, um den Ring zu bilden.
+
+> [...A] custom Cassandra SeedProvider enables Cassandra to discover new Cassandra nodes as they join the cluster. [7]
+
+```yml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: cassandra
+spec:
+  # 3 Node Ring
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: cassandra
+          # Cassandra DB Image with Java SeedProvider integrated
+          image: gcr.io/google-samples/cassandra:v13
+          ports:
+            - containerPort: 7000
+              name: intra-node
+            - containerPort: 7001
+              name: tls-intra-node
+            - containerPort: 7199
+              name: jmx
+            - containerPort: 9042
+              name: cql
+          securityContext:
+            capabilities:
+              add:
+                - IPC_LOCK
+          lifecycle:
+            # Before Stopping the Container, Gracefully Remove from Ring
+            preStop:
+              exec:
+                command:
+                  - /bin/sh
+                  - -c
+                  - nodetool drain
+          volumeMounts:
+            - name: cassandra-data
+              mountPath: /cassandra_data
+  # Volume Claim Template for every Pod of Stateful Set
+  volumeClaimTemplates:
+    - metadata:
+        name: cassandra-data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 1Gi
+```
+
+Mit Hilfe eines Stateful Sets lassen sich Datenbanken als Stateful Applications sehr gut in Kubernetes betreiben, da eine Eindeutigkeit der Pods gewährleistet wird. Die Failover-Mechanismen von Kubernetes helfen dabei abgestürzte Nodes zu reparieren und automatisch wieder in ein Cluster (Beispiel MongoDB) bzw. Ring (Beispiel Cassandra) einzugliedern. Der initiale Aufwand ist erfahrungsgemäß geringer als beim manuellen Setup auf VMs. Wichtig ist nur, dass die Volumes, egal ob per `pod`, `deployment` oder `StatefulSet` betrieben, entsprechend beim produktiven Einsatz gesichert und wiederherstellbar sind.
 
 | #   | Literatur                                                                                                                                                                                                                                                |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [1] | **Thomas Fricke (16.01.2018)**: _Kubernetes: Architektur und Einsatz – Eine Einführung mit Beispielen_, https://www.informatik-aktuell.de/entwicklung/methoden/kubernetes-architektur-und-einsatz-einfuehrung-mit-beispielen.html, aufgerufen 02.12.2019 |
 | [2] | _Nichtflüchtige Speicher mit WordPress und MySQL verwenden_, https://cloud.google.com/kubernetes-engine/docs/tutorials/persistent-disk?hl=de, aufgerufen 01.11.2019                                                                                      |
-| [3] | **Nicolas Bonorquez**: _Yes, You Can: Deploying Databases on Kubernetes with StatefulSets_, https://sweetcode.io/deploying-databases-kubernetes-statefulsets/, aufgerufen 28.11.2019                                                                     |
-| [4] | _Deployments_, https://kubernetes.io/docs/concepts/workloads/controllers/deployment/, aufgerufen 12.1.2020                                                                                                                                               |
-| [5] | _Example: Deploying WordPress and MySQL with Persistent Volumes_, https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/, aufgerufen 12.1.2020                                                                     |
+| [3] | _Deployments_, https://kubernetes.io/docs/concepts/workloads/controllers/deployment/, aufgerufen 12.1.2020                                                                                                                                               |
+| [4] | _Example: Deploying WordPress and MySQL with Persistent Volumes_, https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/, aufgerufen 12.1.2020                                                                     |
+| [5] | **Sandeep Dinesh**, _Running MongoDB on Kubernetes with StatefulSets_, https://kubernetes.io/blog/2017/01/running-mongodb-on-kubernetes-with-statefulsets/, aufgerufen 12.1.2020                                                                         |
+| [6] | _StatefulSets_, https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/, aufgerufen 12.1.2020                                                                                                                                             |
+| [7] | _Example: Deploying Cassandra with Stateful Sets_, https://kubernetes.io/docs/tutorials/stateful-application/cassandra/, aufgerufen 12.1.2020                                                                                                            |
 
 ---
 
