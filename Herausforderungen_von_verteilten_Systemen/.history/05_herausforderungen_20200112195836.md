@@ -1,5 +1,5 @@
-| | [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md) | |
-| -------------------------- ----------------------------------------------- -------------------- | --------- ------------------------------- --------------------- | -------- --------------------------------------- ------------------------------ |
+[<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md)
+|-|-|-|
 
 ---
 
@@ -29,6 +29,15 @@ Es gibt zudem hybride Architekturen, die Elemente der zentraliserten und dezentr
 
 Prozesse sind, wie in Betriebssystemen, auch in verteilten Systemen ein wesentlicher Bestandteil und bilden die Basis für die Kommunikation zwischen verschiedenen Maschinen. Entscheidend ist hierbei die Klärung der Frage, wie die Prozesse organisiert sind und ob sie das Konzept von **Threads** unterstützen. Diese gegenüber Prozessen leichtgewichtigen Nebenläufigkeiten Nebenläufigkeiten werden je nach System vielfältig bezeichnet: Jobs, Tasks, Fibre, Coroutine und viele mehr.
 
+<<<<<<< HEAD
+**Threads** sind in verteilten Systemen eine Möglichkeit effiziente und performante Server zu entwickeln, die auch bei blockierenden I/O-Operationen die Nutzung der CPU durch mehrere Threads ermöglichen.
+
+Wichtig in verteilten Systemen ist auch das Konzept der **Virtualisierung**, welche durch die das immer wichtiger werdende Cloud Computing besondere Aufmerksamkeit erfährt. Populäre Techniken zur Virtualisierung erlauben es dem Nutzer, Anwendungen auf ihren favorisierten Betriebssystemen laufen zu lassen und komplette virtuelle verteilte Systeme "in der Cloud" zu erstellen. Dabei ist die Leistungsfähigkeit vergleichbar zu "traditionellen" Anwendungen. Durch diese Flexibilität in der Erstellung und dem Betrieb von virtuellen Systemen sind verschiedenste Cloud-Dienste entstanden, die Infrastruktur (IaaS), Plattformen (PaaS) und Anwendungen (SaaS) sowie weitere Dienste basierend auf virtuellen Umgebungen anbieten.
+
+Die Organisation von verteilten Anwendungen in **Clients und Server** hat sich als nützlich erwiesen. Clients implementieren hierbei üblicherweise eine Benutzerschnittstelle, welche von einfachen Displays bis hin zu komplexen Anwendungen reicht. Durch das Verstecken von Details über die Kommunikation, Serverstandorte und Serverreplikation wird in der Clientsoftware die angestrebte Verteilungstransparenz erreicht sowie Ausfälle und deren Behebung verdeckt.
+
+Die Server sind in verteilten Systemen meist komplexer als die Clientsoftware. Für sie sind Fragen des Softwaredesigns zu klären betreffend die Anzahl der angebotenen Dienste, der Zustandslosigkeit der Dienste und ähnliches. Insbesondere bei der Anordnung der Dienste in einem Cluster aus Servern ist Achtung geboten, um die Ausprägung des Systems als Cluster vor den Clients zu verbergen. Hierzu verwenden die Cluster meist einen einzelnen Zugangspunkt, von dem aus die Nachrichten mit den Servern im Cluster ausgetauscht werden. Eine Herausforderung ist es, hierfür eine vollständig verteilte Lösung zufinden.
+=======
 Threads sind in verteilten Systemen eine Möglichkeit effiziente und performante Server zu entwickeln, die auch bei blockierenden I/O-Operationen die Nutzung der CPU durch mehrere Threads ermöglichen. Sie benötigen Konzepte zur **Synchronisierung** untereinander, analog zu Betriebssystem Semaphoren und Mutexe, existieren hier das Konzept der Visitor und des Futures. Während Visitor Objekte ihren Zustand aufbauen und während ihrer Lebenszeit mehrere Systeme “besuchen” verhalten sich Futures wie klassische Synchronisierungsobjekte mit Time-out die ihr System nicht verlassen und das Ergebnis eines laufenden Vorganges repräsentieren.
 
 Wichtig in verteilten Systemen ist auch das Konzept der **Virtualisierung**, welche durch die das immer wichtiger werdende Cloud-Computing besondere Aufmerksamkeit erfährt. Populäre Techniken (wie z. B: Docker) zur Virtualisierung erlauben es dem Nutzer, Anwendungen auf ihren favorisierten Betriebssystemen laufen zu lassen und komplette virtuelle verteilte Systeme "in der Cloud" zu erstellen. Dabei ist die Leistungsfähigkeit vergleichbar zu "traditionellen" Anwendungen. Durch diese Flexibilität in der Erstellung und dem Betrieb von virtuellen Systemen sind verschiedenste Cloud-Dienste entstanden, die Infrastruktur (IaaS), Plattformen (PaaS) und Anwendungen (SaaS) sowie weitere Dienste basierend auf virtuellen Umgebungen anbieten. Für die Organisation eines solchen Clusters verteilter Systemen ist eine populäre Lösung Kubernetes.
@@ -36,6 +45,7 @@ Wichtig in verteilten Systemen ist auch das Konzept der **Virtualisierung**, wel
 Die Organisation von verteilten Anwendungen in Clients und Server hat sich als nützlich erwiesen. Clients implementieren hierbei üblicherweise eine Benutzerschnittstelle, welche von einfachen Displays bis hin zu komplexen Anwendungen reicht. Durch das Verstecken von Details über die Kommunikation, Serverstandorte und Server Replikation wird in der Clientsoftware die angestrebte Verteilungstransparenz erreicht sowie Ausfälle und deren Behebung verdeckt.
 
 Die Server sind in verteilten Systemen meist komplexer als die Clientsoftware. Für sind Fragen des Software Designs zu klären betreffend die Anzahl der angebotenen Dienste, der Zustandslosigkeit der Dienste und Ähnliches. Insbesondere bei der Anordnung der Dienste in einem **Cluster** aus Servern ist Achtung geboten, um die Ausprägung des Systems als Cluster vor den Clients zu verbergen. Hierzu verwenden die Cluster meist einen einzelnen Zugangspunkt, der als **Zwischenschicht** zwischen Servern und Clients dient. Sie organisiert den Nachrichtenaustausch der Clients mit den Servern im Cluster. Eine Herausforderung ist es, hierfür eine vollständig verteilte Lösung zu finden.
+>>>>>>> 03d1615eb3294bc84529c6fdb58ce23e7215c582
 
 Eine weiterer wichtiger Aspekt in verteilten Systemen ist die Migration von Code zwischen verschiedenen Computern. Dies umfasst zum Beispiel die Möglichkeit, rechenintensive Anwendungen von den Servern hin zu den Clients zu verlagern, um so die Leistung und Flexibilität zu steigern. Insbesondere in Situationen, in denen die Kommunikation zwischen den Computern teuer und / oder langsam ist, bietet sich dieses Vorgehen an. Ein aktuelles Beispiel für dieses Vorgehen sind moderne Webanwendungen geschrieben in JavaScript, die komplexe Anwendungen bei Aufruf der Website an die Clients ausliefern und dort im Browser ausführen.
 
@@ -68,7 +78,7 @@ Was in Einzelcomputersystemen noch relativ simpel ist, führt in verteilten Syst
 * Identifier
 * menschenfreundliche/-lesbare Namen
 
-Eine **Adresse** ist der Name eines Zugriffspunktes, welcher mit einer Entität verbunden ist.
+Eine **Adresse** ist der Name eines Zugriffspunktes, welcher mit einer Entität verbunden ist. 
 
 Ein **Identifier** ist eineindeutig, hat also eine eins-zu-eins-Beziehung zu einer Entität und wird nie einer anderen Entität zugewiesen.
 
