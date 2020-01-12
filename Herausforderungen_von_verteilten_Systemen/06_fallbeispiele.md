@@ -1,4 +1,4 @@
-﻿[<< Herausforderungen](05_herausforderungen.md) | [Inhaltsverzeichnis](02_toc.md) | [Zusammenfassung >>](07_zusammenfassung.md)
+[<< Herausforderungen](05_herausforderungen.md) | [Inhaltsverzeichnis](02_toc.md) | [Zusammenfassung >>](07_zusammenfassung.md)
 |-|-|-|
 ---
 
@@ -6,11 +6,11 @@
 
 ## 4.1 Optimierung der Replikation für Echtzeit Simulationen (mit Hilfe von Aspekten, Graphen, Räumliche-Partitionierungen und weiteren)
 
-Als herausfordernde Fallbeispiele sollen die Replikation und das Persistieren von Echtzeit Simulationen in Computerspiele mit Einsatz diversen Technologien dienen. Hierbei werden virtuelle bewegliche Entitäten mit individuellen Zuständen in mehreren Schachtelungstiefen ineinander und mit Abhängigkeiten zueinander gespeichert. Zusätzlich werden stationäre nutzergenerierte Strukturen auch direkt in der Welt platziert. Oder auch die Kombination aus beweglichen Entitäten mit relativ zu Ihnen gespeicherten nutzergenerierte Strukturen.
+Als Fallbeispiele sollen die Replikation und das Persistieren von Echtzeit-Simulationen in Computerspielen unter Einsatz von diversen Technologien dienen. Hierbei werden virtuelle, bewegliche Entitäten mit individuellen Zuständen in mehreren Schachtelungstiefen ineinander und mit Abhängigkeiten zueinander gespeichert. Zusätzlich werden stationäre, nutzergenerierte Strukturen auch direkt in der Welt platziert. Zudem bestehen auch Kombinationen aus beweglichen Entitäten mit relativ zu Ihnen gespeicherten nutzergenerierte Strukturen.
 
 Entitäten enthalten neben Ihrer räumlichen Lage eine Vielzahl an Zuständen, welche in Aspekte separiert werden können. Die Abhängigkeiten und Schachtelungen dieser Entitäten und Strukturen miteinander wird über Eltern-Kind Relationen als Graph abgebildet. 
 
-Für diesen Anwendungsfall ist vor allem das Server-Client-Replikationsprotokoll eine Herausforderung, die Datenbank-Server-Persistierung ist ein niederes Problem. Dies verhält sich so, da die meisten Transaktionen direkt im Speicher des Servers vorgenommen werden und nur Langzeit-Speicherungs Informationen und wichtige Transaktionen an die Datenbank weitergeleitet werden. Des Weiteren lassen sich die Langzeit-Speicherung Daten sehr gut über Regionale oder Räumliche Partitionierungen verteilen. Als kritische Operationen für die Kommunikation zwischen Echtzeit Server zu Datenbank ist Folgendes zu sehen:
+Für diesen Anwendungsfall ist vor allem das Server-Client-Replikationsprotokoll eine Herausforderung, während die Datenbank-Persistierung ein eher geringes Problem ist. Dies verhält sich so, da die meisten Transaktionen direkt im Speicher des Servers vorgenommen werden und nur Langzeit-Informationen und wichtige Transaktionen an die Datenbank weitergeleitet werden. Desweiteren lassen sich die Langzeit-Daten sehr gut über regionale oder räumliche Partitionierungen verteilen. Als kritische Operationen für die Echtzeit-Kommunikation zwischen Server und Datenbank ist Folgendes zu sehen:
 * Hochfahren des Servers (Replikation aller stationären und beweglichen In-Welt Entitäten)
 * Initial Synchronisierung, Authentifizierung und Verbindung eines neuen Clients (Replikation aller Client abhängigen Entitäten)
 * Autoritäts Wechsel von Entitäten also atomare Transaktionen wie der Austausch von Entitäten zwischen Clients oder Server-Regions-Partitionen (Verlust oder Duplikat Vermeidung)
@@ -85,7 +85,7 @@ Der sinnvollere Einsatz dieser Technologie ist der Verzicht auf die serverseitig
 
 Als letzte Technik ist zu nennen der Verzicht auf die Synchronität des Simulationzustandes zwischen Clients und Server, es handelt sich also um eigenständige Client-Simulationen, welche durch serverseitige Daten augmentiert werden. Clients senden Informationen zu einem Server dieser persistiert diese und entscheidet dann, welche davon er anderen Clients als Informationsmehrwert zur Verfügung stellt.
 
-Dies hat den Vorteil das sehr wenig Betriebskosten serverseitig entstehen und trotzdem Telemetriedaten gesammelt werden können. Je nach Design der augmentierten clientseitigen Simulationen helfen die Zusatzdaten den Client oder beeinflussen die clientseitige Simulation in Teilaspekten. Der Nachteil ist das Clients nur indirekt miteinander interagieren können.
+Dies hat den Vorteil, dass serverseitig nur geringe Betriebskosten entstehen und trotzdem Telemetriedaten gesammelt werden können. Je nach Design der augmentierten clientseitigen Simulationen helfen die Zusatzdaten den Clients oder beeinflussen die clientseitige Simulation in Teilaspekten. Der Nachteil ist, dass Clients nur indirekt miteinander interagieren können.
 
 ## 4.2 Virtuelle Marktsysteme
 TODO - evtl dieses ausbauen
