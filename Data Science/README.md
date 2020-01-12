@@ -26,6 +26,7 @@ Eine Ausarbeitung zum Thema Data Science.
    3. [Cloud Computing](./Technologien/Cloud.md)
    4. [Blockchain](./Technologien/Blockchain.md)
 5. [Datenbanktechnologien](./Datenbanktechnologien/Datenbanken.md)
-   1. [Neo4J](./Datenbanktechnologien/Neo4J.md)
+   1. [Graph-Datenbanken](./Datenbanktechnologien/Graphdatabase.md)
+   2. [Neo4J](./Datenbanktechnologien/Neo4J.md)
 6. [Fazit](fazit.md)
 7. [Literaturverzeichnis](literaturverzeichnis.md)
