@@ -21,7 +21,7 @@ Laut dem CAP-Theorem kann ein verteiltes System zwei der folgenden Eigenschaften
 
 ---
 
-[<< Run Databases in Kubernetes ](4_dbInK8s.md) | [Inhaltsverzeichnis](0_title.md)
+[<< Run Databases in Kubernetes ](4_dbInK8s.md) | [Inhaltsverzeichnis](README.md)
 
 ---
 

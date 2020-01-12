@@ -20,7 +20,6 @@
 3. [Kubernetes](3_k8s.md)
    - Infrastruktur
    - Komponenten
-   - Persistenz und Storage
 4. [Run Databases in Kubernetes](4_dbInK8s.md)
    - Stateful und Stateless Applications
    - Storage und Persistenz

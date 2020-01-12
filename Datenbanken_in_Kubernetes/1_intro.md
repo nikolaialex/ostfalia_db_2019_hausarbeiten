@@ -9,6 +9,7 @@ Die Google-Software wird bei wirklich großen Umgebungen eingesetzt. Beispielswe
 Das Marktforschungsinstitut Gartner Inc. ordnet Kubernetes Networking in seinem Hype- Cycle-Diagramm, welches in Abbildung 1 dargestellt ist, als eine Technologie ein welche erst in geschätzten zwei bis fünf Jahren das Plateau der Produktivität erreicht haben wird. Im Moment befindet sich diese Technik noch in einer Phase der überzogenen Erwartungen, da Kubernetes derzeit sehr viel öffentliche Aufmerksamkeit erfährt.
 
 ![Hype Cycle 2019](./images/image1.png)
+
 **_Hype Cycle 2019_ [5]**
 
 Kubernetes ist ein Container-Management-System welches zur Verwaltung von containerisierten Arbeitslasten und Services benutzt wird. Kubernetes besitzt ein schnell wachsendes Ökosystem [3].
@@ -27,6 +28,6 @@ Alternativen zu Kubernetes sind beispielsweise Docker Swarm, Apache Mesos und Az
 
 ---
 
-[Inhaltsverzeichnis](0_title.md) | [Docker >>](2_docker.md)
+[Inhaltsverzeichnis](README.md) | [Docker >>](2_docker.md)
 
 ---

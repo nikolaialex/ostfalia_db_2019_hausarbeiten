@@ -171,6 +171,7 @@ In einem Stateful Set wird ein anderer Controller verwendet, dieser startet die 
 Am folgenden Beispiel von einer Mongo Datenbank wird ein [Sidecar-Container](https://github.com/thesandlord/mongo-k8s-sidecar) neben dem MongoDB-Container in einem Pod verwendet, der bei Start des Pods die Datenbank mit den anderen im Stateful Set zu einem gemeinsamen Cluster verknüpft. [5]
 
 ![MongoDB Cluster](./images/mongoDB-cluster.svg)
+
 **_Replikation innerhalb eines MongoDB-Clusters bestehend aus drei Nodes_ [7]**
 
 Im Falle vom MongoDB erfolgt da auch die gegenseitige Zuweisung als _Primary_ und _Secondary Nodes_ der MongoDB-Container in den Pods. [7]Diese Synchronisation beim Start wird durch den im Skript dargestellten `command` bei Containererstellung initiiert. MongoDB besitzt diesen Mechanismus von sich aus, andere Datenbankentypen sind schwieriger als Cluster auzusetzen und erfordern meist ein manuelles Eingreifen durch einen Administrator.
@@ -292,7 +293,7 @@ Mit Hilfe eines Stateful Sets lassen sich Datenbanken als Stateful Applications 
 
 ---
 
-[<< Kubernetes](3_k8s.md) | [Inhaltsverzeichnis](0_title.md) | [Fazit >>](5_fazit.md)
+[<< Kubernetes](3_k8s.md) | [Inhaltsverzeichnis](README.md) | [Fazit >>](5_fazit.md)
 
 ---
 
