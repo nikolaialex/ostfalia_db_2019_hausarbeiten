@@ -29,6 +29,4 @@ Laut dem CAP-Theorem kann ein verteiltes System zwei der folgenden Eigenschaften
 
 - Text
 - Matrix
-- Google Entscheidungs-Artikel verwenden
-
-https://cloud.google.com/blog/products/databases/to-run-or-not-to-run-a-database-on-kubernetes-what-to-consider
+- Google Entscheidungs-Artikel + Bild verwenden für Fazit

@@ -9,8 +9,6 @@
 | Patrick Lammers | 70458381       | Ostfalia Wolfenbüttel |
 | Jürgen Weidig   | 20022913       | TH Brandenburg        |
 
----
-
 ## Inhaltsverzeichnis
 
 1. [Thema und Motivation](1_intro.md)
