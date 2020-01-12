@@ -119,3 +119,6 @@ Anhand der Tabelle und der Abbildung kann man sehr gut erkennen, dass die Contai
 # TODO
 
 - Literaturtabelle vervollständigen mit Titel und Aufruf der Webseite
+- Vergleich überarbeiten
+- Bilder in images Ordner persistieren
+- Bildunterschriften
