@@ -21,8 +21,8 @@
    - Infrastruktur
    - Komponenten
    - Persistenz und Storage
-4. [How to Run DB in Kubernetes](4_dbInK8s.md)
-   - Deployments
-   - Stateful Sets
-   - Vergleich
+4. [Run Databases in Kubernetes](4_dbInK8s.md)
+   - Stateful und Stateless Applications
+   - Storage und Persistenz
+   - Running Workload in Kubernetes
 5. [Fazit](5_fazit.md)
