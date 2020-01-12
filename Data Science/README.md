@@ -11,6 +11,8 @@ Eine Ausarbeitung zum Thema Data Science.
 | Isirafil Gülap           | 874786         | Beuth Hochschule Technik Berlin  |
 | W. Alexander Walkenhorst | 848142         | Beuth Hochschule Technik Berlin  |
 
+## Inahltsverzeichnis
+
 1. [Einleitung](einleitung.md)
 2. [Data Science](tbd.md)
    1. [Was ist ein Data Scientist?](tbd.md)
