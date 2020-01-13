@@ -31,18 +31,21 @@ Es sind 6 verschiedene Replikationsstrategien zu nennen, welche je nach Anforder
 
 Die 3. der Techniken soll im Detail betrachtet werden für dieses Fallbeispiel, die anderen dienen der Vorbereitung und als Ausblick auf Zukunft und alternative Ansätze. Als Quelle für die Beobachtungen und Erkenntnisse zu der technischen Optimierung und den Verhaltensweisen dient die eigene Tätigkeit 2013-2020 im Bereich.
 
+## 4.1 Broadcast Gesamtreplikation
 Die beiden ersten Techniken waren Stand der Technik bis vor etwa 10 Jahren, sie werden aber für kleinere Vorhaben immer noch eingesetzt aufgrund ihrer Einfachheit, der zusätzliche Effizienz und niedrigeren Zykluszeiten. Es wird auf Relevanz Prüfungen verzichtet und das Design so gewählt, dass die Client- und Entitäten Anzahl nicht aus dem Rahmen fallen. Dadurch das für alle Clients alles relevant ist können Übertragungspuffer für die Multicast-Übertragung großteils ohne Individualisierungen wiederverwendet werden, was Speicher Einsparungen bedeutet.
 
 Die Puffer Wiederverwendung machen den Einsatz von Kompressionstechniken sinnvoll, die bei stark Individualisierten Übertragungspuffern nicht effizient wären. Die Kompression des Datenstroms ermöglicht nach Performance und Speicher Profiling Tests auch wieder eine Erhöhung der Client- und Entitäten-Anzahl.
 
 Neben der erhöhten Bandbreiten Nutzung hat die Technik den Nachteil das die Clients zu viele oder gar alle Informationen empfangen. Was für Computerspiele bedeutet das Betrugssoftware clientseitig auch auf diese Informationen zugreifen kann.
 
+## 4.2 Replikation einfacher Multicast
 Die zweite Technik führt Individualisierung der Puffer ein, verzichtet jedoch noch auf aufwendigere Relevanzprüfungen. Es wird davon ausgegangen, dass die meisten Entitäten zueinander immer relevant sind. Diese Technik wird stark bei kurzweiligen rundenbasierten Simulationen mit kleiner Entitäten Anzahl eingesetzt, in diesem Szenario ist die Simulationswelt eingeschränkt teils mit schlauchartigen Designs und zu klein, um eine Optimierung nach räumlichen Kriterien sinnvoll zu machen.
 
 Es wird nach der initialen Synchronisierung des Simulation-Zustandes vermieden identisch gebliebene Informationen nochmals zu übertragen. Bei Zustandsänderungen einer Entität werden also nicht alle Aspekte einer Entität erneut übertragen, sondern nur die Aspekte, die sich geändert haben. Dadurch ist es bei diesem Einsatz bei vielen Implementierungen nicht möglich, nachträglich sich mit der Simulation zu synchronisieren und muss auf die nächste Runde warten. Implementierungen, welche das nachträgliche Synchronisieren unterstützen sammeln in diesem Falle alle Zustands Aspekte aller Entitäten und pausiert ggf. auch den Simulationsablauf bis die neuen Clients voll synchronisiert sind.
 
 Um Client-basierten Betrug zu vermeiden, nicht wegen hoher Datenmengen, ist im letzten Jahrzehnt dazu übergegangen zusätzlich Relevanz Eingrenzung vorzunehmen. Hierbei hat sich die Bestimmung von Sichtbarkeit Informationen anhand von BSP-Bäumen oder für Top-Down Simulationen auch die Prüfung einfacher rasterbasierte Sicht Bitmasken bewährt.
 
+## 4.3 Replikation komplexer Multicast (virtueller Geocast)
 Auf Basis dieser Grundlage entstand dann auch die 3. Technik, welche die Relevanzprüfung hauptsächlich aus Gründen der Datenmengen und CPU-Zeit Reduzierung vornimmt. Anders als bei den vorherig genannten Techniken ist die Datenmenge für diese Langzeit Simulationen (bis zu einem realen Tag) mit Größen von etwa 4 km²-~10 km² nicht mehr bewältigbar für einen Server, welcher maximal 65k dynamische Entitäten unterstützt. Je nach Simulationsart ist zu planen für 250 statischen Entitäten je 255 m² sowie weiteren 250 Dynamischen zu Spitzenzeiten, das ergibt durchschnittlich 2 pro 1 m² und somit bei einer 8 km² Simulation bereits bis zu 64 Millionen Entitäten.
 
 ![Auslastung eines Simulationsserver - 3. Replikationstechnik](assets/serverload.png)
@@ -69,18 +72,21 @@ Abbildung X: TODO: Grafik hier zu ID-Mappings
 
 Die Simulation nutzt aus Effizienzgründen Gleitkommazahlen einfacher Genauigkeit in Form eines Quaternion samt Translation, um die Lage der Entitäten abzubilden. Dies ist problematisch bei dieser Simulation Größe und führt zu sichtbaren Ungenauigkeiten. Mit steigender Entfernung zum Simulationszentrum sinkt die Präzision der Entität-Lagen, dies führt dazu das am Simulationsrand schon ab einer Entfernung von 4 km für Clients bei Bewegungen durch Nutzung von Bildvergrößerung ein Zittern der Entität-Lagen sichtbar wird. Hier empfiehlt sich der Wechsel auf Gleitkommazahlen doppelter Genauigkeit, welche jedoch aus Effizienzgründen nicht möglich ist, da der Server bereits an seiner Leistungsgrenze für das Fallbeispiel ist.
 
+## 4.4 Replikation über Zwischenschicht
 Soll die Simulation trotz dieser Hindernisse noch größer werden muss also eine Lösung eingesetzt werden, welche die Simulation über mehrere Server skaliert. Hier setzt die 4. genannte Technik ein, die Simulation wird in für die technischen Einschränkungen passende Sektoren partitioniert. Es muss eine Zwischenschicht vorgesehen werden, welche zwischen Client und Server vermittelt, um zu entscheiden wann welche Entitäten bei Serversektor Wechsel relevant werden. Diese Zwischenschicht, entscheidet zur Laufzeit, aus Auslastungsgründen Sektoren weiter zu teilen oder wieder zusammenzuführen und somit neue Server-Instanzen zu starten oder einzusparen (z. B. anhand der Verteilung der Client-Entitäten).
 
 Abbildung X: TODO Netzwerktopologie der Partitionierungs Technik
 
 Ein Nachteil dieser Technik sind die im Vergleich zu den bisher genannten Technologien, um Faktor 5-8x höhere laufende Kosten um die gleiche Clientanzahl und Simulationsgröße wie bei der unter 3. genannten Technologie zu realisieren. Dies hat zur Folge das für den Betrieb mit Clients ein Festpreis-Modell mit größerem finanziellen Risiko verbunden ist und eigentlich nur ein Abo-Modell infrage kommt. Der Vorteil ist die hohe Skalierbarkeit und das in der Technik verankerte Loadbalancing. Dies ermöglicht Simulationsgrößen von über 10 km mit über 1000 Client-Entitäten, was nicht mit den bisher genannten Techniken möglich war. Ein Beispiel für solch eine Middleware ist SpatialOS (TODO: Link).
 
+## 4.5 Verzicht auf Replikation über Einsatz von Streaming
 Die 5. der Techniken, der Ersatz von Replikation mit Videostreaming, ist erst in den letzten Jahren im Einsatz. Erst jetzt reichen Client-Bandbreite und geringe algorithmische Laufzeit der Videocodecs um dieses Szenario ermöglichen. Auch ist inzwischen der Hardware Support für de- und Encoding in Consumer - Hardware weit verbreitet. Ein bestehender Nachteil ist die Netzwerklatenz, welche zu Eingabeverzögerung führt.
 
 Es werden Stand 2019 noch nicht die vollen Vorteile der Technik ausgeschöpft. Die Cloud-Server-Hardware, die das Rendering der Simulation vornimmt, wird als Dienst kurzzeitig für Einzelspieler oder normale Mehrspieler Simulation als Client-Hardware Ersatz vermietet. Weiterer Nachteil sind die hohen Kosten auf Rechenzentrum Seite, welche nur sinnvoll sind, wenn die Client-Hardware entsprechend leistungsschwach und günstig ist und somit ein Abo-Modell ermöglicht.
 
 Der sinnvollere Einsatz dieser Technologie ist der Verzicht auf die serverseitige Replikation des Umfangreichen und komplexen Simulation-Zustands, dieser bleibt im Cloud-Rechenzentrum. Das hat den Vorteil das alle Clients unabhängig von Ihrer Hardware und Standort mit nahezu identischen Bedingungen die gleiche Simulation nutzen können. Manipulation und Betrugssoftware hat reduzierte Chancen da aus einem Video-Stream nicht Zusatzinformationen extrahiert werden können.
 
+## 4.6 Verzicht auf Replikation über Aktzeptanz des asynchronen Zustands
 Als letzte Technik ist zu nennen der Verzicht auf die Synchronität des Simulationzustandes zwischen Clients und Server, es handelt sich also um eigenständige Client-Simulationen, welche durch serverseitige Daten augmentiert werden. Clients senden Informationen zu einem Server dieser persistiert diese und entscheidet dann, welche davon er anderen Clients als Informationsmehrwert zur Verfügung stellt.
 
 Dies hat den Vorteil, dass serverseitig nur geringe Betriebskosten entstehen und trotzdem Telemetriedaten gesammelt werden können. Je nach Design der augmentierten clientseitigen Simulationen helfen die Zusatzdaten den Clients oder beeinflussen die clientseitige Simulation in Teilaspekten. Der Nachteil ist, dass Clients nur indirekt miteinander interagieren können.
