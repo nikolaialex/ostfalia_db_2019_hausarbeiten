@@ -21,10 +21,10 @@ Alternativen zu Kubernetes sind beispielsweise Docker Swarm, Apache Mesos und Az
 | #   | Literatur                                                                                                                                                                                                            |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [1] | _Drei gute Gründe sprechen für Kubernetes, Container Days in Hamburg_, https://line-of.biz/it-infrastruktur-und-rechenzentren/drei-gute-gruende-sprechen-fuer-kubernetes/, aufgerufen 25.11.2019                     |
-| [2] | **Jan Mahn, Merlin Schumacher**, _Container à la K_, c’t 2019, Heft 18, Heise Medien, Seite 156 ff                                                                                                                   |
+| [2] | **Jan Mahn, Merlin Schumacher**: _Container à la K_, c’t 2019, Heft 18, Heise Medien, Seite 156 ff                                                                                                                   |
 | [3] | _Was ist Kubernetes?_, https://kubernetes.io/de/docs/concepts/overview/, aufgerufen 5.12.2019                                                                                                                        |
-| [4] | **Harald Weiß**, _Wie Kubernetes die Anwendungsentwicklung revolutioniert_, https://www.computerweekly.com/de/feature/Wie-Kubernetes-die-Anwendungsentwicklung-revolutioniert?vgnextfmt=print, aufgerufen 15.11.2019 |
-| [5] | **David Ramel**, _Research Firm's Hype Cycle Report: 'SDN Has Become Obsolete_, https://virtualizationreview.com/articles/2019/10/14/enterprise-networking-report.aspx, aufgerufen 1.11.2019                         |
+| [4] | **Harald Weiß**: _Wie Kubernetes die Anwendungsentwicklung revolutioniert_, https://www.computerweekly.com/de/feature/Wie-Kubernetes-die-Anwendungsentwicklung-revolutioniert?vgnextfmt=print, aufgerufen 15.11.2019 |
+| [5] | **David Ramel**: _Research Firm's Hype Cycle Report: 'SDN Has Become Obsolete_, https://virtualizationreview.com/articles/2019/10/14/enterprise-networking-report.aspx, aufgerufen 1.11.2019                         |
 
 ---
 

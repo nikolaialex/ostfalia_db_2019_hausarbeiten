@@ -317,11 +317,11 @@ Außerdem gibt es logischerweise keine allgemeine Lösung für verschiedene Date
 | [2] | _Nichtflüchtige Speicher mit WordPress und MySQL verwenden_, https://cloud.google.com/kubernetes-engine/docs/tutorials/persistent-disk?hl=de, aufgerufen 01.11.2019                                                                                      |
 | [3] | _Deployments_, https://kubernetes.io/docs/concepts/workloads/controllers/deployment/, aufgerufen 12.01.2020                                                                                                                                              |
 | [4] | _Example: Deploying WordPress and MySQL with Persistent Volumes_, https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/, aufgerufen 12.01.2020                                                                    |
-| [5] | **Sandeep Dinesh**, _Running MongoDB on Kubernetes with StatefulSets_, https://kubernetes.io/blog/2017/01/running-mongodb-on-kubernetes-with-statefulsets/, aufgerufen 12.01.2020                                                                        |
+| [5] | **Sandeep Dinesh**: _Running MongoDB on Kubernetes with StatefulSets_, https://kubernetes.io/blog/2017/01/running-mongodb-on-kubernetes-with-statefulsets/, aufgerufen 12.01.2020                                                                        |
 | [6] | _StatefulSets_, https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/, aufgerufen 12.01.2020                                                                                                                                            |
 | [7] | _Replication_, https://docs.mongodb.com/manual/replication, aufgerufen 12.01.2020                                                                                                                                                                        |
 | [8] | _Example: Deploying Cassandra with StatefulSets_, https://kubernetes.io/docs/tutorials/stateful-application/cassandra/, aufgerufen 12.01.2020                                                                                                            |
-| [9] | **Ben Bromhead (11.09.2018)**, _Running Apache Cassandra on Kubernetes_, https://opensource.com/article/18/9/cassandra-operator-kubernetes, aufgerufen 13.01.2020                                                                                        |
+| [9] | **Ben Bromhead (11.09.2018)**: _Running Apache Cassandra on Kubernetes_, https://opensource.com/article/18/9/cassandra-operator-kubernetes, aufgerufen 13.01.2020                                                                                        |
 
 ---
 
