@@ -1,5 +1,9 @@
 # Datenbanken in Kubernetes
 
+Kubernetes ist ein Open-Source Orchestrator zur Bereitstellung und Verwaltung von Container-Anwendungen, insbesondere auf Grundlage von Docker.
+
+In diesem Bericht werden Grundlagen von Docker und Kubernetes beschrieben, sowie beispielhafte Einsatzmöglichkeiten für das Betreiben und Skalieren von Datenbanken mit Hilfe von Kubernetes aufgezeigt.
+
 ## Autoren
 
 | Name            | Matrikelnummer | Hochschule            |
@@ -9,17 +13,8 @@
 | Patrick Lammers | 70458381       | Ostfalia Wolfenbüttel |
 | Jürgen Weidig   | 20022913       | TH Brandenburg        |
 
-## Inhaltsverzeichnis
+---
 
-1. [Thema und Motivation](1_intro.md)
-2. [Docker](2_docker.md)
-   - Container-Technologie
-   - Container vs VMs
-3. [Kubernetes](3_k8s.md)
-   - Infrastruktur
-   - Komponenten
-4. [Run Databases in Kubernetes](4_dbInK8s.md)
-   - Stateful und Stateless Applications
-   - Storage und Persistenz
-   - Running Workload in Kubernetes
-5. [Fazit](5_fazit.md)
+[Inhaltsverzeichnis >>](0_inhalt.md)
+
+---
