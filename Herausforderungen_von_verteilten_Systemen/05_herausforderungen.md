@@ -40,21 +40,41 @@ Eine weiterer wichtiger Aspekt in verteilten Systemen ist die Migration von Code
 
 ## 3.3 Kommunikation
 
-Der Kommunikation zwischen den beteiligten Komponenten sowie mit der Außenwelt kommt in verteilten Systemem besondere Bedeutung zu. Während in monolithischen Systemen die Kommunikation noch über Funktionsaufrufe und / oder lokale PubSub-Mechanismen u.ä. ausreicht, ist dies bei verteilten Multicomputersystemen nicht mehr gegeben.
+3.3 Kommunikation
+Der Kommunikation zwischen den beteiligten Komponenten sowie mit der Außenwelt kommt in verteilten Systemen besondere Bedeutung zu. Während in monolithischen Systemen die Kommunikation noch über IPC, Ereignissen und Funktionsaufrufe usw. ausreicht, ist dies bei verteilten Multi Computersystemen nicht mehr gegeben.
 
-```
-TODO: Überarbeiten
-Während in herkömmlichen verteilten Systemen die Netzwerkkommunikation noch über Mechanismen der Transportschicht wie einfaches Message Passing erfolgt, werden in middleware-basierten Systemen abstraktere Mechanismen angeboten, um die Kommunikation zu vereinfachen.
-```
+In klassischen Server- und Clientanwendungen erfolgte die Netzwerkkommunikation über Mechanismen der Transportschicht wie einfaches Message Passing, dies führte zu vielen Speziallösungen mit erhöhten Implementierungs- und Wartungskosten, schlechter Interoperabilität und zweifelhafter Sicherheit.
 
- Diese Mechanismen lassen sich grob in die drei Gruppen **Remote Procedure Calls**, **Message-Oriented Communication** und **Multicast Communication** unterteilen.
+Um dem entgegenzuwirken und die **Wiederverwendung und Kompatibilität zwischen verteilten Systemen** zu erhöhen haben sich **Standards rund um Middleware-basierte Systeme** entwickelt. Anwendungen bzw. Dienste implementieren nicht mehr auf Transportschicht Protokolle, sondern nutzen die Mechanismen der jeweils gewählten Middleware. Es wurden auf den Middlewares aufbauend Referenzen und **standardisierte Lösungen** entwickelt, um die **Interoperabilität in Problemdomänen** noch weiter zu vereinfachen (z. B. OPC für Automatisierungstechnik).
+
+Die Middleware ist nicht nur für die reine Kommunikation zuständig, sondern bietet auch **Sicherheitskonzepte wie Authentifizierung und Verschlüsselung**. Auch die **Fehlerbehandlung** ist parametrierbar und wird, nach optionaler Aufzeichnung, an die Anwendungen in Form von Rückgabewerten oder Ausnahmefehlern weitergegeben. Meist bieten die Middleware auch **Schnittstellenbeschreibung Sprachen** (IDL) samt **Codegeneratoren** oder Import Funktionalitäten damit die definierte Schnittstelle eines Systems möglichst einfach zu Interoperabilitäts Zwecken mit potenziellen Kommunikationspartnern ausgetauscht werden kann.
+
+Je nach **Plattform, Programmiersprache und Anforderung** haben sich über die letzten 30 Jahre diverse Middleware Lösungen mit verschieden Schwerpunkten und teils gegensätzlichen Konzepten entwickelt. Für **isochrone Echtzeitanforderungen** in verteilten Systemen wird bereits direkt auf Hardwareebene auf Feldbussysteme wie CAN, PROFINET oder EtherCAT mit passender Middleware gesetzt, während bei laxeren Zeitanforderungen auch MQTT oder OPC UA über klassische Ethernet ausreicht. Ein weiteres Unterscheidungsmerkmal ist das **Datenformat**, während einige auf **menschlich lesbarer Datenformate** wie XML bei SOAP, JSON bei REST setzen, präferieren andere **effiziente Binärdaten Formate** wie Protocol Buffers, CORBA, ONC und COM+. Zuletzt wird Unterschieden zwischen **zustandsloser Kommunikation** für Komponenten, Web- und Microservices bei REST und dem gegenüberstehenden Konzept der **zustandsbehafteten objektbasierten Kommunikation** bei CORBA und COM+.
+
+Für viele der Middlewares ist der Werkzeugunterstützung und Dokumentation außerhalb der Hauptzielplattform oft nur ein Marketing Gag und nicht praktikabel. Allgemein ist abzusehen das die Entwicklung und Popularität zu Offenen und Plattformunabhängigen, eher weniger komplexen Middlewares und Standards, geht da sie auf den verschiedensten Kommunikationspartnern eingesetzt werden können. Auch aufgrund dessen wurden Broker also Umsetzer und Datensammler entwickelt, welche mehrere Middlewares integrieren und zwischen Ihnen vermitteln können.
+
+Unabhängig von gewählter Middleware finden sich jedoch wiederkehrende **abstrakte Mechanismen**, um die Kommunikation zu vereinfachen. Diese können in folgende Gruppen aufgeteilt werden: **Remote Procedure Calls, Message-Oriented Communication und Object-Replication**.
+
+Ebenfalls unabhängig von gewähltem Mechanismus bieten Middleware auch die Konfiguration des **Routing-Schemas** an, also **Unicast, Multicast, Broadcast und weitere**. Dies entscheidet darüber, zwischen welcher Auswahl an Systemen spezifische Kommunikationen weitergeleitet werden.
+
+Für **Verzögerungs tolerante Einsatzzwecke** gibt es zusätzlich Möglichkeiten (**QoS**) zur Konfiguration von **Priorisierung und Time-outs**. Dies kann hilfreich sein, Daten die zyklisch übertragen werden, nach gewisser Zeit zu verwerfen da sie z. B. durch aktuellere Daten ersetzt wurden.
 
 ### 3.3.1 Remote Procedure Calls
+RPC sind das entfernte Äquivalent der Funktions- oder Methodenaufrufe in verteilten Systeme, sie unterstützen typisierte Parameter und Rückgabewerte sowie die vorhergehend beschriebenen Middleware abhängigen Parametrierung Eigenschaften bzgl. Routing und Priorisierung.
+
+Beim klassischen RPC geht es um eine zustandsbehaftete Kommunikation, in der über eine Verbindung eine Sequenz an Befehlen bidirektional ausgetauscht werden. Die als RMI (Remote Method Invocation) bezeichnete Erweiterung von RPC ist die Integration von ORBs (Object Request Brokern) um Methodenaufrufe und das Referenzieren von Objekten über die Kommunikationsschnittstelle zu ermöglichen. Beispiele für diese Kommunikationsart sind CORBA, COM+, .NET Remoting, ONC und gRPC.
 
 ### 3.3.2 Message-Oriented Communication
+Nachrichtenorientierte Kommunikation ist, das entferne Äquivalent von Ereignissen, im Vergleich zur RPC Kommunikation handelt es sich um eine Kommunikation zwischen schwächer gekoppelten Systemen. Es wird das senden von Benachrichtigungen (push Betrieb) unterstützt. Auch ein Publisher Subscriber Mechanismus wird implementiert, also das anfordern von Benachrichtigungen zu einem bestimmten Thema (pull Betrieb) über einen längeren Zeitraum. Eine weitere Eigenschaft ist die verzögerte und parallelisierbare Bearbeitung der Nachrichten über Wartelisten.
 
-### 3.3.3 Multicast Communication
+Es handelt sich hierbei bis auf Authentifikation und Subscribe Zustände um eine zustandslose Kommunikationsart, Informationen werden je Nachricht redundant übertragen und auch die Verbindung kann zeitweise unterbrochen werden.
 
+Als Grundlage dieser Kommunikationsart kann ein beliebiges Protokoll oder auch eine RPC-Middleware dienen. Als Beispiel ist hier REST, SOAP, JMS, AQMP und MQTT zu nennen.
+
+### 3.3.3 Object-Replication
+Die Objektreplikation stellt das entfernte Äquivalent von dem Persistieren und der Serialisierung von Objekten dar. In einer zustandsbehafteten Kommunikation wird es nötig das bei Unterbrechung, Fehlern oder Initiierung der Kommunikation der Objektzustand zwischen den Systemen synchronisiert werden muss, da ja RP jeweils nur spezifische Zustandsänderungen auslöst.
+
+Im einfachsten Fall ist es so zu sehen das passiv Objektinstanziierung, Destruktion und Zustand aller Aspekte und Eigenschaften von Objekten, zu entfernten Systemen transferiert werden. Die Middleware stellt Mechanismen zur Kennzeichnung von Objekten mit Attributen zur Relevanz, Autorität und der Aufteilung des Zustands in Teilaspekte zur Verfügung. Weiter werden Mechanismen zum Autoritätswechsel und der aktiven Replikation von Gesamtzustand oder Teilaspekten zur Verfügung gestellt. Autorität bedeutet hier welches System ist aktuell für einen Teilaspekt eines Objektes zuständig und repliziert diesen zu den anderen Systemen (auf welchen das Objekt existiert). Beispiele für diese Kommunikationsart, die in Kombination mit RPC eingesetzt wird, sind FT-CORBA, .NET Remoting und RakNet.
 
 
 ## 3.4 Namensgebung
