@@ -1,10 +1,10 @@
-[<< Fallbeispiele](06_fallbeispiele.md) | [Inhaltsverzeichnis](02_toc.md) | [Quellenverzeichnis >>](08_quellenverzeichnis.md)
-|-|-|-|
+[<< Fallbeispiel](06_fallbeispiele.md) | [Inhaltsverzeichnis](02_toc.md) | 
+|-|-|
 
 ---
 
 # 5. Zusammenfassung
 
 ---
-[<< Fallbeispiele](06_fallbeispiele.md) | [Inhaltsverzeichnis](02_toc.md) | [Quellenverzeichnis >>](08_quellenverzeichnis.md)
-|-|-|-|
+[<< Fallbeispiel](06_fallbeispiele.md) | [Inhaltsverzeichnis](02_toc.md) | 
+|-|-|

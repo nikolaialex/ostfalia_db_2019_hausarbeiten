@@ -1,4 +1,4 @@
-| [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md) |
+﻿| [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiel >>](06_fallbeispiel.md) |
 | - | - | - |
 ---
 
@@ -307,5 +307,5 @@ Der Koordinator (a) sendet zunächst ein VOTE-REQUEST an alle Teilnehmer der Gru
 [Vogels, 2009]: W. Vogels, “Eventually Consistent,” Queue, vol. 6, no. 6, p. 14, Oct. 2008, doi: 10.1145/1466443.1466448.
 
 ---
-[<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md)
+[<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiel >>](06_fallbeispiel.md)
 |-|-|-|

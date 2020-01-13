@@ -1,10 +1,8 @@
-[<< Herausforderungen](05_herausforderungen.md) | [Inhaltsverzeichnis](02_toc.md) | [Zusammenfassung >>](07_zusammenfassung.md)
+﻿[<< Herausforderungen](05_herausforderungen.md) | [Inhaltsverzeichnis](02_toc.md) | [Zusammenfassung >>](07_zusammenfassung.md)
 |-|-|-|
 ---
 
-# 4. Fallbeispiele
-
-## 4.1 Optimierung der Replikation für Echtzeit Simulationen (mit Hilfe von Aspekten, Graphen, Räumliche-Partitionierungen und weiteren)
+# 4. Fallbeispiel - Optimierung der Replikation für Echtzeit Simulationen (mit Hilfe von Aspekten, Graphen, Räumlicher-Partitionierung und weiteren Techniken)
 
 Als Fallbeispiele sollen die Replikation und das Persistieren von Echtzeit-Simulationen in Computerspielen unter Einsatz von diversen Technologien dienen. Hierbei werden virtuelle, bewegliche Entitäten mit individuellen Zuständen in mehreren Schachtelungstiefen ineinander und mit Abhängigkeiten zueinander gespeichert. Zusätzlich werden stationäre, nutzergenerierte Strukturen auch direkt in der Welt platziert. Zudem bestehen auch Kombinationen aus beweglichen Entitäten mit relativ zu Ihnen gespeicherten nutzergenerierte Strukturen.
 
@@ -87,26 +85,7 @@ Als letzte Technik ist zu nennen der Verzicht auf die Synchronität des Simulati
 
 Dies hat den Vorteil, dass serverseitig nur geringe Betriebskosten entstehen und trotzdem Telemetriedaten gesammelt werden können. Je nach Design der augmentierten clientseitigen Simulationen helfen die Zusatzdaten den Clients oder beeinflussen die clientseitige Simulation in Teilaspekten. Der Nachteil ist, dass Clients nur indirekt miteinander interagieren können.
 
-## 4.2 Virtuelle Marktsysteme
-TODO - evtl dieses ausbauen
-
-Probleme -> Duplizierungen / Verlust / Diebstahl
-
-Evtl. Marketplace, GUIDs, Transaktionen, Historie, Blockchain, Graphen -> Tangle, etc
-
-## 4.3 Internet of Things und Industry 4.0 Protokolle
-TODO - oder evtl. dieses ausbauen
-
-Standards MQTT / OPC UA -> Foundation Standardimplementierung, Softing
-
-evtl. Bedeutung, Edge computing / -> Broker Pub Subscriber
-
-Sensoren -> Laufzeiten, Wartungsintervalle, Übersichten
-
-Hierarchical Data Storage...
-
-Pollende Rotierende Abtastung Prozessabbilder, Event listener
-
 ---
+
 [<< Herausforderungen](05_herausforderungen.md) | [Inhaltsverzeichnis](02_toc.md) | [Zusammenfassung >>](07_zusammenfassung.md)
 |-|-|-|
