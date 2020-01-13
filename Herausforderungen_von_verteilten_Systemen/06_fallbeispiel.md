@@ -31,21 +31,21 @@ Es sind 6 verschiedene Replikationsstrategien zu nennen, welche je nach Anforder
 
 Die 3. der Techniken soll im Detail betrachtet werden für dieses Fallbeispiel, die anderen dienen der Vorbereitung und als Ausblick auf Zukunft und alternative Ansätze. Als Quelle für die Beobachtungen und Erkenntnisse zu der technischen Optimierung und den Verhaltensweisen dient die eigene Tätigkeit 2013-2020 im Bereich.
 
-## 4.1 Broadcast Gesamtreplikation
+## 4.1 Gesamtreplikation über Broadcast
 Die beiden ersten Techniken waren Stand der Technik bis vor etwa 10 Jahren, sie werden aber für kleinere Vorhaben immer noch eingesetzt aufgrund ihrer Einfachheit, der zusätzliche Effizienz und niedrigeren Zykluszeiten. Es wird auf Relevanz Prüfungen verzichtet und das Design so gewählt, dass die Client- und Entitäten Anzahl nicht aus dem Rahmen fallen. Dadurch das für alle Clients alles relevant ist können Übertragungspuffer für die Multicast-Übertragung großteils ohne Individualisierungen wiederverwendet werden, was Speicher Einsparungen bedeutet.
 
 Die Puffer Wiederverwendung machen den Einsatz von Kompressionstechniken sinnvoll, die bei stark Individualisierten Übertragungspuffern nicht effizient wären. Die Kompression des Datenstroms ermöglicht nach Performance und Speicher Profiling Tests auch wieder eine Erhöhung der Client- und Entitäten-Anzahl.
 
 Neben der erhöhten Bandbreiten Nutzung hat die Technik den Nachteil das die Clients zu viele oder gar alle Informationen empfangen. Was für Computerspiele bedeutet das Betrugssoftware clientseitig auch auf diese Informationen zugreifen kann.
 
-## 4.2 Replikation einfacher Multicast
+## 4.2 Replikation über einfachen Multicast
 Die zweite Technik führt Individualisierung der Puffer ein, verzichtet jedoch noch auf aufwendigere Relevanzprüfungen. Es wird davon ausgegangen, dass die meisten Entitäten zueinander immer relevant sind. Diese Technik wird stark bei kurzweiligen rundenbasierten Simulationen mit kleiner Entitäten Anzahl eingesetzt, in diesem Szenario ist die Simulationswelt eingeschränkt teils mit schlauchartigen Designs und zu klein, um eine Optimierung nach räumlichen Kriterien sinnvoll zu machen.
 
 Es wird nach der initialen Synchronisierung des Simulation-Zustandes vermieden identisch gebliebene Informationen nochmals zu übertragen. Bei Zustandsänderungen einer Entität werden also nicht alle Aspekte einer Entität erneut übertragen, sondern nur die Aspekte, die sich geändert haben. Dadurch ist es bei diesem Einsatz bei vielen Implementierungen nicht möglich, nachträglich sich mit der Simulation zu synchronisieren und muss auf die nächste Runde warten. Implementierungen, welche das nachträgliche Synchronisieren unterstützen sammeln in diesem Falle alle Zustands Aspekte aller Entitäten und pausiert ggf. auch den Simulationsablauf bis die neuen Clients voll synchronisiert sind.
 
 Um Client-basierten Betrug zu vermeiden, nicht wegen hoher Datenmengen, ist im letzten Jahrzehnt dazu übergegangen zusätzlich Relevanz Eingrenzung vorzunehmen. Hierbei hat sich die Bestimmung von Sichtbarkeit Informationen anhand von BSP-Bäumen oder für Top-Down Simulationen auch die Prüfung einfacher rasterbasierte Sicht Bitmasken bewährt.
 
-## 4.3 Replikation komplexer Multicast (virtueller Geocast)
+## 4.3 Replikation über komplexen Multicast (virtueller Geocast)
 Auf Basis dieser Grundlage entstand dann auch die 3. Technik, welche die Relevanzprüfung hauptsächlich aus Gründen der Datenmengen und CPU-Zeit Reduzierung vornimmt. Anders als bei den vorherig genannten Techniken ist die Datenmenge für diese Langzeit Simulationen (bis zu einem realen Tag) mit Größen von etwa 4 km²-~10 km² nicht mehr bewältigbar für einen Server, welcher maximal 65k dynamische Entitäten unterstützt. Je nach Simulationsart ist zu planen für 250 statischen Entitäten je 255 m² sowie weiteren 250 Dynamischen zu Spitzenzeiten, das ergibt durchschnittlich 2 pro 1 m² und somit bei einer 8 km² Simulation bereits bis zu 64 Millionen Entitäten.
 
 ![Auslastung eines Simulationsserver - 3. Replikationstechnik](assets/serverload.png)
@@ -72,7 +72,7 @@ Abbildung X: TODO: Grafik hier zu ID-Mappings
 
 Die Simulation nutzt aus Effizienzgründen Gleitkommazahlen einfacher Genauigkeit in Form eines Quaternion samt Translation, um die Lage der Entitäten abzubilden. Dies ist problematisch bei dieser Simulation Größe und führt zu sichtbaren Ungenauigkeiten. Mit steigender Entfernung zum Simulationszentrum sinkt die Präzision der Entität-Lagen, dies führt dazu das am Simulationsrand schon ab einer Entfernung von 4 km für Clients bei Bewegungen durch Nutzung von Bildvergrößerung ein Zittern der Entität-Lagen sichtbar wird. Hier empfiehlt sich der Wechsel auf Gleitkommazahlen doppelter Genauigkeit, welche jedoch aus Effizienzgründen nicht möglich ist, da der Server bereits an seiner Leistungsgrenze für das Fallbeispiel ist.
 
-## 4.4 Replikation über Zwischenschicht
+## 4.4 Replikation über Partitionierungs Zwischenschicht
 Soll die Simulation trotz dieser Hindernisse noch größer werden muss also eine Lösung eingesetzt werden, welche die Simulation über mehrere Server skaliert. Hier setzt die 4. genannte Technik ein, die Simulation wird in für die technischen Einschränkungen passende Sektoren partitioniert. Es muss eine Zwischenschicht vorgesehen werden, welche zwischen Client und Server vermittelt, um zu entscheiden wann welche Entitäten bei Serversektor Wechsel relevant werden. Diese Zwischenschicht, entscheidet zur Laufzeit, aus Auslastungsgründen Sektoren weiter zu teilen oder wieder zusammenzuführen und somit neue Server-Instanzen zu starten oder einzusparen (z. B. anhand der Verteilung der Client-Entitäten).
 
 Abbildung X: TODO Netzwerktopologie der Partitionierungs Technik
