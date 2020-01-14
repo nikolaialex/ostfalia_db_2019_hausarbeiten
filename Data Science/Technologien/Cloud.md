@@ -26,3 +26,5 @@ Service | Beschreibung | Darstellung |
 | Infrastructure as a Service (IaaS) | IaaS stellt dem Nutzer typische Komponenten einer Rechenzentruminfrastruktur wie Hardware, Rechenleistung, Speicherplatz oder Netzwerkressourcen aus der Cloud zur Verfügung. | ![Infrastructure as a Service (IaaS)](../images/IaaS.png) |
 | Platform as a Service (PaaS) | Als PaaS wird eine Cloudumgebung verstanden, die eine Plattform für die Entwicklung von Anwendungen im Internet anbietet. PaaS baut auf IaaS auf und erweitert das Konzept der Bereitstellung von Hardware um weitere Features. | ![Platform as a Service (PaaS)](../images/PaaS.png) |
 | Software as a Service (SaaS) | SaaS ist ein Distributionsmodell für Anwendungen via Webbrowser und wird nur als Teilbereich in der Cloud verstanden. Die angeforderten Applikationen sind nie direkt auf dem Gerät des Nutzers vorhanden. | ![Software as a Service (SaaS)](../images/SaaS.png) |
+
+[Zurück zu API](./API.md) || [Weiter zu Blockchain](./Blockchain.md)

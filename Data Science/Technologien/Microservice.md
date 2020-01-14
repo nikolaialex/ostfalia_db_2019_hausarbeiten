@@ -34,4 +34,4 @@ Die folgende Abbildung stellt die Architektur eines Monolithen der Architektur v
 
 Ein Monolith ist eine Software-Architektur, bei der alle Prozesse in einem einzigen und untrennbaren sowie homognenen Gebilde verbunden sind. Bereits der Ausfall einer einzelnen Komponente kann zum Ausfall des gesamten Systems führen.
 
-[Weiter zu API](./API.md)
+[Zurück zu Technologien](./Technologien.md) || [Weiter zu API](./API.md)

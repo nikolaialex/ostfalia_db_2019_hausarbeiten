@@ -22,3 +22,5 @@ zeichenn die Blockchain als einzigartige Datenbank aus. [[22](https://www.econso
 
 In der folgenden Abbildung ist eine Transaktion mit Hilfe des Blockchain-Verfahrens zu sehen:
 ![Blockchain Transaktion](../images/Blockchain.png)
+
+[Zurück zu Cloud Computing](./Cloud.md)

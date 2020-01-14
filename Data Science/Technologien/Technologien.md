@@ -19,6 +19,6 @@ Technologiebereiche zu evaluieren und berücksichtigen.
 
 ## Datenbanken
 
-[Datenbanken](./Datenbanken.md)
+[Datenbanken](./../Datenbanktechnologien/Datenbanken.md)
 
-[Neo4J](./Neo4J)
+[Neo4J](./../Datenbanktechnologien/Neo4J.md)

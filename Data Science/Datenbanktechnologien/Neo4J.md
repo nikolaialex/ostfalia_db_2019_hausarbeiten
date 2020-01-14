@@ -7,3 +7,5 @@ Wer jedoch in der Cloud arbeiten möchte, hat die Möglichkeit, dies mit Neo4J, 
     https://neo4j.com/developer/get-started/
 
 ![Graph-Datenbank Neo4J](../images/Neo4J.png)
+
+[Zurück zu Graph-Datenbanken](./Graphdatabase.md)
