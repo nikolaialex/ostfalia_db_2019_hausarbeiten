@@ -68,7 +68,7 @@ Ein Datenbankverbund mehrere Server hat den Vorteil, dass Informationen direkt z
 
 Der Server selbst verwendet einen 32-Bit-Server-Entitäts-ID-Adressraum (16-Bit + 16-Bit Wiederverwendungs Salt). Wenn dieser Adressraum durch Relevanz Änderungen erschöpft ist, muss der Server neustarten, um ID-Kollisionen im Netzwerkprotokoll zu verhindern. Die Server-Entität-IDs werden für das Netzwerkprotokoll je Client individuell auf eine 16-Bit-Netzwerk-ID gemappt. Die Clients arbeiten, wie der Server und bilden die Entitäten wieder in einem individuellem 32-Bit-ID-Adressraum mit zusätzlicher Entropie aus Salt ab. Zusätzlich unterstützt jede der Entitäten bis zu 250 Unter Entitäten für Strukturelemente, welche nicht im Server und Client ID-Adressraum auftauchen. Sie nutzen einen individuellen Adressraum innerhalb der Entität selbst, sie besitzen auch eine GUID welche jedoch nur der Server zur Langzeit Persistierung kennt.
 
-Abbildung X: TODO: Grafik hier zu ID-Mappings
+![Netzwerk ID-Zuordnung - 3. Replikationstechnik](assets/id_mapping.png)
 
 Die Simulation nutzt aus Effizienzgründen Gleitkommazahlen einfacher Genauigkeit in Form eines Quaternion samt Translation, um die Lage der Entitäten abzubilden. Dies ist problematisch bei dieser Simulation Größe und führt zu sichtbaren Ungenauigkeiten. Mit steigender Entfernung zum Simulationszentrum sinkt die Präzision der Entität-Lagen, dies führt dazu das am Simulationsrand schon ab einer Entfernung von 4 km für Clients bei Bewegungen durch Nutzung von Bildvergrößerung ein Zittern der Entität-Lagen sichtbar wird. Hier empfiehlt sich der Wechsel auf Gleitkommazahlen doppelter Genauigkeit, welche jedoch aus Effizienzgründen nicht möglich ist, da der Server bereits an seiner Leistungsgrenze für das Fallbeispiel ist.
 
