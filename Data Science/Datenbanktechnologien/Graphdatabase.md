@@ -10,8 +10,6 @@ Für das Durchsuchen eines Graphen sind sepzialisierte Graphalgorithmen möglich
 
 Während bei der Tiefensuche zunächst der tiefere Knoten besucht wird, werden bei der Breitensuche im ersten Schritt alle Nachbarknoten auf einer Ebene durchsucht und erst dann wird auf die nächst tiefere Ebeneb gewechselt.
 
-    TODO: Code aus BA für Breiten und Tiefensuche -> done aber läuft nicht
-
 Nachfolgend werden die Vor- und Nachteile von Graph-Datenbanken gelistet [[16](https://www.bigdata-insider.de/was-ist-eine-graphdatenbank-a-788834/), [17](https://www.ionos.de/digitalguide/hosting/hosting-technik/graphdatenbank/)]:
 
 Vorteile | Beschreibung |
