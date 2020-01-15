@@ -56,7 +56,7 @@ Zusätzlich wird serverseitig je Client bestimmt, welche Entitäten relevant ist
 
 In der Simulation vor-platzierte Entitäten (wie z. B. Türen, Lichter) werden gruppiert als Entität in einem 250 m Raster. Der gleiche Mechanismus wird auch für nutzergenerierte Strukturen genutzt. Weitere Raster werden eingesetzt, um temporäre Interaktionsmöglichkeiten zu generieren welche vom Client genutzt werden können, um serverseitig Entitäten zu erzeugen. Dies wird im Raster serverseitig vermerkt, sodass die Anfrage nicht beliebig wiederholt werden kann.
 
-![Relevanz Diagram - 3. Replikationstechnik](assets/relevanz.png)
+![Relevanz Diagramm - 3. Replikationstechnik](assets/relevanz.png)
 
 Im obigen Diagramm ist die Relevanz von zwei blauen Client-Entitäten zueinander dargestellt, eine weitere Client-Entität ist nicht relevant zu ihnen. Die nutzergenerierte Struktur in der Mitte der Client-Entitäten ist relevant zu allen drei Clients. Wenn das Zentrum, einer Rasterzelle, im Relevanzradius ist, so werden alle Bestandteile dieser Zusammenfassung dem jeweiligen Client relevant. Die anderen Entitäten und der Leerraum illustrieren, dass je nach räumlicher Clientverteilung auch nicht alle Entitäten immer im Speicher vorhanden sein müssen, sondern es auch reicht diese bei Bedarf nachzuladen oder zu generieren.
 
@@ -79,7 +79,7 @@ Die Simulation nutzt aus Effizienzgründen Gleitkommazahlen einfacher Genauigkei
 ## 4.4 Replikation über Partitionierungs Zwischenschicht
 Soll die Simulation trotz dieser Hindernisse noch größer werden muss also eine Lösung eingesetzt werden, welche die Simulation über mehrere Server skaliert. Hier setzt die 4. genannte Technik ein, die Simulation wird in für die technischen Einschränkungen passende Sektoren partitioniert. Es muss eine Zwischenschicht vorgesehen werden, welche zwischen Client und Server vermittelt, um zu entscheiden wann welche Entitäten bei Serversektor Wechsel relevant werden. Diese Zwischenschicht, entscheidet zur Laufzeit, aus Auslastungsgründen Sektoren weiter zu teilen oder wieder zusammenzuführen und somit neue Server-Instanzen zu starten oder einzusparen (z. B. anhand der Verteilung der Client-Entitäten).
 
-Abbildung X: TODO Netzwerktopologie der Partitionierungs Technik
+![Netzwerktopologie Partitionierung](assets/partitionierung.png)
 
 Ein Nachteil dieser Technik sind die im Vergleich zu den bisher genannten Technologien, um Faktor 5-8x höhere laufende Kosten um die gleiche Clientanzahl und Simulationsgröße wie bei der unter 3. genannten Technologie zu realisieren. Dies hat zur Folge das für den Betrieb mit Clients ein Festpreis-Modell mit größerem finanziellen Risiko verbunden ist und eigentlich nur ein Abo-Modell infrage kommt. Der Vorteil ist die hohe Skalierbarkeit und das in der Technik verankerte Loadbalancing. Dies ermöglicht Simulationsgrößen von über 10 km mit über 1000 Client-Entitäten, was nicht mit den bisher genannten Techniken möglich war. Ein Beispiel für solch eine Middleware ist SpatialOS (TODO: Link).
 
