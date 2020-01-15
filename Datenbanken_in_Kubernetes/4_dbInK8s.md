@@ -233,7 +233,7 @@ Das StatefulSet sorgt bei Ausfall eines MongoDB-Nodes dafür, dass der betroffen
 
 Skalieren kann man ein StatefulSet analog zu einem Replica Set, indem die Replicas hoch oder runterskaliert werden. Kubernetes bzw. der StatefulSet Controller erstellt oder stoppt dann nacheinander MongoDB-Nodes bis die gewünschte Anzahl läuft. Beim Hochskalieren werden neue MongoDB-Nodes analog wie beschrieben gestartet und gliedern sich durch den Sidecar-Container in jedem Pod automatisch in das Cluster ein.
 
-Neben dem Einsatz eines Sidecars als zusätzlicher Container in jedem Pod gibt es am Beispiel der Mongo-Datenbank auch einen weiteren Mechanismus, um einen MongoDB-Cluster aufzubauen, die Verwendung eines weiteren Pod mit einem MongoDB-Operator. Dieser ist dann die Schnittstelle und übernimmt u.a. die Aufgaben des Sidecars.
+Neben dem Einsatz eines Sidecars als zusätzlicher Container in jedem Pod gibt es am Beispiel der Mongo-Datenbank auch einen weiteren Mechanismus, um ein MongoDB-Cluster aufzubauen. Dieser Mechanismus ist die Verwendung eines weiteren Pods mit einem MongoDB-Operator. Dieser ist dann die Schnittstelle und übernimmt u.a. die Aufgaben des Sidecars.
 
 #### 2. Beispiel: Cassandra DB
 
