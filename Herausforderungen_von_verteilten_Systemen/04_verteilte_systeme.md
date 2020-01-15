@@ -8,13 +8,13 @@
 Für das Konzept der verteilten Systeme gibt es in der Literatur, soweit ersichtlich, keine allgemein anerkannte und gültige Definition. Bei [van Steen, 2017] wird daher eine eher unspezifische Definition verwendet:
 > A distributed system is a collection of autonomous computing elements that appears to its users as a single coherent system.
 
-Nach dieser Definition besitzt ein verteiltes System zwei grundlegende Charakteristiken:
-* Es handelt sich um eine Ansammlung eigenständer Recheneinheiten bzw. Knoten.
+Nach dieser Definition besitzt ein verteiltes System zwei grundlegende Charakteristika:
+* Es handelt sich um eine Ansammlung eigenständiger Recheneinheiten bzw. Knoten.
 * Diese Ansammlung erscheint für die Nutzer wie ein einheitliches System.
 
-Bei den Knoten kann es sich um viele verschiedene Arten von Computern handeln, wobei das Spektrum von Hochleistungsrechnern bis hin zu Einplatinenrechnern (und kleiner) reicht. Diese Knoten sind dabei grundsätzlich unabhängig voneinander, müssen aber auf verschiedenen Wegen miteinander kommunizieren. Die räumliche Verteilung der Recheneinheiten kann von demselben Mainboard über den gleichen Raum im Rechenzentrum bis hin zu unterschiedlichen Enden der Welt reichen.
+Bei den Knoten kann es sich um viele verschiedene Arten von Computern handeln, wobei das Spektrum von Hochleistungsrechnern bis hin zu Einplatinenrechnern (und kleiner) reicht. Diese Knoten sind dabei grundsätzlich unabhängig voneinander, müssen aber auf verschiedenen Wegen miteinander kommunizieren. Die räumliche Verteilung der Recheneinheiten kann von demselben Mainboard über den gleichen Raum im Rechenzentrum bis hin zu unterschiedlichen Orten in der ganzen Welt reichen.
 
-Die zweite Eigenschaft, das Erscheinen als ein einheitliches System, erfordert in der extremsten Deutung dieser Eigenschaft, dass sich das verteilte System gegenüber dem Nutzer so verhält als sei es ein einziger Computer. Diese Forderung dürfte in den meisten Fällen jedoch zu weit gehen, sodass im Regelfall die Eigenschaft als erfüllt anzusehen ist, wenn sich das verteilte System den Erwartungen des Nutzers entsprechend verhält.
+Die zweite Eigenschaft, das Erscheinen als ein einheitliches System, erfordert in der extremsten Deutung dieser Eigenschaft, dass sich das verteilte System gegenüber dem Nutzer so verhält, als sei es ein einziger Computer. Diese Forderung dürfte in den meisten Fällen jedoch zu weit gehen, sodass im Regelfall die Eigenschaft als erfüllt anzusehen ist, wenn sich das verteilte System den Erwartungen des Nutzers entsprechend verhält.
 
 
 ## 2.1 Hardware
@@ -31,7 +31,7 @@ In den weiteren Teilen dieser Ausarbeitung wird von heterogenen Systemen ausgega
 
 Der Software kommt in verteilten Systemen die vermutlich wichtigste Rolle zu, ist es doch bislang nur durch den geschickten Einsatz der Software möglich, die Ziele verteilter Systeme zu erreichen. Zu diesen Zielen zählen die gemeinsame Nutzung von Ressourcen, die Transparenz der Verteilung, Offenheit und Skalierbarkeit.
 
-Das Ziel der **gemeinsame Nutzung von Ressourcen** umfasst vor allem den Ansatz, entfernte und / oder teure Ressourcen für mehrere Nutzer zugänglich zu machen. Der Begriff Ressource ist hierbei sehr weit zu verstehen und umfasst sowohl Hardware-Ressourcen wie Drucker, Speicher oder Rechenleistung als auch Software-Ressourcen wie Datenbestände.
+Das Ziel der **gemeinsame Nutzung von Ressourcen** umfasst vor allem den Ansatz, entfernte und / oder teure Ressourcen für mehrere Nutzer zugänglich zu machen. Der Begriff Ressource ist hierbei sehr weitläufig zu verstehen und umfasst sowohl Hardware-Ressourcen wie Drucker, Speicher oder Rechenleistung als auch Software-Ressourcen wie Datenbestände.
 
 Die **Verteilungstransparenz** entspricht der o.g. Definition von verteilten Systemen und benennt die Eigenschaft, dass bei der Nutzung des verteilten Systems dessen Verteilung nicht unmittelbar sichtbar ist. Hierdurch wird insbesondere verborgen,
 * wie der Zugriff auf die Ressource erfolgt (Zugriff)
