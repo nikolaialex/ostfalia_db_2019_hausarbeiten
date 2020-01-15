@@ -4,6 +4,7 @@ Um eine so dynamisch skalierbare Infrastruktur zu schaffen, muss es möglich sei
 Der Durchbruch der Containerisierung gelang im Jahr 2013 mit der Veröffentlichung von Docker. Mit der Hilfe von Docker wurde es einfacher Images selbst zu erstellen, verwalten und zu dann als Container zu nutzen. [1]
 
 ![Docker-Engine [2]](./images/engine-components-flow.png)
+
 **_Docker-Engine_ [6]**
 
 Die Docker-Engine besteht aus drei wesentlichen Bestandteilen:
@@ -85,33 +86,37 @@ Die Einsatzmöglichkeiten wie in dem Beispiel nicht nur auf das Ausführen von A
 
 ## Container vs VMs
 
-Der Vergleich Container vs. virtueller Maschinen ist nicht ganz einfach zu gestalten. Beide Technologien überschneiden sich nur in kleinen Teilen und die eine ist sogar von der anderen abhängig. Nachfolgend werden beide Technologiehen am Beispiel des Anwendungsbetriebs verglichen. Dabei wird davon ausgegangen, dass auf beiden Technologien die gleiche Anwendung betrieben werden soll.
+Der Vergleich Container vs. virtueller Maschinen ist nicht ganz einfach zu gestalten. Beide Technologien überschneiden sich nur in kleinen Teilen und die eine ist sogar von der anderen abhängig. Nachfolgend werden beide Technologien am Beispiel des Anwendungsbetriebs verglichen. Dabei wird davon ausgegangen, dass auf beiden Technologien die gleiche Anwendung betrieben werden soll.
 
-| Bereich           | VM                                                                                                                                                                                       | Container                                                                                                                                                                          |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Persistenz        | voll gegeben                                                                                                                                                                             | nicht vorhanden, nach einem Neustart sind die Daten, die nicht zum Image gehören, weg                                                                                              |
-| Hochverfügbarkeit | gegeben durch den Hyppervisor                                                                                                                                                            | gegeben durch Orchestratoren, die die Container auf verschiedenen Hosts verwalten                                                                                                  |
-| Voraussetzung     | Betriebssystem muss installiert sein (idealerweise in der gleichen Version und mit den gleichen Bibliotheken um Probleme beim Betrieb der Anwendung zu vermeiden)                        | Ist der Host mit einer Containersoftware ausgestattet, so kann die Anwendung reibungslos in Betrieb genommen werden, unabhängig vom Betriebssystem und der Bibliotheken            |
-| Skalierbarkeit    | VMs zu skalieren ist nicht unmöglich, allerdings mit sehr viel Aufwand verbunden. Schließlich müssen die benötigten Bibliotheken und das Betriebssystem jedes mal mit installiert werden | Images können einfach auf andere Hosts kopiert und ausgeführt werden. Auch das mehrfache Starten des gleichen Images auf einem Host ist möglich um eine Lastverteilung zu erzielen |
+| Bereich           | VM                                                                                                                                                                                       | Container                                                                                                                                                                           |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Persistenz        | voll gegeben                                                                                                                                                                             | nicht vorhanden, nach einem Neustart sind die Daten, die nicht zum Image gehören, weg                                                                                               |
+| Hochverfügbarkeit | gegeben durch den Hyppervisor                                                                                                                                                            | gegeben durch Orchestratoren, die die Container auf verschiedenen Hosts verwalten                                                                                                   |
+| Voraussetzung     | Betriebssystem muss installiert sein (idealerweise in der gleichen Version und mit den gleichen Bibliotheken um Probleme beim Betrieb der Anwendung zu vermeiden)                        | Ist der Host mit einer Containersoftware ausgestattet, so kann die Anwendung reibungslos in Betrieb genommen werden, unabhängig vom Betriebssystem und der Bibliotheken             |
+| Skalierbarkeit    | VMs zu skalieren ist nicht unmöglich, allerdings mit sehr viel Aufwand verbunden. Schließlich müssen die benötigten Bibliotheken und das Betriebssystem jedes mal mit installiert werden | Images können einfach auf andere Hosts kopiert und ausgeführt werden. Auch das mehrfache Starten des gleichen Images auf einem Host ist möglich, um eine Lastverteilung zu erzielen |
 
-Anhand der Tabelle und der Abbildung kann man sehr gut erkennen, dass die reine Container-Technologie in Sachen Persistenz und Hochverfügbarkeit nicht mit virtuellen Maschinen mithalten kann. Müssen Daten dauerhaft gespeichert und verändert werden können, so ist momentan die VM der reinen Verwendung von Containern einiges voraus. [7] Bettet man die Technologie der Containerisierung in einen größeren übergrordneten Kontext ein, z.B. einem Orchestrator wie Kubernetes, können die Schwächen der reinen Verwendung von Containern ausgeglichen werden. Orchestartor wie Kubernetes erweitern die Containertechnologie und können außerdem hohe Anforderungen an Hochverfügbarkeit und eine Persistenz der Daten gewährleisten. Auch die Skalierbarkeit steigt rasant in dem Moment wo Orchestrator eingesetzt werden. Somit ist die Vervielfältigung, z.B. zur Lastverteilung, per Knopfdruck oder auch automatisiert möglich. Mehr zum Orchestrator Kubernetes im nächsten Kapitel.
+Anhand der Tabelle kann man sehr gut erkennen, dass die reine Container-Technologie in Sachen Persistenz und Hochverfügbarkeit nicht mit virtuellen Maschinen mithalten kann. Müssen Daten dauerhaft gespeichert und verändert werden können, so ist momentan die VM der reinen Verwendung von Containern einiges voraus. [7]
+
+Bei Betrachtung der Voraussetzungen zum Betrieb stellte man fest, dass Container wesentlich schlanker betrieben werden können, da nicht jede Applikation ein eigenständiges vollständiges Betriebssystem braucht (s. Abbildung). Bei Docker teilen sich die Container über die Container Engine (meist Docker) die Systemressourcen anstatt. Das ist auch einer der wesentlichen Faktoren, wieso Container so schnell in Betrieb genommen, ausgetausch und gestoppt werden können.
 
 ![Vergleich VM <-> Container](./images/vergleich_container_vm.jpg)
+
 **_Vergleich VM <-> Container_ [6]**
 
-| #   | Literatur                                                                                                                                                                                                             |
-| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [1] | **Peter Wurbs**: _Docker versus VM: Wie Container die heutige IT verändern_, [https://jaxenter.de/docker-vs-vm-54816](https://jaxenter.de/docker-vs-vm-54816), aufgerufen am 04.01.2020                               |
-| [2] | _Docker overview_, [https://docs.docker.com/engine/docker-overview/](https://docs.docker.com/engine/docker-overview/), aufgerufen am 31.12.2019                                                                       |
-| [3] | **Stephan Augsten**: _Was ist Docker?_, [https://www.dev-insider.de/was-ist-docker-a-733683/](https://www.dev-insider.de/was-ist-docker-a-733683/), aufgerufen am 25.12.2019                                          |
-| [4] | **Stephan Augsten**: _Was sind Docker-Container?_, [https://www.dev-insider.de/was-sind-docker-container-a-597762/](https://www.dev-insider.de/was-sind-docker-container-a-597762/), aufgerufen am 25.12.2019         |
-| [5] | **Stephan Augsten**: _Was ist ein Container Image?_, [https://www.dev-insider.de/was-ist-ein-container-image-a-756912/](https://www.dev-insider.de/was-ist-ein-container-image-a-756912/), aufgerufen am 25.12.2019   |
-| [6] | _Dockerfile reference_, [https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/), aufgerufen am 04.01.2020                                                              |
-| [6] | **Peter Wurbs**: _Docker versus VM: Wie Container die heutige IT verändern_, [https://jaxenter.de/docker-vs-vm-54816](https://jaxenter.de/docker-vs-vm-54816), aufgerufen am 04.01.2020                               |
+Bettet man die Technologie der Containerisierung in einen größeren übergrordneten Kontext ein, z.B. einem Orchestrator wie Kubernetes, können die Schwächen der reinen Verwendung von Containern ausgeglichen werden. Orchestartor wie Kubernetes erweitern die Containertechnologie und können außerdem hohe Anforderungen an Hochverfügbarkeit und eine Persistenz der Daten gewährleisten. Auch die Möglichkeiten hinsichtlich Skalierbarkeit und Anpassbarkeit steigen rasant in dem Moment wo Orchestrator eingesetzt werden. Somit ist die Vervielfältigung, z.B. zur Lastverteilung, per Knopfdruck oder auch automatisiert möglich. Mehr zum Orchestrator Kubernetes im nächsten Kapitel.
+
+| #   | Literatur                                                                                                                                                                                                           |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [1] | **Peter Wurbs**: _Docker versus VM: Wie Container die heutige IT verändern_, [https://jaxenter.de/docker-vs-vm-54816](https://jaxenter.de/docker-vs-vm-54816), aufgerufen am 04.01.2020                             |
+| [2] | _Docker overview_, [https://docs.docker.com/engine/docker-overview/](https://docs.docker.com/engine/docker-overview/), aufgerufen am 31.12.2019                                                                     |
+| [3] | **Stephan Augsten**: _Was ist Docker?_, [https://www.dev-insider.de/was-ist-docker-a-733683/](https://www.dev-insider.de/was-ist-docker-a-733683/), aufgerufen am 25.12.2019                                        |
+| [4] | **Stephan Augsten**: _Was sind Docker-Container?_, [https://www.dev-insider.de/was-sind-docker-container-a-597762/](https://www.dev-insider.de/was-sind-docker-container-a-597762/), aufgerufen am 25.12.2019       |
+| [5] | **Stephan Augsten**: _Was ist ein Container Image?_, [https://www.dev-insider.de/was-ist-ein-container-image-a-756912/](https://www.dev-insider.de/was-ist-ein-container-image-a-756912/), aufgerufen am 25.12.2019 |
+| [6] | _Dockerfile reference_, [https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/), aufgerufen am 04.01.2020                                                            |
+| [6] | **Peter Wurbs**: _Docker versus VM: Wie Container die heutige IT verändern_, [https://jaxenter.de/docker-vs-vm-54816](https://jaxenter.de/docker-vs-vm-54816), aufgerufen am 04.01.2020                             |
 
 ---
 
 [<< Thema und Motviation](1_intro.md) | [Inhaltsverzeichnis](0_inhalt.md) | [K8s >>](3_k8s.md)
 
 ---
-
