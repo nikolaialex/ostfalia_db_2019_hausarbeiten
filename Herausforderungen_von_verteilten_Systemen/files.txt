@@ -1,5 +1,0 @@
-03_einleitung.md
-04_verteilte_systeme.md
-05_herausforderungen.md
-06_fallbeispiele.md
-07_zusammenfassung.md

@@ -1,5 +1,5 @@
-[<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md)
-|-|-|-|
+| [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md) |
+| ----------------------------------------------- | ------------------------------- | --------------------------------------- |
 
 ---
 
@@ -27,45 +27,55 @@ Es gibt zudem hybride Architekturen, die Elemente der zentraliserten und dezentr
 
 ## 3.2 Prozesse
 
-Prozesse sind, wie in Betriebssystemen, auch in verteilten Systemen ein wesentlicher Bestandteil und bilden die Basis für die Kommunikation zwischen verschiedenen Maschinen. Entscheidend ist hierbei die Klärung der Frage, wie die Prozesse organisiert sind und ob sie das Konzept von **Threads** unterstützen. Diese gegenüber Prozessen leichtgewichtigen Nebenläufigkeiten Nebenläufigkeiten werden je nach System vielfältig bezeichnet: Jobs, Tasks, Fibre, Coroutine und viele mehr.
+Prozesse sind, wie in Betriebssystemen, auch in verteilten Systemen ein wesentlicher Bestandteil und bilden die Basis für die Kommunikation zwischen verschiedenen Maschinen. Entscheidend ist hierbei die Klärung der Frage, wie die Prozesse organisiert sind und ob sie das Konzept von **Threads** unterstützen. Diese gegenüber Prozessen leichtgewichtigen Konzepte zur Implementierung von Nebenläufigkeit tragen je nach System unterschiedliche Namen: Jobs, Tasks, Fibre, Coroutine und viele mehr.
 
-<<<<<<< HEAD
-**Threads** sind in verteilten Systemen eine Möglichkeit effiziente und performante Server zu entwickeln, die auch bei blockierenden I/O-Operationen die Nutzung der CPU durch mehrere Threads ermöglichen.
+Threads sind in verteilten Systemen eine Möglichkeit, effiziente und performante Server zu entwickeln. Sie ermöglichen auch bei blockierenden I/O-Operationen die Nutzung der CPU durch mehrere Threads. Zur Erreichung dieser Nebenläufigkeit benötigen sie Konzepte zur **Synchronisierung** untereinander, analog zu Semaphoren und Mutex in Betriebssystem. Neben diesen existieren hier auch die Konzepte der Visitor und der Futures. Während Visitor Objekte ihren Zustand aufbauen und während ihrer Lebenszeit mehrere Systeme “besuchen”, verhalten sich Futures wie klassische Synchronisierungsobjekte mit Time-out, die ihr System nicht verlassen und das Ergebnis eines laufenden Vorganges repräsentieren.
 
-Wichtig in verteilten Systemen ist auch das Konzept der **Virtualisierung**, welche durch die das immer wichtiger werdende Cloud Computing besondere Aufmerksamkeit erfährt. Populäre Techniken zur Virtualisierung erlauben es dem Nutzer, Anwendungen auf ihren favorisierten Betriebssystemen laufen zu lassen und komplette virtuelle verteilte Systeme "in der Cloud" zu erstellen. Dabei ist die Leistungsfähigkeit vergleichbar zu "traditionellen" Anwendungen. Durch diese Flexibilität in der Erstellung und dem Betrieb von virtuellen Systemen sind verschiedenste Cloud-Dienste entstanden, die Infrastruktur (IaaS), Plattformen (PaaS) und Anwendungen (SaaS) sowie weitere Dienste basierend auf virtuellen Umgebungen anbieten.
-
-Die Organisation von verteilten Anwendungen in **Clients und Server** hat sich als nützlich erwiesen. Clients implementieren hierbei üblicherweise eine Benutzerschnittstelle, welche von einfachen Displays bis hin zu komplexen Anwendungen reicht. Durch das Verstecken von Details über die Kommunikation, Serverstandorte und Serverreplikation wird in der Clientsoftware die angestrebte Verteilungstransparenz erreicht sowie Ausfälle und deren Behebung verdeckt.
-
-Die Server sind in verteilten Systemen meist komplexer als die Clientsoftware. Für sie sind Fragen des Softwaredesigns zu klären betreffend die Anzahl der angebotenen Dienste, der Zustandslosigkeit der Dienste und ähnliches. Insbesondere bei der Anordnung der Dienste in einem Cluster aus Servern ist Achtung geboten, um die Ausprägung des Systems als Cluster vor den Clients zu verbergen. Hierzu verwenden die Cluster meist einen einzelnen Zugangspunkt, von dem aus die Nachrichten mit den Servern im Cluster ausgetauscht werden. Eine Herausforderung ist es, hierfür eine vollständig verteilte Lösung zufinden.
-=======
-Threads sind in verteilten Systemen eine Möglichkeit effiziente und performante Server zu entwickeln, die auch bei blockierenden I/O-Operationen die Nutzung der CPU durch mehrere Threads ermöglichen. Sie benötigen Konzepte zur **Synchronisierung** untereinander, analog zu Betriebssystem Semaphoren und Mutexe, existieren hier das Konzept der Visitor und des Futures. Während Visitor Objekte ihren Zustand aufbauen und während ihrer Lebenszeit mehrere Systeme “besuchen” verhalten sich Futures wie klassische Synchronisierungsobjekte mit Time-out die ihr System nicht verlassen und das Ergebnis eines laufenden Vorganges repräsentieren.
-
-Wichtig in verteilten Systemen ist auch das Konzept der **Virtualisierung**, welche durch die das immer wichtiger werdende Cloud-Computing besondere Aufmerksamkeit erfährt. Populäre Techniken (wie z. B: Docker) zur Virtualisierung erlauben es dem Nutzer, Anwendungen auf ihren favorisierten Betriebssystemen laufen zu lassen und komplette virtuelle verteilte Systeme "in der Cloud" zu erstellen. Dabei ist die Leistungsfähigkeit vergleichbar zu "traditionellen" Anwendungen. Durch diese Flexibilität in der Erstellung und dem Betrieb von virtuellen Systemen sind verschiedenste Cloud-Dienste entstanden, die Infrastruktur (IaaS), Plattformen (PaaS) und Anwendungen (SaaS) sowie weitere Dienste basierend auf virtuellen Umgebungen anbieten. Für die Organisation eines solchen Clusters verteilter Systemen ist eine populäre Lösung Kubernetes.
+Wichtig in verteilten Systemen ist auch das Konzept der **Virtualisierung**, welche durch das immer weiter verbreitete Cloud-Computing besondere Aufmerksamkeit erfährt. Populäre Technologien zur Virtualisierung (wie z.B. VirtualBox, Docker, Podman) und Orchestrierung (z.B. Kubernetes) erlauben es dem Nutzer, Anwendungen auf ihren favorisierten Betriebssystemen laufen zu lassen und komplette virtuelle verteilte Systeme "in der Cloud" zu erstellen. Dabei ist die Leistungsfähigkeit vergleichbar zu "traditionellen" Anwendungen. Durch diese Flexibilität in der Erstellung und dem Betrieb von virtuellen Systemen sind verschiedenste Cloud-Dienste entstanden, die Infrastruktur (IaaS), Plattformen (PaaS) und Anwendungen (SaaS) sowie weitere Dienste basierend auf virtuellen Umgebungen anbieten.
 
 Die Organisation von verteilten Anwendungen in Clients und Server hat sich als nützlich erwiesen. Clients implementieren hierbei üblicherweise eine Benutzerschnittstelle, welche von einfachen Displays bis hin zu komplexen Anwendungen reicht. Durch das Verstecken von Details über die Kommunikation, Serverstandorte und Server Replikation wird in der Clientsoftware die angestrebte Verteilungstransparenz erreicht sowie Ausfälle und deren Behebung verdeckt.
 
-Die Server sind in verteilten Systemen meist komplexer als die Clientsoftware. Für sind Fragen des Software Designs zu klären betreffend die Anzahl der angebotenen Dienste, der Zustandslosigkeit der Dienste und Ähnliches. Insbesondere bei der Anordnung der Dienste in einem **Cluster** aus Servern ist Achtung geboten, um die Ausprägung des Systems als Cluster vor den Clients zu verbergen. Hierzu verwenden die Cluster meist einen einzelnen Zugangspunkt, der als **Zwischenschicht** zwischen Servern und Clients dient. Sie organisiert den Nachrichtenaustausch der Clients mit den Servern im Cluster. Eine Herausforderung ist es, hierfür eine vollständig verteilte Lösung zu finden.
->>>>>>> 03d1615eb3294bc84529c6fdb58ce23e7215c582
+Die Server sind in verteilten Systemen meist komplexer als die Clientsoftware. Für sie sind Fragen des Software Designs zu klären betreffend die Anzahl der angebotenen Dienste, der Zustandslosigkeit der Dienste und Ähnliches. Insbesondere bei der Anordnung der Dienste in einem **Cluster** aus Servern ist es sinnvoll, die Ausprägung des Systems als Cluster vor den Clients zu verbergen. Hierzu verwenden die Cluster meist einen einzelnen Zugangspunkt, welcher den Nachrichtenaustausch der Clients mit den Servern im Cluster verwaltet. Eine Herausforderung ist es, hierfür eine vollständig verteilte Lösung zu finden.
 
-Eine weiterer wichtiger Aspekt in verteilten Systemen ist die Migration von Code zwischen verschiedenen Computern. Dies umfasst zum Beispiel die Möglichkeit, rechenintensive Anwendungen von den Servern hin zu den Clients zu verlagern, um so die Leistung und Flexibilität zu steigern. Insbesondere in Situationen, in denen die Kommunikation zwischen den Computern teuer und / oder langsam ist, bietet sich dieses Vorgehen an. Ein aktuelles Beispiel für dieses Vorgehen sind moderne Webanwendungen geschrieben in JavaScript, die komplexe Anwendungen bei Aufruf der Website an die Clients ausliefern und dort im Browser ausführen.
+Eine weiterer wichtiger Aspekt in verteilten Systemen ist die Migration von Code zwischen verschiedenen Computern. Dies umfasst zum Beispiel die Möglichkeit, rechenintensive Anwendungen von den Servern hin zu den Clients zu verlagern, um so die Leistung und Flexibilität zu steigern. Insbesondere in Situationen, in denen die Kommunikation zwischen den Computern teuer und / oder langsam ist, bietet sich dieses Vorgehen an. Ein aktuelles Beispiel für dieses Vorgehen sind moderne Webanwendungen geschrieben in JavaScript, die komplexe Anwendungen (z.B. Single-Page-Applications) bei Aufruf der Website an die Clients ausliefern und dort im Browser ausführen.
 
 ## 3.3 Kommunikation
 
-Der Kommunikation zwischen den beteiligten Komponenten sowie mit der Außenwelt kommt in verteilten Systemem besondere Bedeutung zu. Während in monolithischen Systemen die Kommunikation noch über Funktionsaufrufe und / oder lokale PubSub-Mechanismen u.ä. ausreicht, ist dies bei verteilten Multicomputersystemen nicht mehr gegeben.
+3.3 Kommunikation
+Der Kommunikation zwischen den beteiligten Komponenten sowie mit der Außenwelt kommt in verteilten Systemen besondere Bedeutung zu. Während in monolithischen Systemen die Kommunikation noch über IPC, Ereignissen und Funktionsaufrufe usw. ausreicht, ist dies bei verteilten Multi Computersystemen nicht mehr gegeben.
 
-```
-TODO: Überarbeiten
-Während in herkömmlichen verteilten Systemen die Netzwerkkommunikation noch über Mechanismen der Transportschicht wie einfaches Message Passing erfolgt, werden in middleware-basierten Systemen abstraktere Mechanismen angeboten, um die Kommunikation zu vereinfachen.
-```
+In klassischen Server- und Clientanwendungen erfolgte die Netzwerkkommunikation über Mechanismen der Transportschicht wie einfaches Message Passing, dies führte zu vielen Speziallösungen mit erhöhten Implementierungs- und Wartungskosten, schlechter Interoperabilität und zweifelhafter Sicherheit.
 
- Diese Mechanismen lassen sich grob in die drei Gruppen **Remote Procedure Calls**, **Message-Oriented Communication** und **Multicast Communication** unterteilen.
+Um dem entgegenzuwirken und die **Wiederverwendung und Kompatibilität zwischen verteilten Systemen** zu erhöhen haben sich **Standards rund um Middleware-basierte Systeme** entwickelt. Anwendungen bzw. Dienste implementieren nicht mehr auf Transportschicht Protokolle, sondern nutzen die Mechanismen der jeweils gewählten Middleware. Es wurden auf den Middlewares aufbauend Referenzen und **standardisierte Lösungen** entwickelt, um die **Interoperabilität in Problemdomänen** noch weiter zu vereinfachen (z. B. OPC für Automatisierungstechnik).
+
+Die Middleware ist nicht nur für die reine Kommunikation zuständig, sondern bietet auch **Sicherheitskonzepte wie Authentifizierung und Verschlüsselung**. Auch die **Fehlerbehandlung** ist parametrierbar und wird, nach optionaler Aufzeichnung, an die Anwendungen in Form von Rückgabewerten oder Ausnahmefehlern weitergegeben. Meist bieten die Middleware auch **Schnittstellenbeschreibung Sprachen** (IDL) samt **Codegeneratoren** oder Import Funktionalitäten damit die definierte Schnittstelle eines Systems möglichst einfach zu Interoperabilitäts Zwecken mit potenziellen Kommunikationspartnern ausgetauscht werden kann.
+
+Je nach **Plattform, Programmiersprache und Anforderung** haben sich über die letzten 30 Jahre diverse Middleware Lösungen mit verschieden Schwerpunkten und teils gegensätzlichen Konzepten entwickelt. Für **isochrone Echtzeitanforderungen** in verteilten Systemen wird bereits direkt auf Hardwareebene auf Feldbussysteme wie CAN, PROFINET oder EtherCAT mit passender Middleware gesetzt, während bei laxeren Zeitanforderungen auch MQTT oder OPC UA über klassische Ethernet ausreicht. Ein weiteres Unterscheidungsmerkmal ist das **Datenformat**, während einige auf **menschlich lesbarer Datenformate** wie XML bei SOAP, JSON bei REST setzen, präferieren andere **effiziente Binärdaten Formate** wie Protocol Buffers, CORBA, ONC und COM+. Zuletzt wird Unterschieden zwischen **zustandsloser Kommunikation** für Komponenten, Web- und Microservices bei REST und dem gegenüberstehenden Konzept der **zustandsbehafteten objektbasierten Kommunikation** bei CORBA und COM+.
+
+Für viele der Middlewares ist der Werkzeugunterstützung und Dokumentation außerhalb der Hauptzielplattform oft nur ein Marketing Gag und nicht praktikabel. Allgemein ist abzusehen das die Entwicklung und Popularität zu Offenen und Plattformunabhängigen, eher weniger komplexen Middlewares und Standards, geht da sie auf den verschiedensten Kommunikationspartnern eingesetzt werden können. Auch aufgrund dessen wurden Broker also Umsetzer und Datensammler entwickelt, welche mehrere Middlewares integrieren und zwischen Ihnen vermitteln können.
+
+Unabhängig von gewählter Middleware finden sich jedoch wiederkehrende **abstrakte Mechanismen**, um die Kommunikation zu vereinfachen. Diese können in folgende Gruppen aufgeteilt werden: **Remote Procedure Calls, Message-Oriented Communication und Object-Replication**.
+
+Ebenfalls unabhängig von gewähltem Mechanismus bieten Middleware auch die Konfiguration des **Routing-Schemas** an, also **Unicast, Multicast, Broadcast und weitere**. Dies entscheidet darüber, zwischen welcher Auswahl an Systemen spezifische Kommunikationen weitergeleitet werden.
+
+Für **Verzögerungs tolerante Einsatzzwecke** gibt es zusätzlich Möglichkeiten (**QoS**) zur Konfiguration von **Priorisierung und Time-outs**. Dies kann hilfreich sein, Daten die zyklisch übertragen werden, nach gewisser Zeit zu verwerfen da sie z. B. durch aktuellere Daten ersetzt wurden.
 
 ### 3.3.1 Remote Procedure Calls
+RPC sind das entfernte Äquivalent der Funktions- oder Methodenaufrufe in verteilten Systeme, sie unterstützen typisierte Parameter und Rückgabewerte sowie die vorhergehend beschriebenen Middleware abhängigen Parametrierung Eigenschaften bzgl. Routing und Priorisierung.
+
+Beim klassischen RPC geht es um eine zustandsbehaftete Kommunikation, in der über eine Verbindung eine Sequenz an Befehlen bidirektional ausgetauscht werden. Die als RMI (Remote Method Invocation) bezeichnete Erweiterung von RPC ist die Integration von ORBs (Object Request Brokern) um Methodenaufrufe und das Referenzieren von Objekten über die Kommunikationsschnittstelle zu ermöglichen. Beispiele für diese Kommunikationsart sind CORBA, COM+, .NET Remoting, ONC und gRPC.
 
 ### 3.3.2 Message-Oriented Communication
+Nachrichtenorientierte Kommunikation ist, das entferne Äquivalent von Ereignissen, im Vergleich zur RPC Kommunikation handelt es sich um eine Kommunikation zwischen schwächer gekoppelten Systemen. Es wird das senden von Benachrichtigungen (push Betrieb) unterstützt. Auch ein Publisher Subscriber Mechanismus wird implementiert, also das anfordern von Benachrichtigungen zu einem bestimmten Thema (pull Betrieb) über einen längeren Zeitraum. Eine weitere Eigenschaft ist die verzögerte und parallelisierbare Bearbeitung der Nachrichten über Wartelisten.
 
-### 3.3.3 Multicast Communication
+Es handelt sich hierbei bis auf Authentifikation und Subscribe Zustände um eine zustandslose Kommunikationsart, Informationen werden je Nachricht redundant übertragen und auch die Verbindung kann zeitweise unterbrochen werden.
 
+Als Grundlage dieser Kommunikationsart kann ein beliebiges Protokoll oder auch eine RPC-Middleware dienen. Als Beispiel ist hier REST, SOAP, JMS, AQMP und MQTT zu nennen.
+
+### 3.3.3 Object-Replication
+Die Objektreplikation stellt das entfernte Äquivalent von dem Persistieren und der Serialisierung von Objekten dar. In einer zustandsbehafteten Kommunikation wird es nötig das bei Unterbrechung, Fehlern oder Initiierung der Kommunikation der Objektzustand zwischen den Systemen synchronisiert werden muss, da ja RPC jeweils nur spezifische Zustandsänderungen auslöst.
+
+Im einfachsten Fall ist es so zu sehen das passiv Objektinstanziierung, Destruktion und Zustand aller Aspekte und Eigenschaften von Objekten, zu entfernten Systemen transferiert werden. Die Middleware stellt Mechanismen zur Kennzeichnung von Objekten mit Attributen zur Relevanz, Autorität und der Aufteilung des Zustands in Teilaspekte zur Verfügung. Weiter werden Mechanismen zum Autoritätswechsel und der aktiven Replikation von Gesamtzustand oder Teilaspekten zur Verfügung gestellt. Autorität bedeutet hier welches System ist aktuell für einen Teilaspekt eines Objektes zuständig und repliziert diesen zu den anderen Systemen (auf welchen das Objekt existiert). Beispiele für diese Kommunikationsart, die in Kombination mit RPC eingesetzt wird, sind FT-CORBA, .NET Remoting und RakNet.
 
 
 ## 3.4 Namensgebung
@@ -78,7 +88,7 @@ Was in Einzelcomputersystemen noch relativ simpel ist, führt in verteilten Syst
 * Identifier
 * menschenfreundliche/-lesbare Namen
 
-Eine **Adresse** ist der Name eines Zugriffspunktes, welcher mit einer Entität verbunden ist. 
+Eine **Adresse** ist der Name eines Zugriffspunktes, welcher mit einer Entität verbunden ist.
 
 Ein **Identifier** ist eineindeutig, hat also eine eins-zu-eins-Beziehung zu einer Entität und wird nie einer anderen Entität zugewiesen.
 
@@ -98,8 +108,6 @@ Bei der **strukturierten Namensgebung** können die Namen in einem Namensraum or
 
 Mithilfe solcher Graphen können bequem menschenfreundliche Namen in strukturierter Weise erstellt werden. Eine Entität kann dann über den Pfadnamen referenziert werden. Die Namensauflösung erfolgt über die Traversierung des Graphen.
 
-
-
 ## 3.5 Koordination
 
 Eine weitere Herausforderung ist die Synchronisation von Prozessen, also dass alle Prozesse zur richtigen Zeit das richtige tun. Erschwert wird dieses Problem dadurch, dass es in verteilten Systemen kein globale Uhr gibt, die für alle beteiligten Computer gilt. Für jedem Computer und die daruaf befindlichen Prozesse gilt daher die jeweilig Systemzeit.
@@ -114,8 +122,6 @@ Die Synchronisation zwischen Prozessen benötigt häufig einen Koordinator. Sofe
 
 Eine besondere Herausforderung ist die Koordination hinsichtlich des verteilten Filterns von Benachrichtigungen (auch: **distributed event matching**), welches die Grundlage von Pub-Sub-Systemen ist. Während es noch relativ simpel ist, für alle Subscriptions schlichte eins-zu-eins-Vergleiche vornehmen zu lassen, ist eine Lastverteilung der Nachrichten schon wesentlich schwieriger zu implementieren. Ein Problem ist dabei, dass es schwer ist, von vornherein zu entscheiden, welcher Subscriber nun für welche Teile zuständig sein soll. Solange das System nicht zu groß wird, lassen sich diese Probleme durch den Einsatz von mehreren Brokern und entsprechenden Algorithmen (**flooding**, **routing**) sinnvoll handhaben.
 
-
-
 ## 3.6 Konsistenz und Replikation
 
 In verteilten System werden Daten üblicherweise repliziert. Dies hat hauptsächlich zwei Gründe: zum einen soll hierdurch die Verfügbarkeit und Verlässlichkeit des verteilten Systems verbessert werden, zum anderen soll die dessen Leistung gesteigert werden.
@@ -124,7 +130,7 @@ Ein großes Problem hierbei ist es, die Replikate konsistent zu halten. Sobald e
 
 Eine mögliche Lösung ist es, anstelle einer sofortigen, unmittelbaren Konsistenz, eine verzögerte Konsistenz in Kauf zu nehmen und diese kontinuierlich wiederherzustellen. Die Unterschiede zwischen dem beabsichtigten und dem tatsächlichen Zustand der Daten können als Abweichungen bezeichnet werden. Diese Abweichungen treten insbesondere in Form von drei Typen auf:
 
--  numerische Abweichungen: Abweichungen zwischen den Replikas bezogen auf Werte
+- numerische Abweichungen: Abweichungen zwischen den Replikas bezogen auf Werte
 - veraltete (engl. stale) Abweichungen: gemeint sind zeitliche Unterschiede, mit denen Updates auf die verschiedenen Replikas angewendet wurden
 - Abweichungen in der Reihenfolge der Operationen: bezeichnet die Anzahl an ausstehenden Schreiboperationen je Server, welche noch nicht mit den anderen Replika-Servern synchronisiert wurden; hierbei kann es vorkommen, dass zeitlich jüngere Operation vor zeitlich älteren vorgenommen wurden
 
@@ -310,6 +316,7 @@ Der Koordinator (a) sendet zunächst ein VOTE-REQUEST an alle Teilnehmer der Gru
 
 
 ---
+[Kleppmann, 2017]: M. Kleppmann, Designing data-intensive applications: the big ideas behind reliable, scalable, and maintainable systems, First edition. Boston: O’Reilly Media, 2017.
 
 [Lamport, 1979]: Lamport, “How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs,” IEEE Trans. Comput., vol. C–28, no. 9, pp. 690–691, Sep. 1979, doi: 10.1109/TC.1979.1675439.
 
@@ -318,5 +325,10 @@ Der Koordinator (a) sendet zunächst ein VOTE-REQUEST an alle Teilnehmer der Gru
 [Vogels, 2009]: W. Vogels, “Eventually Consistent,” Queue, vol. 6, no. 6, p. 14, Oct. 2008, doi: 10.1145/1466443.1466448.
 
 ---
-[<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md)
-|-|-|-|
+<<<<<<< HEAD
+| [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md) |
+| ----------------------------------------------- | ------------------------------- | --------------------------------------- |
+=======
+| [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiel >>](06_fallbeispiel.md) |
+| ----------------------------------------------- | ------------------------------- | ------------------------------------- |
+>>>>>>> a4940a0bd6f86ef715daff2f932c8b52a4afa6a6

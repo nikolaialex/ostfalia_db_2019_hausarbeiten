@@ -16,14 +16,9 @@
     6. [Konsistenz und Replikation](05_herausforderungen.md)
     7. [Fehlertoleranz](05_herausforderungen.md)
     
-4. [Fallbeispiele](06_fallbeispiele.md)
-    1. [Optimierung der Replikation für Echtzeit Simulationen](06_fallbeispiele.md)
-    2. [Virtuelle Marktsysteme](06_fallbeispiele.md)
-    3. [Internet of Things und Industry 4.0 Protokolle](06_fallbeispiele.md)
+4. [Fallbeispiel - Optimierung der Replikation für Echtzeit Simulationen](06_fallbeispiel.md)
 
 5. [Zusammenfassung](07_zusammenfassung.md)
-
-6. [Quellenverzeichnis](08_quellenverzeichnis.md)
 
 ---
 [<< Titel](01_title.md) | [Einleitung >>](03_einleitung.md)

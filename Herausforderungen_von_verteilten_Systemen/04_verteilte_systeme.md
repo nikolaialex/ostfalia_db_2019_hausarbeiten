@@ -61,11 +61,15 @@ Wie in der Grafik zu sehen ist, ist jeder Knoten mit einem eigenen Betriebssyste
 - Remote Procedure Call (RPC)
 - Message-orientierte Middleware
 - Object Request Broker (ORB)
+- Fehlertoleranz
 
 **Häufig verwendete Middleware**
 - MQSeries von IBM ( plattformunabhängige Message orientierte Middleware-Software)
 - der Websphere Application Server von IBM (Laufzeitumgebung für JavaEE-Anwendungen)
 - die SAP Exchange Infrastructure von SAP
+- FT-CORBA, COM+, .NET Remoting (Platformabhänige komplexe Objektbasierte RPC Kommunikation)
+- RakNet (in Bereichen der Computerspiele Entwicklung)
+- Protocol Buffers, gRPC (Effiziente offene plattformunabhängige Binärdaten Kommunikation)
 
 ---
 [van Steen, 2017]: M. van Steen and A. S. Tanenbaum, Distributed systems, Third edition (Version 3.01 (2017)). London: Pearson Education, 2017.
