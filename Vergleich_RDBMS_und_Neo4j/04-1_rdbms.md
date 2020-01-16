@@ -37,8 +37,8 @@ Bestellt ein Kunde nun in diesem Online-Shop ein Produkt, können diese Bestellu
 
 Durch die eindeutigen Schlüssel zur Indentifikation der entsprechenden Datensätze können die einzelnen Bestellungen einem Kunden (hat bestellt) und einem Produkt (wurde gekauft) zugeordnet werden.
 
-### 3.1.2 Contraints
-Die sogenannten Contraints sind vordefinierte Regeln, die jeweils auf einzelne Merkmale (Attribute) oder auch auf gesamte Tabellen bei Erzeugung definiert und durch das RDBMS kontrolliert werden. Zu speichernde Daten, die nicht auf die vordefinierten Contraints passen, werden abgewiesen. Folgende Contraints werden häufig in SQL eingesetzt:
+### 3.1.2 Constraints
+Die sogenannten Constraints sind vordefinierte Regeln, die jeweils auf einzelne Merkmale (Attribute) oder auch auf gesamte Tabellen bei Erzeugung definiert und durch das RDBMS kontrolliert werden. Zu speichernde Daten, die nicht auf die vordefinierten Constraints passen, werden abgewiesen. Folgende Constraints werden häufig in SQL eingesetzt:
 
 * **NOT NULL** - Eine Spalte kann keine NULL Werte enthalten
 * **UNIQUE** - Alle Werte einer Spalte sind unterschiedlich
