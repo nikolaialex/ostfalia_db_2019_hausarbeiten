@@ -1,5 +1,6 @@
-| [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md) |
-| ----------------------------------------------- | ------------------------------- | --------------------------------------- |
+| [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiel >>](06_fallbeispiel.md) |
+| ----------------------------------------------- | ------------------------------- | ------------------------------------- |
+
 
 ---
 
@@ -7,13 +8,11 @@
 
 In diesem Kapitel sollen die Herausforderungen erläutert werden, denen man bei Entwicklung und Betrieb verteilter Systeme üblicherweise begegnet.
 
-
-
 ## 3.1 Architektur
 
 In verteilten Systemen werden die beteiligten Komponenten per Definition häufig auf mehreren, unterschiedlichen Knoten ausgeführt. Mit wachsender Anzahl von Komponenten und Knoten steigt die Komplexität dieser Systeme massiv an.
 
-Um diese Komplexität angemessen zu handhaben, wird bei den verteilten Systemen neben der rein physischen Verteilung der Komponenten,  genannt **Systemarchitektur**, auch deren logische Organisation betrachtet. Diese logische Organisation der Komponenten und deren Interaktionen untereinander werden auch als **Softwarearchitekturen** bezeichnet.
+Um diese Komplexität angemessen zu handhaben, wird bei den verteilten Systemen neben der rein physischen Verteilung der Komponenten, genannt **Systemarchitektur**, auch deren logische Organisation betrachtet. Diese logische Organisation der Komponenten und deren Interaktionen untereinander werden auch als **Softwarearchitekturen** bezeichnet.
 
 Ein wichtiges Ziel bei der Erstellung von Software-Architekturen in verteilten Systemen ist die Trennung der Applikationen von der zugrunde liegenden Plattform. Hierzu wird häufig eine Schicht eingeführt, die als **middleware** bezeichnet wird und welche der Erlangung von Transparenz dient (siehe dazu den Absatz "Ziele" in [Verteilte Systeme](04_verteilte_systeme.md)).
 
@@ -21,9 +20,9 @@ Verteilte Systeme folgen oft einem Architekturstil. Ein Stil reflektiert dabei d
 
 Ein verteiltes System kann auf verschiedenen Wegen zusammengesetzt werden. Eine der wichtigsten Klassen von verteilten Systemen ist die Aufteilung in Clients und Server. Ein Client sendet hierbei Anfragen an einen Server, welcher dann (idealerweise) eine Antwort errechnet und an den Client zurücksendet. Diese Aufteilung entspricht der üblichen Art und Weise, wie ein Modul Funktionen eines anderen Moduls aufruft. Durch die Anordnung verschiedener Komponenten auf verschiedenen Computern wird eine physikalische Verteilung der Funktionen über die beteiligten Computer / Maschinen erreicht.
 
-Während Client-Server-Architekturen meist sehr zentralisiert und hierarchisch sind, gibt es auch denzentraliserte Architekturen, in denen die verschiedenen Prozesse der verschiedenen Computer eher gleichberechtigt angeordnet sind. Diese auch als peer-to-peer-Systeme bekannten verteilten Systeme organisieren ihre Prozesse meist in Form eines logischen Netzwerkes in welcher jeder Prozess eine lokale Liste von Prozessen pflegt, mit welchen Prozessen er kommunizieren kann.
+Während Client-Server-Architekturen meist sehr zentralisiert und hierarchisch sind, gibt es auch denzentraliserte Architekturen, in denen die verschiedenen Prozesse der verschiedenen Computer eher gleichberechtigt angeordnet sind. Diese auch als peer-to-peer-Systeme bekannten verteilten Systeme organisieren ihre Prozesse meist in Form eines logischen Netzwerkes, in welcher jeder Prozess eine lokale Liste von Prozessen pflegt, mit welchen Prozessen er kommunizieren kann.
 
-Es gibt zudem hybride Architekturen, die Elemente der zentraliserten und dezentralisierten Formen kombinieren. So gibt es etwa eine zentrale Stelle, um initiale Anfragen von Clients entgegen zu enhmen. Im weiteren Verlauf wird die Verarbeitung dann von anderen Servern übernommen, welche Teil eines peer-to-peer-Systems sein können.
+Es gibt zudem hybride Architekturen, die Elemente der zentraliserten und dezentralisierten Formen kombinieren. So gibt es etwa eine zentrale Stelle, um initiale Anfragen von Clients entgegen zu nehmen. Im weiteren Verlauf wird die Verarbeitung dann von anderen Servern übernommen, welche Teil eines peer-to-peer-Systems sein können.
 
 ## 3.2 Prozesse
 
@@ -31,7 +30,7 @@ Prozesse sind, wie in Betriebssystemen, auch in verteilten Systemen ein wesentli
 
 Threads sind in verteilten Systemen eine Möglichkeit, effiziente und performante Server zu entwickeln. Sie ermöglichen auch bei blockierenden I/O-Operationen die Nutzung der CPU durch mehrere Threads. Zur Erreichung dieser Nebenläufigkeit benötigen sie Konzepte zur **Synchronisierung** untereinander, analog zu Semaphoren und Mutex in Betriebssystem. Neben diesen existieren hier auch die Konzepte der Visitor und der Futures. Während Visitor Objekte ihren Zustand aufbauen und während ihrer Lebenszeit mehrere Systeme “besuchen”, verhalten sich Futures wie klassische Synchronisierungsobjekte mit Time-out, die ihr System nicht verlassen und das Ergebnis eines laufenden Vorganges repräsentieren.
 
-Wichtig in verteilten Systemen ist auch das Konzept der **Virtualisierung**, welche durch das immer weiter verbreitete Cloud-Computing besondere Aufmerksamkeit erfährt. Populäre Technologien zur Virtualisierung (wie z.B. VirtualBox, Docker, Podman) und Orchestrierung (z.B. Kubernetes) erlauben es dem Nutzer, Anwendungen auf ihren favorisierten Betriebssystemen laufen zu lassen und komplette virtuelle verteilte Systeme "in der Cloud" zu erstellen. Dabei ist die Leistungsfähigkeit vergleichbar zu "traditionellen" Anwendungen. Durch diese Flexibilität in der Erstellung und dem Betrieb von virtuellen Systemen sind verschiedenste Cloud-Dienste entstanden, die Infrastruktur (IaaS), Plattformen (PaaS) und Anwendungen (SaaS) sowie weitere Dienste basierend auf virtuellen Umgebungen anbieten.
+Wichtig in verteilten Systemen ist auch das Konzept der **Virtualisierung**, welche durch das immer weiter verbreitete Cloud-Computing besondere Aufmerksamkeit erfährt. Populäre Technologien zur Virtualisierung (wie z.B. VirtualBox, Docker, Podman) und Orchestrierung (z.B. Kubernetes) erlauben es dem Nutzer, Anwendungen auf ihren favorisierten Betriebssystemen laufen zu lassen und komplette virtuelle verteilte Systeme "in der Cloud" zu erstellen. Dabei ist die Leistungsfähigkeit vergleichbar zu "traditionellen" Anwendungen. Durch diese Flexibilität in der Erstellung und dem Betrieb von virtuellen Systemen sind verschiedenste Cloud-Dienste entstanden, die Infrastruktur (IaaS), Plattformen (PaaS) und Anwendungen (SaaS) sowie weitere Dienste basierend auf virtuellen Umgebungen "as a Service (aaS)" anbieten.
 
 Die Organisation von verteilten Anwendungen in Clients und Server hat sich als nützlich erwiesen. Clients implementieren hierbei üblicherweise eine Benutzerschnittstelle, welche von einfachen Displays bis hin zu komplexen Anwendungen reicht. Durch das Verstecken von Details über die Kommunikation, Serverstandorte und Server Replikation wird in der Clientsoftware die angestrebte Verteilungstransparenz erreicht sowie Ausfälle und deren Behebung verdeckt.
 
@@ -41,52 +40,53 @@ Eine weiterer wichtiger Aspekt in verteilten Systemen ist die Migration von Code
 
 ## 3.3 Kommunikation
 
-3.3 Kommunikation
-Der Kommunikation zwischen den beteiligten Komponenten sowie mit der Außenwelt kommt in verteilten Systemen besondere Bedeutung zu. Während in monolithischen Systemen die Kommunikation noch über IPC, Ereignissen und Funktionsaufrufe usw. ausreicht, ist dies bei verteilten Multi Computersystemen nicht mehr gegeben.
+Der Kommunikation zwischen den beteiligten Komponenten sowie mit der Außenwelt kommt in verteilten Systemen besondere Bedeutung zu. Während in monolithischen Systemen die Kommunikation noch über Interprozesskommunikation (IPC), Ereignisse, Signale, Funktionsaufrufe usw. ausreicht, ist dies bei verteilten Multi-Computersystemen nicht mehr gegeben.
 
 In klassischen Server- und Clientanwendungen erfolgte die Netzwerkkommunikation über Mechanismen der Transportschicht wie einfaches Message Passing, dies führte zu vielen Speziallösungen mit erhöhten Implementierungs- und Wartungskosten, schlechter Interoperabilität und zweifelhafter Sicherheit.
 
-Um dem entgegenzuwirken und die **Wiederverwendung und Kompatibilität zwischen verteilten Systemen** zu erhöhen haben sich **Standards rund um Middleware-basierte Systeme** entwickelt. Anwendungen bzw. Dienste implementieren nicht mehr auf Transportschicht Protokolle, sondern nutzen die Mechanismen der jeweils gewählten Middleware. Es wurden auf den Middlewares aufbauend Referenzen und **standardisierte Lösungen** entwickelt, um die **Interoperabilität in Problemdomänen** noch weiter zu vereinfachen (z. B. OPC für Automatisierungstechnik).
+Um dem entgegenzuwirken und die Wiederverwendung und Kompatibilität zwischen verteilten Systemen zu erhöhen haben sich Standards rund um middleware-basierte Systeme entwickelt. Anwendungen bzw. Dienste implementieren nicht mehr auf Transportschicht Protokolle, sondern nutzen die Mechanismen der jeweils gewählten Middleware. Es wurden auf den Middlewares aufbauend Referenzen und standardisierte Lösungen entwickelt, um die **Interoperabilität in Problemdomänen** noch weiter zu vereinfachen (z. B. OPC für Automatisierungstechnik).
 
-Die Middleware ist nicht nur für die reine Kommunikation zuständig, sondern bietet auch **Sicherheitskonzepte wie Authentifizierung und Verschlüsselung**. Auch die **Fehlerbehandlung** ist parametrierbar und wird, nach optionaler Aufzeichnung, an die Anwendungen in Form von Rückgabewerten oder Ausnahmefehlern weitergegeben. Meist bieten die Middleware auch **Schnittstellenbeschreibung Sprachen** (IDL) samt **Codegeneratoren** oder Import Funktionalitäten damit die definierte Schnittstelle eines Systems möglichst einfach zu Interoperabilitäts Zwecken mit potenziellen Kommunikationspartnern ausgetauscht werden kann.
+Die Middleware ist nicht nur für die reine Kommunikation zuständig, sondern bietet auch Sicherheitskonzepte wie Authentifizierung und Verschlüsselung. Auch die Fehlerbehandlung ist parametrierbar und wird, nach optionaler Aufzeichnung, an die Anwendungen in Form von Rückgabewerten oder Ausnahmefehlern weitergegeben. Meist bieten die Middleware auch **Schnittstellenbeschreibungssprachen** (interface definition language, IDL) samt **Codegeneratoren** oder Importfunktionalitäten an, damit die definierte Schnittstelle eines Systems möglichst einfach zu Interoperabilitäts Zwecken mit potenziellen Kommunikationspartnern ausgetauscht werden kann.
 
-Je nach **Plattform, Programmiersprache und Anforderung** haben sich über die letzten 30 Jahre diverse Middleware Lösungen mit verschieden Schwerpunkten und teils gegensätzlichen Konzepten entwickelt. Für **isochrone Echtzeitanforderungen** in verteilten Systemen wird bereits direkt auf Hardwareebene auf Feldbussysteme wie CAN, PROFINET oder EtherCAT mit passender Middleware gesetzt, während bei laxeren Zeitanforderungen auch MQTT oder OPC UA über klassische Ethernet ausreicht. Ein weiteres Unterscheidungsmerkmal ist das **Datenformat**, während einige auf **menschlich lesbarer Datenformate** wie XML bei SOAP, JSON bei REST setzen, präferieren andere **effiziente Binärdaten Formate** wie Protocol Buffers, CORBA, ONC und COM+. Zuletzt wird Unterschieden zwischen **zustandsloser Kommunikation** für Komponenten, Web- und Microservices bei REST und dem gegenüberstehenden Konzept der **zustandsbehafteten objektbasierten Kommunikation** bei CORBA und COM+.
+Je nach Plattform, Programmiersprache und Anforderung haben sich über die letzten 30 Jahre diverse Middleware Lösungen mit verschieden Schwerpunkten und teils gegensätzlichen Konzepten entwickelt. Für **isochrone Echtzeitanforderungen** in verteilten Systemen wird bereits direkt auf Hardwareebene auf Feldbussysteme wie CAN, PROFINET oder EtherCAT mit passender Middleware gesetzt, während bei laxeren Zeitanforderungen auch MQTT oder OPC UA über klassische Ethernet ausreicht. Ein weiteres Unterscheidungsmerkmal ist das **Datenformat**. Während einige auf **menschenlesbare Datenformate** wie XML bei SOAP, JSON bei REST setzen, präferieren andere **effiziente Binärdaten-Formate** wie Protocol Buffers, CORBA, ONC und COM+. Zuletzt wird unterschieden zwischen **zustandsloser Kommunikation** für Komponenten, Web- und Microservices bei REST und dem gegenüberstehenden Konzept der **zustandsbehafteten objektbasierten Kommunikation** bei CORBA und COM+.
 
-Für viele der Middlewares ist der Werkzeugunterstützung und Dokumentation außerhalb der Hauptzielplattform oft nur ein Marketing Gag und nicht praktikabel. Allgemein ist abzusehen das die Entwicklung und Popularität zu Offenen und Plattformunabhängigen, eher weniger komplexen Middlewares und Standards, geht da sie auf den verschiedensten Kommunikationspartnern eingesetzt werden können. Auch aufgrund dessen wurden Broker also Umsetzer und Datensammler entwickelt, welche mehrere Middlewares integrieren und zwischen Ihnen vermitteln können.
+Für viele der Middlewares ist der Werkzeugunterstützung und Dokumentation außerhalb der Hauptzielplattform oft nur ein Marketing-Gag und nicht praktikabel. Es ist daher eine Abkehr von eher komplexen Systemen und eine Tendenz hin zur Entwicklung von offenen und plattformunabhängigen Middlewares und Standards zu erkennen, welche von verschiedensten Kommunikationspartnern eingesetzt werden können. Auch aufgrund dessen wurden Broker also Umsetzer und Datensammler entwickelt, welche mehrere Middlewares integrieren und zwischen Ihnen vermitteln können.
 
 Unabhängig von gewählter Middleware finden sich jedoch wiederkehrende **abstrakte Mechanismen**, um die Kommunikation zu vereinfachen. Diese können in folgende Gruppen aufgeteilt werden: **Remote Procedure Calls, Message-Oriented Communication und Object-Replication**.
 
 Ebenfalls unabhängig von gewähltem Mechanismus bieten Middleware auch die Konfiguration des **Routing-Schemas** an, also **Unicast, Multicast, Broadcast und weitere**. Dies entscheidet darüber, zwischen welcher Auswahl an Systemen spezifische Kommunikationen weitergeleitet werden.
 
-Für **Verzögerungs tolerante Einsatzzwecke** gibt es zusätzlich Möglichkeiten (**QoS**) zur Konfiguration von **Priorisierung und Time-outs**. Dies kann hilfreich sein, Daten die zyklisch übertragen werden, nach gewisser Zeit zu verwerfen da sie z. B. durch aktuellere Daten ersetzt wurden.
+Für **Verzögerungs tolerante Einsatzzwecke** gibt es zusätzlich Möglichkeiten (**QoS**) zur Konfiguration von **Priorisierung und Time-outs**. Dies kann hilfreich sein, Daten, die zyklisch übertragen werden, nach gewisser Zeit zu verwerfen, da sie z. B. durch aktuellere Daten ersetzt wurden.
 
 ### 3.3.1 Remote Procedure Calls
-RPC sind das entfernte Äquivalent der Funktions- oder Methodenaufrufe in verteilten Systeme, sie unterstützen typisierte Parameter und Rückgabewerte sowie die vorhergehend beschriebenen Middleware abhängigen Parametrierung Eigenschaften bzgl. Routing und Priorisierung.
+
+RPC sind das entfernte Äquivalent der Funktions- oder Methodenaufrufe in verteilten Systemen, sie unterstützen typisierte Parameter und Rückgabewerte sowie die vorhergehend beschriebene middlewareabhängige Parametrierung der Eigenschaften bzgl. Routing und Priorisierung.
 
 Beim klassischen RPC geht es um eine zustandsbehaftete Kommunikation, in der über eine Verbindung eine Sequenz an Befehlen bidirektional ausgetauscht werden. Die als RMI (Remote Method Invocation) bezeichnete Erweiterung von RPC ist die Integration von ORBs (Object Request Brokern) um Methodenaufrufe und das Referenzieren von Objekten über die Kommunikationsschnittstelle zu ermöglichen. Beispiele für diese Kommunikationsart sind CORBA, COM+, .NET Remoting, ONC und gRPC.
 
 ### 3.3.2 Message-Oriented Communication
-Nachrichtenorientierte Kommunikation ist, das entferne Äquivalent von Ereignissen, im Vergleich zur RPC Kommunikation handelt es sich um eine Kommunikation zwischen schwächer gekoppelten Systemen. Es wird das senden von Benachrichtigungen (push Betrieb) unterstützt. Auch ein Publisher Subscriber Mechanismus wird implementiert, also das anfordern von Benachrichtigungen zu einem bestimmten Thema (pull Betrieb) über einen längeren Zeitraum. Eine weitere Eigenschaft ist die verzögerte und parallelisierbare Bearbeitung der Nachrichten über Wartelisten.
+
+Nachrichtenorientierte Kommunikation ist das entferne Äquivalent von Ereignissen, im Vergleich zur RPC Kommunikation handelt es sich um eine Kommunikation zwischen schwächer gekoppelten Systemen. Es wird das Senden von Benachrichtigungen (push Betrieb) unterstützt. Auch ein Publisher Subscriber Mechanismus wird implementiert, also das Anfordern von Benachrichtigungen zu einem bestimmten Thema (pull Betrieb) über einen längeren Zeitraum. Eine weitere Eigenschaft ist die verzögerte und parallelisierbare Bearbeitung der Nachrichten über Wartelisten.
 
 Es handelt sich hierbei bis auf Authentifikation und Subscribe Zustände um eine zustandslose Kommunikationsart, Informationen werden je Nachricht redundant übertragen und auch die Verbindung kann zeitweise unterbrochen werden.
 
 Als Grundlage dieser Kommunikationsart kann ein beliebiges Protokoll oder auch eine RPC-Middleware dienen. Als Beispiel ist hier REST, SOAP, JMS, AQMP und MQTT zu nennen.
 
 ### 3.3.3 Object-Replication
-Die Objektreplikation stellt das entfernte Äquivalent von dem Persistieren und der Serialisierung von Objekten dar. In einer zustandsbehafteten Kommunikation wird es nötig das bei Unterbrechung, Fehlern oder Initiierung der Kommunikation der Objektzustand zwischen den Systemen synchronisiert werden muss, da ja RPC jeweils nur spezifische Zustandsänderungen auslöst.
 
-Im einfachsten Fall ist es so zu sehen das passiv Objektinstanziierung, Destruktion und Zustand aller Aspekte und Eigenschaften von Objekten, zu entfernten Systemen transferiert werden. Die Middleware stellt Mechanismen zur Kennzeichnung von Objekten mit Attributen zur Relevanz, Autorität und der Aufteilung des Zustands in Teilaspekte zur Verfügung. Weiter werden Mechanismen zum Autoritätswechsel und der aktiven Replikation von Gesamtzustand oder Teilaspekten zur Verfügung gestellt. Autorität bedeutet hier welches System ist aktuell für einen Teilaspekt eines Objektes zuständig und repliziert diesen zu den anderen Systemen (auf welchen das Objekt existiert). Beispiele für diese Kommunikationsart, die in Kombination mit RPC eingesetzt wird, sind FT-CORBA, .NET Remoting und RakNet.
+Die Objektreplikation stellt das entfernte Äquivalent von dem Persistieren und der Serialisierung von Objekten dar. In einer zustandsbehafteten Kommunikation wird es nötig, dass bei Unterbrechung, Fehlern oder Initiierung der Kommunikation der Objektzustand zwischen den Systemen synchronisiert werden muss, da ja RPC jeweils nur spezifische Zustandsänderungen auslöst.
 
+Im einfachsten Fall ist es so zu sehen, dass passiv Objektinstanziierung, Destruktion und Zustand aller Aspekte und Eigenschaften von Objekten zu entfernten Systemen transferiert werden. Die Middleware stellt Mechanismen zur Kennzeichnung von Objekten mit Attributen zur Relevanz, Autorität und der Aufteilung des Zustands in Teilaspekte zur Verfügung. Weiter werden Mechanismen zum Autoritätswechsel und der aktiven Replikation von Gesamtzustand oder Teilaspekten zur Verfügung gestellt. Autorität bedeutet hier welches System ist aktuell für einen Teilaspekt eines Objektes zuständig und repliziert diesen zu den anderen Systemen (auf welchen das Objekt existiert). Beispiele für diese Kommunikationsart, die in Kombination mit RPC eingesetzt wird, sind FT-CORBA, .NET Remoting und RakNet.
 
 ## 3.4 Namensgebung
 
-Was in Einzelcomputersystemen noch relativ simpel ist, führt in verteilten Systemen zu Schwierigkeiten: die Lokalisierung und Referenzierung von Entitäten sowie dabei die Namensauflösung. In verteilten Systemen ist das System der Namensgebung meist auch verteilt implementiert und über mehrerer Computer verteilt.
+Was in Einzelcomputersystemen noch relativ simpel ist, führt in verteilten Systemen zu Schwierigkeiten: die Lokalisierung und Referenzierung von Entitäten sowie dabei die Namensauflösung. In verteilten Systemen ist das System der Namensgebung meist auch verteilt implementiert und über mehrere Computer verteilt.
 
 Über einen Namen kann eine Entität referenziert werden. Im Grunde gibt es drei Arten von Namen:
 
-* Adressen
-* Identifier
-* menschenfreundliche/-lesbare Namen
+- Adressen
+- Identifier
+- menschenfreundliche/-lesbare Namen
 
 Eine **Adresse** ist der Name eines Zugriffspunktes, welcher mit einer Entität verbunden ist.
 
@@ -98,9 +98,9 @@ Basierend auf diesen drei Arten von Namen können die folgenden Systeme der Name
 
 Beim **flat naming** wird hauptsächlich die Auflösung eines Identifiers zu einer Adresse der zugeordneten Entität vorgenommen. Diese Lokalisierung einer Entität kann auf verschiedenen Wegen erfolgen.
 
-1. Broadcasting / Multicasting: der Identifier wird an alle Prozesse bekanntgegeben. Der Prozess, welcher eine Zugriffsmöglichkeit auf die Entität hat, antwortet mit der korrespondieren Adresse.
+1. Broadcasting / Multicasting: der Identifier wird an alle Prozesse bekanntgegeben. Der Prozess, welcher eine Zugriffsmöglichkeit auf die Entität hat, antwortet mit der korrespondierenden Adresse.
 2. Weiterleitungen: sobald eine Entität den Ort wechselt, hinterlässt sie eine Weiterleitung, die den neuen Ort enthält. Die Lokaliserung der Entität erfolgt dann über die Traversierung / Nachverfolgung der Weiterleitungen.
-3. Einer Entität kann ein sog. Zuhause zugewiesen sein. Jedes mal, wenn eine Entität den Ort wechselt, teilt sie ihren neuen Ort dem Zuhause mit. Die Lokalisierung erfolgt dann über die Abfrage des aktuellen Ortes beim Zuhause.
+3. Einer Entität kann ein sog. Zuhause zugewiesen sein. Jedes Mal, wenn eine Entität den Ort wechselt, teilt sie ihren neuen Ort dem Zuhause mit. Die Lokalisierung erfolgt dann über die Abfrage des aktuellen Ortes beim Zuhause.
 4. Alle Knoten im System können als peer-to-peer-Netzwerk strukturiert sein, wobei die Knoten systematisch den Entitäten anhand der Identifier zugewiesen werden. Über einen entsprechenden Routing-Algorithmus kann eine Anfrage dann an den verantwortlichen Knoten weitergeleitet werden.
 5. Verwendung eines hierarchischen Suchbaumes: die einzelnen, disjunkten Netzwerke des verteilten Systems können in immer abstraktere Domänen gruppiert werden. Jeder Domäne ist Knoten mit einem Verzeichnis zugeordnet, in welchem Verweise auf die Entitäten gespeichert sind. Auf der untersten Ebene sind schließlich die Adressen der Entitäten gespeichert. Nach diesem Muster ist das **Domain-Name-System** aufgebaut.
 
@@ -110,7 +110,7 @@ Mithilfe solcher Graphen können bequem menschenfreundliche Namen in strukturier
 
 ## 3.5 Koordination
 
-Eine weitere Herausforderung ist die Synchronisation von Prozessen, also dass alle Prozesse zur richtigen Zeit das richtige tun. Erschwert wird dieses Problem dadurch, dass es in verteilten Systemen kein globale Uhr gibt, die für alle beteiligten Computer gilt. Für jedem Computer und die daruaf befindlichen Prozesse gilt daher die jeweilig Systemzeit.
+Eine weitere Herausforderung ist die Synchronisation von Prozessen, also dass alle Prozesse zur richtigen Zeit das richtige tun. Erschwert wird dieses Problem dadurch, dass es in verteilten Systemen kein globale Uhr gibt, die für alle beteiligten Computer gilt. Für jedem Computer und die darauf befindlichen Prozesse gilt daher die jeweilige Systemzeit.
 
 Um diesem Problem zu begegnen, gibt es verschiedene Wege, die Uhren der Computer zu synchronisieren. Diese Methoden basieren im Kern aber alle auf dem Austausch von Zeiten zwischen den Computern, wobei die Zeit zum Senden und Empfangen dieser Nachrichten entsprechend berücksichtigt wird.
 
@@ -120,13 +120,13 @@ Eine wichtige Klasse von Algorithmen zur Synchronisation ist die des verteilten 
 
 Die Synchronisation zwischen Prozessen benötigt häufig einen Koordinator. Sofern dieser nicht fest einer Instanz zugeordnet ist, ist es erforderlich, dass die beteiligten Prozesse in der Lage sind, sich auf einen gemeinsamen Koordinator zu einigen. Hierfür wurden Algorithmen zur Auswahl entwickelt, welche meistens dann zum Einsatz kommen, wenn der Koordinator selber ausfallen kann.
 
-Eine besondere Herausforderung ist die Koordination hinsichtlich des verteilten Filterns von Benachrichtigungen (auch: **distributed event matching**), welches die Grundlage von Pub-Sub-Systemen ist. Während es noch relativ simpel ist, für alle Subscriptions schlichte eins-zu-eins-Vergleiche vornehmen zu lassen, ist eine Lastverteilung der Nachrichten schon wesentlich schwieriger zu implementieren. Ein Problem ist dabei, dass es schwer ist, von vornherein zu entscheiden, welcher Subscriber nun für welche Teile zuständig sein soll. Solange das System nicht zu groß wird, lassen sich diese Probleme durch den Einsatz von mehreren Brokern und entsprechenden Algorithmen (**flooding**, **routing**) sinnvoll handhaben.
+Eine besondere Herausforderung ist die Koordination hinsichtlich des verteilten Filterns von Benachrichtigungen (auch: **distributed event matching**), welches die Grundlage von Pub-Sub-Systemen ist. Während es noch relativ simpel ist, für alle Subscriptions schlichte eins-zu-eins-Vergleiche vornehmen zu lassen, ist eine Lastverteilung der Nachrichten schon wesentlich schwieriger zu implementieren. Ein Problem ist dabei, dass es schwierig ist, von vornherein zu entscheiden, welcher Subscriber nun für welche Teile zuständig sein soll. Solange das System nicht zu groß wird, lassen sich diese Probleme durch den Einsatz von mehreren Brokern und entsprechenden Algorithmen (**flooding**, **routing**) sinnvoll handhaben.
 
 ## 3.6 Konsistenz und Replikation
 
-In verteilten System werden Daten üblicherweise repliziert. Dies hat hauptsächlich zwei Gründe: zum einen soll hierdurch die Verfügbarkeit und Verlässlichkeit des verteilten Systems verbessert werden, zum anderen soll die dessen Leistung gesteigert werden.
+In verteilten System werden Daten üblicherweise repliziert. Dies hat hauptsächlich zwei Gründe: zum einen soll hierdurch die Verfügbarkeit und Verlässlichkeit des verteilten Systems verbessert werden, zum anderen soll dessen Leistung gesteigert werden.
 
-Ein großes Problem hierbei ist es, die Replikate konsistent zu halten. Sobald ein Replikat geändert wird, unterscheidet es sich von den übrigen Beständen. Um die Konsistenz wieder herzustellen, müssen Änderungen in den übrigen Replikaten übernommen werden, idealerweise ohne, dass diese temporäre Inkonsistenz bemerkt wird. Dies kann je nach Größe und Aufbau des verteilten System zu massiven Leistungsproblemen führen.
+Ein großes Problem hierbei ist es, die Replikate konsistent zu halten. Sobald ein Replikat geändert wird, unterscheidet es sich von den übrigen Beständen. Um die Konsistenz wieder herzustellen, müssen Änderungen in den übrigen Replikaten übernommen werden, idealerweise ohne dass diese temporäre Inkonsistenz bemerkt wird. Dies kann je nach Größe und Aufbau des verteilten System zu massiven Leistungsproblemen führen.
 
 Eine mögliche Lösung ist es, anstelle einer sofortigen, unmittelbaren Konsistenz, eine verzögerte Konsistenz in Kauf zu nehmen und diese kontinuierlich wiederherzustellen. Die Unterschiede zwischen dem beabsichtigten und dem tatsächlichen Zustand der Daten können als Abweichungen bezeichnet werden. Diese Abweichungen treten insbesondere in Form von drei Typen auf:
 
@@ -134,13 +134,13 @@ Eine mögliche Lösung ist es, anstelle einer sofortigen, unmittelbaren Konsiste
 - veraltete (engl. stale) Abweichungen: gemeint sind zeitliche Unterschiede, mit denen Updates auf die verschiedenen Replikas angewendet wurden
 - Abweichungen in der Reihenfolge der Operationen: bezeichnet die Anzahl an ausstehenden Schreiboperationen je Server, welche noch nicht mit den anderen Replika-Servern synchronisiert wurden; hierbei kann es vorkommen, dass zeitlich jüngere Operation vor zeitlich älteren vorgenommen wurden
 
-Um den verschiedenen Anforderungen an die Konsistenz gerecht zu werden, gibt es diverse Konsistenzmodelle und verschiedene Wege, diese zu implementieren. Im Folgenden sollen verschiedene Modell betrachtet werden.
+Um den verschiedenen Anforderungen an die Konsistenz gerecht zu werden, gibt es diverse Konsistenzmodelle und verschiedene Wege, diese zu implementieren. Im Folgenden sollen verschiedene Modelle betrachtet werden.
 
 ### 3.6.1 Datenzentrierte Konsistenzmodelle
 
 Traditionell wurde Konsistenz in Bezug auf Lese- und Schreiboperationen betrachtet, welche auf verteilten und gemeinsamen Datenbanken, Dateisystemen oder Speicher durchgeführt wurden. Für diese Datenhaltungsoptionen kann auch der allgemeinere Begriff **Data Store** verwendet werden.
 
-Grundsätzlich wird in diesen Modellen davon ausgegangen, dass Prozesse, die Zugriff auf die Daten haben, eine lokale oder nahe Kopie des gesamten Data Store haben. Schreiboperationen werden dann zu den anderen Kopien verbreitet. Ein Konsistenzmodell ist aus dieser Sicht ein Vertrag zwischen den Prozessen und dem Data Store. Solange die Prozesse sich an bestimmte Regeln halten, verspricht der Data Store korrekt zu arbeiten und bei Lese-Operationen das Ergebnis der letzten Schreiboperationen zurückzugeben.
+Grundsätzlich wird in diesen Modellen davon ausgegangen, dass Prozesse, die Zugriff auf die Daten haben, eine lokale oder nahe Kopie des gesamten Data Store haben. Schreiboperationen werden dann zu den anderen Kopien verbreitet. Ein Konsistenzmodell ist aus dieser Sicht ein Vertrag zwischen den Prozessen und dem Data Store. Solange die Prozesse sich an bestimmte Regeln halten, verspricht der Data Store, korrekt zu arbeiten und bei Lese-Operationen das Ergebnis der letzten Schreiboperationen zurückzugeben.
 
 Viele Modelle aus dieser Kategorie beschäftigen sich mit der **korrekten Anordnung von Operationen** auf gemeinsam genutzten, verteilten Daten. Im Kern geht es bei diesen Modellen darum, dass die Replikate sich auf eine global gültige, konsistente Reihenfolge der Operationen einigen müssen.
 
@@ -160,18 +160,18 @@ Im Gegensatz dazu verdeutlicht die rechte Abbildung (b) einen inkonsistenten Zus
 
 Eine weitere Form der datenzentrierten Konsistenz ist die der **letztendlichen Konsistenz** (engl. eventual consistency) nach [Vogels, 2009]. Hiermit ist gemeint, dass alle Replikate im Data Store letztendlich den zuletzt geänderten Wert zurückgeben, solange dieser nicht verändert wird. Im Kern bedeutet dies, dass eine Änderung eines Objektes garantiert irgendwann an alle Replikate propagiert wird, also dass alle Replikate letztendlich zu einem Zustand konvergieren.
 
-Dieses Modell kann aus Client-Sicht Nachteile haben. Ein Client wird bei Benutzung des Systems mit einem Replikat verbunden sein und Änderungen veranlassen. Verbindet sich der Client dann über ein anderes Gerät oder an einem anderen Ort mit dem Systems, kann der Client mit einem anderen Replikat verbunden sein, auf dem die Änderungen noch nicht angelangt sind. Dies kann zu inkonsistentem Verhalten führen.
+Dieses Modell kann aus Client-Sicht Nachteile haben. Ein Client wird bei Benutzung des Systems mit einem Replikat verbunden sein und Änderungen veranlassen. Verbindet sich der Client dann über ein anderes Gerät oder an einem anderen Ort mit dem System, kann der Client mit einem anderen Replikat verbunden sein, auf dem die Änderungen noch nicht angelangt sind. Dies kann zu inkonsistentem Verhalten führen.
 
 ### 3.6.2 Clientzentrierte Konsistenzmodelle
 
-Um die Nachteile der *eventual consistency* aufzuwiegen, wurden clientzentrierte Konsistenzmodelle entwickelt. Diese garantieren im Kern dafür, dass Zugriffe eines einzelnen Clients auf den Data Store konsistent sind. Diese Garantie gilt jedoch *nicht* für nebenläufige Zugriffe mehrerer Clients.
+Um die Nachteile der _eventual consistency_ aufzuwiegen, wurden clientzentrierte Konsistenzmodelle entwickelt. Diese garantieren im Kern dafür, dass Zugriffe eines einzelnen Clients auf den Data Store konsistent sind. Diese Garantie gilt jedoch _nicht_ für nebenläufige Zugriffe mehrerer Clients.
 
-Die clientzentrierten Modelle wurden im Rahmen von Arbeiten an mobilen Datensystemen entwickelt, bei denen davon ausgegangen wurde, dass die Netzwerkverbindung unzuverlässig sei und Leistungsprobleme habe. Hierbei wurden insbesondere folgende vier verschiedene Konsistenzmodelle erstellt (deren Übersetzung aus dem Englischen der Übersichtlichkeit wegen nicht erfolgt ist) :
+Die clientzentrierten Modelle wurden im Rahmen von Arbeiten an mobilen Datensystemen entwickelt, bei denen davon ausgegangen wurde, dass die Netzwerkverbindung unzuverlässig sei und Leistungsprobleme habe. Hierbei wurden insbesondere folgende vier verschiedene Konsistenzmodelle erstellt (deren Übersetzung aus dem Englischen der Übersichtlichkeit wegen nicht erfolgt ist):
 
-* **monotonic reads**: sobald ein Prozess den Wert eines Eintrags gelesen hat, werden alle nachfolgenden Lesezugriffe dieses Prozesses nur einen Wert zurückgeben, welcher genauso alt oder jünger ist wie der erste Wert
-* **monotonic writes**: eine Schreiboperation eines Prozesses auf einem Eintrag wird garantiert abgeschlossen, bevor eine weitere Scheiboperation desselben Prozessen erfolgen kann
-* **read-your-writes**: hat ein Prozess einen Eintrag mit einer bestimmten Version geschrieben, dann werden nachfolgende Lesezugriffe garantiert keine ältere als diese Version lesen
-* **writes follow reads**: hat ein Prozess einen Wert für einen Eintrag gelesen, so werden nachfolgende Schreiboperationen garantiert auf dem gelesenen Wert oder einem jüngeren Wert ausgeführt
+- **monotonic reads**: sobald ein Prozess den Wert eines Eintrags gelesen hat, werden alle nachfolgenden Lesezugriffe dieses Prozesses nur einen Wert zurückgeben, welcher genauso alt oder jünger ist wie der erste Wert
+- **monotonic writes**: eine Schreiboperation eines Prozesses auf einem Eintrag wird garantiert abgeschlossen, bevor eine weitere Scheiboperation desselben Prozesses erfolgen kann
+- **read-your-writes**: hat ein Prozess einen Eintrag mit einer bestimmten Version geschrieben, dann werden nachfolgende Lesezugriffe garantiert keine ältere als diese Version lesen
+- **writes follow reads**: hat ein Prozess einen Wert für einen Eintrag gelesen, so werden nachfolgende Schreiboperationen garantiert auf dem gelesenen Wert oder einem jüngeren Wert ausgeführt
 
 ### 3.6.3 Replikatverwaltung
 
@@ -181,17 +181,17 @@ Die Platzierung der Replika-Server ist heutzutage kein großes Problem mehr aufg
 
 Bei der Platzierung der Daten können drei Typen mit den jeweiligen Eigenschaften unterschieden werden:
 
-* permanente Replikate:
-  * initiale Menge der Daten im verteilten Data Store
-  * geringe Anzahl
-  * gespiegelt auf verschiedenen Servern
-* durch Server erzeugte Replikate
-  * Kopien der Daten in der Nähe von / auf Servern zur Steigerung der Leistung
-  * können Nur-lesend konfiguriert werden, wenn permanente Replikate zum Schreiben verwendet werden
-* durch Clients erzeugte Replikate
-  * Cache beim Client
-  * lokale Kopie der angefragten Daten
-  * dienen der Leistungssteigerung.
+- permanente Replikate:
+  - initiale Menge der Daten im verteilten Data Store
+  - geringe Anzahl
+  - gespiegelt auf verschiedenen Servern
+- durch Server erzeugte Replikate
+  - Kopien der Daten in der Nähe von / auf Servern zur Steigerung der Leistung
+  - können Nur-lesend konfiguriert werden, wenn permanente Replikate zum Schreiben verwendet werden
+- durch Clients erzeugte Replikate
+  - Cache beim Client
+  - lokale Kopie der angefragten Daten
+  - dienen der Leistungssteigerung.
 
 Ein weiteres Thema der Replikatverwaltung ist die Art und Weise, in der Änderungen im Datenbestand zu den Replikaten propagiert werden. So muss geklärt werden, was eigentlich bei einer Änderung übermittelt wird, ob diese Änderungen aktiv oder passiv übermittelt werden und ob die Replikate individuell oder alle zusammen informiert werden.
 
@@ -217,9 +217,9 @@ Im Folgenden sollen einige Konsistenzprotokolle weiter vorgestellt werden.
 
 #### Primary-based Protokolle
 
-Bei den primary-based Protokollen hat jeder Dateneintrag *x* im Data Store einen sog. **Primary**, also einen zugeordneten Prozess mit der primären Kopie der Daten, welcher für Koordination der Schreiboperationen auf *x* verantwortlich ist. Hierbei kann unterschieden werden zwischen **Primaries**, die fest einem Server zugordnet sind und einer wechselnden Variante, bei der jener Prozess der **Primary** wird, welcher die Schreiboperation initiiert.
+Bei den primary-based Protokollen hat jeder Dateneintrag _x_ im Data Store einen sog. **Primary**, also einen zugeordneten Prozess mit der primären Kopie der Daten, welcher für Koordination der Schreiboperationen auf _x_ verantwortlich ist. Hierbei kann unterschieden werden zwischen **Primaries**, die fest einem Server zugordnet sind und einer wechselnden Variante, bei der jener Prozess der **Primary** wird, welcher die Schreiboperation initiiert.
 
-In der einfachsten Variante ist der **Primary** einem Server fest zugeordnet. Alle Schreiboperationen, die auf dem Dateneintrag *x* ausgeführt werden sollen, werden zu diesem Server weitergeleitet. Dieser führt dann die Änderung auf seinem lokalem Datenbestand durch und leitet die Änderung anschließend an die übrigen Replikate weiter. Die Aktualisierung der nachgelagerten Replikate wird durch diese dem **Primary** gegenüber bestätigt. Dieser wiederum bestätigt die Änderung gegenüber dem initiierenden Prozess, sobald alle nachgelagerten Änderungen bestätigt wurden. Dieses Verfahren ist in der folgenden Abbildung aus [van Steen, 2017] dargestellt, welche ein primary-based Protokoll in Form eines primary-backup Protokolls wiedergibt.
+In der einfachsten Variante ist der **Primary** einem Server fest zugeordnet. Alle Schreiboperationen, die auf dem Dateneintrag _x_ ausgeführt werden sollen, werden zu diesem Server weitergeleitet. Dieser führt dann die Änderung auf seinem lokalem Datenbestand durch und leitet die Änderung anschließend an die übrigen Replikate weiter. Die Aktualisierung der nachgelagerten Replikate wird durch diese dem **Primary** gegenüber bestätigt. Dieser wiederum bestätigt die Änderung gegenüber dem initiierenden Prozess, sobald alle nachgelagerten Änderungen bestätigt wurden. Dieses Verfahren ist in der folgenden Abbildung aus [van Steen, 2017] dargestellt, welche ein primary-based Protokoll in Form eines primary-backup Protokolls wiedergibt.
 
 ![Primary-based protocol](./assets/primary_based_protocol.png)
 
@@ -235,7 +235,7 @@ In einer als **local-write** bezeichneten Variante der Protokolle sucht der anfr
 
 Bei den replicated-write Protokollen werden die Schreiboperationen von mehreren Replikaten ausgeführt anstatt nur von einem **Primary**. Bei diesen Protokollen kann unterschieden werden zwischen Protokollen mit **active replication** und **quorum-based** Protokollen.
 
-Bei den Protokollen mit **active replication** ist jedes Replikat mit einem Prozess ausgestattet, welche der Änderungen durchführen kann. Jede Operation wird hierbei zu jedem Replikat gesendet. Problematisch ist hierbei, dass jede Operation auf jedem Replikat in der richtigen Reihenfolge ausgeführt werden muss. In der Praxis können hierfür sog. **Sequencer** eingesetzt werden. Diese sind zentrale Koordinatoren im System, welche zunächst alle Operationen erhalten, diese mit einer eindeutigen Sequenznummer versehen und anschließende an die Replikate propagieren. Dort werden die Operationen dann anhand ihrer Sequenznummer abgearbeitet.
+Bei den Protokollen mit **active replication** ist jedes Replikat mit einem Prozess ausgestattet, welche die Änderungen durchführen kann. Jede Operation wird hierbei zu jedem Replikat gesendet. Problematisch ist hierbei, dass jede Operation auf jedem Replikat in der richtigen Reihenfolge ausgeführt werden muss. In der Praxis können hierfür sog. **Sequencer** eingesetzt werden. Diese sind zentrale Koordinatoren im System, welche zunächst alle Operationen erhalten, diese mit einer eindeutigen Sequenznummer versehen und anschließend an die Replikate propagieren. Dort werden die Operationen dann anhand ihrer Sequenznummer abgearbeitet.
 
 In den **quorum-based** Protokollen wird das Konzept von Wahlen verwendet. Die grundlegende Idee dabei ist es, dass Clients gezwungen sind, die Berechtigung zum Lesen und Schreiben von replizierten Daten anzufragen und zu erhalten. Hierfür benötigen sie die Zustimmung einer Mehrheit von Replikaten.
 
@@ -250,7 +250,7 @@ Nur wenn die benötigte Anzahl von Servern der Operation zugestimmt hat, kann di
 
 Neben der oben beschriebenen Implementierung der datenzentrierten Konsistenzmodell gibt es auch Implementierungen der clientzentrierten Konsistenzmodelle.
 
-Grundlegend für diese Protokolle ist, dass jeder Schreiboperation eine global eindeutiger ID zugewiesen wird. Diese weist der Server zu, der die Schreibanfrage erhalten hat. Dieser Server ist dann der Ursprung der Operation. Dann werden für jeden Client zwei Mengen an Schreiboperationen vorgehalten. Die eine Menge besteht aus den Schreiboperationen, die für die lesenden Operationen relevant sind (**read set**), die andere besteht aus den Schreiboperationen, welche der Client durchgeführt hat (**write set**).
+Grundlegend für diese Protokolle ist, dass jeder Schreiboperation eine global eindeutige ID zugewiesen wird. Diese weist der Server zu, der die Schreibanfrage erhalten hat. Dieser Server ist dann der Ursprung der Operation. Dann werden für jeden Client zwei Mengen an Schreiboperationen vorgehalten. Die eine Menge besteht aus den Schreiboperationen, die für die lesenden Operationen relevant sind (**read set**), die andere besteht aus den Schreiboperationen, welche der Client durchgeführt hat (**write set**).
 
 Auf dieser Basis können die vier oben genannten Konsistenzmodelle implementiert werden.
 
@@ -270,8 +270,6 @@ Die monotonic write-Konsistenz wird analog zu monotonic reads implementiert. Wen
 
 Hierbei wird der angefragte Server zunächst anhand der Schreiboperationen im **read set** aktualisiert. Anschließend wird die Schreiboperation zusammen mit den Operationen aus dem **read set** in das **write set** eingefügt, da die Operationen aus dem **read set** nun ebenfalls relevant für die Schreiboperation sind.
 
-
-
 ## 3.7 Fehlerrobustheit
 
 Eine kennzeichnende Eigenschaft von verteilten Systemen, die sie von Einzel-Computer-Systemen unterscheidet, ist das Konzept des teilweisen Ausfalls: ein Teil des Systemes kann ausfallen, während die übrigen Teile zumindest scheinbar korrekt weiterarbeiten.
@@ -280,10 +278,10 @@ Ein wichtiges Ziel beim Entwurf verteilter Systeme ist es, das System so zu entw
 
 Die Robustheit und Zuverlässigkeit eines verteilten Systems ergibt sich aus dem Zusammenspiel verschiedener, nützlicher Anforderungen, die an ein solches System zu stellen sind, nämlich
 
-* Verfügbarkeit
-* Verlässlichkeit
-* Sicherheit
-* Wartbarkeit.
+- Verfügbarkeit
+- Verlässlichkeit
+- Sicherheit
+- Wartbarkeit.
 
 Die **Verfügbarkeit** (engl. availability) eines Systems ist definiert durch die Eigenschaft, sofort verwendbar zu sein. Allgemein ist damit die Wahrscheinlichkeit gemeint, dass ein System zu einem bestimmten Zeitpunkt korrekt arbeitet und für die Nutzer funktioniert.
 
@@ -303,7 +301,7 @@ Neben der Behandlung ausfallenender Prozesse ist in verteilten Systemen eine wei
 
 Bei Punkt-zu-Punkt-Verbindungen werden häufig verlässliche Protokolle wie TCP verwendet. Durch TCP ist es möglich, Fehler in Form verlorener Nachrichten durch Bestätigungen und das erneute Senden von Nachrichten zu maskieren. Der kompletten Wegfall einer Verbindung kann durch TCP jedoch nicht kompensiert werden, sodass auf Anwendungsebene entsprechend eine Neuverbindung vorgenommen werden muss.
 
-Ein immer wieder zu lösendes Problem ist der verteilten Commits. Gemeint ist das Problem, dass eine Operation von allen Teilnehmern einer Prozessgruppe ausgeführt wurde oder gar nicht. Bei dieser Operation kann es sich um die zuverlässige Übermittlung der Nachrichten oder um verteilte Operationen handeln.
+Ein immer wieder zu lösendes Problem ist das der verteilten Commits. Gemeint ist das Problem, dass eine Operation von allen Teilnehmern einer Prozessgruppe ausgeführt wurde oder gar nicht. Bei dieser Operation kann es sich um die zuverlässige Übermittlung der Nachrichten oder um verteilte Operationen handeln.
 
 Verteilte Commits werden häufig durch das Zusammenspiel mit einem sog. Koordinator ermöglicht. Dieser Koordinator teilt den beteiligten Prozessen mit, ob sie eine lokale Operation durchführen sollen. In dieser einfachen Form des **one-phase commit protocol** gibt es den Nachteil, dass der Koordinator nicht darüber informiert wird, wenn einer oder mehrere der beteiligten Prozesse die Operation nicht ausführen kann.
 
@@ -313,9 +311,8 @@ In der Praxis kommen daher komplexere Protokolle zum Einsatz. Eines dieser Proto
 
 Der Koordinator (a) sendet zunächst ein VOTE-REQUEST an alle Teilnehmer der Gruppe. Wenn ein Prozess (b) ein VOTE-REQUEST empfängt, sendet er entweder ein VOTE-COMMIT zurück, wenn er bereit ist die Operation auszuführen. Anderenfalls sendet er ein VOTE-ABORT an den Koordinator. Der Koordinator sammelt alle Antworten der Teilnehmer. Haben alle Teilnehmer mit VOTE-COMMIT geantwortet, sendet der Koordinator ein GLOBAL-COMMIT an die Teilnehmer. Gibt es jedoch auch nur ein VOTE-ABORT, so sendet der Koordinator ein GLOBAL-ABORT an die Teilnehmer. Die Teilnehmer warten auf die finale Nachricht des Koordinators und reagieren entsprechend der empfangene Nachricht mit dem Ausführen der Operation (GLOBAL-COMMIT) oder mit deren Abbruch (GLOBAL-ABORT).
 
-
-
 ---
+
 [Kleppmann, 2017]: M. Kleppmann, Designing data-intensive applications: the big ideas behind reliable, scalable, and maintainable systems, First edition. Boston: O’Reilly Media, 2017.
 
 [Lamport, 1979]: Lamport, “How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs,” IEEE Trans. Comput., vol. C–28, no. 9, pp. 690–691, Sep. 1979, doi: 10.1109/TC.1979.1675439.
@@ -325,10 +322,7 @@ Der Koordinator (a) sendet zunächst ein VOTE-REQUEST an alle Teilnehmer der Gru
 [Vogels, 2009]: W. Vogels, “Eventually Consistent,” Queue, vol. 6, no. 6, p. 14, Oct. 2008, doi: 10.1145/1466443.1466448.
 
 ---
-<<<<<<< HEAD
-| [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiele >>](06_fallbeispiele.md) |
-| ----------------------------------------------- | ------------------------------- | --------------------------------------- |
-=======
+
 | [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiel >>](06_fallbeispiel.md) |
 | ----------------------------------------------- | ------------------------------- | ------------------------------------- |
->>>>>>> a4940a0bd6f86ef715daff2f932c8b52a4afa6a6
+

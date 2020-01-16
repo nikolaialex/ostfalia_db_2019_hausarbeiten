@@ -1,8 +1,9 @@
 # Herausforderungen von verteilten Systemen
 
-Abstract
+
 
 ## Autoren
+
 | Name             | Matrikelnummer| Hochschule       |
 |:-----------------|:--------------|:-----------------|
 | Carsten Brauer   | 896335       | Beuth Hochschule für Technik Berlin |
@@ -12,4 +13,5 @@ Abstract
 ***
 |[Inhaltsverzeichnis >>](02_toc.md)|
 |----------------------------------|
+
 ***
