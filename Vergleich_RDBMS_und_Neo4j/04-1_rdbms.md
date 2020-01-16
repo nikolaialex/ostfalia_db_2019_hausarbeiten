@@ -1,7 +1,7 @@
-## 3.1 RDBMS
+## 2.1 RDBMS
 Ein Relational Database Management System (RDBMS) bezeichnet grundsätzlich ein Database Management System (DBMS), welches auf dem relationalen Modell von E. F. Codd (vgl. Codd 1970: 377 ff.) basiert. Innerhalb dieses Systems können Daten anhand einer vordefinierten Struktur in Datenbankobjekten gespeichert werden, die innerhalb des RDBMS durch Tabellen dargestellt werden. RDBMS dient als Basis für die Structured Query Language (SQL) und findet unter anderem Anwendung in den Datenbanksystemen Oracle, MySQL sowie Postgres.
 
-### 3.1.1 Schema 
+### 2.1.1 Schema 
 Eine Tabelle bildet die einfachste Form von Datenspeicherung innerhalb dieses Systems und beschreibt jeweils eine Gruppierung von schemagleichen Daten, organisiert durch mehrere Reihen und Spalten. Die nachfolgende Tabelle veranschaulicht ein Datenbankobjekt anhand einer (vereinfachten) Kundendatenbank eines Online-Shops:
 
 
@@ -37,7 +37,7 @@ Bestellt ein Kunde nun in diesem Online-Shop ein Produkt, können diese Bestellu
 
 Durch die eindeutigen Schlüssel zur Indentifikation der entsprechenden Datensätze können die einzelnen Bestellungen einem Kunden (hat bestellt) und einem Produkt (wurde gekauft) zugeordnet werden.
 
-### 3.1.2 Constraints
+### 2.1.2 Constraints
 Die sogenannten Constraints sind vordefinierte Regeln, die jeweils auf einzelne Merkmale (Attribute) oder auch auf gesamte Tabellen bei Erzeugung definiert und durch das RDBMS kontrolliert werden. Zu speichernde Daten, die nicht auf die vordefinierten Constraints passen, werden abgewiesen. Folgende Constraints werden häufig in SQL eingesetzt:
 
 * **NOT NULL** - Eine Spalte kann keine NULL Werte enthalten
@@ -48,13 +48,13 @@ Die sogenannten Constraints sind vordefinierte Regeln, die jeweils auf einzelne 
 * **CHECK** - Überprüft, ob alle Werte einer Spalte einer Bedingung entsprechen
 * **INDEX** - Baut einen Index auf, um Abfragen schneller bearbeiten zu können
 
-### 3.1.3 Integrität 
+### 2.1.3 Integrität 
 Innerhalb jedes RDBMS lassen sich durch die zuvor genannten Contraints folgende Kategorien definieren, die die Integrität der Daten gewährleisten:
 * **Entity Integrety** - Es existieren keine Duplikate in einer Tabelle
 * **Domain Integrety** - Spalten werden nach Datentyp, Format oder Länge der Werte eingeschränkt
 * **Referntial Integretiy** - Tupel, die durch andere Tupel über **FOREIGN KEY** referenziert werden, können nicht gelöscht werden
 
-### 3.1.4 Sprache, Operationen und Syntax
+### 2.1.4 Sprache, Operationen und Syntax
 SQL wurde 1987 durch die International Organization for Standardization (ISO)als offizielle, domänenspezifische Sprache für RDBMS ernannt und basierte ursprünglich auf relationaler Algebra und Kalkülausdrücken. SQL war die erste kommerzielle Sprache, die das relationale Modell von E. F. Codd [01] aufgriff. Nachfolgend sind die relevantesten Statements dargestellt, die mit SQL realisiert werden können:
 
 * **SELECT** - Liest Daten
