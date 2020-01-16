@@ -1,4 +1,3 @@
-// TODO: Sortieren!
 # Literatur
 
 * Codd, E. F. (1970): A Relational Model of Data for
@@ -10,6 +9,8 @@ Large Shared Data Banks, Communications of the ACM, Volume 13, Number 6.
 
 * Hunger, Michael (2014): Neo4j 2.0 – eine Graphendatenbank für alle – schnell und kompakt, entwickler.press / Software & Support Media GmbH, Frankfurt.
 
-* Neo4j, Inc. (2019): Getting started, Tutorium in Neo4j Desktop Version 1.2.3, Seite 2/7.
+* Neo4j, Inc. (2019a): Getting started, Tutorium in Neo4j Desktop Version 1.2.3, Seite 2/7.
+
+* Neo4j, Inc. (2019b): Who uses Neo4j, [online] https://neo4j.com/who-uses-neo4j/, [16.01.2020].
 
 * Quackit (2019): Neo4j – Create an index using cypher, [online] https://www.quackit.com/neo4j/tutorial/neo4j_create_an_index_using_cypher.cfm, [26.12.2019].
