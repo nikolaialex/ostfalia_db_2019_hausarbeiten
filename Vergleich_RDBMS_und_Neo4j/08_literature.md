@@ -1,8 +1,8 @@
 // TODO: Sortieren!
 # Literatur
 
-* [01] Codd, E. F. "A Relational Model of Data for
-Large Shared Data Banks" Communications of the ACM, Volume 13, Number 6, Juni 1970
+* Codd, E. F. (1970): A Relational Model of Data for
+Large Shared Data Banks, Communications of the ACM, Volume 13, Number 6.
 
 * Edllich, Stefan / Friedland, Achim / Hampe, Jens / Brauer, Benjamin (2010): NoSQL – Einstieg in die Welt nichtrelationaler Web 2.0 Datenbanken, Carl Hanser Verlag München.
 
