@@ -6,4 +6,6 @@ Während relationale Datenbanken (RDBMS) zu den wohl bekanntesten Datenbanksyste
 
 Neo4j ist ein populäres Graphendatenbanksystem, das von Unternehmen wie Walmart und ebay eingesetzt wird (Neo4j Inc. 2020). Umso interessanter ist es, Neo4j exemplarisch für Graphendatenbanken, den RDBMS gegenüberzustellen. 
 
-Bei dieser Arbeit werden die zwei verschiedenen DBMS-Konzepte zunächst kurz erklärt. Anschließend soll anhand eines praktischen Beispiels die wesentlichen Unterschiede vorgestellt werden.
+Bei dieser Arbeit werden die zwei verschiedenen DBMS-Konzepte zunächst kurz erklärt. Anschließend sollen anhand eines praktischen Beispiels die wesentlichen Unterschiede vorgestellt werden. Hierzu wird ein reales Projekt der Staatsbibliothek zu Berlin vorgestellt, bei dem es um die Verfügbarmachung von abendländischen mittelalterlichen Sprachen geht. Dieses Projekt soll als Beispiel für tief verschachtelte Datenstrukturen in einer Datenbank stehen. Ein Performance-Test soll im kleineren Rahmen zwar stattfinden, steht nicht im Mittelpunkt der Ergebnisse, da es hierzu ein weitaus größeren Datenmenge bedarf als in diesem Projekt zur Verfügung steht. Dennoch soll ein Ansatz für eine Performancesteigerung evaluiert werden.
+
+
