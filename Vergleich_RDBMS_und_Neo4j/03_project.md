@@ -51,12 +51,12 @@ Beispiel: Dokumentenelement Text
 
 ![Beispiel Handschrift aus dem 15 Jahrhundert Inhalt](dokumentenelement.png) 
 
-Anhand dieses Beispiel wurde kurz die fachliche Struktur einer Handschriftenbeschreibung dargestellt. Zu erkennen ist, das ein Beschreibungsdokument viele Beziehungen zu Orten, Personen, Instiutionen mit zeitlicher Varianz haben kann. 
+Anhand dieses Beispiel wurde kurz die fachliche Struktur einer Handschriftenbeschreibung dargestellt. Zu erkennen ist, dass ein Beschreibungsdokument viele Beziehungen zu Orten, Personen, Instiutionen mit zeitlicher Varianz haben kann. 
   
 ## 3.4 Unterschiede in der Implementierung 
 
 ### 3.4.1 Objekt Mapping für RDBMS und Graphdatenbank
-Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der der Objektmapper Frameworks ausgezeichnet, sodass der Mapper diese persistieren kann. Nachfolgende soll die Beschreibungsentität kurz erläutert werden: 
+Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der Objektmapper Frameworks ausgezeichnet, sodass der Mapper diese persistieren kann. Nachfolgende Graphik soll die Beschreibungsentität kurz erläutert werden: 
 
     @Entity
     @Table(name = "beschreibungen")
@@ -98,11 +98,11 @@ Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der 
 **OGM Annotation für GRAPH Datenbank** 
 
 Ein Neo4J Knoten wird durch die Annotation **@NodeEntity** gekennzeichnet. Zusätzlich benötigt ein Knoten eine eindeutige Identifikationsnummer. Eine Beziehung zu anderen Knoten wird 
-mit Hilfe der Annotation **@Relationship** gekennzeichnet. Mit Hilfe dieser Annotationen kann ein Objekt Graph Mapper, wie er im Spring Data Neo4J verwendet wird dieses Java Objekt in einer Graphendatenbank persistieren. 
+mit Hilfe der Annotation **@Relationship** gekennzeichnet. Mit Hilfe dieser Annotationen kann ein Objekt Graph Mapper, wie er im Spring Data Neo4J verwendet wird, dieses Java Objekt in einer Graphendatenbank persistieren. 
 
 #### 3.4.1.1 Objekt Mapping, Besonderheit RelationshipEntity
 
-Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Provienz dar. Dieses Objekt ist ein Relationsobjekt **@RelationshipEntity()** welches zwei Entitäten miteinander verbindet. Eine solche Objektannotation gibt es im Kontext des RDBMS nicht. 
+Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Provienz dar. Dieses Objekt ist ein Relationsobjekt **@RelationshipEntity()** , welches zwei Entitäten miteinander verbindet. Eine solche Objektannotation gibt es im Kontext des RDBMS nicht. 
 
     @Entity
     @RelationshipEntity()
@@ -140,7 +140,7 @@ Eine Besonderheit im Bereich der Graphendatenbank stellt hierbei das Objekt Prov
     @StartNode
     private Beschreibungsdokument beschreibungsdokument;
     
-Die Provienz verbindet hierbei die Entitäten Beschreibungsdokument und Beteiligte in einer gerichtet Form. Die Richtung wird durch die Annotationen **@StartNode** und **@EndNode** gekennzeichnet. 
+Die Provienz verbindet hierbei die Entitäten Beschreibungsdokument und Beteiligte in einer gerichteten Form. Die Richtung wird durch die Annotationen **@StartNode** und **@EndNode** gekennzeichnet. 
 
 #### 3.4.1.2 Objekt Mapping, Besonderheit Vererbung 
 
@@ -169,7 +169,7 @@ Für die Graphendatenbank werden hier keine Steuerungsangaben benötigt. Jeder K
 
 Ein Java Objekt, welches in eine relationale Datenbank persistiert werden soll, muss mit der Annotation **@Entity** gekennzeichnet werden. Genau wie bei Neo4J muss dieses Objekt ein Attribute mit der **@Id** Annotation als primäry Key kennzeichnen. 
 Für Beziehungen zu anderen Objekten stehen folgende Annotationen zur Verfügung: **@OneToOne**, **@OneToMany**, **@ManyToOne**, **@ManyToMany**. Für diese Annotationen müssen noch Werte für das Verhalten beim Laden angegeben werden. Zusätzlich können Daten zusammenhänged 
-gespeichert, gelöscht oder geladen werden was die Arbeit mit Objekten des ORM in der Praxis oft komplex werden lässt. Bei der Konfiguration des Objekt Mappers benötigt das relationale Datenbankmanagementsystem mehr Steuerung als die Graphendatenbank.
+gespeichert, gelöscht oder geladen werden, was die Arbeit mit Objekten des ORM in der Praxis oft komplex werden lässt. Bei der Konfiguration des Objekt Mappers benötigt das relationale Datenbankmanagementsystem mehr Steuerung als die Graphendatenbank.
 
 
 ### 3.4.2 CREAD, READ, UPDATE and DELETE (CRUD) für RDBMS und Graphdatenbank
@@ -207,7 +207,7 @@ die Klasse Beschreibungsdokument und die Klasse String. Die Verwendung des Repos
       beschreibungsdokumenteRDBMSRepository.saveAll(l);
       
 Im ersten Schritt muss die Implementierng via Dependency Injection einer Variable zugewiesen werden. Anschließend können die Entitäten mit save, delete, oder findBy Methoden in die entsprechende Datenbank 
-persistiert, gelöscht oder aktualisiert werden. Für die Verwendung der Standard Operation macht es hierbei keinen Unterschied ob diese auf einer Graphendatenbank oder einem relationales DBMS durchgeführt werden.
+persistiert, gelöscht oder aktualisiert werden. Für die Verwendung der Standard Operation macht es hierbei keinen Unterschied, ob diese auf einer Graphendatenbank oder einem relationales DBMS durchgeführt werden.
 
       
 ### 3.4.3 Queries für RDBMS und Graphdatenbank
@@ -248,7 +248,7 @@ Nachfolgendes Codebeispiel zeigt die Implementierung einer CRUD und einer native
     }
     
 Grundsätzlich lassen sich mit Hilfe des Frameworks Spring Data native Queries für beide Datenbanksysteme sehr leicht implementieren. Die Unterstützung der Standardoperation ist ebenfalls sehr gut. Allerdings bietet die Graphendatenbank 
-mit Hilfe des Return Statements noch eine Möglichkeit individuelle Ergebnisse zurück zugeben. Die Möglichkeit besteht für die relationale Datenbank nicht. Folgendes Beispiel zeigt dies anhand der Provienz: 
+mit Hilfe des Return Statements noch eine Möglichkeit individuelle Ergebnisse zurück zugeben. Die Möglichkeit besteht für die relationale Datenbank nicht. Folgendes Beispiel zeigt dies anhand der Provenienz: 
 
     @Query("MATCH (k:Koerperschaft)-[r:PROVENIENZ]-(b:Beschreibungsdokument) RETURN k AS beteiligte,r AS provenienz,b AS beschreibungsdokument")
       List<ProvenienzResult> findAllProvenienz();
@@ -309,12 +309,12 @@ mit Hilfe des Return Statements noch eine Möglichkeit individuelle Ergebnisse z
     }
 
 Diese Abfrage gibt als Ergebnis ein Objekt zurück, welches die Knoten Beteiligte und Beschreibungsdokument sowie die Beziehung Provienz enthält. Diese Flexibilität ermöglicht es für den Einsatz 
-einer Graphendatenbank sehr leicht beliebige Ergebnisobjekte zu erschaffen. So können sehr leicht neue Informationen aus den Daten gewonnen werden ohne die Datenbankstruktur anpassen zu müssen.
+einer Graphendatenbank sehr leicht beliebige Ergebnisobjekte zu erschaffen. So können sehr leicht neue Informationen aus den Daten gewonnen werden, ohne die Datenbankstruktur anpassen zu müssen.
 
 ### 3.4.3 Schema Management für RDBMS und Graphdatenbank
 
-Beide Ojektmapper können das Schema automatisch verwalten. Dies bedeutet, dass sowohl die Tabellen als auch die Knoten und Beziehungen automatische angelegt werden. Allerdings benötigt der RDBMS OR Mapper 
-eine Einstellung zur Steuerung ob das Schema der Datenbank automatisch oder manuell angelegt werden soll. 
+Beide Ojektmapper können das Schema automatisch verwalten. Dies bedeutet, dass sowohl die Tabellen, als auch die Knoten und Beziehungen automatisch angelegt werden. Allerdings benötigt der RDBMS OR Mapper 
+eine Einstellung zur Steuerung, ob das Schema der Datenbank automatisch oder manuell angelegt werden soll. 
 
     spring.jpa.hibernate.ddl-auto=update
 
@@ -336,7 +336,7 @@ RDBMS Strukturen sind wesentlich starrer und aufwendiger zu betreuen als das Sch
 ## 4 Untersuchungen ##
 ### 4.1 Abfragen an konkreten Daten, SQL versus Cypher ##
 
-In diesem Kapitel möchten wir Anhand eines konkreten Beispiels die Abfragesprachen beider RDBM System mit einander vergleichen. Dazu werden wir mit einem einfachen Beispiel beginnen und dieses immer weiter ausbauen. 
+In diesem Kapitel möchten wir anhand eines konkreten Beispiels die Abfragesprachen beider RDBM-Systeme miteinander vergleichen. Dazu werden wir mit einem einfachen Beispiel beginnen und dieses immer weiter ausbauen. 
 
    1. Anzeigen eines Beschreibungsdokumentes. 
 
@@ -354,7 +354,7 @@ In diesem Kapitel möchten wir Anhand eines konkreten Beispiels die Abfragesprac
 <img src="./cypher_beschreibung_1.png" width=350>
     
     
-Gut zu erkennen ist, dass im Ergebnis der SQL Abfrage der Primärschlüssel der Tabelle der beteiligten Buchbinder mit enthalten ist. Um ein identisches Ergebnis zu erhalten, müssten mit Hilfe der Selektion die 
+Gut zu erkennen ist, dass im Ergebnis der SQL Abfrage der Primärschlüssel der Tabelle der beteiligten Buchbinder mitenthalten ist. Um ein identisches Ergebnis zu erhalten, müssten mit Hilfe der Selektion die 
 entsprechenden Spalten im SQL definiert werden. Das Ergebnis der Cypher Abfrage enthält hingegen noch zusätzliche Metadaten, welche das Datenbanksystem automatisch angelegt hat. Diese sind: 
 
   * label: Kennzeichnung eines Knotentyps 
@@ -488,7 +488,7 @@ An diesem Beispiel ist bereits zu erkennen, dass die SQL Query etwas aufwendiger
 
 <img src="./cypher_beschreibung_4.svg" width=650>
 
-Je mehr Beziehungen abgefragt werden müssen, desdo einfacher wird die Anfrageformulierung mit Hilfe von Cypher.
+Je mehr Beziehungen abgefragt werden müssen, desto einfacher wird die Anfrageformulierung mit Hilfe von Cypher.
 
 
 5. Anzeigen eines Beschreibungsdokumentes und allen Dokumentenelemente aller Hierarchien.
@@ -538,9 +538,9 @@ Je mehr Beziehungen abgefragt werden müssen, desdo einfacher wird die Anfragefo
 
 <img src="./cypher_beschreibung_5.svg" width=650>
 
-Durch den einfachen Ausdruck einer rekursiven Abfragen mit Hilfe der Cypher Query im Vergleich zur SQL Anfragen wird sehr deutlich, dass SQL für rekursiv strukturierte Daten nicht sehr komfortable ist.
+Durch den einfachen Ausdruck einer rekursiven Abfragen mit Hilfe der Cypher Query im Vergleich zur SQL Anfragen wird sehr deutlich, dass SQL für rekursiv strukturierte Daten nicht sehr komfortabel ist.
 Darüber hinaus muss der Entwickler solcher Queries bei SQL sehr genau die Datenstrukturen kennen, was für eine Graphenabfrage mit Hilfe von Cypher nicht zwingend notwnedig ist. Um zum Beispiel alle Daten, welche in einem einstufigen rekursiven Bezug 
-zum Beschreibungsdokument zu bekommen muss lediglich folgende Abfrage mit Cypher formuliert werden: 
+zum Beschreibungsdokument zu bekommen, muss lediglich folgende Abfrage mit Cypher formuliert werden: 
 
 
       Cypher: MATCH (b:Beschreibungsdokument {id:'31275197'})-[r *1..2]-(k) RETURN b,r,k;
@@ -549,10 +549,10 @@ zum Beschreibungsdokument zu bekommen muss lediglich folgende Abfrage mit Cypher
 <img src="./cypher_beschreibung_6.svg" width=850>
 
 
-Das Ergebnis zeigt, das beliebige Beziehungen und Knoten mit aufgeführt werden. Eine solche Abfrage via SQL zu formulieren würde einen enorm großen Aufwand bedeuten. 
+Das Ergebnis zeigt, dass beliebige Beziehungen und Knoten mit aufgeführt werden. Eine solche Abfrage via SQL zu formulieren würde einen enorm großen Aufwand bedeuten. 
 
-Zusammendfassend zeigen diese Beispiele, dass steigender Anfragekomplexität die Cypher Anfrage leichter zu formulieren ist als die SQL Abfrage. Zusätzlich ist bei SQL eine genaue Kenntnis der Datenbankstruktur notwendig um die Anfrage formulieren zu können. 
-Für die Formulierung einer Cypher Anfrage hingegen, benötigt man nicht zwingend genaue Kenntnisse der Knoten und Beziehungsstrukturen. Dies bietet unter anderem eine gute Möglichkeit um neue Erkenntnisse aus den Daten gewinnen zu können. 
+Zusammendfassend zeigen diese Beispiele, dass bei steigender Anfragekomplexität die Cypher-Anfrage leichter zu formulieren ist als die SQL-Abfrage. Zusätzlich ist bei SQL eine genaue Kenntnis der Datenbankstruktur notwendig, um die Anfrage formulieren zu können. 
+Für die Formulierung einer Cypher-Anfrage hingegen, benötigt man nicht zwingend genaue Kenntnisse der Knoten und Beziehungsstrukturen. Dies bietet unter anderem eine gute Möglichkeit, um neue Erkenntnisse aus den Daten gewinnen zu können. 
 
 ### 4.1 Performance ##
 
@@ -576,14 +576,14 @@ entsprechenden Freundeanzahl wird aufgezeigt, dass die Performance mit steigende
 ![Table 1 Performance](neo4jinaction_table1.png) 
 
 Ursache dafür ist nach Ansicht der Autoren, dass für jede Join Abfrage das kartesische Produkt der relevanten Tabelle durchgeführt wird bevor anschließend die relevanten Daten gefiltert werden. 
-In dem oben dargestellt Fall bedeutet dies, das ein 5 maliges Join mit derselben Tabelle mit 50.0000 Einträgen zu einer Tabelle mit 102.4 x 10 ^21 führt.  
+In dem oben dargestellt Fall bedeutet dies, dass ein 5-maliges Join mit derselben Tabelle mit 50.0000 Einträgen zu einer Tabelle mit 102.4 x 10 ^21 führt.  
 
-Ein Vergleich mit denselben Daten und Abfragen auf Basis einer Neo4J Graphendatenbank zeigt folgendes Ergebnis. 
+Ein Vergleich mit denselben Daten und Abfragen auf Basis einer Neo4J Graphendatenbank zeigt folgendes Ergebnis: 
 
 ![Table 2 Performance](neo4jinaction_table2.png)
 
-Ursache für die nahzu gleichbleibende gute Performance ist die Tatsache, dass innerhalb der Graphendatenbank zur Ermittlung des Ergebnisses Knoten abgelaufen werden. Nicht relevante Knoten werden wieder verworfen. So bleibt bei gleicher Ergebnissmenge die Abfragegeschwindigkeit 
-nahzu gleich obwohl mehr Knoten überprüft werden müssen.
+Ursache für die nahezu gleichbleibende gute Performance ist die Tatsache, dass innerhalb der Graphendatenbank zur Ermittlung des Ergebnisses Knoten abgelaufen werden. Nicht relevante Knoten werden wieder verworfen. So bleibt bei gleicher Ergebnismenge die Abfragegeschwindigkeit 
+nahezu gleich, obwohl mehr Knoten überprüft werden müssen.
 
 Um nun für unser praktisches Beispiel vergleichbare Untersuchungen machen zu können mussten wir Testdaten erzeugen. Dafür haben wir 1000 Beschreibungsdokumente erzeugt, welche wir mit jeweils 10 Dokumentelementen mit jeweils 5 Kindelementen erzeugt haben. Jedes Dokumentenelement ist dabei wiederum ein Kindelement des vorherigen Elementes. Eine Testbeschreibung ist in nachfolgender Grafik dargestellt: 
 
@@ -633,11 +633,11 @@ Nachfolgende Tabelle stellt die Ergebnisse unseres Abfragetests dar.
 </table>
 
 Die Tabelle zeigt, dass wir die Ergebnisse aus dem Buch "Neo4J in Action" nicht reproduzieren können. Dies kann verschiedenste Ursachen haben. Der größte Unterschied zu dem Test von Aleksa Vukotic und Nicki Watt sind sicherlich die unterschiedlichen Abfragen.
-Für die Graphendatenbank haben wir Cypher verwendet und das SQL Statement ist eine rekursive Abfrage. Die rekursive Abfrage enthält zwar Joins allerdings könnte das wiederholen der zweiten Abfrage nicht zu einem kartesischen Produkt aller Daten führen. Ein weiterer Unterschied ist, dass 
-wir als RDBMS Postgres und nicht MySQL verwendet haben. Ein Reproduzieren dass Ergenis war uns hier allerdings nicht unser primäres Ziel. Vielmehr wollten wir untersuchen, wie die beiden Systeme tief verschachtelte Datenstrukturen mit vielen Beziehungen zueinander behandeln. 
+Für die Graphendatenbank haben wir Cypher verwendet und das SQL Statement ist eine rekursive Abfrage. Die rekursive Abfrage enthält zwar Joins. Allerdings könnte das Wiederholen der zweiten Abfrage nicht zu einem kartesischen Produkt aller Daten führen. Ein weiterer Unterschied ist, dass 
+wir als RDBMS Postgres und nicht MySQL verwendet haben. Ein Reproduzieren des Ergebnisses war hier allerdings nicht unser primäres Ziel. Vielmehr wollten wir untersuchen, wie die beiden Systeme tief verschachtelte Datenstrukturen mit vielen Beziehungen zueinander behandeln. 
 
-Bei unserem Test ist aufgefallen, dass die Schreibgeschwindigkeit zwischen dem RDBMS Postgres und Neo4J stark unterschiedlich war. Für ein Testdatenset von 50 Beschreibungsdokumenten benötigte die
-Graphendatenbnk ca. 500 Millisekunden und das RDBMS Postgres 20 Sekunden. Die Ursache für die 4fach langsamere Schreibgeschwindigkeit der Postgres Datenbank konnten wir im Rahmen dieses Projektes nicht evaluieren. 
+Bei unserem Test ist uns aufgefallen, dass die Schreibgeschwindigkeit zwischen dem RDBMS Postgres und Neo4J stark unterschiedlich war. Für ein Testdatenset von 50 Beschreibungsdokumenten benötigte die
+Graphendatenbnk ca. 500 Millisekunden und das RDBMS Postgres 20 Sekunden. Die Ursache für die 4fach langsamere Schreibgeschwindigkeit der Postgres-Datenbank konnten wir im Rahmen dieses Projektes nicht evaluieren. 
 
 ### 4.1 Performance Optimierungsmaßnahmen ##
 
@@ -647,12 +647,12 @@ Für beide Datenbanksysteme gibt es Möglichkeiten die Performance des Systems z
   * Einstellungen für das DBMS für Speicherbedarf, Verbindungsmanagement und Handling setzen. 
   * Einstellungen des ORM / OGM setzen. 
 
-Beim Performanceoptimieren eines Datenbankmanagementsystem muss man sehr dediziert und analytisch vorgehen. Im ersten Schritt ist zu überprüfen welche Aktionen genau zu viel Zeit benötigen. Im Falle von Abfragen sollte die Ausführung auf dem DBMS analysiert werden. 
-In der Regel stellen die Entwickler der entsprechenden Systeme dazu Werkzeuge zur Verfügung. Um zum Beispiel die Abfragegeschwindigkeit im Allgemeinen zu erhöhen können bestimmte Werte einer Tabelle oder eines Graphens indiziert werden. 
+Beim Performanceoptimieren eines Datenbankmanagementsystem muss man sehr dediziert und analytisch vorgehen. Im ersten Schritt ist zu überprüfen, welche Aktionen genau zu viel Zeit benötigen. Im Falle von Abfragen sollte die Ausführung auf dem DBMS analysiert werden. 
+In der Regel stellen die Entwickler der entsprechenden Systeme dazu Werkzeuge zur Verfügung. Um zum Beispiel die Abfragegeschwindigkeit im Allgemeinen zu erhöhen, können bestimmte Werte einer Tabelle oder eines Graphens indiziert werden. 
 
 #### 4.1.1 Indizes erstellen ####
 
-Um einen Index auf einer relationalen Datenbank anzulegen geht man bezogen auf unser Projekt wie folgt vor: 
+Um einen Index auf einer relationalen Datenbank anzulegen, geht man, bezogen auf unser Projekt, wie folgt vor: 
 
   1.) Erstellen eines Index auf einer Tabelle mit Hilfe einer Annotation. 
   
@@ -660,7 +660,7 @@ Um einen Index auf einer relationalen Datenbank anzulegen geht man bezogen auf u
       
   2.) Alle Werte müssen anschließend neu in diese Tabelle geschrieben werden. 
   
-Um einen Index für unsere Graphendatenbank anzulegen ist folgendes notwendig: 
+Um einen Index für unsere Graphendatenbank anzulegen, ist folgendes notwendig: 
 
   1.) Annotation der Werte des Knotens bzw. der Relation
 
@@ -674,28 +674,28 @@ Um einen Index für unsere Graphendatenbank anzulegen ist folgendes notwendig:
   3.) Alle Werte neu in die Datenbank schreiben. 
   
 
-Für beide Systeme muss festgelegt werden, welche Elemente mit einem zusätzlich Index ausgestattet werden. Dies verbessert die Lesegeschwindigkeit verringert allerdings die Schreibgeschwindigkeit. Wie im vorherigen Abschnitt bereits erwähnt war die Schreibgeschwindigkeit 
-der Postgres Datenbank signifikant schlechter als die der Neo4J Datenbank. 
+Für beide Systeme muss festgelegt werden, welche Elemente mit einem zusätzlich Index ausgestattet werden. Dies verbessert die Lesegeschwindigkeit, verringert allerdings die Schreibgeschwindigkeit. Wie im vorherigen Abschnitt bereits erwähnt, war die Schreibgeschwindigkeit 
+der Postgres-Datenbank signifikant schlechter als die der Neo4J Datenbank. 
 
 #### 4.1.2 DBMS Konfiguration anpassen ####
 
-Beide Systeme lassen sich über Konfigurationsdateien im Dateisystem anpassen. Für die Graphendatenbank heisst die Datei **neo4j.conf** und die Postgresdatenbank **postgresql.conf**. 
+Beide Systeme lassen sich über Konfigurationsdateien im Dateisystem anpassen. Für die Graphendatenbank heißt die Datei **neo4j.conf** und die Postgresdatenbank **postgresql.conf**. 
 
 **Optimierungen Neo4J Graphendatenbank**
 
-Da die Neo4J Datenbank auf Java basiert können über die folgenden beiden Werte der Java Virtual Machine mehr Arbeitsspeicher zur Verfügung gestellt werden. 
+Da die Neo4J Datenbank auf Java basiert, können über die folgenden beiden Werte der Java Virtual Machine mehr Arbeitsspeicher zur Verfügung gestellt werden. 
 
       dbms.memory.heap.initial_size=2g
       dbms.memory.heap.max_size=2g
       
-So steht der Grahpendatenbank 2 GByte schneller Arbeitsspeicher zur Verfügung um die Anfrage- und Schreiboperationen durchzuführen. Allerdings muss bei der Einstellung der Werte 
-darauf geachtet werden, wieviel Arbeitsspeicher das physikalische System zur Verfügung stellt. Wird der Wert zu groß gewählt kommt es zum Absturz der Datenbank, da mehr Speicher versucht wird zu allokieren, als dem System zur Verfügung steht. 
+So steht der Grahpendatenbank 2 GByte schneller Arbeitsspeicher zur Verfügung, um die Anfrage- und Schreiboperationen durchzuführen. Allerdings muss bei der Einstellung der Werte 
+darauf geachtet werden, wieviel Arbeitsspeicher das physikalische System zur Verfügung stellt. Wird der Wert zu groß gewählt, kommt es zum Absturz der Datenbank, da mehr Speicher versucht wird zu allokieren als dem System zur Verfügung steht. 
 
 Ein weiterer wichtiger Wert ist: 
 
     dbms.memory.pagecache.size=1g
 
-Dieser Wert bestimmt die Datenmenge, welche Neo4J nicht von der Platte laden muss,sondern aus dem Arbeitsspeicher laden kann. Die nachfolgende Abbildung verdeutlicht den Sachverhalt. 
+Dieser Wert bestimmt die Datenmenge, welche Neo4J nicht von der Platte laden muss, sondern aus dem Arbeitsspeicher laden kann. Die nachfolgende Abbildung verdeutlicht den Sachverhalt. 
 
 <img src="./neo4j_performance_tuning_1.png" width=250>  
 
@@ -705,7 +705,7 @@ Anpassung der Speicherwerte für die Postgresdatenbank.
 
     shared_buffers = 4096MB
 
-Dieser Wert bestimmt den Cache welcher im Arbeitsspeicher des Systems für die Postgres Datenbank verwendet wird. Der Standardwertvon 128KByte ist sehr gering. Der Wert ist vergleichbar mit dem Wert der Grahpendatenbank
+Dieser Wert bestimmt den Cache, welcher im Arbeitsspeicher des Systems für die Postgres Datenbank verwendet wird. Der Standardwertvon 128KByte ist sehr gering. Der Wert ist vergleichbar mit dem Wert der Grahpendatenbank
 dbms.memory.pagecache.size. 
 
 Nachfolgende Werte stellen dem System mehr Arbeitsspeicher für Sortierung von Ergebnisse und Wartungsaufgaben wie Index anlegen, Tabellen ändern, Schlüsselbeziehungen anlegen. 
