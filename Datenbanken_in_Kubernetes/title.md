@@ -15,6 +15,6 @@ In diesem Bericht werden Grundlagen von Docker und Kubernetes beschrieben, sowie
 
 ---
 
-[Inhaltsverzeichnis >>](0_inhalt.md)
+| [Inhaltsverzeichnis >>](0_inhalt.md) |
+| ------------------------------------ |
 
----

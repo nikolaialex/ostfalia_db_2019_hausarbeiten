@@ -56,6 +56,6 @@ Letztendlich ist die _"beste"_ Lösung immer individuell und abhängig von der z
 
 ---
 
-[<< Run Databases in Kubernetes ](4_dbInK8s.md) | [Inhaltsverzeichnis](0_inhalt.md)
+| [<< Run Databases in Kubernetes ](4_dbInK8s.md) |  [Inhaltsverzeichnis](0_inhalt.md) |
+| ----------------------------------------------- | ---------------------------------- |
 
----

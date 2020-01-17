@@ -325,6 +325,6 @@ Außerdem gibt es logischerweise keine allgemeine Lösung für verschiedene Date
 
 ---
 
-[<< Kubernetes](3_k8s.md) | [Inhaltsverzeichnis](0_inhalt.md) | [Fazit >>](5_fazit.md)
+| [<< Kubernetes](3_k8s.md) |  [Inhaltsverzeichnis](0_inhalt.md) |  [Fazit >>](5_fazit.md) |
+| ------------------------- | ---------------------------------- | ----------------------- |
 
----

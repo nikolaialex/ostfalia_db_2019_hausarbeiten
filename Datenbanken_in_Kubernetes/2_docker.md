@@ -117,6 +117,6 @@ Bettet man die Technologie der Containerisierung in einen größeren übergrordn
 
 ---
 
-[<< Thema und Motviation](1_intro.md) | [Inhaltsverzeichnis](0_inhalt.md) | [K8s >>](3_k8s.md)
+| [<< Thema und Motviation](1_intro.md) | [Inhaltsverzeichnis](0_inhalt.md) | [K8s >>](3_k8s.md) |
+| ------------------------------------- | --------------------------------- | ------------------ |
 
----

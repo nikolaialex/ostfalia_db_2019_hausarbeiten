@@ -28,6 +28,6 @@ Alternativen zu Kubernetes sind beispielsweise Docker Swarm, Apache Mesos und Az
 
 ---
 
-[Inhaltsverzeichnis](0_inhalt.md) | [Docker >>](2_docker.md)
+| [Inhaltsverzeichnis](0_inhalt.md) |  [Docker >>](2_docker.md) |
+| --------------------------------- | ------------------------- |
 
----
