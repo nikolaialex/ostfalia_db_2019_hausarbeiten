@@ -11,4 +11,4 @@
    - Stateful und Stateless Applications
    - Storage und Persistenz
    - Running Workload in Kubernetes
-5. [Fazit](5_fazit.md)
+5. [When to Run Databases in Kubernetes](5_fazit.md)
