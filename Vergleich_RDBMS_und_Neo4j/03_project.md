@@ -8,22 +8,22 @@ zeigen, worin die Unterschiede und Gemeinsamkeiten beim Entwickeln einer Anwendu
 
 Um die theoretischen Fragestellungen praktisch evaluieren zu können wurde ein Java Enterprise Projekt mit Hilfe des [Spring Frameworks](https://spring.io/) aufgesetzt. 
 Um in kurzer Zeit eine lauffähige Serverumgebung zu bekommen wurde [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/) mit einem integriertem Tomcat Servlet Container als Laufzeitumgebung eingesetzt. Als Build Werkzeug 
-kommt [Gradle](https://gradle.org/) zum Einsatz. Der gesamte Quellcode wird mit Hilfe des Versionierungssystem [Git](https://git-scm.com/) auf der Github Platform verwaltet.Das Projekt ist öffentich [hier](https://github.com/eichstaedtk/handschriften-graphviewer/tree/master/src/main/java/de/eichstaedt/handschriftengraphviewer) verfügbar.  
+kommt [Gradle](https://gradle.org/) zum Einsatz. Der gesamte Quellcode wird mit Hilfe des Versionierungssystem [Git](https://git-scm.com/) auf der Github Platform verwaltet. Das Projekt ist öffentich [hier](https://github.com/eichstaedtk/handschriften-graphviewer/tree/master/src/main/java/de/eichstaedt/handschriftengraphviewer) verfügbar.  
 
 Um die relevanten Datenbanksystem zur Verfügung zu stellen haben wir uns entschieden [Docker](https://www.docker.com/) als Container Technologie zu verwenden. So konnten wir sehr leicht eine relationale Postgres Datenbank
 und eine Neo4J Graphendatenbank anbinden. Um die Daten in diesen Systemen zu persistieren, wurden die Objekt Graph Mapper (OGM) Bibliothek [Spring Data Neo4J](https://spring.io/guides/gs/accessing-data-neo4j/) und Objekt Relational Mapper (ORM) Bibliothek [Spring Data JPA](https://spring.io/projects/spring-data) verwendet. 
 
 ## 3.3 Domainmodell 
 
-Das fachliche Modell stellt Handschriftenbeschreibungen von mittelalterlichen Handschriften dar. Diese stellen gesammelte Metadaten, welche durch Bibliothekare identifiziert worden sind dar. Nachfolgende Abbildung zeigt eine Handschrift aus dem 15. Jahrhundert.
+Das fachliche Modell stellt Handschriftenbeschreibungen von mittelalterlichen Handschriften dar. Diese stellen gesammelte Metadaten, welche durch Bibliothekare identifiziert worden sind, dar. Nachfolgende Abbildung zeigt eine Handschrift aus dem 15. Jahrhundert.
 
 ![Johannes Versor Handschrift 15 Jahrhundert](img/johannesversorbuch.jpeg)
 
 Das Datenmodell dieses Projektes besteht aus folgenden Komponenten: 
 
   *  **Beschreibungsdokument**: Enthält alle Metadaten zu einer abendländischen Handschriftenbeschreibung. Es stellt im Context von Domain Driven Design das Root Aggregate dar. 
-  *  **Dokumentenelement**: Ist ein inhaltlicher Bestandteil einer Beschreibung. Das kann Textabschnitt zur Beschreibung eines Einbandes oder eine Sammlung von Texten sein. 
-  *  **Beteiligte**:  Ist ein abstraktes Element um gemeinsame Normdatenattribute für Personen und Koerperschaften zu verwalten. 
+  *  **Dokumentenelement**: Ist ein inhaltlicher Bestandteil einer Beschreibung. Das kann ein Textabschnitt zur Beschreibung eines Einbandes oder eine Sammlung von Texten sein. 
+  *  **Beteiligte**: Ist ein abstraktes Element um gemeinsame Normdatenattribute für Personen und Koerperschaften zu verwalten. 
   *  **Ort**: Informationen zu einem Ort. 
   *  **Person**: Informationen zu einer Person, was in diesem Kontext ein Autor oder ein Besitzer einer Handschrift sein kann. 
   *  **Koerperschaft**: Informationen zu einer Institution. 
@@ -51,12 +51,12 @@ Beispiel: Dokumentenelement Text
 
 ![Beispiel Handschrift aus dem 15 Jahrhundert Inhalt](img/dokumentenelement.png) 
 
-Anhand dieses Beispiel wurde kurz die fachliche Struktur einer Handschriftenbeschreibung dargestellt. Zu erkennen ist, dass ein Beschreibungsdokument viele Beziehungen zu Orten, Personen, Instiutionen mit zeitlicher Varianz haben kann. 
+Anhand dieses Beispiels wurde kurz die fachliche Struktur einer Handschriftenbeschreibung dargestellt. Zu erkennen ist, dass ein Beschreibungsdokument viele Beziehungen zu Orten, Personen, Instiutionen mit zeitlicher Varianz haben kann. 
   
 ## 3.4 Unterschiede in der Implementierung 
 
 ### 3.4.1 Objekt Mapping für RDBMS und Graphdatenbank
-Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der Objektmapper Frameworks ausgezeichnet, sodass der Mapper diese persistieren kann. Nachfolgende Graphik soll die Beschreibungsentität kurz erläutert werden: 
+Alle Bestandteile des Datenmodells wurden mit den entsprechenden Annotation der Objektmapper Frameworks ausgezeichnet, sodass der Mapper diese persistieren kann. Nachfolgende Graphik soll die Beschreibungsentität kurz erläutern: 
 ~~~~java
 @Entity
 @Table(name = "beschreibungen")
@@ -152,7 +152,7 @@ public class Koerperschaft extends Beteiligte {..}
 public class Person extends Beteiligte {..}
 ~~~~  
 
-Für ein relationales Datenbanksystem muss eine Strategie festgelegt werden, in wieviel Tabellen die Daten vom Typ Beteiligte abgelegt werden.
+Für ein relationales Datenbanksystem muss eine Strategie festgelegt werden, in wieviele Tabellen die Daten vom Typ Beteiligte abgelegt werden.
 
 ~~~~java
 Entity
@@ -171,14 +171,14 @@ Für die Graphendatenbank werden hier keine Steuerungsangaben benötigt. Jeder K
 
 **ORM Annotationen für RDBMS** 
 
-Ein Java Objekt, welches in eine relationale Datenbank persistiert werden soll, muss mit der Annotation **@Entity** gekennzeichnet werden. Genau wie bei Neo4J muss dieses Objekt ein Attribute mit der **@Id** Annotation als primäry Key kennzeichnen. 
+Ein Java Objekt, welches in eine relationale Datenbank persistiert werden soll, muss mit der Annotation **@Entity** gekennzeichnet werden. Genau wie bei Neo4J muss dieses Objekt ein Attribute mit der **@Id** Annotation als Primary Key kennzeichnen. 
 Für Beziehungen zu anderen Objekten stehen folgende Annotationen zur Verfügung: **@OneToOne**, **@OneToMany**, **@ManyToOne**, **@ManyToMany**. Für diese Annotationen müssen noch Werte für das Verhalten beim Laden angegeben werden. Zusätzlich können Daten zusammenhänged 
 gespeichert, gelöscht oder geladen werden, was die Arbeit mit Objekten des ORM in der Praxis oft komplex werden lässt. Bei der Konfiguration des Objekt Mappers benötigt das relationale Datenbankmanagementsystem mehr Steuerung als die Graphendatenbank.
 
 
 ### 3.4.2 CREAD, READ, UPDATE and DELETE (CRUD) für RDBMS und Graphdatenbank
 
-Mit Spring Data bekommt der Entwickler eine der einfachsten Möglichkeiten für die Umsetzung der CRUD Operation an die Hand, die es meiner Meinung nach gibt. Für jede Entität die durch Spring Data verwaltet werden soll muss lediglich 
+Mit Spring Data bekommt der Entwickler eine der einfachsten Möglichkeiten für die Umsetzung der CRUD Operation an die Hand, die es unserer Meinung nach gibt. Für jede Entität die durch Spring Data verwaltet werden soll, muss lediglich 
 ein Spring Data CRUDRepository erweitert werden. 
 
 **Beispiel Neo4J**
@@ -194,7 +194,7 @@ public interface BeschreibungsdokumenteRDBMSRepository extends CrudRepository<Be
 
 }
 ~~~~
-Die Implementierung dieser Interfaces wird durch Spring Data selbst vorgenommen. Mit Hilfe von Generics muss im Interface lediglich der Typ der Entität und der Typ des Primärschlüssels angebeben werden. In beiden Fällen ist dies jeweils
+Die Implementierung dieser Interfaces wird durch Spring Data selbst vorgenommen. Mit Hilfe von Generics muss im Interface lediglich der Typ der Entität und der Typ des Primary Key angebeben werden. In beiden Fällen ist dies jeweils
 die Klasse Beschreibungsdokument und die Klasse String. Die Verwendung des Repositories ist in beiden Fällen sehr einfach: 
 ~~~~java
 @Autowired
@@ -218,20 +218,17 @@ persistiert, gelöscht oder aktualisiert werden. Für die Verwendung der Standar
       
 ### 3.4.3 Queries für RDBMS und Graphdatenbank
 
-In einem relationalen Datenbankmanagementsystem wird [Structured Query Language](https://de.wikipedia.org/wiki/SQL) als Datenbanksprache verwendet. SQL Befehle lassen sich in vier Kategorien einteilen: 
+Wie bereits zuvor erläutert, werden in einem relationalen Datenbankmanagementsystem SQL als Datenbanksprache verwendet. SQL Befehle lassen sich in vier Kategorien einteilen: 
 
   *  Data Query Language: Befehle zur Abfrage und Aufbereitung
   *  Data Manipulation Language: Befehle zum Einfügen, Aktualisieren und Löschen von Daten
   *  Data Definition Language: Befehle zur Schema Definition
   *  Data Control Language: Befehle zur Rechteverwaltung und Transaktionskontrolle. 
   
-In diesem Kapitel sollen primär die Befehle zur Abfrage mit den der Graphendatenbank verglichen werden. 
-
-Eine Graphdatenbank wie Neo4j kann mit Hilfe der Graphdatenbanksprache [Cypher](https://neo4j.com/cypher-graph-query-language/) abgefragt und manipuliert werden. Cypher ist SQL sehr ähnlich 
-und für einen Entwickler mit SQL Erfahrung sehr leicht zu lernen. 
+In diesem Kapitel sollen primär die Befehle zur Abfrage mit denen der Graphendatenbanksprache Cypher verglichen werden. 
 
 Grundsätzlich müssen mit dem Einsatz von Spring Data die einfachen Befehle zur Abfragen und Manipulation nicht mehr selbst geschrieben werden. Wie im vorhergehenden Kapitel beschrieben steht dafür das CRUDRepository zur Verfügung. Allerdings bietet Spring Data 
-für beide Datenbanksysteme die Möglichkeit eigene Queries zu formulieren. 
+für beide Datenbanksysteme die Möglichkeit, eigene Queries zu formulieren. 
 
 Nachfolgendes Codebeispiel zeigt die Implementierung einer CRUD und einer nativen Query einmal für ein RDBMS und einmal für ein Graphendatenbanksystem. 
 ~~~~java
@@ -255,7 +252,7 @@ public interface BeschreibungsdokumentGraphRepository extends Neo4jRepository<Be
 ~~~~
 
 Grundsätzlich lassen sich mit Hilfe des Frameworks Spring Data native Queries für beide Datenbanksysteme sehr leicht implementieren. Die Unterstützung der Standardoperation ist ebenfalls sehr gut. Allerdings bietet die Graphendatenbank 
-mit Hilfe des Return Statements noch eine Möglichkeit individuelle Ergebnisse zurück zugeben. Die Möglichkeit besteht für die relationale Datenbank nicht. Folgendes Beispiel zeigt dies anhand der Provenienz: 
+durch die sogenannten Return Statements noch die Möglichkeit, individuelle Ergebnisse zurück zugeben. Die Möglichkeit besteht für die relationale Datenbank nicht. Folgendes Beispiel zeigt dies anhand der Provenienz: 
 ~~~~java
 @Query("MATCH (k:Koerperschaft)-[r:PROVENIENZ]-(b:Beschreibungsdokument) RETURN k AS beteiligte,r AS provenienz,b AS beschreibungsdokument")
   List<ProvenienzResult> findAllProvenienz();
@@ -316,7 +313,7 @@ public class ProvenienzResult {
 }
 ~~~~
 
-Diese Abfrage gibt als Ergebnis ein Objekt zurück, welches die Knoten Beteiligte und Beschreibungsdokument sowie die Beziehung Provienz enthält. Diese Flexibilität ermöglicht es für den Einsatz 
+Diese Abfrage gibt als Ergebnis ein Objekt zurück, welches die Knoten Beteiligte und Beschreibungsdokument, sowie die Beziehung Provienz enthält. Diese Flexibilität ermöglicht es für den Einsatz 
 einer Graphendatenbank sehr leicht beliebige Ergebnisobjekte zu erschaffen. So können sehr leicht neue Informationen aus den Daten gewonnen werden, ohne die Datenbankstruktur anpassen zu müssen.
 
 ### 3.4.3 Schema Management für RDBMS und Graphdatenbank
@@ -333,9 +330,9 @@ Die OR-Mapper Implementierung Hibernate benötigt hier die Einstellung für die 
   * Create: Das Schema wird mit jeder Initialisierung erstellt. 
   * Create-Drop: Das Schema wird mit jeder Initialisierung erstellt und dem Herunterfahren gelöscht.
   
-Der OR Graphmapper benötigt diese Einstellungen nicht. Ein Schmema der Graphendatenbank besteht lediglich aus der Definition von Inizes und Constraints. Die Strukturen der Knoten und Beziehungen werden automatisch angelegt. 
+Der OR Graphmapper benötigt diese Einstellungen nicht. Ein Schmema der Graphendatenbank besteht lediglich aus der Definition von Indizes und Constraints. Die Strukturen der Knoten und Beziehungen werden automatisch angelegt. 
 
-Automatische Anpassungen am Schema sind sowohl für RDBMS als auch für Graphendatenbanken nicht für produktive Datenbanken empfohlen. Daher sollten die Schema Änderungen mit Hilfe eines Tools oder manuell durchgeführt werden. Populäre Werkzeuge sind das Google Tool [Flyway](https://flywaydb.org/getstarted/) oder 
-[Liquibase](https://www.liquibase.org/). Nur das Tool Liqiubase bietet Unterstützung für die Änderungen in einer [Graphendatenbank](https://www.liquigraph.org/).   
+Automatische Anpassungen am Schema sind weder für RDBMS, noch für Graphendatenbanken im produktiven Einsatz empfohlen. Daher sollten die Schema Änderungen mit Hilfe eines Tools oder manuell durchgeführt werden. Populäre Werkzeuge sind das Google Tool [Flyway](https://flywaydb.org/getstarted/) oder 
+[Liquibase](https://www.liquibase.org/). Nur das Tool Liquibase bietet Unterstützung für die Änderungen in einer [Graphendatenbank](https://www.liquigraph.org/).   
 
 RDBMS Strukturen sind wesentlich starrer und aufwendiger zu betreuen als das Schema einer Graphendatenbank. Dies gilt auch für den Einsatz mit Hilfe eines Objektmappers. 
