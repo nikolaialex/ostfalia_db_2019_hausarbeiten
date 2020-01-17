@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="1080px" viewBox="0 0 1920 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>middleware</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#979797" stroke-width="2" x="1" y="1" width="1918" height="1078"></rect>
+        <g id="Computer-A" transform="translate(159.000000, 111.000000)">
+            <rect id="Rectangle-2" stroke="#979797" stroke-width="2" x="1" y="75" width="392" height="546"></rect>
+            <text font-family="Monaco" font-size="36" font-weight="normal" fill="#4A4A4A">
+                <tspan x="88.9824219" y="36">Computer A</tspan>
+            </text>
+            <g id="Kernel" transform="translate(86.000000, 521.000000)">
+                <rect id="Rectangle-3" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="223" height="82"></rect>
+                <text font-family="Monaco" font-size="36" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="43.6894531" y="36">Kernel</tspan>
+                </text>
+            </g>
+            <g id="Netzwerk" transform="translate(18.000000, 409.000000)">
+                <rect id="Rectangle-3" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="358" height="82"></rect>
+                <text id="Netzwerkdienste" font-family="Monaco" font-size="36" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="17.4736328" y="36">Netzwerkdienste</tspan>
+                </text>
+            </g>
+            <path d="M196.5,622.5 L196.5,784.5" id="Line-2" stroke="#979797" stroke-width="5" stroke-linecap="square"></path>
+        </g>
+        <g id="Computer-B" transform="translate(764.000000, 111.000000)">
+            <rect id="Rectangle-2" stroke="#979797" stroke-width="2" x="1" y="75" width="392" height="546"></rect>
+            <text font-family="Monaco" font-size="36" font-weight="normal" fill="#4A4A4A">
+                <tspan x="88.9824219" y="36">Computer B</tspan>
+            </text>
+            <g id="Kernel" transform="translate(86.000000, 521.000000)">
+                <rect id="Rectangle-3" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="223" height="82"></rect>
+                <text font-family="Monaco" font-size="36" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="43.6894531" y="36">Kernel</tspan>
+                </text>
+            </g>
+            <g id="Netzwerk" transform="translate(18.000000, 409.000000)">
+                <rect id="Rectangle-3" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="358" height="82"></rect>
+                <text id="Netzwerkdienste" font-family="Monaco" font-size="36" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="17.4736328" y="36">Netzwerkdienste</tspan>
+                </text>
+            </g>
+            <path d="M196.5,622.5 L196.5,784.5" id="Line-2" stroke="#979797" stroke-width="5" stroke-linecap="square"></path>
+        </g>
+        <g id="Computer-C" transform="translate(1368.000000, 116.000000)">
+            <rect id="Rectangle-2" stroke="#979797" stroke-width="2" x="1" y="75" width="392" height="546"></rect>
+            <text font-family="Monaco" font-size="36" font-weight="normal" fill="#4A4A4A">
+                <tspan x="88.9824219" y="36">Computer C</tspan>
+            </text>
+            <g id="Kernel" transform="translate(86.000000, 521.000000)">
+                <rect id="Rectangle-3" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="223" height="82"></rect>
+                <text font-family="Monaco" font-size="36" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="43.6894531" y="36">Kernel</tspan>
+                </text>
+            </g>
+            <g id="Netzwerk" transform="translate(18.000000, 409.000000)">
+                <rect id="Rectangle-3" stroke="#979797" fill="#D8D8D8" x="0.5" y="0.5" width="358" height="82"></rect>
+                <text id="Netzwerkdienste" font-family="Monaco" font-size="36" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="17.4736328" y="36">Netzwerkdienste</tspan>
+                </text>
+            </g>
+            <path d="M196.5,622.5 L196.5,784.5" id="Line-2" stroke="#979797" stroke-width="5" stroke-linecap="square"></path>
+        </g>
+        <g id="Network" transform="translate(159.000000, 901.000000)">
+            <path d="M0.5,1.5 L1602.5,1.5" id="Line" stroke="#979797" stroke-width="5" stroke-linecap="square"></path>
+            <text id="Netzwerk" font-family="Monaco" font-size="36" font-weight="normal" fill="#4A4A4A">
+                <tspan x="715.085938" y="55">Netzwerk</tspan>
+            </text>
+        </g>
+        <g id="Middleware" transform="translate(177.000000, 376.000000)">
+            <rect id="Rectangle-4" stroke="#979797" stroke-width="3" fill="#4A90E2" x="1.5" y="1.5" width="1566" height="80"></rect>
+            <text id="Middleware-Dienste" font-family="Monaco" font-size="36" font-weight="normal" fill="#FFFFFF">
+                <tspan x="589.068359" y="59.3909091">Middleware-Dienste</tspan>
+            </text>
+        </g>
+        <g id="Anwendungen" transform="translate(177.000000, 243.000000)">
+            <rect id="Rectangle-4" stroke="#979797" stroke-width="3" fill="#4A90E2" x="1.5" y="1.5" width="1566" height="80"></rect>
+            <text id="Verteilte-Anwendunge" font-family="Monaco" font-size="36" font-weight="normal" fill="#FFFFFF">
+                <tspan x="557.663086" y="51">Verteilte Anwendungen</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
