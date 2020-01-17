@@ -43,8 +43,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-500">
-                <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <first_editor relative-caret-position="356">
+                <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
                 <folding>
                   <element signature="e#781#782#0" expanded="true" />
                   <element signature="e#857#858#0" expanded="true" />
@@ -69,8 +69,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="5253">
-                <caret line="309" column="90" selection-start-line="309" selection-start-column="90" selection-end-line="309" selection-end-column="90" />
+              <first_editor relative-caret-position="546">
+                <caret line="80" selection-start-line="80" selection-end-line="80" selection-end-column="51" />
               </first_editor>
               <second_editor />
             </state>
@@ -276,14 +276,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="39470000" />
-    </task>
-    <task id="LOCAL-00014" summary="Add first Query comparison">
-      <created>1576922905945</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1576922905945</updated>
+      <workItem from="1576920728886" duration="39719000" />
     </task>
     <task id="LOCAL-00015" summary="Add first Query comparison">
       <created>1576923046205</created>
@@ -621,16 +614,23 @@
       <option name="project" value="LOCAL" />
       <updated>1579288376373</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Reduce image size">
+      <created>1579288801564</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1579288801564</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61741000" />
+    <option name="totallyTimeSpent" value="61990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10802224" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10802224" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -645,7 +645,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.27226278" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.27226278" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.33430657" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -686,7 +686,8 @@
     <MESSAGE value="Set theoretical correct values" />
     <MESSAGE value="Add last missing results" />
     <MESSAGE value="Fix broken table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix broken table" />
+    <MESSAGE value="Reduce image size" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduce image size" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04-1_rdbms.md">
@@ -797,16 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="5253">
-            <caret line="309" column="90" selection-start-line="309" selection-start-column="90" selection-end-line="309" selection-end-column="90" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/00-2_toc.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -815,11 +806,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="546">
+            <caret line="80" selection-start-line="80" selection-end-line="80" selection-end-column="51" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="-500">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <first_editor relative-caret-position="356">
+            <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
             <folding>
               <element signature="e#781#782#0" expanded="true" />
               <element signature="e#857#858#0" expanded="true" />
