@@ -157,7 +157,7 @@ public class Person extends Beteiligte {..}
 Für ein relationales Datenbanksystem muss eine Strategie festgelegt werden, in wieviele Tabellen die Daten vom Typ Beteiligte abgelegt werden.
 
 ~~~~java
-Entity
+@Entity
 @Table(name = "beteiligte")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Beteiligte {
