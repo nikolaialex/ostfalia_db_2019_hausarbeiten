@@ -316,7 +316,7 @@ Für die Graphendatenbank haben wir Cypher verwendet und das SQL Statement ist e
 wir als RDBMS Postgres und nicht MySQL verwendet haben. Ein Reproduzieren des Ergebnisses war hier allerdings nicht unser primäres Ziel. Vielmehr wollten wir untersuchen, wie die beiden Systeme tief verschachtelte Datenstrukturen mit vielen Beziehungen zueinander behandeln. 
 
 Bei unserem Test ist uns aufgefallen, dass die Schreibgeschwindigkeit zwischen dem RDBMS Postgres und Neo4J stark unterschiedlich war. Für ein Testdatenset von 50 Beschreibungsdokumenten benötigte die
-Graphendatenbnk ca. 500 Millisekunden und das RDBMS Postgres 20 Sekunden. Die Ursache für die 4-fach langsamere Schreibgeschwindigkeit der Postgres-Datenbank konnten wir im Rahmen dieses Projektes nicht evaluieren. 
+Graphendatenbank ca. 500 Millisekunden und das RDBMS Postgres 20 Sekunden. Die Ursache für die 4-fach langsamere Schreibgeschwindigkeit der Postgres-Datenbank konnten wir im Rahmen dieses Projektes nicht evaluieren. 
 
 ## 4.1 Performance Optimierungsmaßnahmen ##
 
