@@ -13,6 +13,6 @@ Large Shared Data Banks, Communications of the ACM, Volume 13, Number 6.
 
 * Neo4j, Inc. (2020): Who uses Neo4j, [online] https://neo4j.com/who-uses-neo4j/, [16.01.2020].
 
-* Partner, Jonas (2014): Neo4j in action, Manning Publications, New York.
+* Aleksa Vukotic and Nicki Watt with Tareq Abedrabbo, Dominic Fox, and Jonas Partner (2014): Neo4j in action, Manning Publications, New York.
 
 * Quackit (2019): Neo4j – Create an index using cypher, [online] https://www.quackit.com/neo4j/tutorial/neo4j_create_an_index_using_cypher.cfm, [26.12.2019].
