@@ -113,7 +113,7 @@ Bettet man die Technologie der Containerisierung in einen größeren übergrordn
 | [4] | **Stephan Augsten**: _Was sind Docker-Container?_, [https://www.dev-insider.de/was-sind-docker-container-a-597762/](https://www.dev-insider.de/was-sind-docker-container-a-597762/), aufgerufen am 25.12.2019       |
 | [5] | **Stephan Augsten**: _Was ist ein Container Image?_, [https://www.dev-insider.de/was-ist-ein-container-image-a-756912/](https://www.dev-insider.de/was-ist-ein-container-image-a-756912/), aufgerufen am 25.12.2019 |
 | [6] | _Dockerfile reference_, [https://docs.docker.com/engine/reference/builder/](https://docs.docker.com/engine/reference/builder/), aufgerufen am 04.01.2020                                                            |
-| [6] | **Peter Wurbs**: _Docker versus VM: Wie Container die heutige IT verändern_, [https://jaxenter.de/docker-vs-vm-54816](https://jaxenter.de/docker-vs-vm-54816), aufgerufen am 04.01.2020                             |
+| [7] | **Peter Wurbs**: _Docker versus VM: Wie Container die heutige IT verändern_, [https://jaxenter.de/docker-vs-vm-54816](https://jaxenter.de/docker-vs-vm-54816), aufgerufen am 04.01.2020                             |
 
 ---
 
