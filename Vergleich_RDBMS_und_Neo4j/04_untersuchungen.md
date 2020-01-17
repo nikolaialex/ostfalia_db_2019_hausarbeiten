@@ -212,7 +212,7 @@ CYPHER: MATCH (b:Beschreibungsdokument {id:'31275197'})-[r:ENTHAELT *1..2]-(k) R
 <img src="img//cypher_beschreibung_5.svg" width=650>
 
 Durch den einfachen Ausdruck einer rekursiven Abfragen mit Hilfe der Cypher Query im Vergleich zur SQL Anfragen wird sehr deutlich, dass SQL für rekursiv strukturierte Daten nicht sehr komfortabel ist.
-Darüber hinaus muss der Entwickler solcher Queries bei SQL sehr genau die Datenstrukturen kennen, was für eine Graphenabfrage mit Hilfe von Cypher nicht zwingend notwnedig ist. Um zum Beispiel alle Daten, welche in einem einstufigen rekursiven Bezug 
+Darüber hinaus muss der Entwickler solcher Queries bei SQL sehr genau die Datenstrukturen kennen, was für eine Graphenabfrage mit Hilfe von Cypher nicht zwingend notwendig ist. Um zum Beispiel alle Daten, welche in einem einstufigen rekursiven Bezug 
 zum Beschreibungsdokument zu bekommen, muss lediglich folgende Abfrage mit Cypher formuliert werden: 
 
 ~~~~cypher
@@ -224,7 +224,7 @@ Cypher: MATCH (b:Beschreibungsdokument {id:'31275197'})-[r *1..2]-(k) RETURN b,r
 
 Das Ergebnis zeigt, dass beliebige Beziehungen und Knoten mit aufgeführt werden. Eine solche Abfrage via SQL zu formulieren würde einen enorm großen Aufwand bedeuten. 
 
-Zusammendfassend zeigen diese Beispiele, dass bei steigender Anfragekomplexität die Cypher-Anfrage leichter zu formulieren ist als die SQL-Abfrage. Zusätzlich ist bei SQL eine genaue Kenntnis der Datenbankstruktur notwendig, um die Anfrage formulieren zu können. 
+Zusammenfassend zeigen diese Beispiele, dass bei steigender Anfragekomplexität die Cypher-Anfrage leichter zu formulieren ist als die SQL-Abfrage. Zusätzlich ist bei SQL eine genaue Kenntnis der Datenbankstruktur notwendig, um die Anfrage formulieren zu können. 
 Für die Formulierung einer Cypher-Anfrage hingegen, benötigt man nicht zwingend genaue Kenntnisse der Knoten und Beziehungsstrukturen. Dies bietet unter anderem eine gute Möglichkeit, um neue Erkenntnisse aus den Daten gewinnen zu können. 
 
 ## 4.1 Performance ##
@@ -248,12 +248,12 @@ WHERE  uf1.user_1 = ?
 
 Für jedes weiteres freundschaftliches Beziehungslevel erhält die Tabelle eine weitere Spalte und die Abfrage muss um ein weiteres Join erweitert werden. Bei einem 
 Testdatenset von 1000 Personen mit ca. 50 Beziehungen enthält die Beziehungstabelle ca. 50.000 Einträge. In einem Experiment mit 1000 Benutzerdaten und jeweils 10 SQL Abfragen auf die 
-entsprechenden Freundeanzahl wird aufgezeigt, dass die Performance mit steigender Anzahl an Join-Verbindungen stark abfällt obwohl die Anzahl des Ergebnisses gleich bleibt. 
+entsprechenden Freundeanzahl wird aufgezeigt, dass die Performance mit steigender Anzahl an Join-Verbindungen stark abfällt, obwohl die Anzahl des Ergebnisses gleich bleibt. 
 
 ![Table 1 Performance](img/neo4jinaction_table1.png) 
 
-Ursache dafür ist nach Ansicht der Autoren, dass für jede Join Abfrage das kartesische Produkt der relevanten Tabelle durchgeführt wird bevor anschließend die relevanten Daten gefiltert werden. 
-In dem oben dargestellt Fall bedeutet dies, dass ein 5-maliges Join mit derselben Tabelle mit 50.0000 Einträgen zu einer Tabelle mit 102.4 x 10 ^21 führt.  
+Ursache dafür ist nach Ansicht der Autoren, dass für jede Join Abfrage das kartesische Produkt der relevanten Tabelle durchgeführt wird, bevor anschließend die relevanten Daten gefiltert werden. 
+In dem oben dargestellt Fall bedeutet dies, dass ein 5-maliger Join mit derselben Tabelle mit 50.0000 Einträgen zu einer Tabelle mit 102.4 x 10 ^21 führt.  
 
 Ein Vergleich mit denselben Daten und Abfragen auf Basis einer Neo4J Graphendatenbank zeigt folgendes Ergebnis: 
 
@@ -266,7 +266,7 @@ Um nun für unser praktisches Beispiel vergleichbare Untersuchungen machen zu k�
 
 <img src="img/testdaten_performance.svg" width=850>
 
-Diese Datenstruktur ist mit den Testdatenstrukturen aus dem Buch Neo4J vergleichbar. Um hier die Beziehungen der Dokumentenelemente abzufragen müssen für SQL ebenfalls Joins auf dieselbe Tabelle angewendet werden. In nachfolgendem Beispiel sind die jeweiligen Abfragen aufgeführt. 
+Diese Datenstruktur ist mit den Testdatenstrukturen aus dem Buch Neo4J vergleichbar. Um hier die Beziehungen der Dokumentenelemente abzufragen, müssen für SQL ebenfalls Joins auf dieselbe Tabelle angewendet werden. In nachfolgendem Beispiel sind die jeweiligen Abfragen aufgeführt. 
 
 
 
@@ -312,11 +312,11 @@ Nachfolgende Tabelle stellt die Ergebnisse unseres Abfragetests dar.
 </table>
 
 Die Tabelle zeigt, dass wir die Ergebnisse aus dem Buch "Neo4J in Action" nicht reproduzieren können. Dies kann verschiedenste Ursachen haben. Der größte Unterschied zu dem Test von Aleksa Vukotic und Nicki Watt sind sicherlich die unterschiedlichen Abfragen.
-Für die Graphendatenbank haben wir Cypher verwendet und das SQL Statement ist eine rekursive Abfrage. Die rekursive Abfrage enthält zwar Joins. Allerdings könnte das Wiederholen der zweiten Abfrage nicht zu einem kartesischen Produkt aller Daten führen. Ein weiterer Unterschied ist, dass 
+Für die Graphendatenbank haben wir Cypher verwendet und das SQL Statement ist eine rekursive Abfrage. Die rekursive Abfrage enthält zwar Joins, allerdings könnte das Wiederholen der zweiten Abfrage nicht zu einem kartesischen Produkt aller Daten führen. Ein weiterer Unterschied ist, dass 
 wir als RDBMS Postgres und nicht MySQL verwendet haben. Ein Reproduzieren des Ergebnisses war hier allerdings nicht unser primäres Ziel. Vielmehr wollten wir untersuchen, wie die beiden Systeme tief verschachtelte Datenstrukturen mit vielen Beziehungen zueinander behandeln. 
 
 Bei unserem Test ist uns aufgefallen, dass die Schreibgeschwindigkeit zwischen dem RDBMS Postgres und Neo4J stark unterschiedlich war. Für ein Testdatenset von 50 Beschreibungsdokumenten benötigte die
-Graphendatenbnk ca. 500 Millisekunden und das RDBMS Postgres 20 Sekunden. Die Ursache für die 4fach langsamere Schreibgeschwindigkeit der Postgres-Datenbank konnten wir im Rahmen dieses Projektes nicht evaluieren. 
+Graphendatenbnk ca. 500 Millisekunden und das RDBMS Postgres 20 Sekunden. Die Ursache für die 4-fach langsamere Schreibgeschwindigkeit der Postgres-Datenbank konnten wir im Rahmen dieses Projektes nicht evaluieren. 
 
 ## 4.1 Performance Optimierungsmaßnahmen ##
 
