@@ -3,7 +3,7 @@
 * Codd, E. F. (1970): A Relational Model of Data for
 Large Shared Data Banks, Communications of the ACM, Volume 13, Number 6.
 
-* Edllich, Stefan / Friedland, Achim / Hampe, Jens / Brauer, Benjamin (2010): NoSQL – Einstieg in die Welt nichtrelationaler Web 2.0 Datenbanken, Carl Hanser Verlag München.
+* Edlich, Stefan / Friedland, Achim / Hampe, Jens / Brauer, Benjamin (2010): NoSQL – Einstieg in die Welt nichtrelationaler Web 2.0 Datenbanken, Carl Hanser Verlag München.
 
 * Gerken, Wolfgang (2018): Datenbanksysteme für dummies, Wiley-VCH-Verlag GmbH & Co KGaA, Weinheim: 2. Auflage.
 
