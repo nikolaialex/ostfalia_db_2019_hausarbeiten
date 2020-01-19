@@ -97,7 +97,7 @@ Der Vergleich Container vs. virtueller Maschinen ist nicht ganz einfach zu gesta
 
 Anhand der Tabelle kann man sehr gut erkennen, dass die reine Container-Technologie in Sachen Persistenz und Hochverfügbarkeit nicht mit virtuellen Maschinen mithalten kann. Müssen Daten dauerhaft gespeichert und verändert werden können, so ist momentan die VM der reinen Verwendung von Containern einiges voraus. [7]
 
-Bei Betrachtung der Voraussetzungen zum Betrieb stellte man fest, dass Container wesentlich schlanker betrieben werden können, da nicht jede Applikation ein eigenständiges udn vollständiges Betriebssystem braucht (s. Abbildung). Bei Docker teilen sich die Container über die Container Engine (meist Docker) die Systemressourcen. Das ist auch einer der wesentlichen Faktoren, wieso Container so schnell in Betrieb genommen, ausgetauscht und gestoppt werden können.
+Bei Betrachtung der Voraussetzungen zum Betrieb stellte man fest, dass Container wesentlich schlanker betrieben werden können, da nicht jede Applikation ein eigenständiges und vollständiges Betriebssystem braucht (s. Abbildung). Bei Docker teilen sich die Container über die Container Engine (meist Docker) die Systemressourcen. Das ist auch einer der wesentlichen Faktoren, wieso Container so schnell in Betrieb genommen, ausgetauscht und gestoppt werden können.
 
 ![Vergleich VM <-> Container](./images/vergleich_container_vm.jpg)
 
