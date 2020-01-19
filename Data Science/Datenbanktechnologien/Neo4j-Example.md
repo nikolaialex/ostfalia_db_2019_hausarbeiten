@@ -17,7 +17,7 @@ Die Voraussetzungen für einen Graphen sind dabei Knoten, Beziehungen und Eigens
 
 ![Datenbeispiel](../images/Neo4J-Dataexample.png)
 
-Um nun einen Datensatz anlegen zu können, wird die Datenbank gestartet und im Browser geöffnet. Es befindet sich in dem Fenster eine Art Suchspalt, in der die Cypher-Abfrage getippt wird. In der Abbildung ist zu sehen, wie ein erster Datensatz mit der Sprache Cypher erzeugt wurde.
+Um nun einen Datensatz anlegen zu können, wird die Datenbank gestartet und im Browser geöffnet. Es befindet sich in dem Fenster eine Art Eingabespalt, in der die Cypher-Abfragen eingegeben werden können. In der Abbildung ist zu sehen, wie ein erster Datensatz mit der Sprache [Cypher](https://neo4j.com/docs/cypher-manual/current/) erzeugt wurde.
 
 ![Erstellung Datensatz](../images/Neo4J-CreateData.png)
 
