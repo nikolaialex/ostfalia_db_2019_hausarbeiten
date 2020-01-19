@@ -6,7 +6,7 @@ Kubernetes ist eine Open-Source-Software die von Google entwickelt wurde. 2015 w
 
 Die Google-Software wird bei wirklich großen Umgebungen eingesetzt. Beispielsweise bei einer sehr großen Webseite, auf die weltweit zugegriffen werden soll, die auf sehr vielen Servern in mehreren Clouds läuft und hohe Lastspitzen abfangen muss. [2]
 
-Das Marktforschungsinstitut Gartner Inc. ordnet Kubernetes Networking in seinem Hype- Cycle-Diagramm, welches in Abbildung 1 dargestellt ist, als eine Technologie ein welche erst in geschätzten zwei bis fünf Jahren das Plateau der Produktivität erreicht haben wird. Im Moment befindet sich diese Technik noch in einer Phase der überzogenen Erwartungen, da Kubernetes derzeit sehr viel öffentliche Aufmerksamkeit erfährt.
+Das Marktforschungsinstitut Gartner Inc. ordnet Kubernetes Networking in seinem Hype- Cycle-Diagramm, welches in Abbildung 1 dargestellt ist, als eine Technologie ein, welche erst in geschätzten zwei bis fünf Jahren das Plateau der Produktivität erreicht haben wird. Im Moment befindet sich diese Technik noch in einer Phase der überzogenen Erwartungen, da Kubernetes derzeit sehr viel öffentliche Aufmerksamkeit erfährt.
 
 ![Hype Cycle 2019](./images/image1.png)
 
