@@ -15,6 +15,10 @@ Neo4J steht außerdem kurz vor dem Ziel, eine standardisierte Abfragesprache fü
 
 Wer jedoch in der Cloud arbeiten möchte, hat die Möglichkeit, dies mit Neo4J, unter dem Namen "Aura", zu tun. [[16](https://www.bigdata-insider.de/graph-datenbanken-a-887332/)]
 
-    https://neo4j.com/developer/get-started/
+Namenhafte Kunden, wie eBay, Adobe, Microsoft und einige mehr, nutzen Neo4J. [[17](https://neo4j.com/customers/?ref=home)]
 
-[Zurück zu Graph-Datenbanken](./Graphdatabase.md)
+Um Neo4J selbst auszuprobieren, kann mit Hilfe der [Get Started Dokumentation]([./API.md](https://neo4j.com/developer/get-started/)) begonnen werden.
+
+Die Autoren haben sich dabei für den Neo4J Browser entschieden, da hier lediglich eine Registrierung von Nöten war. Im [folgenden Kapitel](./Neo4j-Example.md) wurde dafür ein Praxisbeispiel gewählt und dokumentiert.
+
+[Zurück zu Graph-Datenbanken](./Graphdatabase.md) || [Weiter zum Praxisbeispiel](./Neo4j-Example.md)

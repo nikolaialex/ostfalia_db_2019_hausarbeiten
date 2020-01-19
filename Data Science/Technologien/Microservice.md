@@ -1,13 +1,12 @@
 # Architetkurmuster Microservice
 
-Rund 70 Prozent der Unternehmen wollen ihre Softwaremonolithen aufbrechen und setzen dabei auf den Einsatz von Microservices.
-Microservices machen nicht nur die IT schneller und agiler, sondern steigern auch die Releases pro Woche um das Vierfache. [[1](https://www.computerwoche.de/a/microservices-machen-die-it-schneller-und-agiler,3329517)]
+Rund 70 Prozent der europäischen und US-amerikanischen Unternehmen wollen ihre Softwaremonolithen aufbrechen und setzen dabei auf den Einsatz von Microservices. Microservices machen nicht nur die IT schneller und agiler, sondern steigern auch die Releases pro Woche um das Vierfache. [[1](https://www.computerwoche.de/a/microservices-machen-die-it-schneller-und-agiler,3329517)]
 
 Eine Software soll dabei aus kleinen unabhängigen und eigenständigen (modularen) Services bestehen, die über sorgfältig und schlank definierte [APIs](./API.md) kommunizieren. Ein Microservice übernimmt also unabhängige und kleine Teilaufgaben und ist dabei nach außen hin isoliert.
 
 Folgende Eigenschaften hat ein Microservice:
 
-- Eigenständigkeit - jeder Service einer Software wird eigenständig behandelt, das heißt dieser kann entwickelt, bereitgestellt, betrieben und skalliert werden, ohne dabei abdere Services zu beeinträchtigen
+- Eigenständigkeit - jeder Service einer Software wird eigenständig behandelt, das heißt dieser kann entwickelt, bereitgestellt, betrieben und skalliert werden, ohne dabei andere Services zu beeinträchtigen
 
 - Spezialisierung - jeder Service löst ein konkretes Problem - sollte ein Service an Komplexität gewinnen, kann dieser in kleinere Services unterteilt werden
 
