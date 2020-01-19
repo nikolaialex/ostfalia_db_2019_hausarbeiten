@@ -1,4 +1,4 @@
-# Praxisbeispiel mit Neo4J Browser
+# Praxisbeispiel mit Neo4J Desktop
 
 Für das Praxisbeispiel wurde die entsprechende Dokumentation von Neo4J Browser herangezogen, die unter <https://neo4j.com/developer/neo4j-browser/> erreichbar ist.
 
