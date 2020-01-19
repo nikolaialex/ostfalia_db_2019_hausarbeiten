@@ -12,7 +12,7 @@ Nach erfolgreichem Setup, ist die Datenbank unter <http://localhost:7474> erreic
 
 ![Neo4J unter localhost](../images/Neo4J-localhost.png)
 
-Zunächst soll an dieser Stelle ein ausgedachtes Modell vorgestellt werden, welches im Anschluss in die Datenabnk überführt wird.
+Zunächst soll an dieser Stelle ein ausgedachtes Modell vorgestellt werden, welches im Anschluss in die Datenbank überführt wird.
 Die Voraussetzungen für einen Graphen sind dabei Knoten, Beziehungen und Eigenschaften.
 
 ![Datenbeispiel](../images/Neo4J-Dataexample.png)
