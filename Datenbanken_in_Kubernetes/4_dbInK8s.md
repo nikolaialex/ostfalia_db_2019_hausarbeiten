@@ -104,7 +104,7 @@ spec:
   storageClassName: ionos-enterprise-hdd
 ```
 
-Wie bereits beschrieben sind provisionierte Volumes einer Storage Class unabhängig von jeglichen Workload im Kubernetes Cluster. Ein Container kann also kein Volume direkt _besitzen_, sondern lediglich ein Volume anfordern (claim). Kubernetes sorgt dann dafür, dass der Container beim Schreiben auf dieses externe Verzeichnis zugreifen kann und stellt dafür die notwendige Verbindung her. Wenn ein PVC erstellt wird und kein zugehöriges Volume existiert, wird dieses dynamisch provisioniert.
+Wie bereits beschrieben sind provisionierte Volumes einer Storage Class unabhängig von jeglichem Workload im Kubernetes Cluster. Ein Container kann also kein Volume direkt _besitzen_, sondern lediglich ein Volume anfordern (claim). Kubernetes sorgt dann dafür, dass der Container beim Schreiben auf dieses externe Verzeichnis zugreifen kann und stellt dafür die notwendige Verbindung her. Wenn ein PVC erstellt wird und kein zugehöriges Volume existiert, wird dieses dynamisch provisioniert.
 
 Pro partitioniertem Volume gibt es nur ein zugehöriges PVC. Dieses PVC kann aber von beliebig vielen Containern für einen lesenden und schreibenden Zugriff verwendet werden.
 
