@@ -129,7 +129,7 @@ Der Typ `deployment` ist generell für komplexere Stateless oder einfache Statef
 > _"You describe a desired state in a Deployment, and the Deployment Controller
 > changes the actual state to the desired state at a controlled rate."_ [3]
 
-Für kleine Anwendungen, z.B. eine Website (klassischer WordPress-Stack), bestehenden aus PHP-Server in einem Pod und einer Datenbank in einem anderen Pod, kann dieser Typ `deployment` sehr gut verwendet werden. Es werden keine sehr hohen Ansprüche an eine 100%-Verfügbarkeit noch an die Partitionstoleranz gemäß CAP-Theorem gestellt, da das Cluster an sich meist sowieso nicht hochverfügbar gestaltet ist und nur aus wenigen Nodes besteht. Die Konsistenz ist allerdings gewährleistet, es gibt nur eine schreibende bzw. lesende Instanz und ein Pod mit dem PHP-Server. Nachfolgend ist ein Beispiel für ein MySQL-Deplyoment für eine WordPress-Anwendung dargestellt. [4]
+Für kleine Anwendungen, z.B. eine Webseite (klassischer WordPress-Stack), bestehenden aus PHP-Server in einem Pod und einer Datenbank in einem anderen Pod, kann dieser Typ `deployment` sehr gut verwendet werden. Es werden keine sehr hohen Ansprüche an eine 100%-Verfügbarkeit noch an die Partitionstoleranz gemäß CAP-Theorem gestellt, da das Cluster an sich meist sowieso nicht hochverfügbar gestaltet ist und nur aus wenigen Nodes besteht. Die Konsistenz ist allerdings gewährleistet, es gibt nur eine schreibende bzw. lesende Instanz und ein Pod mit dem PHP-Server. Nachfolgend ist ein Beispiel für ein MySQL-Deplyoment für eine WordPress-Anwendung dargestellt. [4]
 
 ```yaml
 apiVersion: apps/v1
