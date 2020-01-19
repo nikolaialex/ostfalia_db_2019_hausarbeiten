@@ -27,6 +27,7 @@ Eine Ausarbeitung zum Thema Data Science.
    4. [Blockchain](./Technologien/Blockchain.md)
 5. [Datenbanktechnologien](./Datenbanktechnologien/Datenbanken.md)
    1. [Graph-Datenbanken](./Datenbanktechnologien/Graphdatabase.md)
-      1. [Neo4J](./Datenbanktechnologien/Neo4J.md)
+      1. [Neo4j](./Datenbanktechnologien/Neo4J.md)
+      2. [Praxisbeispiel Neo4j](./Datenbanktechnologien/Neo4j-Example.md)
 6. [Fazit](fazit.md)
 7. [Literaturverzeichnis](literaturverzeichnis.md)
