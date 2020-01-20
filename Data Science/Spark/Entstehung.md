@@ -8,5 +8,5 @@ Das von Google eingeführte MapReduce-Verfahren verteilt Berechnungen auf Comput
 
 Für die Verarbeitung von Big Data kommen verschiedene Tools und Programmiersprachen zum Einsatz. So können Daten, je nach Arbeitsschritt mit verschiedenen Programmiersprachen, bearbeitet werden. Spark entstand in dieser Zeit, in der sich Entwickler bessere Tools zur Verarbeitung dieser großen Datenmengen gewünscht haben. Da Spark gleich mehrere Probleme auf einmal löste, etablierte es sich als ein beliebtes Tool.
 
-![The Complex World of Big Data](../images/5_4.jpg)
+![The Complex World of Big Data](../images/5_4.jpg)<br>
 *Abbildung 5.1: The Complex World of Big Data, [[5.4](https://towardsdatascience.com/a-beginners-guide-to-apache-spark-ff301cb4cd92)]*
