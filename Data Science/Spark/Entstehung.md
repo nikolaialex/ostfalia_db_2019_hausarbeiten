@@ -10,3 +10,5 @@ Für die Verarbeitung von Big Data kommen verschiedene Tools und Programmierspra
 
 ![The Complex World of Big Data](../images/5_4.jpg)<br>
 *Abbildung 5.1: The Complex World of Big Data, [[5.4](https://towardsdatascience.com/a-beginners-guide-to-apache-spark-ff301cb4cd92)]*
+
+[Zurück zu XXX](./XXX.md) || [Weiter zu XXX](./XXX.md)

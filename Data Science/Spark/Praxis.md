@@ -12,19 +12,19 @@ Aus Platzgründen wird auf eine ausführliche Erklärung des Arbeitsumfeldes ver
 
 Als „Hello World“ für verteilte Rechnersysteme gelten Anwendungen, die in einem vorgegebenen Text Wörter zählen und nach Häufigkeit ordnen. Es folgt ein Beispiel hierfür in Spark an.
 
-![Databricks 1](../images/5_11.png)
+![Databricks 1](../images/5_11.png)<br>
 *Abbildung 5.7: Databricks 1*
 
 Bereits der erste Blick erinnert, wie oben erwähnt, an Jupyter Notebooks. Neben dem selbst bestimmten Titel „WordCount“ steht in Klammern als primäre Programmiersprache „Python“ eingestellt, darunter ein Dropdown mit grünem Punkt (symbolisiert „aktiv“) und dem Titel des Clusters, an den dieser „Workspace“ angebunden ist ("Databricks 1").
 
 Beim Laden des Textes kommt zum ersten Mal der Spark Core mit dem Befehl „sc.“ (Codezeile 2) zum Einsatz. Bei Ausführen des Codes wird zusätzlich zur Ausgabe auch die benötigte Zeit, sowie der zum Einsatz gekommene Cluster, angezeigt ("Databricks 2"). „take“ ist die Aktion, die eine Anzeige erzeugt.
 
-![Databricks 2](../images/5_12.png)
+![Databricks 2](../images/5_12.png)<br>
 *Abbildung 5.8: Databricks 2*
 
 Als nächstes soll angezeigt werden, wieviele Worker („partitions“) zum Einsatz gekommen sind (ABB XXX).
 
-![Databricks 3](../images/5_13.png)
+![Databricks 3](../images/5_13.png)<br>
 *Abbildung 5.9: Databricks 3*
 
 Mit den nächsten Aktionen wird der vorliegende Text in eine Liste mit einzelnen Wörtern umgewandelt und Stopwords werden herausgefiltert. Die übrig gebliebenen Wörter werden gecached – unsere erste Transformation, die als Ergebnis keine Ausgabe liefert sondern ein neues RDD.("Databricks 4").
@@ -34,18 +34,20 @@ Mit den nächsten Aktionen wird der vorliegende Text in eine Liste mit einzelnen
 
 Jetzt können die Wörter absteigend nach Häufigkeit sortiert und in SQL-Tabellenform überführt werden ("Databricks 5").
 
-![Databricks 5](../images/5_15.png)
+![Databricks 5](../images/5_15.png)<br>
 *Abbildung 5.11: Databricks 5*
 
 Abschließend werden per SQL-Befehl die 10 häufigsten Wörter aufgelistet. Die SQL-Codesequenz wird mit dem „%sql“ initialisiert ("Databricks 6*").
 
-![Databricks 6](../images/5_16.png)
+![Databricks 6](../images/5_16.png)<br>
 *Abbildung 5.12: Databricks 6*
 
 Unter dem Ausgabefenster fallen drei neue Icons ("Databricks 7") auf, über die die Daten als Tabelle beziehungsweise als Diagramm dargestellt oder (3) als CSV heruntergeladen werden können. "Databricks 8" zeigt ein einfaches Balkendiagramm sowie einen Teil der Anpassungsmöglichkeiten für Diagramme.
 
-![Databricks 7](../images/5_17.png)
+![Databricks 7](../images/5_17.png)<br>
 *Abbildung 5.13: Databricks 7*
 
-![Databricks 8](../images/5_18.png)
+![Databricks 8](../images/5_18.png)<br>
 *Abbildung 5.14: Databricks 8*
+
+[Zurück zu XXX](./XXX.md) || [Weiter zu XXX](./XXX.md)

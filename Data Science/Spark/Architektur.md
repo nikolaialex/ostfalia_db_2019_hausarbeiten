@@ -8,10 +8,10 @@ Vorab sei erwähnt, dass die im Folgenden zu erklärenden Teile einen der größ
 
 Folgende Grafik zeigt die Ergebnisse einer Databricks-Umfrage aus dem Jahr XXX. Demnach nutzen XXX% der Befragten mindestens zwei und XXX% gleich drei der in Databricks zur Verfügung gestellten Programmiersprachen - ein starker Indikator, dass in der Verarbeitung von Big Data sehr häufig mehrere Programmiersprachen zum Einsatz kommen und gleichzeitig ein Indiz für die Beliebtheit von Spark.
 
-![Aufbau von Apache Spark](../images/5_9.png)
+![Aufbau von Apache Spark](../images/5_9.png)<br>
 *Abbildung 5.5: Aufbau von Apache Spark, Eigene Darstellung*
 
-![Where Spark Shines](../images/5_10.png)
+![Where Spark Shines](../images/5_10.png)<br>
 *Abbildung 5.6: Where Spark Shines, Eigene Darstellung*
 
 ## Spark Core
@@ -33,3 +33,5 @@ Mllib / SparkML ermöglicht Maschinelles Lernen in Spark. Verschiedene Algorithm
 ## GraphX
 
 Diese Bibliothek stellt Funktionalitäten zur Verfügung, um Graphen (zum Beispiel Netzwerk von Freunden auf Social Media) zu manipulieren. In Kapitel XXX) haben wir bereits Neo4J kennengelernt, das auch zur Verarbeitung von Graphendaten dient.
+
+[Zurück zu XXX](./XXX.md) || [Weiter zu XXX](./XXX.md)
