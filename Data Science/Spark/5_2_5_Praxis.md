@@ -50,4 +50,4 @@ Unter dem Ausgabefenster fallen drei neue Icons ("Databricks 7") auf, über die 
 ![Databricks 8](../images/5_18.png)<br>
 *Abbildung 5.14: Databricks 8*
 
-[Zurück zu XXX](./XXX.md) || [Weiter zu XXX](./XXX.md)
+[Zurück zu Architektur](./5_2_4_Architektur.md) || [Weiter zu Fazit](./XXX.md)
