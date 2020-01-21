@@ -1,4 +1,4 @@
-# Vorteile
+# 5.2.2 Vorteile
 
 Spark selbst fasst die eigenen Vorteile zusammen als: „Speed“, „Ease of Use“, „Generality“ und „Runs Everywhere“ [[5.5](https://spark.apache.org/)]
 
@@ -18,4 +18,4 @@ All diese Faktoren haben dazu geführt, dass Spark zum “de facto”-Tool für 
 ![Arbeitsumgebung von Spark](../images/5_7.png)<br>
 *Abbildung 5.3: Arbeitsumgebung von Spark, [[5.7](https://spark.apache.org/)]*
 
-[Zurück zu XXX](./XXX.md) || [Weiter zu XXX](./XXX.md)
+[Zurück zu Entstehung](./5_2_1_Entstehung.md) || [Weiter zu Funktionsweise](./5_2_3_Funktionsweise.md)

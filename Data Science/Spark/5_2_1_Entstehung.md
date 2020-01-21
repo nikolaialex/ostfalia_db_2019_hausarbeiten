@@ -1,4 +1,6 @@
-# Entstehung
+# 5.2 Apache Spark
+
+# 5.2.1 Entstehung
 
 Wie bereits weiter oben in Kap XXX erwähnt, steigt die Menge an zu verarbeitenden Daten enorm. Gleichzeitig werden diese Daten immer unstrukturierter, stammen schon lange nicht mehr nur aus einer, sondern in der Regel gleich aus mehreren Quellen und liegen in unterschiedlichen Formen vor. Das IT-Marktforschungsunternehmen Gartner versteht _„Big data“ als “high-volume, high-velocity and/or high-variety information assets that demand cost-effective, innovative forms of information processing that enable enhanced insight, decision making, and process automation.”_ [[5.1](https://www.gartner.com/en/information-technology/glossary/big-data)] Das „Big“ bezeichnet nachdem nicht nur die Menge (Volume), sondern auch das Tempo (Velocity) und die unterschiedlichen Formate (Variety).
 
@@ -11,4 +13,4 @@ Für die Verarbeitung von Big Data kommen verschiedene Tools und Programmierspra
 ![The Complex World of Big Data](../images/5_4.jpg)<br>
 *Abbildung 5.1: The Complex World of Big Data, [[5.4](https://towardsdatascience.com/a-beginners-guide-to-apache-spark-ff301cb4cd92)]*
 
-[Zurück zu XXX](./XXX.md) || [Weiter zu XXX](./XXX.md)
+[Zurück zu Praxisbeispiel Neo4j](../Datenbanktechnologien/Neo4j-Example.md) || [Weiter zu Vorteile](./5_2_2_Vorteile.md)

@@ -1,4 +1,4 @@
-# Funktionsweise
+# 5.2.3 Funktionsweise
 
 Von den in Spark zur Verfügung gestellten Datenstrukturen, wird der Resilient Distributed Dataset (RDD) ("robuster verteilter Datensatz") im Folgenden näher betrachtet.
 
@@ -9,4 +9,4 @@ Spark unterscheidet bei Operationen auf Datenstrukturen generell zwischen grunds
 
 Des Weiteren bietet Spark die Datenstruktur DataFrame (DF), die wir in ähnlicher Form bereits aus Python (pandas) kennen, an. Die jüngste Datenstruktur heißt DataSet (DS) – eine Kombination aus RDD und DF. Daten können als RDD angelegt und wie ein DF bearbeitet werden. Diese Datenstruktur gewinnt an Bedeutung und wird wohl auch in Zukunft noch wichtiger werden.
 
-[Zurück zu XXX](./XXX.md) || [Weiter zu XXX](./XXX.md)
+[Zurück zu Vorteile](./5_2_2_Vorteile.md) || [Weiter zu Architektur](./5_2_4_Architektur.md)
