@@ -11,7 +11,7 @@ Eine Ausarbeitung zum Thema Data Science.
 | Isirafil Gülap           | 874786         | Beuth Hochschule Technik Berlin  |
 | W. Alexander Walkenhorst | 848142         | Beuth Hochschule Technik Berlin  |
 
-## Inahltsverzeichnis
+## Inhaltsverzeichnis
 
 1. [Einleitung](einleitung.md)
 2. [Data Science](tbd.md)
@@ -19,7 +19,10 @@ Eine Ausarbeitung zum Thema Data Science.
    2. [Berufsfeld Data Scientist](tbd.md)
    3. [Big Data](tbd.md)
    4. [Machine Learning](tbd.md)
-3. [Data Science Prozess](tbd.md)
+3. [Data Science Prozess](02_Data_Science_Prozess.md)
+   1. [Daten Management](tbd.md)
+   2. [Der Prozess](tbd.md)
+   3. [Checkliste](tbd.md)
 4. [Technologien](./Technologien/Technologien.md)
    1. [Microservices](./Technologien/Microservice.md)
    2. [API](./Technologien/API.md)
