@@ -1,5 +1,0 @@
-TODO
-
-Offene Punkte
-
-- [ ] Formulierung
