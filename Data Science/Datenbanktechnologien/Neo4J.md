@@ -2,7 +2,7 @@
 
 In dem YouTube-Video wird Neo4J vorgestellt.
 [![Was ist Neo4J?](../images/neo4J.jpg)](https://www.youtube.com/watch?v=GM9bB4ytGao)
-*Video 1: Was ist Neo4j?*
+*Video 1: Was ist Neo4j? [[TBD](ttps://www.youtube.com/watch?v=GM9bB4ytGao)]*
 
 Neo4J ist eine in Java entwickelte NoSQL-Graph-Datenbank, die nicht nur Daten speichert, sondern auch die Beziehungen zwischen den Daten.
 
