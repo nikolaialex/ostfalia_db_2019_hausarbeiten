@@ -5,6 +5,7 @@ Graph-Datenbanken basieren auf der mathematischen Graphentheorie und speichern d
 Die folgende Abbildung zeigt einen Graphen mit Beziehungen zu anderen Entitäten:
 
 ![Graph](../images/Graph.png)
+*Abbildung 9: Eigene Abbildung eines Graphen mit Beziehungen zu anderen Entitäten*
 
 Für das Durchsuchen eines Graphen sind sepzialisierte Graphalgorithmen möglich, es wird dabei zwischen der Tiefen- und der Breitensuche unterschieden.
 

@@ -12,15 +12,16 @@ Die Eigenschaften
 
 | Eigenschaft | Beschreibung |
 | :----: | :----: |
-| Dezentralität | "Dezentralität: Durch seine dezentrale Datenbank werden alle Daten auf weltweit Tausenden verschiedenen Computern gespeichert." |
-| Vertrauen | "Die verschiedenen Knoten innerhalb der Blockchain können nicht einfach manipuliert werden. Dadurch ist Vertrauen in das System vorhanden." |
-| Anonymität | "Während einer Transaktion werden keinerlei persönliche Daten o. ä. ausgetauscht, somit müssen sich die Partner nicht kennen und die Anonymität ist sichergestellt." |
-| Transparenz | "Alle Transaktionen sind öffentlich sichtbar und dadurch entscheidet der Grad der Dezentralisierung wie weit Informationen bis zu Ihrem Ursprung zurück verfolgt werden können." |
-| Manipulationssicherheit| "Einzelne Knoten können erst ab einem Besitz von über 51 Prozent dieser, durch einen Teilnehmer kontrolliert und somit blockiert, verändert oder an beliebige Adresse transferiert werden. Dadurch ist es fast unmöglich dass Transaktionen, welche einmal der Blockchain hinzugefügt wurden, im Anschluss noch bearbeitet oder entfernt werden können." |
+| Dezentralität | Mit Hilfe der dezentralen Datenbank werden alle Daten auf Tausenden internationalen verschiedenen Computern gespeichert |
+| Vertrauen | Das Manipulieren der verschiedenen Blöcke innerhalb der Blockchain ist nicht einfach möglich und somit wird das Vertrauen in das System bestärkt. |
+| Anonymität | Es findet kein Austausch von persönlichen Daten während einer Transaktion statt, weshalb die Anonymität der Partner sichergestellt ist. |
+| Transparenz | Der Grad der Denzentralisierung in wie weit Informationen bis zum Ursprung zurückverfolgt werden können, hängt von allen öffentlich sichtbaren Transaktionen ab. |
+| Manipulationssicherheit | Es ist fast unmöglich Transaktionen, die einmal Bestandteil der Blockchain waren, im Anschlss noch zu bearbeiten oder zu entfernen. Jeder Block erhält neben den eigentlichen Daten auch Vorgängerinformationen zur Verifikation. Somit müssen bei einer Manipulation eines Blocks auch alle nachfolgenden Blöcke erneut erzeugt werden.|
 
-zeichenn die Blockchain als einzigartige Datenbank aus. [[22](https://www.econsor.de/digitalisierung/digitalisierung-news/was-ist-eine-blockchain/)]
+zeichenn die Blockchain als einzigartige Datenbank aus. [[22](https://www.econsor.de/digitalisierung/digitalisierung-news/was-ist-eine-blockchain/), [23](https://www.digitale-technologien.de/DT/Redaktion/DE/Downloads/Publikation/2017-02-09_smartdata_steckbrief_blockchain.pdf?__blob=publicationFile&v=5)]
 
 In der folgenden Abbildung ist eine Transaktion mit Hilfe des Blockchain-Verfahrens zu sehen:
 ![Blockchain Transaktion](../images/Blockchain.png)
+*Abbildung 8: Screenshot einer Transaktion mit Hilfe des Blockchain-Verfahrens [[24](https://www.bwi.de/news-blog/blog/blockchain-interview/)]*
 
 [Zurück zu Cloud Computing](./Cloud.md)
