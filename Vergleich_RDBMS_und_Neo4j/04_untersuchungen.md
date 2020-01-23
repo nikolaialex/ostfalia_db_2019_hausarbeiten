@@ -169,18 +169,18 @@ Je mehr Beziehungen abgefragt werden müssen, desto einfacher wird die Anfragefo
 SQL:    
 WITH RECURSIVE q as (
     SELECT bb.bestandteile_id,e.name FROM beschreibungen
-    LEFT JOIN beschreibungen_bestandteile bb on beschreibungen.id = bb.beschreibungsdokument_id
-    LEFT JOIN elemente_bestandteile on elemente_bestandteile.bestandteile_id = bb.bestandteile_id
-    LEFT JOIN elemente e on e.id = bb.bestandteile_id
+    LEFT JOIN beschreibungen_bestandteile bb ON beschreibungen.id = bb.beschreibungsdokument_id
+    LEFT JOIN elemente_bestandteile ON elemente_bestandteile.bestandteile_id = bb.bestandteile_id
+    LEFT JOIN elemente e ON e.id = bb.bestandteile_id
     WHERE beschreibungen.id = '31275197'
 
     UNION ALL
 
     SELECT el.bestandteile_id, e.name from elemente_bestandteile el
-    left join elemente e on e.id = el.bestandteile_id
-    LEFT JOIN beschreibungen_bestandteile on e.id = beschreibungen_bestandteile.bestandteile_id
+    left join elemente e ON e.id = el.bestandteile_id
+    LEFT JOIN beschreibungen_bestandteile ON e.id = beschreibungen_bestandteile.bestandteile_id
     LEFT JOIN beschreibungen ON beschreibungen_bestandteile.beschreibungsdokument_id = beschreibungen.id
-    join q on q.bestandteile_id = el.dokument_element_id
+    JOIN q ON q.bestandteile_id = el.dokument_element_id
     ) SELECT * from q
 ~~~~
 
