@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +46,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="664">
-                <caret line="217" column="87" selection-start-line="217" selection-start-column="87" selection-end-line="217" selection-end-column="87" />
+              <first_editor relative-caret-position="888">
+                <caret line="339" column="269" selection-start-line="339" selection-start-column="269" selection-end-line="339" selection-end-column="269" />
                 <folding>
                   <element signature="e#781#782#0" expanded="true" />
                   <element signature="e#857#858#0" expanded="true" />
@@ -299,28 +300,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="42990000" />
-    </task>
-    <task id="LOCAL-00027" summary="Add fourth Query comparison">
-      <created>1576934574606</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1576934574606</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Add fourth Query comparison">
-      <created>1576934924002</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1576934924002</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Add fourth Query comparison">
-      <created>1576935053160</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1576935053160</updated>
+      <workItem from="1576920728886" duration="43350000" />
     </task>
     <task id="LOCAL-00030" summary="Add fith Query comparison">
       <created>1576943762613</created>
@@ -644,11 +624,32 @@
       <option name="project" value="LOCAL" />
       <updated>1579808629088</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Korrektur REchtschreibung">
+      <created>1579809101040</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809101040</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Korrektur REchtschreibung">
+      <created>1579809214746</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809214746</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Korrektur REchtschreibung">
+      <created>1579809350311</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809350311</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65261000" />
+    <option name="totallyTimeSpent" value="65621000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -863,8 +864,8 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="664">
-            <caret line="217" column="87" selection-start-line="217" selection-start-column="87" selection-end-line="217" selection-end-column="87" />
+          <first_editor relative-caret-position="888">
+            <caret line="339" column="269" selection-start-line="339" selection-start-column="269" selection-end-line="339" selection-end-column="269" />
             <folding>
               <element signature="e#781#782#0" expanded="true" />
               <element signature="e#857#858#0" expanded="true" />
