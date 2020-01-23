@@ -1,4 +1,4 @@
-# Application Programming Interface
+# 4.2 Application Programming Interface
 
 Bei einer API handelt es sich um eine Programmierschnittstelle, bei der Informationen zwischen einer Anwendung und einzelnen Programmteilen standardisiert ausgetauscht werden können.
 
@@ -9,7 +9,7 @@ Mit Hilfe von APIs werden einfache Möglichkeiten zur Anbindung der eigenen Infr
 Die folgende Abbildung demonstriert eine solche API [[6](https://www.redhat.com/de/topics/api/what-are-application-programming-interfaces)]:
 
 ![API](../images/API.png)
-*Abbildung 3: Screenshot zur Verwendung von APIs [[6](https://www.redhat.com/de/topics/api/what-are-application-programming-interfaces)]*
+*Abbildung 4.2: Screenshot zur Verwendung von APIs [[6](https://www.redhat.com/de/topics/api/what-are-application-programming-interfaces)]*
 
 Es wird dabei zwischen den folgenden Typklassen unterscheiden:
 

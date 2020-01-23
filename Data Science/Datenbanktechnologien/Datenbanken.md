@@ -1,4 +1,4 @@
-# Datenbanken
+# 5 Datenbanken
 
 Wenn von Data Science gesprochen wird, dann geht es um den Schwerpunkt Daten. Die bereits vorhandene Datenflut, die im Zeitalter der Digitalisierung bereits entstanden ist, wird nochmals um Größenfaktoren anschwellen. Es wird geschätzt, dass diese rund 44 Zettbyte im Jahr 2020 annehmen werden. Aus diesem Grund werden leistungsfähige Datenbanksysteme immer wichtiger. Es handelt sich dabei zumeist um Graph-Datenbanken.
 
@@ -8,4 +8,4 @@ Demnach muss ein Data Scientist mit unterschiedlichen Datenbanksystemen zurechtk
 
 Bevor in den nächsten Kapiteln auf die Datenbanksysteme [Neo4J](./Neo4J.md) und [Apache Spark](../Spark/5_2_1_Entstehung.md) genauer eingegangen wird, soll zunächst die Begrifflichkeit [Graph-Datenbank](./Graphdatabase.md) erläutert werden.
 
-[Weiter zu Graph-Datenbank](./Graphdatabase.md)
+[Zurück zu Blockchain](./../Technologien/Blockchain.md) | [Weiter zu Graph-Datenbank](./Graphdatabase.md)

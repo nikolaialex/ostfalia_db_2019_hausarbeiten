@@ -1,4 +1,4 @@
-# Blockchain
+# 4.4 Blockchain
 
 Mit Hilfe der Bockchain-Technolgie (auch *Distributed Ledger Technolgies* genannt) ist es möglich, digitale Informationen in einer dezentralen Datenbank zu speichern, zu verarbeiten, zu teilen und zu verwalten.
 
@@ -22,6 +22,6 @@ zeichenn die Blockchain als einzigartige Datenbank aus. [[22](https://www.econso
 
 In der folgenden Abbildung ist eine Transaktion mit Hilfe des Blockchain-Verfahrens zu sehen:
 ![Blockchain Transaktion](../images/Blockchain.png)
-*Abbildung 8: Screenshot einer Transaktion mit Hilfe des Blockchain-Verfahrens [[24](https://www.bwi.de/news-blog/blog/blockchain-interview/)]*
+*Abbildung 4.7: Screenshot einer Transaktion mit Hilfe des Blockchain-Verfahrens [[24](https://www.bwi.de/news-blog/blog/blockchain-interview/)]*
 
-[Zurück zu Cloud Computing](./Cloud.md)
+[Zurück zu Cloud Computing](./Cloud.md) | [Weiter zu Datenbanktechnologien](./../Datenbanktechnologien/Datenbanken.md)

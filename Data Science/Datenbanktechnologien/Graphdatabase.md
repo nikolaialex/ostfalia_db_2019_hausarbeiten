@@ -1,11 +1,11 @@
-# Graph-Datenbanken
+# 5.1 Graph-Datenbanken
 
 Graph-Datenbanken basieren auf der mathematischen Graphentheorie und speichern die Daten in einem Modell, welches überwiegend aus Knoten und Kanten besteht. Ein Knoten repräsentiert dabei eine Entität, welche durch Kanten mit anderen Entitäten verbunden sein können, also in Relation zueinander stehen. Es lassen sich somit also stark vernetzte Informationen speichern, wie zum Beispiel Daten aus sozialen Netzwerken oder Daten über Kunden.
 
 Die folgende Abbildung zeigt einen Graphen mit Beziehungen zu anderen Entitäten:
 
 ![Graph](../images/Graph.png)
-*Abbildung 9: Eigene Abbildung eines Graphen mit Beziehungen zu anderen Entitäten*
+*Abbildung 4.8: Eigene Abbildung eines Graphen mit Beziehungen zu anderen Entitäten*
 
 Für das Durchsuchen eines Graphen sind sepzialisierte Graphalgorithmen möglich, es wird dabei zwischen der Tiefen- und der Breitensuche unterschieden.
 

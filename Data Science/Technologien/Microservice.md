@@ -1,4 +1,4 @@
-# Architetkurmuster Microservice
+# 4.1 Architetkurmuster Microservice
 
 Rund 70 Prozent der europäischen und US-amerikanischen Unternehmen wollen ihre Softwaremonolithen aufbrechen und setzen dabei auf den Einsatz von Microservices.
 Microservices machen nicht nur die IT schneller und agiler, sondern steigern auch die Releases pro Woche um das Vierfache. [[1](https://www.computerwoche.de/a/microservices-machen-die-it-schneller-und-agiler,3329517)]
@@ -33,7 +33,7 @@ Zwei weitere Nachteile sind, dass der Aufwand durch die Unabhängigkeit und Isol
 
 Die folgende Abbildung stellt die Architektur eines Monolithen der Architektur von Microservices gegenüber [[4](https://www.redhat.com/de/topics/microservices/what-are-microservices)]:
 ![Architekturgegenüberstellung Monolith vs. Microservices](../images/monolithic-vs-microservices.png)
-*Abbildung2: Screenshot zur Gegenüberstellung von Monolithen versus Microservices [[4](https://www.redhat.com/de/topics/microservices/what-are-microservices)]*
+*Abbildung 4.1: Screenshot zur Gegenüberstellung von Monolithen versus Microservices [[4](https://www.redhat.com/de/topics/microservices/what-are-microservices)]*
 
 Ein Monolith ist eine Software-Architektur, bei der alle Prozesse in einem einzigen und untrennbaren sowie homogenen Gebilde verbunden sind. Bereits der Ausfall einer einzelnen Komponente kann zum Ausfall des gesamten Systems führen.
 

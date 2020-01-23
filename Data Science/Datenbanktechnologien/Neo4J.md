@@ -1,15 +1,15 @@
-# Neo4J
+# 5.1.1 Neo4J
 
 In dem YouTube-Video wird Neo4J vorgestellt.
 [![Was ist Neo4J?](../images/neo4J.jpg)](https://www.youtube.com/watch?v=GM9bB4ytGao)
-*Video 1: Was ist Neo4j? [[TBD](ttps://www.youtube.com/watch?v=GM9bB4ytGao)]*
+*Video 5.1.1: Was ist Neo4j? [[TBD](ttps://www.youtube.com/watch?v=GM9bB4ytGao)]*
 
 Neo4J ist eine in Java entwickelte NoSQL-Graph-Datenbank, die nicht nur Daten speichert, sondern auch die Beziehungen zwischen den Daten.
 
 Die folgende Abbildung visualisiert einen solchen Graphen mit  entsprechenden sogenannten *Nodes* (Knoten) und *Relationships* (Kanten/Beziehungen):
 
 ![Graph-Datenbank Neo4J](../images/Neo4J.png)
-*Abbildung 10: Screenshot eines Graphen mit entsprechenden Nodes und Relationships [[TBD](https://neo4j.com/developer/get-started/)]*
+*Abbildung 4.9: Screenshot eines Graphen mit entsprechenden Nodes und Relationships [[TBD](https://neo4j.com/developer/get-started/)]*
 
 Obwohl Neo4J zu den NoSQL-Datenbanken zählt, wird dennoch die Datenbankabfragesprache SQL (Structured Query Language) unterstützend vorangetreiben, da diese insbesonders bei Unternehmensanalytikern Anwednung findet.
 

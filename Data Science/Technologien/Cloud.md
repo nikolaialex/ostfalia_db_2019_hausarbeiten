@@ -1,4 +1,4 @@
-# Cloud Computing
+# 4.3 Cloud Computing
 
 Data Analytics funktioniert ohne Cloud nicht mehr! Warum das so ist und welche Vorteile diese Kombination den Unternehmen so viel bringt, wird im Folgenden geklärt.
 
@@ -8,7 +8,7 @@ Die Vernetzung von Milliarden Geräten, Sensoren und anderen Komponenten steigt 
 
 Die nachfolgende Abbildung zeigt den Anteil der Cloud-nutzenden Unternehmen in Deutschland, die kostenpflichtige Cloud-Dienste für folgende Zwecke im Jahr 2018 nutzen [[14](https://de.statista.com/statistik/daten/studie/381830/umfrage/einsatzzwecke-von-cloud-computing-in-unternehmen-in-deutschland/)]:
 ![Einsatzzwecke von Cloud Computing in Unternehmen in Deutschland](../images/Clound-Nutzung-Zweck.png)
-*Abbildung 4: Screenshot zu dem Anteil der Cloud-nutzenden Unternehmen in Deutschland, die kostenpflichtige Cloud-Dienste für folgende Zwecke im Jahr 2018 nutzen [[14](https://de.statista.com/statistik/daten/studie/381830/umfrage/einsatzzwecke-von-cloud-computing-in-unternehmen-in-deutschland/)]*
+*Abbildung 4.3: Screenshot zu dem Anteil der Cloud-nutzenden Unternehmen in Deutschland, die kostenpflichtige Cloud-Dienste für folgende Zwecke im Jahr 2018 nutzen [[14](https://de.statista.com/statistik/daten/studie/381830/umfrage/einsatzzwecke-von-cloud-computing-in-unternehmen-in-deutschland/)]*
 
 Als klarer Gewinner geht hier die Speicherung von Daten hervor - mit der Tendenz, in den nächsten Jahren stetig zu steigen.
 
@@ -27,8 +27,8 @@ Service | Beschreibung | Darstellung |
 | Infrastructure as a Service (IaaS) | IaaS stellt dem Nutzer typische Komponenten einer Rechenzentruminfrastruktur wie Hardware, Rechenleistung, Speicherplatz oder Netzwerkressourcen aus der Cloud zur Verfügung. | ![Infrastructure as a Service (IaaS)](../images/IaaS.png) |
 | Platform as a Service (PaaS) | Als PaaS wird eine Cloudumgebung verstanden, die eine Plattform für die Entwicklung von Anwendungen im Internet anbietet. PaaS baut auf IaaS auf und erweitert das Konzept der Bereitstellung von Hardware um weitere Features. | ![Platform as a Service (PaaS)](../images/PaaS.png) |
 | Software as a Service (SaaS) | SaaS ist ein Distributionsmodell für Anwendungen via Webbrowser und wird nur als Teilbereich in der Cloud verstanden. Die angeforderten Applikationen sind nie direkt auf dem Gerät des Nutzers vorhanden. | ![Software as a Service (SaaS)](../images/SaaS.png) |
-*Abbildung 5: Screenshot zum Service IaaS [[10](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]*
-*Abbildung 6: Screenshot zum Service PaaS [[10](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]*
-*Abbildung 7: Screenshot zum Service SaaS [[10](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]*
+*Abbildung 4.4: Screenshot zum Service IaaS [[10](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]*
+*Abbildung 4.5: Screenshot zum Service PaaS [[10](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]*
+*Abbildung 4.6: Screenshot zum Service SaaS [[10](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]*
 
 [Zurück zu API](./API.md) || [Weiter zu Blockchain](./Blockchain.md)
