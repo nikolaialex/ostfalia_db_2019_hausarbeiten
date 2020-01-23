@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_allgemein.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_allgemein.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,12 +41,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="530">
-                <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
+              <first_editor relative-caret-position="77">
+                <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
                 <folding>
                   <element signature="e#781#782#0" expanded="true" />
                   <element signature="e#857#858#0" expanded="true" />
@@ -124,7 +123,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_allgemein.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -167,11 +166,11 @@
         <option value="$PROJECT_DIR$/Data Science/title.md" />
         <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_toc.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" />
         <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/06_literature.md" />
         <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md" />
         <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/00-1_title.md" />
         <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_allgemein.md" />
+        <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" />
       </list>
     </option>
   </component>
@@ -210,7 +209,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ChangesTree.GroupingKeys" value="module" />
+    <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -300,14 +299,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="42487000" />
-    </task>
-    <task id="LOCAL-00023" summary="Add third Query comparison">
-      <created>1576931899803</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1576931899803</updated>
+      <workItem from="1576920728886" duration="42664000" />
     </task>
     <task id="LOCAL-00024" summary="Add third Query comparison">
       <created>1576932754602</created>
@@ -645,11 +637,18 @@
       <option name="project" value="LOCAL" />
       <updated>1579807543373</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Korrektur REchtschreibung">
+      <created>1579807967250</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1579807967250</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64758000" />
+    <option name="totallyTimeSpent" value="64935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -714,7 +713,8 @@
     <MESSAGE value="Reduce image size" />
     <MESSAGE value="Fix issue in code" />
     <MESSAGE value="Satz für die Titelseite ergänzt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Satz für die Titelseite ergänzt" />
+    <MESSAGE value="Korrektur REchtschreibung" />
+    <option name="LAST_COMMIT_MESSAGE" value="Korrektur REchtschreibung" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04-1_rdbms.md">
@@ -796,30 +796,6 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/img/johannesversorbuch.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="530">
-            <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
-            <folding>
-              <element signature="e#781#782#0" expanded="true" />
-              <element signature="e#857#858#0" expanded="true" />
-              <element signature="e#895#896#0" expanded="true" />
-              <element signature="e#922#923#0" expanded="true" />
-              <element signature="e#975#976#0" expanded="true" />
-              <element signature="e#1013#1014#0" expanded="true" />
-              <element signature="e#1051#1052#0" expanded="true" />
-              <element signature="e#1078#1079#0" expanded="true" />
-              <element signature="e#1131#1132#0" expanded="true" />
-              <element signature="e#1169#1170#0" expanded="true" />
-              <element signature="e#1229#1230#0" expanded="true" />
-              <element signature="e#1267#1268#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/06_literature.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -879,6 +855,30 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="176">
             <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="77">
+            <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+            <folding>
+              <element signature="e#781#782#0" expanded="true" />
+              <element signature="e#857#858#0" expanded="true" />
+              <element signature="e#895#896#0" expanded="true" />
+              <element signature="e#922#923#0" expanded="true" />
+              <element signature="e#975#976#0" expanded="true" />
+              <element signature="e#1013#1014#0" expanded="true" />
+              <element signature="e#1051#1052#0" expanded="true" />
+              <element signature="e#1078#1079#0" expanded="true" />
+              <element signature="e#1131#1132#0" expanded="true" />
+              <element signature="e#1169#1170#0" expanded="true" />
+              <element signature="e#1229#1230#0" expanded="true" />
+              <element signature="e#1267#1268#0" expanded="true" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
