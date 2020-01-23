@@ -332,7 +332,7 @@ Die OR-Mapper Implementierung Hibernate benötigt hier die Einstellung für die 
   * Create: Das Schema wird mit jeder Initialisierung erstellt. 
   * Create-Drop: Das Schema wird mit jeder Initialisierung erstellt und dem Herunterfahren gelöscht.
   
-Der OR Graphmapper benötigt diese Einstellungen nicht. Ein Schmema der Graphendatenbank besteht lediglich aus der Definition von Indizes und Constraints. Die Strukturen der Knoten und Beziehungen werden automatisch angelegt. 
+Der OR Graphmapper benötigt diese Einstellungen nicht. Ein Schema der Graphendatenbank besteht lediglich aus der Definition von Indizes und Constraints. Die Strukturen der Knoten und Beziehungen werden automatisch angelegt. 
 
 Automatische Anpassungen am Schema sind weder für RDBMS, noch für Graphendatenbanken im produktiven Einsatz empfohlen. Daher sollten die Schema Änderungen mit Hilfe eines Tools oder manuell durchgeführt werden. Populäre Werkzeuge sind das Google Tool [Flyway](https://flywaydb.org/getstarted/) oder 
 [Liquibase](https://www.liquibase.org/). Nur das Tool Liquibase bietet Unterstützung für die Änderungen in einer [Graphendatenbank](https://www.liquigraph.org/).   
