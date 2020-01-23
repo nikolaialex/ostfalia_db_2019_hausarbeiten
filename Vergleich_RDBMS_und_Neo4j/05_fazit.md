@@ -1,4 +1,4 @@
-# Fazit
+#5. Fazit
 
 Die praktische Arbeit mit Neo4j brachte Erkenntnisse im direkten Vergleich zu relationalen Datenbanksystemen, wie sie aus der  Theorie mithilfe der Literatur dem Team nicht offensichtlich geworden wäre. Auch wenn sich die Abfragesprache Cypher sehr an SQL orientiert, wurde sie im Team als einfacher im Erlernen empfunden. Das liegt unter anderem daran, dass Cypher auf dem ASCII-Art-Modell beruht. Die einfachere Handhabung der Sprache beruht nicht zuletzt auch darauf, dass bei der Ausarbeitung von Abfragen, der Nutzer eines RDBMS Kenntnisse über die Struktur haben muss. Bei Neo4j hingegen sind generische Abfragen (Wildcard) über Beziehungen möglich. Während bei RDBMS die Datenmodelle nicht ohne weiteres im Nachhinein erforschbar sind, kann man bei Neo4j die Struktur der Daten in Erfahrung bringen. Neo4j ist beliebig erweiterbar, RDBMS hingegen nicht.
 
