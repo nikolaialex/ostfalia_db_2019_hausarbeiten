@@ -1,5 +1,11 @@
 # Vergleich RDBMS und Neo4j
-Abstract
+__Semesterarbeit__  
+Wintersemester 2019/2020  
+Modul:          Datenbanktechnologien  
+Prüfer:         Dipl.-Inf. Nikolai Alex  
+
+Dieser Bericht thematisiert die Gleichheiten und Unterschiede relationaler Datenbanksysteme im Vergleich mit dem Graphendatenbanksystem Neo4j.
+
 ## Autoren
 
 | Name            | Matrikelnummer | Hochschule              |
