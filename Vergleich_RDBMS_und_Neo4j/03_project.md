@@ -3,7 +3,7 @@
 
 Die Staatsbibliothek zu Berlin ermöglicht den ortsunabhängigen und kostenfreien Zugang zu den Ergebnissen der Handschriftenkatalogisierung im deutschen Sprachraum. Alle Metadaten der abendländischen mittelalterlichen Handschriften
 sollen in diesem Projekt als Datengrundlage verwendet werden. Die Metadaten beschreiben den Handschriftenbestand und liegen in Form von XML Dateien vor. Diese Daten sollen in ein sehr vereinfachtes Datenmodell überführt und 
-in den entsprechenden Datenbanksystemen persitsiert werden. Anschließend sollen verschiedene Aspekte im Rahmen der Anwendungsentwicklung für beide Datenbanktechnologien verglichen werden. Wir möchten damit anhand eines konkreten Anwendungsfalls 
+in den entsprechenden Datenbanksystemen persistiert werden. Anschließend sollen verschiedene Aspekte im Rahmen der Anwendungsentwicklung für beide Datenbanktechnologien verglichen werden. Wir möchten damit anhand eines konkreten Anwendungsfalls 
 zeigen, worin die Unterschiede und Gemeinsamkeiten beim Entwickeln einer Anwendungen sind. 
 
 ## 3.2 Technologie Stack
