@@ -51,9 +51,9 @@ Die sogenannten Constraints sind vordefinierte Regeln, die jeweils auf einzelne 
 
 ### 2.1.3 Integrität 
 Innerhalb jedes RDBMS lassen sich durch die zuvor genannten Contraints folgende Kategorien definieren, die die Integrität der Daten gewährleisten:
-* **Entity Integrety** - Es existieren keine Duplikate in einer Tabelle
-* **Domain Integrety** - Spalten werden nach Datentyp, Format oder Länge der Werte eingeschränkt
-* **Referntial Integretiy** - Tupel, die durch andere Tupel über **FOREIGN KEY** referenziert werden, können nicht gelöscht werden
+* **Entity Integrity** - Es existieren keine Duplikate in einer Tabelle
+* **Domain Integrity** - Spalten werden nach Datentyp, Format oder Länge der Werte eingeschränkt
+* **Referential Integrity** - Tupel, die durch andere Tupel über **FOREIGN KEY** referenziert werden, können nicht gelöscht werden
 
 ### 2.1.4 Sprache, Operationen und Syntax
 SQL wurde 1987 durch die International Organization for Standardization (ISO)als offizielle, domänenspezifische Sprache für RDBMS ernannt und basierte ursprünglich auf relationaler Algebra und Kalkülausdrücken. SQL war die erste kommerzielle Sprache, die das relationale Modell von E. F. Codd [01] aufgriff. Nachfolgend sind die relevantesten Statements dargestellt, die mit SQL realisiert werden können:
