@@ -71,8 +71,8 @@
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="624">
-                <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+              <first_editor relative-caret-position="658">
+                <caret line="179" column="13" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
               </first_editor>
               <second_editor />
             </state>
@@ -299,28 +299,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="43457000" />
-    </task>
-    <task id="LOCAL-00031" summary="Add fith Query comparison">
-      <created>1576943868737</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1576943868737</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Add fith Query comparison">
-      <created>1576944166400</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1576944166400</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Add fith Query comparison">
-      <created>1576944266818</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1576944266818</updated>
+      <workItem from="1576920728886" duration="43688000" />
     </task>
     <task id="LOCAL-00034" summary="Add fith Query comparison">
       <created>1576944819405</created>
@@ -644,11 +623,32 @@
       <option name="project" value="LOCAL" />
       <updated>1579809545019</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Korrektur REchtschreibung">
+      <created>1579809739676</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809739676</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Korrektur REchtschreibung">
+      <created>1579809818582</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809818582</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Korrektur REchtschreibung">
+      <created>1579809948705</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809948705</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65728000" />
+    <option name="totallyTimeSpent" value="65959000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -877,8 +877,8 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="624">
-            <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
+          <first_editor relative-caret-position="658">
+            <caret line="179" column="13" selection-start-line="179" selection-start-column="13" selection-end-line="179" selection-end-column="13" />
           </first_editor>
           <second_editor />
         </state>

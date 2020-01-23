@@ -176,12 +176,12 @@ WITH RECURSIVE q as (
 
     UNION ALL
 
-    SELECT el.bestandteile_id, e.name from elemente_bestandteile el
+    SELECT el.bestandteile_id, e.name FROM elemente_bestandteile el
     left JOIN elemente e ON e.id = el.bestandteile_id
     LEFT JOIN beschreibungen_bestandteile ON e.id = beschreibungen_bestandteile.bestandteile_id
     LEFT JOIN beschreibungen ON beschreibungen_bestandteile.beschreibungsdokument_id = beschreibungen.id
     JOIN q ON q.bestandteile_id = el.dokument_element_id
-    ) SELECT * from q
+    ) SELECT * FROM q
 ~~~~
 
 <table border="1" style="border-collapse:collapse">
