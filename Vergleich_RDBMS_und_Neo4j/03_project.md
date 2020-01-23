@@ -10,7 +10,7 @@ zeigen, worin die Unterschiede und Gemeinsamkeiten beim Entwickeln einer konkret
 
 Um die theoretischen Fragestellungen praktisch evaluieren zu können wurde ein Java Enterprise Projekt mit Hilfe des [Spring Frameworks](https://spring.io/) aufgesetzt. 
 Um in kurzer Zeit eine lauffähige Serverumgebung zu bekommen wurde [Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/) mit einem integriertem Tomcat Servlet Container als Laufzeitumgebung eingesetzt. Als Build Werkzeug 
-kommt [Gradle](https://gradle.org/) zum Einsatz. Der gesamte Quellcode wird mit Hilfe des Versionierungssystem [Git](https://git-scm.com/) auf der Github Platform verwaltet. Das Projekt ist öffentich [hier](https://github.com/eichstaedtk/handschriften-graphviewer/tree/master/src/main/java/de/eichstaedt/handschriftengraphviewer) verfügbar.  
+kommt [Gradle](https://gradle.org/) zum Einsatz. Der gesamte Quellcode wird mit Hilfe des Versionierungssystem [Git](https://git-scm.com/) auf der Github Platform verwaltet. Das Projekt ist öffentlich [hier](https://github.com/eichstaedtk/handschriften-graphviewer/tree/master/src/main/java/de/eichstaedt/handschriftengraphviewer) zugänglich.  
 
 Um die relevanten Datenbanksystem zur Verfügung zu stellen haben wir uns entschieden [Docker](https://www.docker.com/) als Container Technologie zu verwenden. So konnten wir sehr leicht eine relationale Postgres Datenbank
 und eine Neo4J Graphendatenbank anbinden. Um die Daten in diesen Systemen zu persistieren, wurden die Objekt Graph Mapper (OGM) Bibliothek [Spring Data Neo4J](https://spring.io/guides/gs/accessing-data-neo4j/) und Objekt Relational Mapper (ORM) Bibliothek [Spring Data JPA](https://spring.io/projects/spring-data) verwendet. 
