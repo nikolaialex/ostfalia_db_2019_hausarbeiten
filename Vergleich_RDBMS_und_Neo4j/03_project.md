@@ -215,7 +215,7 @@ beschreibungsdokumenteRDBMSRepository.saveAll(l);
 ~~~~
       
 Im ersten Schritt muss die Implementierng via Dependency Injection einer Variable zugewiesen werden. Anschließend können die Entitäten mit save, delete, oder findBy Methoden in die entsprechende Datenbank 
-persistiert, gelöscht oder aktualisiert werden. Für die Verwendung der Standard Operation macht es hierbei keinen Unterschied, ob diese auf einer Graphendatenbank oder einem relationales DBMS durchgeführt werden.
+persistiert, gelöscht oder aktualisiert werden. Für die Verwendung der CRUD Operationen macht es hierbei keinen Unterschied, ob diese auf einer Graphendatenbank oder einem relationales DBMS durchgeführt werden.
 
       
 ### 3.4.3 Queries für RDBMS und Graphdatenbank
