@@ -253,16 +253,16 @@ entsprechenden Freundeanzahl wird aufgezeigt, dass die Performance mit steigende
 ![Table 1 Performance](img/neo4jinaction_table1.png) 
 
 Ursache dafür ist nach Ansicht der Autoren, dass für jede Join Abfrage das kartesische Produkt der relevanten Tabelle durchgeführt wird, bevor anschließend die relevanten Daten gefiltert werden. 
-In dem oben dargestellt Fall bedeutet dies, dass ein 5-maliger Join mit derselben Tabelle mit 50.0000 Einträgen zu einer Tabelle mit 102.4 x 10 ^21 führt.  
+In dem oben dargestellt Fall bedeutet dies, dass ein 5-maliger Join mit derselben Tabelle mit 50.0000 Einträgen zu einer Tabelle mit 102.4 x 10 ^21 Zeilen führt.  
 
-Ein Vergleich mit denselben Daten und Abfragen auf Basis einer Neo4J Graphendatenbank zeigt folgendes Ergebnis: 
+Ein Vergleich mit denselben Daten und Abfragen auf Basis einer Neo4J Graphendatenbank zeigt diese folgendes Ergebnis: 
 
 ![Table 2 Performance](img/neo4jinaction_table2.png)
 
 Ursache für die nahezu gleichbleibende gute Performance ist die Tatsache, dass innerhalb der Graphendatenbank zur Ermittlung des Ergebnisses Knoten abgelaufen werden. Nicht relevante Knoten werden wieder verworfen. So bleibt bei gleicher Ergebnismenge die Abfragegeschwindigkeit 
 nahezu gleich, obwohl mehr Knoten überprüft werden müssen.
 
-Um nun für unser praktisches Beispiel vergleichbare Untersuchungen machen zu können mussten wir Testdaten erzeugen. Dafür haben wir 1000 Beschreibungsdokumente erzeugt, welche wir mit jeweils 10 Dokumentelementen mit jeweils 5 Kindelementen erzeugt haben. Jedes Dokumentenelement ist dabei wiederum ein Kindelement des vorherigen Elementes. Eine Testbeschreibung ist in nachfolgender Grafik dargestellt: 
+Um nun für unser praktisches Beispiel vergleichbare Untersuchungen machen zu können mussten wir Testdaten erzeugen. Dafür haben wir eine bestimmte Anzahl an Beschreibungsdokumente erzeugt, welche wir mit jeweils 10 Dokumentelementen mit jeweils 5 Kindelementen erzeugt haben. Jedes Dokumentenelement ist dabei wiederum ein Kindelement des vorherigen Elementes. Eine Testbeschreibung ist in nachfolgender Grafik dargestellt: 
 
 <img src="img/testdaten_performance.svg" width=850>
 
