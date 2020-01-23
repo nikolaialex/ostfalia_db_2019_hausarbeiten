@@ -4,7 +4,7 @@ Wintersemester 2019/2020
 Modul:          Datenbanktechnologien  
 Prüfer:         Dipl.-Inf. Nikolai Alex  
 
-Dieser Bericht thematisiert die Gleichheiten und Unterschiede relationaler Datenbanksysteme im Vergleich mit dem Graphendatenbanksystem Neo4j.
+Dieser Bericht thematisiert die Gemeinsamkeiten und Unterschiede relationaler Datenbanksysteme im Vergleich mit dem Graphendatenbanksystem Neo4j.
 
 ## Autoren
 
