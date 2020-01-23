@@ -56,9 +56,9 @@ An diesem Beispiel ist bereits zu erkennen, dass die SQL Query etwas aufwendiger
 SQL:  
 SELECT beschreibungen.id,signatur,titel,koerperschaft.name,orte_name,e.name FROM beschreibungen
 LEFT JOIN koerperschaft ON buchbinder_name = koerperschaft.name
-LEFT JOIN beschreibungen_orte on beschreibungen.id = beschreibungen_orte.beschreibungsdokument_id
-LEFT JOIN beschreibungen_bestandteile bb on beschreibungen.id = bb.beschreibungsdokument_id
-LEFT JOIN elemente e on bb.bestandteile_id = e.id
+LEFT JOIN beschreibungen_orte ON beschreibungen.id = beschreibungen_orte.beschreibungsdokument_id
+LEFT JOIN beschreibungen_bestandteile bb ON beschreibungen.id = bb.beschreibungsdokument_id
+LEFT JOIN elemente e ON bb.bestandteile_id = e.id
 WHERE beschreibungen.id = '31275197'
 ~~~~
 
