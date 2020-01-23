@@ -16,3 +16,6 @@ Large Shared Data Banks, Communications of the ACM, Volume 13, Number 6.
 * Aleksa Vukotic and Nicki Watt with Tareq Abedrabbo, Dominic Fox, and Jonas Partner (2014): Neo4j in action, Manning Publications, New York.
 
 * Quackit (2019): Neo4j – Create an index using cypher, [online] https://www.quackit.com/neo4j/tutorial/neo4j_create_an_index_using_cypher.cfm, [26.12.2019].
+---
+| [<< Fazit](05_fazit.md) | Literatur |
+|------------------------------------|------------|
