@@ -8,8 +8,10 @@ Zum durchführen der Übung müssen einige Vorraustzungen erfüllt werden bzw. m
 **ACHTUNG:** Bei dem von mir eingesetzten Betriebssystem handelt es sich um die Linux Distribution **Ubuntu**. Für andere Betriebssystem wie Windows oder MacOS sind zahlreiche Installationsanweisungen für die eingesetzten Tools im Internet vorhanden. 
 
 ## Python 3
-<img style="float:right;" src="img/python-logo.png"></img>
+
 Bei [Python](https://www.python.org/) handelt es sich um eine höhere, interpretierte Programmiersprache, die sich vor allem durch Einfachheit und gute Lesbarkeit auszeichnet. 
+
+![python](img/python-logo.png)
 
 ### Module
 Python zeichnet sich durch seine Modularität aus. So ist es relativ einfach möglich, bereits vorhandene Klassen und Funktionen zu verwenden. Folgende Module müssen zur Ausführung der Skripte installiert sein. 
@@ -54,11 +56,10 @@ Nach dem die technischen Vorrausetzungen geschaffen wurde kann nun begonnen werd
 
 
 # Start praktische Übung
-- See `create-db.py` for more details on how the `demo.db` is built.
+
 - [Spatialite Documentation](http://www.gaia-gis.it/gaia-sins/spatialite-sql-4.3.0.html)
 - [Well-known text representation of geometry](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)
 - [Kepler GL Jupyter](https://github.com/keplergl/kepler.gl/blob/master/docs/keplergl-jupyter/user-guide.md)
-
 
 ```python
 import os
