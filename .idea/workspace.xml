@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,23 +68,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="833">
-                <caret line="318" column="185" selection-start-line="318" selection-start-column="185" selection-end-line="318" selection-end-column="185" />
+              <first_editor relative-caret-position="-574">
+                <caret line="317" column="36" selection-start-line="317" selection-start-column="36" selection-end-line="317" selection-end-column="36" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="34">
+                <caret line="2" column="373" selection-start-line="2" selection-start-column="373" selection-end-line="2" selection-end-column="373" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -172,6 +174,7 @@
         <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_allgemein.md" />
         <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" />
         <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md" />
+        <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md" />
       </list>
     </option>
   </component>
@@ -300,21 +303,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="44369000" />
-    </task>
-    <task id="LOCAL-00040" summary="Add Testdata Image">
-      <created>1578423856934</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1578423856934</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Add Testdata Image">
-      <created>1578423916528</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1578423916528</updated>
+      <workItem from="1576920728886" duration="45152000" />
     </task>
     <task id="LOCAL-00042" summary="Add Testdata Image">
       <created>1578429397912</created>
@@ -645,11 +634,25 @@
       <option name="project" value="LOCAL" />
       <updated>1579810695531</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Korrektur REchtschreibung">
+      <created>1579810937373</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1579810937373</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Korrektur REchtschreibung">
+      <created>1579811810511</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1579811810511</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66640000" />
+    <option name="totallyTimeSpent" value="67423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -807,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/00-1_title.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -878,8 +873,18 @@
     <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="833">
-            <caret line="318" column="185" selection-start-line="318" selection-start-column="185" selection-end-line="318" selection-end-column="185" />
+          <first_editor relative-caret-position="-574">
+            <caret line="317" column="36" selection-start-line="317" selection-start-column="36" selection-end-line="317" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="34">
+            <caret line="2" column="373" selection-start-line="2" selection-start-column="373" selection-end-line="2" selection-end-column="373" />
           </first_editor>
           <second_editor />
         </state>
