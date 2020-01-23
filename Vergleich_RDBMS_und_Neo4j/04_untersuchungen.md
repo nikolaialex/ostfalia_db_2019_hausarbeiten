@@ -86,10 +86,10 @@ WHERE beschreibungen.id = '31275197'
 SQL:   
 SELECT DISTINCT beschreibungen.id,signatur,titel,koerperschaft.name as buchbinder,orte_name,e.name as element, p.von_jahr, p.bis_jahr, p.beteiligte_name FROM beschreibungen
 LEFT JOIN koerperschaft ON buchbinder_name = koerperschaft.name
-LEFT JOIN beschreibungen_orte on beschreibungen.id = beschreibungen_orte.beschreibungsdokument_id
-LEFT JOIN beschreibungen_bestandteile bb on beschreibungen.id = bb.beschreibungsdokument_id
-LEFT JOIN elemente e on bb.bestandteile_id = e.id
-LEFT JOIN provenienz p on beschreibungen.id = p.beschreibungsdokument_id
+LEFT JOIN beschreibungen_orte ON beschreibungen.id = beschreibungen_orte.beschreibungsdokument_id
+LEFT JOIN beschreibungen_bestandteile bb ON beschreibungen.id = bb.beschreibungsdokument_id
+LEFT JOIN elemente e ON bb.bestandteile_id = e.id
+LEFT JOIN provenienz p ON beschreibungen.id = p.beschreibungsdokument_id
 WHERE beschreibungen.id = '31275197'
 ~~~~
 <table border="1" style="border-collapse:collapse">
