@@ -6,13 +6,13 @@ Auch über diese Bibliotheken hinaus gibt es hunderte von Open Source Bibliothek
 
 Vorab sei erwähnt, dass die im Folgenden zu erklärenden Teile einen der größten Vorteile von Spark bilden: die Möglichkeit, unterschiedliche Prozesstypen nahtlos und eng beieinander liegend zu erledigen. Beispielsweise kann man Daten aus einem Datenstrom in Echtzeit auffangen und direkt per Machine Learning weiterverarbeiten. Gleichzeitig können Analysten SQL-Abfragen auf den resultierenden Daten ausführen. Data Scientists können über die Python shell auf dieselben Daten zugreifen und Ad Hoc Analysen durchführen. Und all das während das IT-Team nur ein einziges System zu warten hat.
 
-Abbildung 5.6 zeigt die Ergebnisse einer Databricks-Umfrage aus dem Jahr 2016. Demnach nutzen 62% der Befragten mindestens zwei Programmiersprachen und 38% zwei der Spark Komponenten - ein starker Indikator, dass in der Verarbeitung von Big Data sehr häufig mehrere Programmiersprachen sowie Komponenten zum Einsatz kommen und gleichzeitig ein Indiz für die Beliebtheit von Spark.
+Darstellung 5.6 zeigt die Ergebnisse einer Databricks-Umfrage aus dem Jahr 2016. Demnach nutzen 62% der Befragten mindestens zwei Programmiersprachen und 38% zwei der Spark Komponenten - ein starker Indikator, dass in der Verarbeitung von Big Data sehr häufig mehrere Programmiersprachen sowie Komponenten zum Einsatz kommen und gleichzeitig ein Indiz für die Beliebtheit von Spark.
 
 ![Aufbau von Apache Spark](../images/5_9.png)<br>
-*Abbildung 5.5: Aufbau von Apache Spark, [[5.8](https://databricks.com/spark/getting-started-with-apache-spark)]*
+*Darstellung 5.5: Aufbau von Apache Spark, [[5.8](https://databricks.com/spark/getting-started-with-apache-spark)]*
 
 !["Languages Used" und "Components Used"](../images/5_10.png)<br>
-*Abbildung 5.6: Where Spark Shines, [[5.10](http://pages.databricks.com/rs/094-YMS-629/images/2016_Spark_Infographic.pdf)]*
+*Darstellung 5.6: Where Spark Shines, [[5.10](http://pages.databricks.com/rs/094-YMS-629/images/2016_Spark_Infographic.pdf)]*
 
 ## 5.2.4.1 Spark Core
 
@@ -32,6 +32,6 @@ Mllib / SparkML ermöglicht Maschinelles Lernen in Spark. Verschiedene Algorithm
 
 ## 5.2.4.5 GraphX
 
-Diese Bibliothek stellt Funktionalitäten zur Verfügung, um Graphen (zum Beispiel Netzwerk von Freunden auf Social Media) zu manipulieren. In Kapitel XXX) haben wir bereits Neo4J kennengelernt, das auch zur Verarbeitung von Graphendaten dient.
+Diese Bibliothek stellt Funktionalitäten zur Verfügung, um Graphen (zum Beispiel Netzwerk von Freunden auf Social Media) zu manipulieren. In Kapitel [5.1.1 Neo4J](./Neo4J.md) wurde bereits Neo4J vorgestellt, das auch zur Verarbeitung von Graphendaten dient.
 
 [Zurück zu Funktionsweise](./5_2_3_Funktionsweise.md) || [Weiter zu Praxis](./5_2_5_Praxis.md)
