@@ -229,7 +229,7 @@ Für die Formulierung einer Cypher-Anfrage hingegen, benötigt man nicht zwingen
 
 ## 4.1 Performance ##
 
-Im Rahmen dieser Arbeit möchten wir eine bereits durchgeführte Untersuchungen zu rekursiven Abfragen in einer MySQL und einer Neo4J Datenbank hinsichtlich der Abfragegeschwindigkeit evaluieren. Die Untersuchung wird im Buch Neo4J in Action im Kapitel 1.4 "SQL JOINS VERSUS GRAPH TRAVERSAL ON A LARGE SCALE" als ein Datenexperiment vorgestellt, welches SQL Join Queries mit einer ∆Graph Traversal Queries vergleicht. Das Testdatenset ist
+Im Rahmen dieser Arbeit möchten wir eine durch die Autoren des Buches "Neo4J in Action" Aleksa Vukotic und Nicki Watt bereits durchgeführte Untersuchungen zu rekursiven Abfragen in einer MySQL und einer Neo4J Datenbank hinsichtlich der Abfragegeschwindigkeit evaluieren. Die Untersuchung wird im Buch Neo4J in Action im Kapitel 1.4 "SQL JOINS VERSUS GRAPH TRAVERSAL ON A LARGE SCALE" als ein Datenexperiment vorgestellt, welches SQL Join Queries mit einer Graph Traversal Queries vergleicht. Das Testdatenset ist
 in diesem Beispiel sehr einfach aufgebaut. Es gibt eine Tabelle mit den Daten der Personen und eine Tabelle in welcher die Freundschaftsbeziehung zur jeweiligen Person festgehalten ist. 
 
 ![Testdata Neo4J in Action](img/neo4jinaction-testdataset.png)
