@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,7 +84,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="34">
-                <caret line="2" column="373" selection-start-line="2" selection-start-column="373" selection-end-line="2" selection-end-column="373" />
+                <caret line="2" column="1047" selection-start-line="2" selection-start-column="1047" selection-end-line="2" selection-end-column="1047" />
               </first_editor>
               <second_editor />
             </state>
@@ -303,14 +302,7 @@
       <workItem from="1574520720467" duration="485000" />
       <workItem from="1574588975854" duration="18618000" />
       <workItem from="1576919779777" duration="490000" />
-      <workItem from="1576920728886" duration="45152000" />
-    </task>
-    <task id="LOCAL-00042" summary="Add Testdata Image">
-      <created>1578429397912</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1578429397912</updated>
+      <workItem from="1576920728886" duration="45323000" />
     </task>
     <task id="LOCAL-00043" summary="Add Test Results">
       <created>1578515631131</created>
@@ -648,11 +640,18 @@
       <option name="project" value="LOCAL" />
       <updated>1579811810511</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Korrektur REchtschreibung">
+      <created>1579811863141</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1579811863141</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67423000" />
+    <option name="totallyTimeSpent" value="67594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
@@ -884,7 +883,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="34">
-            <caret line="2" column="373" selection-start-line="2" selection-start-column="373" selection-end-line="2" selection-end-column="373" />
+            <caret line="2" column="1047" selection-start-line="2" selection-start-column="1047" selection-end-line="2" selection-end-column="1047" />
           </first_editor>
           <second_editor />
         </state>
