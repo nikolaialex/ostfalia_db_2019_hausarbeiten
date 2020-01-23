@@ -232,7 +232,7 @@ In diesem Kapitel sollen primär die Befehle zur Abfrage mit denen der Graphenda
 Grundsätzlich müssen mit dem Einsatz von Spring Data die einfachen Befehle zur Abfragen und Manipulation nicht mehr selbst geschrieben werden. Wie im vorhergehenden Kapitel beschrieben steht dafür das CRUDRepository zur Verfügung. Allerdings bietet Spring Data 
 für beide Datenbanksysteme die Möglichkeit, eigene Queries zu formulieren. 
 
-Nachfolgendes Codebeispiel zeigt die Implementierung einer CRUD und einer nativen Query einmal für ein RDBMS und einmal für ein Graphendatenbanksystem. 
+Nachfolgendes Codebeispiel zeigt die Implementierung einer Query by Name und einer nativen Query einmal für ein RDBMS und einmal für ein Graphendatenbanksystem. 
 ~~~~java
 public interface BeschreibungsdokumenteRDBMSRepository extends CrudRepository<Beschreibungsdokument,String> {
 
