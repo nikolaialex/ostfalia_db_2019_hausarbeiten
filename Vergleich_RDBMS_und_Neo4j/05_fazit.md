@@ -6,6 +6,8 @@ Die Performance einer Neo4j-Datenbank kann durch die Vergabe von Indizes beeintr
 
 Insgesamt lässt sich festhalten, dass beide Systeme mehr gemeinsam, als ursprünglich vermutet wurde. So verfolgen beide das ACID-Theorem. Die Konfiguration der Datenbanken ist auch ähnlich gewesen.
 
-
+---
+| [<< Untersuchungen](04_untersuchungen.md) | Fazit | [Literatur >>](06_literature.md) |
+|------------------------------------|------------|-------------------------------------|
 
 

@@ -338,3 +338,6 @@ Automatische Anpassungen am Schema sind weder für RDBMS, noch für Graphendaten
 [Liquibase](https://www.liquibase.org/). Nur das Tool Liquibase bietet Unterstützung für die Änderungen in einer [Graphendatenbank](https://www.liquigraph.org/).   
 
 RDBMS Strukturen sind wesentlich starrer und aufwendiger zu betreuen als das Schema einer Graphendatenbank. Dies gilt auch für den Einsatz mit Hilfe eines Objektmappers. 
+---
+| [<< Allgemeine Vorstellung](02_allgemein.md) | Projektvorstellung | [Untersuchungen >>](04_untersuchungen.md) |
+|------------------------------------|------------|-------------------------------------|

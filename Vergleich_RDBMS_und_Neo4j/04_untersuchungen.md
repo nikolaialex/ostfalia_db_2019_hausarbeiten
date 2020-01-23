@@ -402,3 +402,6 @@ Für die OMG Bibliothek gibt es hierbei kaum Werte die eingestellt werden könne
     spring.jpa.properties.hibernate.order_updates=true
     
 Mit Hilfe dieser Einstellungen können Massendaten schneller in das RDBMS geladen werden, da diese im Batch Modus verarbeitet werden. 
+---
+| [<< Projektvorstellung](03_project.md) | Untersuchungen | [Fazit >>](05_fazit.md) |
+|------------------------------------|------------|-------------------------------------|
