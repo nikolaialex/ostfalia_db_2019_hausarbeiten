@@ -9,10 +9,10 @@ Vorab sei erwähnt, dass die im Folgenden zu erklärenden Teile einen der größ
 Darstellung 5.6 zeigt die Ergebnisse einer Databricks-Umfrage aus dem Jahr 2016. Demnach nutzen 62% der Befragten mindestens zwei Programmiersprachen und 38% zwei der Spark Komponenten - ein starker Indikator, dass in der Verarbeitung von Big Data sehr häufig mehrere Programmiersprachen sowie Komponenten zum Einsatz kommen und gleichzeitig ein Indiz für die Beliebtheit von Spark.
 
 ![Aufbau von Apache Spark](../images/5_9.png)<br>
-*Darstellung 5.5: Aufbau von Apache Spark, [[5.8](https://databricks.com/spark/getting-started-with-apache-spark)]*
+*Darstellung 5.5: Aufbau von Apache Spark, [[5.20] https://databricks.com/spark/getting-started-with-apache-spark]*
 
 !["Languages Used" und "Components Used"](../images/5_10.png)<br>
-*Darstellung 5.6: Where Spark Shines, [[5.10](http://pages.databricks.com/rs/094-YMS-629/images/2016_Spark_Infographic.pdf)]*
+*Darstellung 5.6: Where Spark Shines, [[5.21] http://pages.databricks.com/rs/094-YMS-629/images/2016_Spark_Infographic.pdf]*
 
 ## 5.2.4.1 Spark Core
 

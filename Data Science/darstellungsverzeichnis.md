@@ -32,3 +32,17 @@ Abbildung 29:
 Abbildung 30:
 Abbildung 31:
 Abbildung 32:
+Darstellung 5.1: The Complex World of Big Data
+Darstellung 5.2: Logistic regression in Hadoopand Spark
+Darstellung 5.3: Arbeitsumgebung von Spark
+Darstellung 5.4: Funktionsweise: Anwender-Master-Worker
+Darstellung 5.5: Aufbau von Apache Spark
+Darstellung 5.6: Where Spark Shines
+Darstellung 5.7: Databricks 1
+Darstellung 5.8: Databricks 2
+Darstellung 5.9: Databricks 3
+Darstellung 5.10: Databricks 4
+Darstellung 5.11: Databricks 5
+Darstellung 5.12: Databricks 6
+Darstellung 5.13: Databricks 7
+Darstellung 5.14: Databricks 8

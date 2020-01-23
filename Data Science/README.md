@@ -40,5 +40,5 @@ Eine Ausarbeitung zum Thema Data Science.
       5. [Praxisbeispiel Apache Spark](./Spark/5_2_5_Praxis.md)
 6. [Fazit](fazit.md)
 7. [Darstellungsverzeichnis](darstellungsverzeichnis.md)
-8. [Literaturverzeichnis](literaturverzeichnis.md)
+8. [Literaturverzeichnis](Literaturverzeichnis.md)
 9. [Videoverzeichnis](videoverzeichnis.md)

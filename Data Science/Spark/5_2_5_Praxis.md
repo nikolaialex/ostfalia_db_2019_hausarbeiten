@@ -29,7 +29,7 @@ Als nächstes soll angezeigt werden, wieviele Worker („partitions“) zum Eins
 
 Mit den nächsten Aktionen wird der vorliegende Text in eine Liste mit einzelnen Wörtern umgewandelt und Stopwords werden herausgefiltert. Die übrig gebliebenen Wörter werden gecached – unsere erste Transformation, die als Ergebnis keine Ausgabe liefert sondern ein neues RDD.
 
-![Databricks 4](../images/5_14.png)
+![Databricks 4](../images/5_14.png)<br>
 *Darstellung 5.10: Databricks 4*
 
 Jetzt können die Wörter absteigend nach Häufigkeit sortiert und in SQL-Tabellenform überführt werden.

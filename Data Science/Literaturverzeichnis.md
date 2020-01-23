@@ -70,9 +70,9 @@
 
 [5.5] https://github.com/nikolaialex/ostfalia_db_2016_hausarbeiten/tree/master/data_science/Jevgeni_Jostin
 
-[5.6] Data Science Vorlesung von Patrick Baier am 04.07.2019
+[5.6] Patrick Baier, Volesung: Data Science Vorlesung, 04.07.2019
 
-[5.7] Data Science Vorlesung von Stefan Edlich am 21.06.2018
+[5.7] Stefan Edlich, Volesung: Data Science Vorlesung, 21.06.2018
 
 [5.8] https://www.linkedin.com/learning/apache-spark-essential-training/next-steps?u=68873474
 
@@ -95,3 +95,9 @@
 [5.17] http://pages.databricks.com/rs/094-YMS-629/images/2016_Spark_Infographic.pdf
 
 [5.18] https://databricks.com/sparkaisummit
+
+[5.19] https://www.gartner.com/en/information-technology/glossary/big-data
+
+[5.20] https://databricks.com/spark/getting-started-with-apache-spark
+
+[5.21] http://pages.databricks.com/rs/094-YMS-629/images/2016_Spark_Infographic.pdf
