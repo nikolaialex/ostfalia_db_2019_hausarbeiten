@@ -29,7 +29,9 @@ Service | Beschreibung | Darstellung |
 | Software as a Service (SaaS) | SaaS ist ein Distributionsmodell für Anwendungen via Webbrowser und wird nur als Teilbereich in der Cloud verstanden. Die angeforderten Applikationen sind nie direkt auf dem Gerät des Nutzers vorhanden. | ![Software as a Service (SaaS)](../images/SaaS.png) |
 
 *Abbildung 4.4: Screenshot zum Service IaaS [[10](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]*
+
 *Abbildung 4.5: Screenshot zum Service PaaS [[10](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]*
+
 *Abbildung 4.6: Screenshot zum Service SaaS [[10](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]*
 
 [Zurück zu API](./API.md) || [Weiter zu Blockchain](./Blockchain.md)
