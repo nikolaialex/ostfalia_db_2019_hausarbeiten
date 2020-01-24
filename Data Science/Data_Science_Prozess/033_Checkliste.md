@@ -27,3 +27,6 @@ Der Fortschritt beim Training des Modells muss dokumentiert, visualisiert und au
 
 ### 3.3.9 Monitoring 
 Auch nach der Produktivsetzung muss die Leistungen dokumentiert werden, idealerweise in einem Zentralen Leitstand (Dashboard).
+
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 3.2 Der Prozess](./032_Der_Prozess.md) | Der Prozess | [4 Technologien &gt;&gt;](../Technologien/Technologien.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

@@ -58,8 +58,5 @@ Das rückt auch die Dokumentation wieder in den Fokus. Wenn andere Kollegen die 
 Um eine konstante Qualitätskontrolle zu ermöglichen, sollten alle Anfragen und Ergebnisse protokolliert werden. Mit diesen Daten kann eine die Genauigkeit und die Justierung im zeitlichen Verlauf kontrolliert werden.
 Alle Aufgaben sollten weiterhin dokumentiert werden, sei es, dass neue Algorithmen oder Daten ausprobiert werden oder einmalige Zusatzauswertungen vorgenommen werden müssen. Alles sollte an einem zentralen Ort mit einer standardisierten Struktur abgelegt werden.
 
-| [&lt;&lt;&lt; Inhaltsverzeichnis](./readme.md) | [&lt;&lt; 3.1 Daten Management](./Data_Science_Prozess/031_Daten_Management.md) | Der Prozess | [Checkliste &gt;&gt;](./Data_Science_Prozess/033_Checkliste.md) |
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 3.1 Daten Management](./031_Daten_Management.md) | Der Prozess | [3.3 Checkliste &gt;&gt;](./033_Checkliste.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|
-
-
-[Zurück zu 3.2 Der Prozess](#3.2_Der_Prozess) | [Weiter zu 3.3 Checkliste](#3.3_Checkliste)

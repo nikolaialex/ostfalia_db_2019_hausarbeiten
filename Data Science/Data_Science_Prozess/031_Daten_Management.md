@@ -41,4 +41,5 @@ Im Geschäftsumfeld wird weiterhin stark auf das Data Warehouse gesetzt. Diese w
 
 **Darstellung 3.1:** Tabelle zur Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake 
 
-[Zurück zu 3.1 Daten Management](#3.1_Daten_Management) || [Weiter zu 3.2 Der Prozess](#3.2_Der_Prozess)
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 3 Data Science Prozess](./030_Data_Science_Prozess.md) | Daten Management | [3.2 Der Prozess &gt;&gt;](./032_Der_Prozess.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|
