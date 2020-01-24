@@ -25,5 +25,5 @@ Um Neo4J selbst auszuprobieren, kann mit Hilfe der [Get Started Dokumentation](h
 
 Die Autoren haben sich dabei für den Neo4J Browser entschieden, da hier lediglich eine Registrierung von Nöten war. Im [folgenden Kapitel](./Neo4j-Example.md) wurde dafür ein Praxisbeispiel gewählt und dokumentiert.
 
-| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.1 Graph-Datenbanken](./Graphdatabase.md) | Neo4J | [5.1.2  Praxisbeispiel mit Neo4J Desktop](./Neo4j-Example.md) |
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.1 Graph-Datenbanken](./Graphdatabase.md) | Neo4J | [5.1.2  Praxisbeispiel mit Neo4J Desktop  &gt;&gt;](./Neo4j-Example.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

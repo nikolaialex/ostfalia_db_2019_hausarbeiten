@@ -4,5 +4,5 @@ In der vorliegenden Ausarbeitung geht es um das Thema Data Science. Neben einer 
 
 Der Bereich Data Science ist ein enorm großes Gebiet, welches im Zuge der Digitalisierung weiterhin stetig wachsen wird.
 
-| [&lt;&lt;&lt; Inhaltsverzeichnis](README.md) | [&lt;&lt; 5.2.4 Apache Spark - Praxis](./Spark/5_2_5_Praxis.md) | Fazit | [7 Darstellungsverzeichnis](darstellungsverzeichnis.md) |
+| [&lt;&lt;&lt; Inhaltsverzeichnis](README.md) | [&lt;&lt; 5.2.4 Apache Spark - Praxis](./Spark/5_2_5_Praxis.md) | Fazit | [7 Darstellungsverzeichnis &gt;&gt;](darstellungsverzeichnis.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

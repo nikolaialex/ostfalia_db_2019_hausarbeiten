@@ -10,5 +10,5 @@ Spark unterscheidet bei Operationen auf Datenstrukturen generell zwischen grunds
 
 Des Weiteren bietet Spark die Datenstruktur DataFrame (DF), die wir in ähnlicher Form bereits aus Python (pandas) kennen, an. Die jüngste Datenstruktur heißt DataSet (DS) – eine Kombination aus RDD und DF. Daten können als RDD angelegt und wie ein DF bearbeitet werden. Diese Datenstruktur gewinnt an Bedeutung und wird wohl auch in Zukunft noch wichtiger werden.
 
-| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.2.2 Vorteile](./5_2_2_Vorteile.md) | Funktionsweise | [5.2.4 Architektur](./5_2_4_Architektur.md) |
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.2.2 Vorteile](./5_2_2_Vorteile.md) | Funktionsweise | [5.2.4 Architektur &gt;&gt;](./5_2_4_Architektur.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

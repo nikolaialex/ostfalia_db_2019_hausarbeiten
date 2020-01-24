@@ -96,6 +96,6 @@ Darstellung 1: -> Janet
 
 [Darstellung 5.2.14](./Spark/5_2_5_Praxis.md#Darstellung_5214): Databricks 8
 
-| [&lt;&lt;&lt; Inhaltsverzeichnis](README.md) | [&lt;&lt; 6 Fazit](fazit.md) | Darstellungsverzeichnis
+| [&lt;&lt;&lt; Inhaltsverzeichnis](README.md) | [&lt;&lt; 6 Fazit &gt;&gt;](fazit.md) | Darstellungsverzeichnis
  | [8 Literaturverzeichnis](Literaturverzeichnis.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

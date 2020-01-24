@@ -26,5 +26,5 @@ Im Gegensatz zu relationalen Datenbanken, gehören Graphdatenbanken zur Familie 
 
 NoSQL steht dabei für *Not only SQL*. Mehr über NoSQL kann unter <https://aws.amazon.com/de/nosql/> nachgelesen werden.
 
-| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5 Datenbanken](./Datenbanken.md) | Graph-Datenbanken | [5.1.1 Neo4J](./Neo4J.md) |
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5 Datenbanken](./Datenbanken.md) | Graph-Datenbanken | [5.1.1 Neo4J &gt;&gt;](./Neo4J.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

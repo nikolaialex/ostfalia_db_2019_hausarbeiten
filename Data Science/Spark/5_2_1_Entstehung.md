@@ -13,5 +13,5 @@ Für die Verarbeitung von Big Data kommen verschiedene Tools und Programmierspra
 ![The Complex World of Big Data](../images/5_4.jpg)<br>
 ***Darstellung 5.2.1:** The Complex World of Big Data, [5.2.2](https://towardsdatascience.com/a-beginners-guide-to-apache-spark-ff301cb4cd92)*
 
-| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.1.2 Praxisbeispiel mit Neo4J Desktop](../Datenbanktechnologien/Neo4j-Example.md) | Apache Spark - Entstehung | [5.2.2 Vorteile](./5_2_2_Vorteile.md) |
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.1.2 Praxisbeispiel mit Neo4J Desktop](../Datenbanktechnologien/Neo4j-Example.md) | Apache Spark - Entstehung | [5.2.2 Vorteile &gt;&gt;](./5_2_2_Vorteile.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|
