@@ -20,7 +20,7 @@ Eine Ausarbeitung zum Thema Data Science.
    3. [Big Data](tbd.md)
    4. [Machine Learning](tbd.md)
 3. [Data Science Prozess](./Data_Science_Prozess/030_Data_Science_Prozess.md)
-   1. [Daten Management](./Data_Science_Prozess/031_Daten Management.md)
+   1. [Daten Management][./Data_Science_Prozess/031_Daten Management.md]
    2. [Der Prozess](./Data_Science_Prozess/032_Der_Prozess.md)
    3. [Checkliste](./Data_Science_Prozess/033_Checkliste.md)
 4. [Technologien](./Technologien/Technologien.md)
