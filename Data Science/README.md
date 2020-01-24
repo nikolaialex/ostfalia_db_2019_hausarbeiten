@@ -41,4 +41,3 @@ Eine Ausarbeitung zum Thema Data Science.
 6. [Fazit](fazit.md)
 7. [Darstellungsverzeichnis](darstellungsverzeichnis.md)
 8. [Literaturverzeichnis](Literaturverzeichnis.md)
-9. [Videoverzeichnis](videoverzeichnis.md)

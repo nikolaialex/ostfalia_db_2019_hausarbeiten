@@ -1,6 +1,6 @@
 # 5.2.2 Vorteile
 
-Spark selbst fasst die eigenen Vorteile zusammen als: „Speed“, „Ease of Use“, „Generality“ und „Runs Everywhere“ [5.11] (https://spark.apache.org/)
+Spark selbst fasst die eigenen Vorteile zusammen als: „Speed“, „Ease of Use“, „Generality“ und „Runs Everywhere“ [[5.2.11](https://spark.apache.org/)]
 
 Eine der stärksten Besonderheiten ist die In-Memory-Verarbeitung, wodurch Anwendungen spürbar beschleunigt werden. Spark selbst gibt eine über 100-fach schnellere Bearbeitung gegenüber Hadoop an. (vgl Darstellung 5.6) Dies ist möglich, da Spark das MapReduce erweitert um u.a. interaktive Abfragen sowie die Verarbeitung von Datenströmen zu ermöglichen. Schnelligkeit ist bei der Verarbeitung großer Datenmengen enorm wichtig – hiervon hängt ab, ob man interaktiv in Echtzeit arbeiten kann oder je nach Komplexität Minuten beziehungsweise Stunden auf Ergebnisse warten muss.
 
@@ -12,10 +12,10 @@ Während andere Tools auch dafür eine Lösung anzubieten versuchen, wie die zu 
 
 All diese Faktoren haben dazu geführt, dass Spark zum “de facto”-Tool für jeden, an Datenanalyse / Big Data, interessierten Entwickler avanciert ist. Der Einstieg ist einfach und es kann problemlos zur Verarbeitung von enorm großen Mengen hochskaliert werden – unabhängig vom Ablageort der Daten.
 
-![Logistic regression in Hadoopand Spark](../images/5_6.png)<br>
-*Darstellung 5.2: Logistic regression in Hadoopand Spark, [[5.11] (https://spark.apache.org/)]*
+![Logistic regression in Hadoopand Spark](../images/5_6.png)
+*Darstellung 5.2.2: Logistic regression in Hadoopand Spark, [[5.2.11](https://spark.apache.org/)]*
 
-![Arbeitsumgebung von Spark](../images/5_7.png)<br>
-*Darstellung 5.3: Arbeitsumgebung von Spark, [[5.11] (https://spark.apache.org/)]*
+![Arbeitsumgebung von Spark](../images/5_7.png)
+*Darstellung 5.2.3: Arbeitsumgebung von Spark, [[5.2.11](https://spark.apache.org/)]*
 
 [Zurück zu Entstehung](./5_2_1_Entstehung.md) || [Weiter zu Funktionsweise](./5_2_3_Funktionsweise.md)

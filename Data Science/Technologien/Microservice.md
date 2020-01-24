@@ -1,7 +1,7 @@
 # 4.1 Architetkurmuster Microservice
 
 Rund 70 Prozent der europäischen und US-amerikanischen Unternehmen wollen ihre Softwaremonolithen aufbrechen und setzen dabei auf den Einsatz von Microservices.
-Microservices machen nicht nur die IT schneller und agiler, sondern steigern auch die Releases pro Woche um das Vierfache. [[1](https://www.computerwoche.de/a/microservices-machen-die-it-schneller-und-agiler,3329517)]
+Microservices machen nicht nur die IT schneller und agiler, sondern steigern auch die Releases pro Woche um das Vierfache. [[4.1](https://www.computerwoche.de/a/microservices-machen-die-it-schneller-und-agiler,3329517)]
 
 Eine Software soll dabei aus kleinen unabhängigen und eigenständigen (modularen) Services bestehen, die über sorgfältig und schlank definierte [APIs](./API.md) kommunizieren. Ein Microservice übernimmt also unabhängige und kleine Teilaufgaben und ist dabei nach außen hin isoliert.
 
@@ -29,11 +29,11 @@ Nachteile | Beschreibung |
 
 **Don't repeat yourself*
 
-Zwei weitere Nachteile sind, dass der Aufwand durch die Unabhängigkeit und Isolation erhöht wird und jeder Microservice einen eigenen Deployment-Prozess benötigt. [[2](https://aws.amazon.com/de/microservices/), [3](https://t3n.de/news/was-sind-eigentlich-microservices-1005903/)]
+Zwei weitere Nachteile sind, dass der Aufwand durch die Unabhängigkeit und Isolation erhöht wird und jeder Microservice einen eigenen Deployment-Prozess benötigt. [[4.2](https://aws.amazon.com/de/microservices/), [4.3](https://t3n.de/news/was-sind-eigentlich-microservices-1005903/)]
 
-Die folgende Abbildung stellt die Architektur eines Monolithen der Architektur von Microservices gegenüber [[4](https://www.redhat.com/de/topics/microservices/what-are-microservices)]:
+Die folgende Darstellung stellt die Architektur eines Monolithen der Architektur von Microservices gegenüber [[4.4](https://www.redhat.com/de/topics/microservices/what-are-microservices)]:
 ![Architekturgegenüberstellung Monolith vs. Microservices](../images/monolithic-vs-microservices.png)
-*Abbildung 4.1: Screenshot zur Gegenüberstellung von Monolithen versus Microservices [[4](https://www.redhat.com/de/topics/microservices/what-are-microservices)]*
+*Darstellung 4.1: Screenshot zur Gegenüberstellung von Monolithen versus Microservices [[4.4](https://www.redhat.com/de/topics/microservices/what-are-microservices)]*
 
 Ein Monolith ist eine Software-Architektur, bei der alle Prozesse in einem einzigen und untrennbaren sowie homogenen Gebilde verbunden sind. Bereits der Ausfall einer einzelnen Komponente kann zum Ausfall des gesamten Systems führen.
 

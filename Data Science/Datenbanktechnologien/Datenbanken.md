@@ -4,7 +4,7 @@ Wenn von Data Science gesprochen wird, dann geht es um den Schwerpunkt Daten. Di
 
 Der Marktführer der Graph-Datenbanken ist Neo4J, gefolgt von dem Apache-Projekt TinkerPop und schließlich [Apache Spark](../Spark/5_2_1_Entstehung.md), Amazon Neptune und SAP HANA.
 
-Demnach muss ein Data Scientist mit unterschiedlichen Datenbanksystemen zurechtkommen und zumindest sehr gute Kenntnisse der Datenbanksprache SQL (Structured Query Language) mitbringen. [[14](https://www.cio.de/a/was-ein-data-scientist-wirklich-koennen-muss,3577657), [15](https://www.bigdata-insider.de/big-data-datenbanken-a-718773/), [16](https://www.bigdata-insider.de/graph-datenbanken-a-887332/)]
+Demnach muss ein Data Scientist mit unterschiedlichen Datenbanksystemen zurechtkommen und zumindest sehr gute Kenntnisse der Datenbanksprache SQL (Structured Query Language) mitbringen. [[5.1](https://www.cio.de/a/was-ein-data-scientist-wirklich-koennen-muss,3577657), [5.2](https://www.bigdata-insider.de/big-data-datenbanken-a-718773/), [5.3](https://www.bigdata-insider.de/graph-datenbanken-a-887332/)]
 
 Bevor in den nächsten Kapiteln auf die Datenbanksysteme [Neo4J](./Neo4J.md) und [Apache Spark](../Spark/5_2_1_Entstehung.md) genauer eingegangen wird, soll zunächst die Begrifflichkeit [Graph-Datenbank](./Graphdatabase.md) erläutert werden.
 
