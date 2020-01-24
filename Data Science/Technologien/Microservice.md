@@ -11,7 +11,7 @@ Folgende Eigenschaften hat ein Microservice:
 
 - Spezialisierung - jeder Service löst ein konkretes Problem - sollte ein Service an Komplexität gewinnen, kann dieser in kleinere Services unterteilt werden
 
-Die Vorteile von Microservices überwiegen den Nachteilen, wie der nachfolgenden Auflistunge zu entnehmen ist:
+Die Vorteile von Microservices überwiegen den Nachteilen, wie der nachfolgenden Auflistunge zu entnehmen ist <a id="Darstellung_41"></a>:
 
 Vorteile | Beschreibung |
 | :----: | :----: |
@@ -22,18 +22,24 @@ Vorteile | Beschreibung |
 | Wiederverwendbarer Code | "Die Aufteilung der Software in kleine, klar definierte Module ermöglicht es Teams, Funktionen für verschiedene Zwecke zu nutzen. Ein für eine bestimmte Funktion geschriebener Service kann auch als Baustein für einen anderen Funktionsumfang verwendet werden. Dies ermöglicht es einer Anwendung, auf sich selbst zurückzugreifen, da Entwickler neue Funktionen erstellen können, ohne Code von Grund auf neu zu schreiben." |
 | Resilienz | "Die Serviceunabhängigkeit erhöht die Ausfallsicherheit einer Anwendung. In einer monolithischen Architektur kann der Ausfall einer einzelnen Komponente zum Ausfall der gesamten Anwendung führen. Mit Microservices überwinden Anwendungen einen kompletten Serviceausfall, indem sie die Funktionalität beeinträchtigen und nicht die gesamte Anwendung zum Absturz bringen." Somit bieten Microservices eine hohe Stabilität. |
 
+***Darstellung 4.1:** Tabelle mit Vorteilen und jeweiliger Beschreibung von Microservices*
+
+<a id="Darstellung_42"></a>
 Nachteile | Beschreibung |
 | :----: | :----: |
 | erhöhte Latenzzeit | Durch die Anzahl der verteilten Services und dem  Kommunikationsweg über verschiedene Server wird die Latenzzeit erhöht. |
 | Verletzung des DRY-Prinzip* | Durch die unabhängige Entwicklung der Teams, besteht die Gefahr, Codeabschnitte an mehreren Stellen wieder zu verwenden. |
 
+***Darstellung 4.2:** Tabelle mit Nachteilen und jeweiliger Beschreibung von Microservices*
+
 **Don't repeat yourself*
 
 Zwei weitere Nachteile sind, dass der Aufwand durch die Unabhängigkeit und Isolation erhöht wird und jeder Microservice einen eigenen Deployment-Prozess benötigt. [[4.2](https://aws.amazon.com/de/microservices/), [4.3](https://t3n.de/news/was-sind-eigentlich-microservices-1005903/)]
 
-Die folgende Darstellung stellt die Architektur eines Monolithen der Architektur von Microservices gegenüber [[4.4](https://www.redhat.com/de/topics/microservices/what-are-microservices)]:
+Die folgende Darstellung stellt die Architektur eines Monolithen der Architektur von Microservices gegenüber [[4.4](https://www.redhat.com/de/topics/microservices/what-are-microservices)] <a id="Darstellung_43"></a>:
+
 ![Architekturgegenüberstellung Monolith vs. Microservices](../images/monolithic-vs-microservices.png)
-*Darstellung 4.1: Screenshot zur Gegenüberstellung von Monolithen versus Microservices [[4.4](https://www.redhat.com/de/topics/microservices/what-are-microservices)]*
+***Darstellung 4.3:** Screenshot zur Gegenüberstellung von Monolithen versus Microservices [[4.4](https://www.redhat.com/de/topics/microservices/what-are-microservices)]*
 
 Ein Monolith ist eine Software-Architektur, bei der alle Prozesse in einem einzigen und untrennbaren sowie homogenen Gebilde verbunden sind. Bereits der Ausfall einer einzelnen Komponente kann zum Ausfall des gesamten Systems führen.
 
