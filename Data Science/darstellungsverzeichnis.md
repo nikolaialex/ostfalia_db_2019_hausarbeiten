@@ -53,7 +53,7 @@ Darstellung 5.1.14: Screenshot dreier Nodes und einer Beziehung
 
 Darstellung 5.1.15: Screenshot eines grafisch fertig erstellten Graphens
 
-Video 5.1.1: Was ist Neo4j? [[5.1.4](htps://www.youtube.com/watch?v=GM9bB4ytGao)]
+Video 5.1.1: Was ist Neo4j? [[5.1.4](https://www.youtube.com/watch?v=GM9bB4ytGao)]
 
 ## Apache Spark
 
