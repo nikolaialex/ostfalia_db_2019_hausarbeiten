@@ -26,8 +26,10 @@ Das erlaubt insbesondere Daten bereitzustellen für die noch kein Anwendungszwec
 ### 3.1.2 Data Warehouse
 Im Geschäftsumfeld wird weiterhin stark auf das Data Warehouse gesetzt. Diese werden als höchst zuverlässige Datenquelle gehandelt. Daher sind die Anforderungen an die Qualität der Strukturen und den Wahrheitsgehalt der Daten entsprechend hoch. Die Daten müssen vor der Aufnahme ins Data Warehouse entsprechend der Anforderungen gereinigt und strukturiert werden. Üblicherweise werden die Daten aus relationalen Datenbanksystemen extrahiert. Aus diesem Grund fällt der Nachteil der starren Strukturen weniger ins Gewicht. Der gesamte Prozess findet in einer Umgebung statt, was die Bedienung, Überwachung und Konsistenz vereinfacht. Ein weiterer Gewinn ist die Möglichkeit, dass auch Endanwender Abfragen und Reports erzeugen können. Zum einen weil die Umgebung dafür ausgelegt ist (Anwenderfreundliche GUI Oberfläche, Zugriffssteuerung) und zum anderen weil die Qualität der Daten ein Überschaubares Maß an Kenntnissen der Informatik benötigt.
 
-### 3.1.3 Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake
-<a id="Darstellung_31"></a>
+### 3.1.3 Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake <a id="Darstellung_31"></a>
+
+
+
 | Eigenschaften    | Data Warehouse                                                                                  | Data Lake                                                                                                        |
 |-------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | Daten              | Relational und transaktionsorientierte Datenbank eines Anwendungessystems oder Anwendung | Nicht-Relationale und relationale Daten aus verschiedensten Quellen |
