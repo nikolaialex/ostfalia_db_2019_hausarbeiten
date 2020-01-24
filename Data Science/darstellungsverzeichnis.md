@@ -3,7 +3,7 @@
 Darstellung 1: -> Janet
 ## Data Science Prozess
 
-[Darstellung 3.1:](./Data_Science_Prozess/031_Daten Management.md#3.1.3_Tabelle_Uebersicht_der_Eigenschaften) Tabelle zur Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake
+[Darstellung 3.1:](./Data_Science_Prozess/031_Daten Management.md#Darstellung_31) Tabelle zur Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake
 
 ## Technologien
 

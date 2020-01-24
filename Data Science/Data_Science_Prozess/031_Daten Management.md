@@ -36,6 +36,6 @@ Im Geschäftsumfeld wird weiterhin stark auf das Data Warehouse gesetzt. Diese w
 | Daten Qualität      | Akkurat gepflegte und strukturierte Daten die auch als Wahrheitsquelle dient (SPOT - Single Point of Truth)                             | Alle Arten von Daten die gepflegt und strukturiert sein können oder auch nicht                                                     |
 | Benutzer             | Business Analyst                                                                               | Data Scientists,  Data Developer und Business Analysts                                      |
 | Auswertungen         | Berichtslauf im Hintergrund, Business Intelligence und  Berichtsvisualisierungen                                                          | Machine Learning, Vohersagemodellierung, data discovery und Profiling                                             |
-**Darstellung 3.1:** Tabelle zur Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake <a id="3.1.3_Tabelle_Uebersicht_der_Eigenschaften"></a>
+**Darstellung 3.1:** Tabelle zur Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake <a id="Darstellung_31"></a>
 
 [Zurück zu 3.1 Daten Management](#3.1_Daten_Management) || [Weiter zu 3.2 Der Prozess](#3.2_Der_Prozess)
