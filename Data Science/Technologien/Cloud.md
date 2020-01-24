@@ -34,4 +34,5 @@ Service | Beschreibung | Darstellung |
 
 *Darstellung 4.6: Screenshot zum Service SaaS [[4.11](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]*
 
-[Zurück zu API](./API.md) || [Weiter zu Blockchain](./Blockchain.md)
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 4.2 Application Programming Interface](./API.md) | Cloud Computing | [4.4 Blockchain &gt;&gt;](./Blockchain.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

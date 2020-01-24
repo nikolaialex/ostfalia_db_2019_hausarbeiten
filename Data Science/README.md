@@ -24,8 +24,8 @@ Eine Ausarbeitung zum Thema Data Science.
    2. [Der Prozess](./Data_Science_Prozess/032_Der_Prozess.md)
    3. [Checkliste](./Data_Science_Prozess/033_Checkliste.md)
 4. [Technologien](./Technologien/Technologien.md)
-   1. [Microservices](./Technologien/Microservice.md)
-   2. [API](./Technologien/API.md)
+   1. [Architetkurmuster Microservice](./Technologien/Microservice.md)
+   2. [Application Programming Interface](./Technologien/API.md)
    3. [Cloud Computing](./Technologien/Cloud.md)
    4. [Blockchain](./Technologien/Blockchain.md)
 5. [Datenbanktechnologien](./Datenbanktechnologien/Datenbanken.md)
@@ -41,3 +41,9 @@ Eine Ausarbeitung zum Thema Data Science.
 6. [Fazit](fazit.md)
 7. [Darstellungsverzeichnis](darstellungsverzeichnis.md)
 8. [Literaturverzeichnis](Literaturverzeichnis.md)
+
+
+
+| [<<< Inhaltsverzeichnis](readme.md) | Einleitung | [Geometrische Formen >>](02_datatypes.md) |
+|-------------------------------------|------------|-------------------------------------|
+---

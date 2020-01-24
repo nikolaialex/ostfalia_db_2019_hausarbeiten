@@ -24,4 +24,5 @@ In der folgenden Darstellung ist eine Transaktion mit Hilfe des Blockchain-Verfa
 ![Blockchain Transaktion](../images/Blockchain.png)
 *Darstellung 4.7: Screenshot einer Transaktion mit Hilfe des Blockchain-Verfahrens [[4.20](https://www.bwi.de/news-blog/blog/blockchain-interview/)]*
 
-[Zurück zu Cloud Computing](./Cloud.md) | [Weiter zu Datenbanktechnologien](./../Datenbanktechnologien/Datenbanken.md)
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 4.3 Cloud Computing](./Cloud.md) | Blockchain | [5 Datenbanken &gt;&gt;](../Datenbanktechnologien/Datenbanken.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

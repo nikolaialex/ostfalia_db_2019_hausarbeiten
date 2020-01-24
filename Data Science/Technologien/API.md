@@ -24,4 +24,7 @@ Eine erste Dokumentation ist unter [docs/swagger.json](https://github.com/wesade
 
 REST steht dabei für REpresentational State Transfer und beschreibt die Art und Weise der Kommunikation zwischen verteilten Systemen. Unter REST-API ist also eine Programmierschnittstelle zu verstehen, die die Kommunikation zwischen Client und Server beschreibt und sich dabei an den Paradigmen und das Verhalten des World Wide Web (WWW) orientiert. [[4.7](https://www.cloudcomputing-insider.de/was-ist-eine-rest-api-a-611116/)]
 
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 4.1 Architetkurmuster Microservice](./Microservice.md) | Application Programming Interface | [4.3 Cloud Computing &gt;&gt;](./Cloud.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|
+
 [Zurück zu Microservices](./Microservice.md) || [Weiter zu Cloud Computing](./Cloud.md)
