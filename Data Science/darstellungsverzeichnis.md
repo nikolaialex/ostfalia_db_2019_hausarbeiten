@@ -1,4 +1,4 @@
-# 7 Abbildungsverzeichnis
+# 7 Darstellungsverzeichnis
 
 Darstellung 1: -> Janet
 ## Data Science Prozess

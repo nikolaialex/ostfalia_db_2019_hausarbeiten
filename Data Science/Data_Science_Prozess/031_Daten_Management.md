@@ -27,7 +27,7 @@ Das erlaubt insbesondere Daten bereitzustellen für die noch kein Anwendungszwec
 Im Geschäftsumfeld wird weiterhin stark auf das Data Warehouse gesetzt. Diese werden als höchst zuverlässige Datenquelle gehandelt. Daher sind die Anforderungen an die Qualität der Strukturen und den Wahrheitsgehalt der Daten entsprechend hoch. Die Daten müssen vor der Aufnahme ins Data Warehouse entsprechend der Anforderungen gereinigt und strukturiert werden. Üblicherweise werden die Daten aus relationalen Datenbanksystemen extrahiert. Aus diesem Grund fällt der Nachteil der starren Strukturen weniger ins Gewicht. Der gesamte Prozess findet in einer Umgebung statt, was die Bedienung, Überwachung und Konsistenz vereinfacht. Ein weiterer Gewinn ist die Möglichkeit, dass auch Endanwender Abfragen und Reports erzeugen können. Zum einen weil die Umgebung dafür ausgelegt ist (Anwenderfreundliche GUI Oberfläche, Zugriffssteuerung) und zum anderen weil die Qualität der Daten ein Überschaubares Maß an Kenntnissen der Informatik benötigt.
 
 ### 3.1.3 Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake
-
+<a id="Darstellung_31"></a>
 | Eigenschaften    | Data Warehouse                                                                                  | Data Lake                                                                                                        |
 |-------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | Daten              | Relational und transaktionsorientierte Datenbank eines Anwendungessystems oder Anwendung | Nicht-Relationale und relationale Daten aus verschiedensten Quellen |
@@ -36,6 +36,6 @@ Im Geschäftsumfeld wird weiterhin stark auf das Data Warehouse gesetzt. Diese w
 | Daten Qualität      | Akkurat gepflegte und strukturierte Daten die auch als Wahrheitsquelle dient (SPOT - Single Point of Truth)                             | Alle Arten von Daten die gepflegt und strukturiert sein können oder auch nicht                                                     |
 | Benutzer             | Business Analyst                                                                               | Data Scientists,  Data Developer und Business Analysts                                      |
 | Auswertungen         | Berichtslauf im Hintergrund, Business Intelligence und  Berichtsvisualisierungen                                                          | Machine Learning, Vohersagemodellierung, data discovery und Profiling                                             |
-**Darstellung 3.1:** Tabelle zur Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake <a id="Darstellung_31"></a>
+**Darstellung 3.1:** Tabelle zur Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake 
 
 [Zurück zu 3.1 Daten Management](#3.1_Daten_Management) || [Weiter zu 3.2 Der Prozess](#3.2_Der_Prozess)
