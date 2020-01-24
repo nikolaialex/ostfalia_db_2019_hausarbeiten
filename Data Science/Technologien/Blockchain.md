@@ -6,7 +6,7 @@ Ursprünglich wurde die Blockchain-Technologie für die Kryptowährung Bitcoin u
 
 Unter *Smart Contracts* ist eine Art neuer Verträge zu verstehen, die automatisch ausgeführt werden. Manipulationen oder Menschen als Fehlerquelle können dabei ausgeschlossen werden. [[4.15](https://blockchainwelt.de/blockchain-was-ist-das/), [4.16](https://www.startupvalley.news/de/blockchain-das-gewaltige-potenzial-des-digitalen-datenregisters/)]
 
-Während klassische Datenbanken sich an der Client-Server-Architektur mit zentraler Eingriffsmöglichkeit orientieren, bestehen Blockchain-Netzwerke aus gleichberechtigten Server-Nodes. Diese pflegen die gemeinsame Datenbasis kontinuierlich und unabhängig voneinander. [[4.17](https://t3n.de/news/blockchain-statt-datenbank-diese-1063641/2/)]
+Während klassische Datenbanken sich an der Client-Server-Architektur mit zentraler Eingriffsmöglichkeit orientieren, bestehen Blockchain-Netzwerke aus gleichberechtigten Server-Nodes. Diese pflegen die gemeinsame Datenbasis kontinuierlich und unabhängig voneinander. [[4.17](https://t3n.de/news/blockchain-statt-datenbank-diese-1063641/2/)] <a id="Darstellung_410"></a>
 
 Die Eigenschaften
 
@@ -20,8 +20,10 @@ Die Eigenschaften
 
 zeichenn die Blockchain als einzigartige Datenbank aus. [[4.18](https://www.econsor.de/digitalisierung/digitalisierung-news/was-ist-eine-blockchain/), [4.19](https://www.digitale-technologien.de/DT/Redaktion/DE/Downloads/Publikation/2017-02-09_smartdata_steckbrief_blockchain.pdf?__blob=publicationFile&v=5)]
 
-In der folgenden Darstellung ist eine Transaktion mit Hilfe des Blockchain-Verfahrens zu sehen:
+***Darstellung 4.10:** Tabelle mit Eigenschaften und jeweiliger Beschreibung der Blockchain*
+
+In der folgenden Darstellung ist eine Transaktion mit Hilfe des Blockchain-Verfahrens zu sehen <a id="Darstellung_411"></a>:
 ![Blockchain Transaktion](../images/Blockchain.png)
-*Darstellung 4.7: Screenshot einer Transaktion mit Hilfe des Blockchain-Verfahrens [[4.20](https://www.bwi.de/news-blog/blog/blockchain-interview/)]*
+***Darstellung 4.11:** Screenshot einer Transaktion mit Hilfe des Blockchain-Verfahrens [[4.20](https://www.bwi.de/news-blog/blog/blockchain-interview/)]*
 
 [Zurück zu Cloud Computing](./Cloud.md) | [Weiter zu Datenbanktechnologien](./../Datenbanktechnologien/Datenbanken.md)
