@@ -19,35 +19,35 @@ Bereits der erste Blick erinnert, wie oben erwähnt, an Jupyter Notebooks. Neben
 
 Beim Laden des Textes kommt zum ersten Mal der Spark Core mit dem Befehl „sc.“ (Codezeile 2 in Darstellung 5.8) zum Einsatz. Bei Ausführen des Codes wird zusätzlich zur Ausgabe auch die benötigte Zeit, sowie der zum Einsatz gekommene Cluster, angezeigt. Der Befehl „take“ ist die Aktion, die eine Anzeige erzeugt.
 
-![Databricks 2](../images/5_12.png)
+![Databricks 2](../images/5_12.png)<br>
 *Darstellung 5.2.8: Databricks 2*
 
 Als nächstes soll angezeigt werden, wieviele Worker („partitions“) zum Einsatz gekommen sind.
 
-![Databricks 3](../images/5_13.png)
+![Databricks 3](../images/5_13.png)<br>
 *Darstellung 5.2.9: Databricks 3*
 
 Mit den nächsten Aktionen wird der vorliegende Text in eine Liste mit einzelnen Wörtern umgewandelt und Stopwords werden herausgefiltert. Die übrig gebliebenen Wörter werden gecached – unsere erste Transformation, die als Ergebnis keine Ausgabe liefert sondern ein neues RDD.
 
-![Databricks 4](../images/5_14.png)
+![Databricks 4](../images/5_14.png)<br>
 *Darstellung 5.2.10: Databricks 4*
 
 Jetzt können die Wörter absteigend nach Häufigkeit sortiert und in SQL-Tabellenform überführt werden.
 
-![Databricks 5](../images/5_15.png)
+![Databricks 5](../images/5_15.png)<br>
 *Darstellung 5.2.11: Databricks 5*
 
 Abschließend werden per SQL-Befehl die 10 häufigsten Wörter aufgelistet. Die SQL-Codesequenz wird mit dem „%sql“ initialisiert.
 
-![Databricks 6](../images/5_16.png)
+![Databricks 6](../images/5_16.png)<br>
 *Darstellung 5.2.12: Databricks 6*
 
 Unter dem Ausgabefenster fallen drei neue Icons auf, über die die Daten als Tabelle beziehungsweise als Diagramm dargestellt oder (3) als CSV heruntergeladen werden können. Darstellung 5.14 zeigt ein aus unseren Daten automatisch erzeugtes einfaches Balkendiagramm sowie einen Teil der Anpassungsmöglichkeiten für Diagramme.
 
-![Databricks 7](../images/5_17.png)
+![Databricks 7](../images/5_17.png)<br>
 *Darstellung 5.2.13: Databricks 7*
 
-![Databricks 8](../images/5_18.png)
+![Databricks 8](../images/5_18.png)<br>
 *Darstellung 5.2.14: Databricks 8*
 
 [Zurück zu Architektur](./5_2_4_Architektur.md) || [Weiter zu Fazit](./XXX.md)

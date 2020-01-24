@@ -12,10 +12,10 @@ Während andere Tools auch dafür eine Lösung anzubieten versuchen, wie die zu 
 
 All diese Faktoren haben dazu geführt, dass Spark zum “de facto”-Tool für jeden, an Datenanalyse / Big Data, interessierten Entwickler avanciert ist. Der Einstieg ist einfach und es kann problemlos zur Verarbeitung von enorm großen Mengen hochskaliert werden – unabhängig vom Ablageort der Daten.
 
-![Logistic regression in Hadoopand Spark](../images/5_6.png)
+![Logistic regression in Hadoopand Spark](../images/5_6.png)<br>
 *Darstellung 5.2.2: Logistic regression in Hadoopand Spark, [[5.2.11](https://spark.apache.org/)]*
 
-![Arbeitsumgebung von Spark](../images/5_7.png)
+![Arbeitsumgebung von Spark](../images/5_7.png)<br>
 *Darstellung 5.2.3: Arbeitsumgebung von Spark, [[5.2.11](https://spark.apache.org/)]*
 
 [Zurück zu Entstehung](./5_2_1_Entstehung.md) || [Weiter zu Funktionsweise](./5_2_3_Funktionsweise.md)
