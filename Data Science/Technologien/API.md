@@ -6,10 +6,10 @@ In der Regel wird eine API im Zusammenhang mit einer ausführlichen Dokumentatio
 
 Mit Hilfe von APIs werden einfache Möglichkeiten zur Anbindung der eigenen Infrastruktur über die Entwicklung cloudnativer Anwendungen geboten. Außerdem wird so die Möglichkeit geschaffen, die Daten gemeinsam mit Kunden, anderen externen Nutzern oder Partnern zu verwenden.
 
-Die folgende Darstellung demonstriert eine solche API [[4.6](https://www.redhat.com/de/topics/api/what-are-application-programming-interfaces)]<a id="Darstellung_44"></a>:
+Die folgende Darstellung demonstriert eine solche API [[4.6](https://www.redhat.com/de/topics/api/what-are-application-programming-interfaces)]:
 
 ![API](../images/API.png)
-***Darstellung 4.4:** Screenshot zur Verwendung von APIs [[4.6](https://www.redhat.com/de/topics/api/what-are-application-programming-interfaces)]*
+*Darstellung 4.2: Screenshot zur Verwendung von APIs [[4.6](https://www.redhat.com/de/topics/api/what-are-application-programming-interfaces)]*
 
 Es wird dabei zwischen den folgenden Typklassen unterscheiden:
 
@@ -26,5 +26,3 @@ REST steht dabei für REpresentational State Transfer und beschreibt die Art und
 
 | [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 4.1 Architetkurmuster Microservice](./Microservice.md) | Application Programming Interface | [4.3 Cloud Computing &gt;&gt;](./Cloud.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|
-
-[Zurück zu Microservices](./Microservice.md) || [Weiter zu Cloud Computing](./Cloud.md)

@@ -20,4 +20,5 @@ All diese Faktoren haben dazu geführt, dass Spark zum “de facto”-Tool für 
 ![Arbeitsumgebung von Spark](../images/5_7.png)<br>
 ***Darstellung 5.2.3:** Arbeitsumgebung von Spark, [[5.2.11](https://spark.apache.org/)]*
 
-[Zurück zu Entstehung](./5_2_1_Entstehung.md) || [Weiter zu Funktionsweise](./5_2_3_Funktionsweise.md)
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.2.1 Apache Spark - Entstehung](./5_2_1_Entstehung.md) | Vorteile | [5.2.3 Funktionsweise](./5_2_3_Funktionsweise.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

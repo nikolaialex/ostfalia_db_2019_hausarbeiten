@@ -116,3 +116,7 @@
 [5.2.20] <https://databricks.com/spark/getting-started-with-apache-spark>
 
 [5.2.21] <http://pages.databricks.com/rs/094-YMS-629/images/2016_Spark_Infographic.pdf>
+
+| [&lt;&lt;&lt; Inhaltsverzeichnis](README.md) | [&lt;&lt; 7 Darstellungsverzeichnis](darstellungsverzeichnis.md) | Literaturverzeichnis
+ | [1 Einleitung](einleitung.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

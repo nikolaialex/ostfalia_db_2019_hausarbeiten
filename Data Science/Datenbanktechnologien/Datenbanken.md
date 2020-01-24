@@ -8,4 +8,6 @@ Demnach muss ein Data Scientist mit unterschiedlichen Datenbanksystemen zurechtk
 
 Bevor in den nächsten Kapiteln auf die Datenbanksysteme [Neo4J](./Neo4J.md) und [Apache Spark](../Spark/5_2_1_Entstehung.md) genauer eingegangen wird, soll zunächst die Begrifflichkeit [Graph-Datenbank](./Graphdatabase.md) erläutert werden.
 
-[Zurück zu Blockchain](./../Technologien/Blockchain.md) | [Weiter zu Graph-Datenbank](./Graphdatabase.md)
+
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 4.4 Blockchain](../Technologien/Blockchain.md) | Datenbanken | [5.1.1 Graph-Datenbanken](./Graphdatabase.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

@@ -78,4 +78,5 @@ Die Nodes lassen sich außerdem auch verschieben, indem der entsprechende Knoten
 
 Es ist erkennbar, dass hier unendlich viele Knoten, Eigenschaften und Beziehungen erstellt werden können und Graph-Datenabnken ein Gewinn für das Zeitalter der Digitalisierung sind.
 
-[Zurück zu Neo4J](./Neo4J.md) | [Weiter zu Apace Spark](./../Spark/5_2_1_Entstehung.md)
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.1.1 Neo4J](./Neo4J.md) | Praxisbeispiel mit Neo4J Desktop | [5.2.1  Apache Spark - Entstehung](../Spark/5_2_1_Entstehung.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

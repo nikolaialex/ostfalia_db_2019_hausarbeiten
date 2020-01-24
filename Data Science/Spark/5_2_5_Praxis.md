@@ -54,4 +54,5 @@ Unter dem Ausgabefenster fallen drei neue Icons auf, über die die Daten als Tab
 ![Databricks 8](../images/5_18.png)<br>
 ***Darstellung 5.2.14:** Databricks 8*
 
-[Zurück zu Architektur](./5_2_4_Architektur.md) || [Weiter zu Fazit](./XXX.md)
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.2.3 Architektur](./5_2_3_Funktionsweise.md) | Praxis: Databricks statt lokale Installation | [6 Fazit](../fazit.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|
