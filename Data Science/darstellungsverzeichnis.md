@@ -30,6 +30,8 @@ Darstellung 5.1.13: Screenshot der Oberfläche zur Erstellung eines Graphen mit 
 Darstellung 5.1.14: Screenshot dreier Nodes und einer Beziehung
 Darstellung 5.1.15: Screenshot eines grafisch fertig erstellten Graphens
 
+Video 5.1.1: Was ist Neo4j? [[5.1.4](htps://www.youtube.com/watch?v=GM9bB4ytGao)]
+
 ## Apache Spark
 
 Darstellung 5.2.1: The Complex World of Big Data
@@ -46,5 +48,3 @@ Darstellung 5.2.11: Databricks 5
 Darstellung 5.2.12: Databricks 6
 Darstellung 5.2.13: Databricks 7
 Darstellung 5.2.14: Databricks 8
-
-Video 5.1.1: Was ist Neo4j? [[TBD](https://www.youtube.com/watch?v=GM9bB4ytGao)]
