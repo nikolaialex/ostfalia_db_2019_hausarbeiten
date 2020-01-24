@@ -68,31 +68,30 @@ Darstellung 1: -> Janet
 
 ## Apache Spark
 
-Darstellung 5.2.1: The Complex World of Big Data
+[Darstellung 5.2.1](./Spark/5_2_1_Entstehung.md#Darstellung_521): The Complex World of Big Data
 
-Darstellung 5.2.2: Logistic regression in Hadoopand Spark
+[Darstellung 5.2.2](./Spark/5_2_2_Vorteile.md#Darstellung_522): Logistic regression in Hadoopand Spark
 
-Darstellung 5.2.3: Arbeitsumgebung von Spark
+[Darstellung 5.2.3](./Spark/5_2_2_Vorteile.md#Darstellung_523): Arbeitsumgebung von Spark
 
-Darstellung 5.2.4: Funktionsweise: Anwender-Master-Worker
+[Darstellung 5.2.4](./Spark/5_2_3_Funktionsweise.md#Darstellung_524): Funktionsweise: Anwender-Master-Worker
 
-Darstellung 5.2.5: Aufbau von Apache Spark
+[Darstellung 5.2.5](./Spark/5_2_4_Architektur.md#Darstellung_525): Aufbau von Apache Spark
 
-Darstellung 5.2.6: Where Spark Shines
+[Darstellung 5.2.6](./Spark/5_2_4_Architektur.md#Darstellung_526): Where Spark Shines
 
-Darstellung 5.2.7: Databricks 1
+[Darstellung 5.2.7](./Spark/5_2_5_Praxis.md#Darstellung_527): Databricks 1
 
-Darstellung 5.2.8: Databricks 2
+[Darstellung 5.2.8](./Spark/5_2_5_Praxis.md#Darstellung_528): Databricks 2
 
-Darstellung 5.2.9: Databricks 3
+[Darstellung 5.2.9](./Spark/5_2_5_Praxis.md#Darstellung_529): Databricks 3
 
-Darstellung 5.2.10: Databricks 4
+[Darstellung 5.2.10](./Spark/5_2_5_Praxis.md#Darstellung_5210): Databricks 4
 
-Darstellung 5.2.11: Databricks 5
+[Darstellung 5.2.11](./Spark/5_2_5_Praxis.md#Darstellung_5211): Databricks 5
 
-Darstellung 5.2.12: Databricks 6
+[Darstellung 5.2.12](./Spark/5_2_5_Praxis.md#Darstellung_5212): Databricks 6
 
-Darstellung 5.2.13: Databricks 7
+[Darstellung 5.2.13](./Spark/5_2_5_Praxis.md#Darstellung_5213): Databricks 7
 
-Darstellung 5.2.14: Databricks 8
-
+[Darstellung 5.2.14](./Spark/5_2_5_Praxis.md#Darstellung_5214): Databricks 8

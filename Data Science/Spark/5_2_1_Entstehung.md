@@ -8,9 +8,9 @@ Gleichzeitig liefert diese Beschreibung von Garnet auch einen Hinweis, wie diese
 
 Das von Google eingeführte MapReduce-Verfahren verteilt Berechnungen auf Computerclustern, um diese parallelisiert zu verarbeiten. Auf diesem Algorithmus basiert das 2006 veröffentlichte Apache Hadoop Framework, das seit 2008 zu einem Top-Level-Projekt der Apache Software Foundation geworden ist. Apache Spark wiederum basiert auf Hadoop, weswegen diese beiden Frameworks auch von Apache Spark selbst hinsichtlich Schnelligkeit und anderen Eigenschaft verglichen werden.
 
-Für die Verarbeitung von Big Data kommen verschiedene Tools und Programmiersprachen zum Einsatz. So können Daten, je nach Arbeitsschritt mit verschiedenen Programmiersprachen, bearbeitet werden. Spark entstand in dieser Zeit, in der sich Entwickler bessere Tools zur Verarbeitung dieser großen Datenmengen gewünscht haben. Da Spark gleich mehrere Probleme auf einmal löste, etablierte es sich als ein beliebtes Tool.
+Für die Verarbeitung von Big Data kommen verschiedene Tools und Programmiersprachen zum Einsatz. So können Daten, je nach Arbeitsschritt mit verschiedenen Programmiersprachen, bearbeitet werden. Spark entstand in dieser Zeit, in der sich Entwickler bessere Tools zur Verarbeitung dieser großen Datenmengen gewünscht haben. Da Spark gleich mehrere Probleme auf einmal löste, etablierte es sich als ein beliebtes Tool. <a id="Darstellung_521"></a>
 
 ![The Complex World of Big Data](../images/5_4.jpg)<br>
-*Darstellung 5.2.1: The Complex World of Big Data, [5.2.2](https://towardsdatascience.com/a-beginners-guide-to-apache-spark-ff301cb4cd92)*
+***Darstellung 5.2.1:** The Complex World of Big Data, [5.2.2](https://towardsdatascience.com/a-beginners-guide-to-apache-spark-ff301cb4cd92)*
 
 [Zurück zu Praxisbeispiel Neo4j](../Datenbanktechnologien/Neo4j-Example.md) || [Weiter zu Vorteile](./5_2_2_Vorteile.md)
