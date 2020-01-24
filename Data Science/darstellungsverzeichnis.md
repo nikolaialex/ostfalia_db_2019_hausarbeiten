@@ -1,6 +1,7 @@
 # 7 Darstellungsverzeichnis
 
 Darstellung 1: -> Janet
+
 ## Data Science Prozess
 
 [Darstellung 3.1:](./Data_Science_Prozess/031_Daten_Management.md#Darstellung_31) Tabelle zur Gegenüberstellung der Eigenschaften von Data Warehous und Data Lake
@@ -17,7 +18,7 @@ Darstellung 1: -> Janet
 
 [Darstellung 4.5](./Technologien/Cloud.md#Darstellung_45): Screenshot zu dem Anteil der Cloud-nutzenden Unternehmen in Deutschland, die kostenpflichtige Cloud-Dienste für folgende Zwecke im Jahr 2018 nutzen [[4.9](https://de.statista.com/statistik/daten/studie/381830/umfrage/einsatzzwecke-von-cloud-computing-in-unternehmen-in-deutschland/)]
 
-[Darstellung 4.6](./Technologien/Cloud.md#Darstellung_46): abelle der drei Hauptarten des Cloud Computing
+[Darstellung 4.6](./Technologien/Cloud.md#Darstellung_46): Tabelle der drei Hauptarten des Cloud Computing
 
 [Darstellung 4.7](./Technologien/Cloud.md#Darstellung_47): Screenshot zum Service IaaS [[4.11](https://aws.amazon.com/de/what-is-cloud-computing/?nc1=f_cc)]
 
