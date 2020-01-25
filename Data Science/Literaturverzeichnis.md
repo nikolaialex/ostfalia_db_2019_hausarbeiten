@@ -117,5 +117,5 @@
 
 [5.2.21] <http://pages.databricks.com/rs/094-YMS-629/images/2016_Spark_Infographic.pdf>
 
-| [&lt;&lt;&lt; Inhaltsverzeichnis](./readme.md) | [&amp;lt;&amp;lt; 7 Darstellungsverzeichnis](darstellungsverzeichnis.md) | Literaturverzeichnis | [1 Einleitung &amp;gt;&amp;gt;](./Data_Science_Allgemein/00_Einleitung.md) |
+| [&lt;&lt;&lt; Inhaltsverzeichnis](./readme.md) | [&lt;&lt; 7 Darstellungsverzeichnis](darstellungsverzeichnis.md) | Literaturverzeichnis | [1 Einleitung &gt;&gt;](./Data_Science_Allgemein/00_Einleitung.md) |
 |------------------------------------------------|--------------------------------------------------------------------------|----------------------|----------------------------------------------------------------------------|

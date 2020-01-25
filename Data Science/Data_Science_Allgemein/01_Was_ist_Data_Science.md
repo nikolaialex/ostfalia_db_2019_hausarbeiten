@@ -10,5 +10,3 @@ Ein weiteres interessantes und oft genutztes Verfahren zur Erstellungs von Progn
 
 | [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 1 Einleitung](./00_Einleitung.md) | Was ist Data Science? | [2.2 Berufsfeld Data Scientist &gt;&gt;](./02_Berufsfeld_Data_Scientist.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|
-
-Berufsfeld Data Scientist
