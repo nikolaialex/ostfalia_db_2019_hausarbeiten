@@ -1,4 +1,4 @@
-# 2.2 Berufsfeld Data Scientist
+# 2.1 Berufsfeld Data Scientist
 
 Eine Person, deren Aufgaben im Bereich Data Science liegen, wird als Data Scientist bezeichnet, dies gilt sowohl für die männliche als auch weibliche Form. Der Einfachheit halber wird in der vorliegenden Arbeit daher immer vom Data Scientist gesprochen.
 
@@ -8,10 +8,10 @@ Es werden große unstrukturierte Datenmengen gesammelt und daraus Informationen 
 
 In der heutigen Zeit werden inzwischen in nahezu allen Branchen große Datenmengen erhoben und ausgewertet. Für ein Unternehmen ist ein Data Scientist fast schon unerlässlich, um die Menge an Daten richtig auswerten und nutzen zu können. Zudem werden die erhobenen Daten als das “neue Gold” bezeichnet und die Nachfrage nach Data Scientist(en) ist somit enorm. Vorreiter für die Nutzung dieser Datenmengen sind Unternehmen aus der Automobilbranche und Versicherungen. Später kamen dann Unternehmen aus der Logistikbranche, Gesundheitsbranche und Handelsbranche hinzu.
 
-Die folgende Grafik zeigt auf, aus welchen Bereichen sich Data Science zusammensetzt und welcher dieser Bereiche in entsprechenden Berufsfeldern, Branchen oder Technologien Anwendung findet.
+Die folgende Grafik zeigt auf, aus welchen Bereichen sich Data Science zusammensetzt und welcher dieser Bereiche in entsprechenden Berufsfeldern, Branchen oder Technologien Anwendung findet.<a id="Darstellung_11"></a>
 
+![Graph](../images/DataScientist.png)
+***Darstellung 1.1:** Zusammensetzung des Bereiches Data Science*
 
-![Graph](../images/DataScientist.png) 
-
-| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 2.1 Was ist Data Science?](./01_Was_ist_Data_Science.md) | Berufsfeld Data Scientist | [2.3 Big Data &gt;&gt;](./03_Big_Data.md) |
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 2 Data Science](./01_Was_ist_Data_Science.md) | Berufsfeld Data Scientist | [2.2 Big Data &gt;&gt;](./03_Big_Data.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

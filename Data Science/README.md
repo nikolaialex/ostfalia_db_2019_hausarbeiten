@@ -15,10 +15,9 @@ Eine Ausarbeitung zum Thema Data Science.
 
 1. [Einleitung](./Data_Science_Allgemein/00_Einleitung.md)
 2. [Data Science](./Data_Science_Allgemein/01_Was_ist_Data_Science.md)
-   1. [Was ist ein Data Scientist?](./Data_Science_Allgemein/01_Was_ist_Data_Science.md)
-   2. [Berufsfeld Data Scientist](./Data_Science_Allgemein/02_Berufsfeld_Data_Scientist.md)
-   3. [Big Data](./Data_Science_Allgemein/03_Big_Data.md)
-   4. [Machine Learning](./Data_Science_Allgemein/04_Machine_Learning.md)
+   1. [Berufsfeld Data Scientist](./Data_Science_Allgemein/02_Berufsfeld_Data_Scientist.md)
+   2. [Big Data](./Data_Science_Allgemein/03_Big_Data.md)
+   3. [Machine Learning](./Data_Science_Allgemein/04_Machine_Learning.md)
 3. [Data Science Prozess](./Data_Science_Prozess/030_Data_Science_Prozess.md)
    1. [Daten Management](./Data_Science_Prozess/031_Daten_Management.md)
    2. [Der Prozess](./Data_Science_Prozess/032_Der_Prozess.md)
