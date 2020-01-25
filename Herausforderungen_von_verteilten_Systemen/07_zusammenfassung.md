@@ -1,9 +1,11 @@
 | [<< Fallbeispiel](06_fallbeispiel.md) | [Inhaltsverzeichnis](02_toc.md) |
 | ------------------------------------- | ------------------------------- |
 
+
 ---
 
 # 5. Zusammenfassung
+
 Im Rahmen dieser Ausarbeitung wurden Herausforderungen betrachtet, die sich in verteilten Systemen ergeben können und in den meisten Systemen immer wieder bewältigt werden müssen.
 
 Grundlegende Herausforderungen ergeben sich bereits bei der Wahl einer geeigneten System- und Softwarearchitektur, wobei die Verwendung von Middleware-Schichten breite Verwendung erfahren hat.
@@ -24,7 +26,7 @@ Im anschließenden Fallbeispiel wurde erläutert, wie durch Relevanzkriterien z.
 
 Es ist festzuhalten, dass es für alle Herausforderungen auch Lösungen gibt, jedoch ist anhand des Systemdesigns abzuwägen, welche der Konzepte und konkreten Mechanismen die meisten der Anforderungen erfüllen können. Die Vor- und Nachteile müssen gegenübergestellt und Anforderungen priorisiert werden, um ein technologisch und wirtschaftlich optimales verteiltes System zu realisieren.
 
-Die Konzepte und Technologien unterliegen durch variierende Anforderungen und Präferenzen, wie überall  in der IT-Welt, stets einem Wandel. Wegen Kompatibilitäts-, Lizenz- und Komplexitätseinschränkungen werden stetig neue Technologien geschaffen, die wiederum neue Konzepte oder Plattformen besser als vorhergehende Technologien realisieren.
+Die Konzepte und Technologien unterliegen durch variierende Anforderungen und Präferenzen, wie überall in der IT-Welt, stets einem Wandel. Wegen Kompatibilitäts-, Lizenz- und Komplexitätseinschränkungen werden stetig neue Technologien geschaffen, die wiederum neue Konzepte oder Plattformen besser als vorhergehende Technologien realisieren.
 
 ---
 
