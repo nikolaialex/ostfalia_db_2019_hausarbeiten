@@ -1,7 +1,6 @@
 | [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiel >>](06_fallbeispiel.md) |
 | ----------------------------------------------- | ------------------------------- | ------------------------------------- |
 
-
 ---
 
 # 3. Herausforderungen
@@ -313,8 +312,6 @@ Der Koordinator (a) sendet zunächst ein VOTE-REQUEST an alle Teilnehmer der Gru
 
 ---
 
-[Kleppmann, 2017]: M. Kleppmann, Designing data-intensive applications: the big ideas behind reliable, scalable, and maintainable systems, First edition. Boston: O’Reilly Media, 2017.
-
 [Lamport, 1979]: Lamport, “How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs,” IEEE Trans. Comput., vol. C–28, no. 9, pp. 690–691, Sep. 1979, doi: 10.1109/TC.1979.1675439.
 
 [van Steen, 2017]: M. van Steen and A. S. Tanenbaum, Distributed systems, Third edition (Version 3.01 (2017)). London: Pearson Education, 2017.
@@ -325,4 +322,3 @@ Der Koordinator (a) sendet zunächst ein VOTE-REQUEST an alle Teilnehmer der Gru
 
 | [<< Verteilte Systeme](04_verteilte_systeme.md) | [Inhaltsverzeichnis](02_toc.md) | [Fallbeispiel >>](06_fallbeispiel.md) |
 | ----------------------------------------------- | ------------------------------- | ------------------------------------- |
-

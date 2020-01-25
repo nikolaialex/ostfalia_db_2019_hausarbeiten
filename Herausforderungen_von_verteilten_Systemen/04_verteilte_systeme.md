@@ -1,7 +1,6 @@
 | [<< Einleitung](03_einleitung.md) | [Inhaltsverzeichnis](02_toc.md) | [Herausforderungen >>](05_herausforderungen.md) |
 | --------------------------------- | ------------------------------- | ----------------------------------------------- |
 
-
 ---
 
 # 2. Verteilte Systeme
@@ -56,7 +55,7 @@ In der folgenden Abbildung ist zu sehen, wie die Middleware als Softwareschicht 
 ![Middleware](assets/middleware.svg)
 Wie in der Grafik zu sehen ist, ist jeder Knoten mit einem eigenen Betriebssystem und eigenen Netzwerkdiensten ausgestattet. Die Verwaltung übernimmt das jeweilige Betriebssystem. Die Middleware bietet dann, basiered auf den Diensten und Ressourcen der jeweiligen Knoten, selber Dienste an, welche die Heterogenität der einzelnen Knoten verbergen.
 
-**Beispiele für Dienste, die von Middleware bereitgestellt werden:**
+Im Folgenden werden einige Dienste aufgelistet, die von der Middleware bereitgestellt werden:
 
 - Application Programming Interface (API)
 - Anwendungsserver
@@ -64,18 +63,17 @@ Wie in der Grafik zu sehen ist, ist jeder Knoten mit einem eigenen Betriebssyste
 - Datenintegration
 - Transaction Processing
 - Remote Procedure Call (RPC)
-- Message-orientierte Middleware
 - Object Request Broker (ORB)
-- Fehlertoleranz
 
-**Häufig verwendete Middleware**
+Eine Auswahl häufig verwendeter Middleware umfasst:
 
 - MQSeries von IBM ( plattformunabhängige Message orientierte Middleware-Software)
 - der Websphere Application Server von IBM (Laufzeitumgebung für JavaEE-Anwendungen)
 - die SAP Exchange Infrastructure von SAP
 - FT-CORBA, COM+, .NET Remoting (Platformabhänige komplexe Objektbasierte RPC Kommunikation)
-- RakNet (in Bereichen der Computerspiele Entwicklung)
-- Protocol Buffers, gRPC (Effiziente offene plattformunabhängige Binärdaten Kommunikation)
+- RakNet (in Bereichen der Computerspiele Entwicklung).
+
+  
 
 ---
 
