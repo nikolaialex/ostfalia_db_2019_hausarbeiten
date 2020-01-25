@@ -67,10 +67,16 @@ Im Folgenden werden einige Dienste aufgelistet, die von der Middleware bereitges
 
 Eine Auswahl häufig verwendeter Middleware umfasst:
 
-- MQSeries von IBM ( plattformunabhängige Message orientierte Middleware-Software)
+* Erlang/OTP
+
+- MQSeries von IBM (plattformunabhängige Message orientierte Middleware-Software)
+
 - der Websphere Application Server von IBM (Laufzeitumgebung für JavaEE-Anwendungen)
+
 - die SAP Exchange Infrastructure von SAP
+
 - FT-CORBA, COM+, .NET Remoting (Platformabhänige komplexe Objektbasierte RPC Kommunikation)
+
 - RakNet (in Bereichen der Computerspiele Entwicklung).
 
   

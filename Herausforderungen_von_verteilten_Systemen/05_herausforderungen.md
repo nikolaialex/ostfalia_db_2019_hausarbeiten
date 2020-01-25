@@ -79,7 +79,7 @@ Im einfachsten Fall ist es so zu sehen, dass passiv Objektinstanziierung, Destru
 
 ## 3.4 Namensgebung
 
-Was in Einzelcomputersystemen noch relativ simpel ist, führt in verteilten Systemen zu Schwierigkeiten: die Lokalisierung und Referenzierung von Entitäten sowie dabei die Namensauflösung. In verteilten Systemen ist das System der Namensgebung meist auch verteilt implementiert und über mehrere Computer verteilt.
+Was in Einzelcomputersystemen noch relativ simpel ist, führt in verteilten Systemen zu Schwierigkeiten: die **Lokalisierung und Referenzierung von Entitäten** sowie dabei die **Namensauflösung**. In verteilten Systemen ist das System der Namensgebung meist auch verteilt implementiert und über mehrere Computer verteilt.
 
 Über einen Namen kann eine Entität referenziert werden. Im Grunde gibt es drei Arten von Namen:
 
@@ -109,7 +109,7 @@ Mithilfe solcher Graphen können bequem menschenfreundliche Namen in strukturier
 
 ## 3.5 Koordination
 
-Eine weitere Herausforderung ist die Synchronisation von Prozessen, also dass alle Prozesse zur richtigen Zeit das richtige tun. Erschwert wird dieses Problem dadurch, dass es in verteilten Systemen kein globale Uhr gibt, die für alle beteiligten Computer gilt. Für jedem Computer und die darauf befindlichen Prozesse gilt daher die jeweilige Systemzeit.
+Eine weitere Herausforderung ist die **Synchronisation von Prozessen**, also dass alle Prozesse zur richtigen Zeit das richtige tun. Erschwert wird dieses Problem dadurch, dass es in verteilten Systemen keine globale Uhr gibt, die für alle beteiligten Computer gilt. Für jedem Computer und die darauf befindlichen Prozesse gilt daher die jeweilige Systemzeit.
 
 Um diesem Problem zu begegnen, gibt es verschiedene Wege, die Uhren der Computer zu synchronisieren. Diese Methoden basieren im Kern aber alle auf dem Austausch von Zeiten zwischen den Computern, wobei die Zeit zum Senden und Empfangen dieser Nachrichten entsprechend berücksichtigt wird.
 
