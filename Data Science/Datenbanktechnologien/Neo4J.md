@@ -15,7 +15,7 @@ Die folgende Darstellung visualisiert einen solchen Graphen mit  entsprechenden 
 
 Obwohl Neo4J zu den NoSQL-Datenbanken zählt, wird dennoch die Datenbankabfragesprache SQL (Structured Query Language) unterstützend vorangetreiben, da diese insbesonders bei Unternehmensanalytikern Anwednung findet.
 
-Neo4J steht außerdem kurz vor dem Ziel, eine standardisierte Abfragesprache für alle Graph-Datenbanken, die sich Cypher nennt, zu etablieren.
+Neo4J steht außerdem kurz vor dem Ziel, eine standardisierte Abfragesprache für alle [Graph-Datenbanken](./Graphdatabase.md), die sich [Cypher](https://neo4j.com/docs/cypher-manual/current/) nennt, zu etablieren.
 
 Wer jedoch in der Cloud arbeiten möchte, hat die Möglichkeit, dies mit Neo4J, unter dem Namen "Aura", zu tun. [[5.3](https://www.bigdata-insider.de/graph-datenbanken-a-887332/)]
 
@@ -23,7 +23,7 @@ Namenhafte Kunden, wie eBay, Adobe, Microsoft und einige mehr, nutzen Neo4J. [[5
 
 Um Neo4J selbst auszuprobieren, kann mit Hilfe der [Get Started Dokumentation](https://neo4j.com/developer/get-started/) begonnen werden.
 
-Die Autoren haben sich dabei für den Neo4J Browser entschieden, da hier lediglich eine Registrierung von Nöten war. Im [folgenden Kapitel](./Neo4j-Example.md) wurde dafür ein Praxisbeispiel gewählt und dokumentiert.
+Die Autoren haben sich dabei für den Neo4J Browser entschieden, da hier zunächst lediglich eine Registrierung von Nöten war. Im [folgenden Kapitel](./Neo4j-Example.md) wurde dafür ein Praxisbeispiel gewählt und dokumentiert.
 
-| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.1 Graph-Datenbanken](./Graphdatabase.md) | Neo4J | [5.1.2  Praxisbeispiel mit Neo4J Desktop  &gt;&gt;](./Neo4j-Example.md) |
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.1 Graph-Datenbanken](./Graphdatabase.md) | Neo4j | [5.1.2  Praxisbeispiel mit Neo4j Desktop  &gt;&gt;](./Neo4j-Example.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|

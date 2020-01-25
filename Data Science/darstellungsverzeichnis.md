@@ -40,15 +40,15 @@
 
 [Darstellung 5.1.3](./Datenbanktechnologien/Neo4J.md#Darstellung_513): Screenshot eines Graphen mit entsprechenden Nodes und Relationships [[5.1.5](https://neo4j.com/developer/get-started/)]
 
-[Darstellung 5.1.4](./Datenbanktechnologien/Neo4j-Example.md#Darstellung_514): Screenshot von Neo4J Desktop
+[Darstellung 5.1.4](./Datenbanktechnologien/Neo4j-Example.md#Darstellung_514): Screenshot von Neo4j Desktop
 
-[Darstellung 5.1.5](./Datenbanktechnologien/Neo4j-Example.md#Darstellung_515): Screenshot Neo4J im Browser
+[Darstellung 5.1.5](./Datenbanktechnologien/Neo4j-Example.md#Darstellung_515): Screenshot Neo4j im Browser
 
 [Darstellung 5.1.6](./Datenbanktechnologien/Neo4j-Example.md#Darstellung_516): Eigene Darstellung eines Graphmodells
 
-[Darstellung 5.1.7](./Datenbanktechnologien/Neo4j-Example.md#Darstellung_517): Screenshot eines in Cypher geschriebenen Datensatzes
+[Darstellung 5.1.7](./Datenbanktechnologien/Neo4j-Example.md#Darstellung_517): Screenshot eines in [Cypher](https://neo4j.com/docs/cypher-manual/current/) geschriebenen Datensatzes
 
-[Darstellung 5.1.8](./Datenbanktechnologien/Neo4j-Example.md#Darstellung_518): Screenshot des Neo4J Desktop Menüs
+[Darstellung 5.1.8](./Datenbanktechnologien/Neo4j-Example.md#Darstellung_518): Screenshot des Neo4j Desktop Menüs
 
 [Darstellung 5.1.9](./Datenbanktechnologien/Neo4j-Example.md#Darstellung_519): Screenshot eines grafisch erstellten Nodes in der Graphansicht
 
