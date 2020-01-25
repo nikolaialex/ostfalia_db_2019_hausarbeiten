@@ -7,10 +7,10 @@
 
 ### Inhaltsverzeichnis
 ---
-1. [Was ist Apache Kafka?](01_was_ist_apache_kafka.md)
-	* [Die Idee](die_idee.md)
-	* [Begrifflichkeiten](begrifflichkeiten.md)
-	* [Anwendungsmöglichkeiten von Kafka](anwendungsmöglichkeiten_von_kafka.md)
+1. [Was ist Apache Kafka?](01_Was_ist_Apache_Kafka.md)
+	* [Die Idee](Die_Idee.md)
+	* [Begrifflichkeiten](Begrifflichkeiten.md)
+	* [Anwendungsmöglichkeiten von Kafka](Anwendungsmöglichkeiten_von_Kafka.md)
 2. [Die Architektur](02_die_architektur.md)
 	* [Beispiel](Beispiel.md)
 3. [Quellenverzeichnis](03_Quellenverzeichnis.md)
