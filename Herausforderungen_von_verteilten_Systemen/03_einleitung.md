@@ -31,12 +31,14 @@ In [Kapitel 2](04_verteilte_systeme.md) werden zunächst Eigenschaften verteilte
 
 ---
 [Harari, 2018] Y. N. Harari, Eine kurze Geschichte der Menschheit, 30. Auflage. München: Pantheon, 2018.
+
 [Moore, 1998] G. E. Moore, “Cramming More Components Onto Integrated Circuits,” Proc. IEEE, vol. 86, no. 1, pp. 82–85, Jan. 1998, doi: 10.1109/JPROC.1998.658762.
+
 [Godwin, 2017] A. Godwin, “Horros of Distributed Systems,” 04-Aug-2017, URL: https://youtu.be/jx1Hkxe64Xs
+
 [Amdahl, 1967] G. M. Amdahl, “Validity of the single processor approach to achieving large scale computing capabilities,” in Proceedings of the April 18-20, 1967, spring joint computer conference on - AFIPS ’67 (Spring), Atlantic City, New Jersey, 1967, p. 483, doi: 10.1145/1465482.1465560.
+
 [Kleppmann, 2017] M. Kleppmann, Designing data-intensive applications: the big ideas behind reliable, scalable, and maintainable systems, First edition. Boston: O’Reilly Media, 2017.
-
-
 
 ---
 |[<< Inhaltsverzeichnis](02_toc.md) | [Verteilte Systeme >>](04_verteilte_systeme.md)|
