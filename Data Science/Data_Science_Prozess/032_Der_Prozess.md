@@ -2,7 +2,7 @@
 ### 3.2.1 Anbindung der Datenquellen 
 Die erste Aufgabe besteht im Anschluss der Quelle an das Daten Management Systems. Neben dem Einlesen klassischer Datenbanktabellen werden insbesondere bei Data Lakes auch Daten aus Log-dateien (Textformat), CSV-Dateien, Sensoren- und Maschinendaten gesammelt.
 
-Dazu können neben SQL Abfragen, Restful API, RFC-Konnektoren, API oder Microservices verwendet werden. Da Daten Änderungen unterworfen sind, sollten ein regelmäßiges Update eingeplant werden. Die Häufigkeit richtet sich nach der Dynamik der Daten. Dabei sollte auch geprüft werden, wie mit Löschungen umzugehen ist. Sollen zum Beispiel Unternehmen die Aufgelöst wurden, weiter geführt werden, wie sollen Unternehmen behandelt werden, die fusionieren. 
+Dazu können neben SQL Abfragen, Restful [API](../Technologien/API.md), RFC-Konnektoren, API oder [Microservices](../Technologien/Microservice.md) verwendet werden. Da Daten Änderungen unterworfen sind, sollten ein regelmäßiges Update eingeplant werden. Die Häufigkeit richtet sich nach der Dynamik der Daten. Dabei sollte auch geprüft werden, wie mit Löschungen umzugehen ist. Sollen zum Beispiel Unternehmen die Aufgelöst wurden, weiter geführt werden, wie sollen Unternehmen behandelt werden, die fusionieren. 
 
 Bei der Anbindung sollte darauf geachtet werden, dass:
 - die Daten schreibgeschützt abgelegt werden. Eine Änderung sollte nur an Kopien der Daten durchgeführt werden.
