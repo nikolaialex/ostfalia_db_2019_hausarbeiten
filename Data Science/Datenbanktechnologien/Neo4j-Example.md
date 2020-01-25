@@ -6,7 +6,7 @@ Als Voraussetzung wird hier der Download von Neo4j Desktop genannt. Nach diesem,
 
 ![Startoberfläche Neo4j](../images/Neo4J-Start.png)
 
-***Darstellung 5.1.4:** Screenshot von Neo4J Desktop*
+***Darstellung 5.1.4:** Screenshot von Neo4j Desktop*
 
 Entsprechend der [Anleitung](https://neo4j.com/download-thanks-desktop/?edition=desktop&flavour=osx&release=1.2.4&offline=true) wurde ein neues Projekt angelegt und ein Graph erstellt.
 
@@ -14,7 +14,7 @@ Nach erfolgreichem Setup, ist die Datenbank unter <http://localhost:7474> erreic
 
 ![Neo4j unter localhost](../images/Neo4J-localhost.png)
 
-***Darstellung 5.1.5**: Screenshot Neo4J im Browser*
+***Darstellung 5.1.5**: Screenshot Neo4j im Browser*
 
 Zunächst soll an dieser Stelle ein ausgedachtes Modell vorgestellt werden, welches im Anschluss in die Datenbank überführt wird.
 Die Voraussetzungen für einen Graphen sind dabei Knoten, Beziehungen und Eigenschaften. <a id="Darstellung_516"></a>
