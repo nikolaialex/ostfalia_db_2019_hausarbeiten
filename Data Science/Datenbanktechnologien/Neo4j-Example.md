@@ -68,7 +68,7 @@ Die Farben der Nodes können individuell verändert werden. Dazu ist lediglich e
 
 ***Darstellung 5.1.14:** Screenshot der Oberfläche zur Erstellung eines Graphen mit Farbpalette*
 
-Nun fehlen nur noch die Beziehungen. Diese können über die entsprechenden Cypher-Abfragen hinzugefügt werden.
+Nun fehlen nur noch die Beziehungen. Diese können über die entsprechenden [Cypher](https://neo4j.com/docs/cypher-manual/current/)-Abfragen hinzugefügt werden.
 
     MATCH (p:Person), (un:University) CREATE (p)-[r:STUDIES_AT]->(un)
 
