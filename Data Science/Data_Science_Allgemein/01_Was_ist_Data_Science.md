@@ -1,3 +1,5 @@
+# 2 Data Science
+
 # 2.1 Was ist Data Science?
 
 Data Science wird zu deutsch Datenwissenschaft genannt. Gängig ist aber die Verwendung des englischen Begriffs Data Science. Data Science beschreibt ein interdisziplinäres Wissenschaftsfeld, welches strukturierte, als auch unstrukturierte Daten basierend auf wissenschaftlich fundierten Methoden, Algorithmen, Prozessen und Systemen zur Extraktion von Mustern, Erkenntnissen und Schlüssen ermöglicht. Der Schwerpunkt von Data Science liegt also nicht bei den Daten selbst, sondern vor allem bei der Art und Weise wie die Daten verarbeitet, aufbereitet und analysiert werden. Es werden dabei Techniken und Theorien aus den Bereichen der Mathematik, Statistik, Informationstechnologie sowie Signalverarbeitung genutzt. Ebenso werden Wahrscheinlichkeitsmodelle des maschinellen und statistischen Lernens, der Programmierung, der Datentechnik, der Mustererkennung, der Prognostik, der Modellierung von Unsicherheiten und der Datenlagerung verwendet.
