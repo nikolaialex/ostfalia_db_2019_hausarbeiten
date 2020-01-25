@@ -42,7 +42,3 @@ Eine Ausarbeitung zum Thema Data Science.
 7. [Darstellungsverzeichnis](darstellungsverzeichnis.md)
 8. [Literaturverzeichnis](Literaturverzeichnis.md)
 
-
-| [&lt;&lt; 7 Darstellungsverzeichnis](darstellungsverzeichnis.md) | Data Science - Eine Ausarbeitung | [1 Einleitung &gt;&gt;](./Data_Science_Allgemein/00_Einleitung.md) |
-|--------------------------------------------------------------------------|----------------------------------|----------------------------------------------------------------------------|
-
