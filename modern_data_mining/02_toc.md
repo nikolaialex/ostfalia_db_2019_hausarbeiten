@@ -2,9 +2,9 @@
 
 1. [Einleitung](03_einleitung.md) <- Joanna
 2. [Einführung in Data Mining](04_einfuehrung.md)
-   1. [Definition]()
-   2. [Verwandte Bereiche und ihre Unterschiede zu Data Mining]()
-   3. [Data Mining Prozess]()
+   1. [Definition](04_einfuehrung.md#definition)
+   2. [Verwandte Bereiche und ihre Unterschiede zu Data Mining](04_einfuehrung.md#verwandte-bereiche-und-ihre-unterschiede-zu-data-mining)
+   3. [Data Mining Prozess](04_einfuehrung.md#data-mining-prozess)
 3. [Data Mining Methoden](05_Methoden.md)
    1. [Ausreßer-Erkennung]()
    2. [Clustering]()
