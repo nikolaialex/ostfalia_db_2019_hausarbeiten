@@ -11,7 +11,7 @@ Folgende Eigenschaften hat ein Microservice:
 
 - Spezialisierung - jeder Service löst ein konkretes Problem - sollte ein Service an Komplexität gewinnen, kann dieser in kleinere Services unterteilt werden
 
-Die Vorteile von Microservices überwiegen den Nachteilen, wie der nachfolgenden Auflistunge zu entnehmen ist <a id="Darstellung_41"></a>:
+Die Vorteile von Microservices überwiegen den Nachteilen, wie der nachfolgenden Auflistunge zu entnehmen ist [[4.2](https://aws.amazon.com/de/microservices/), [4.3](https://t3n.de/news/was-sind-eigentlich-microservices-1005903/)]<a id="Darstellung_41"></a>:
 
 Vorteile | Beschreibung |
 | :----: | :----: |
