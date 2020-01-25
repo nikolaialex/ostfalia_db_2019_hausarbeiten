@@ -5,10 +5,9 @@
 ---
 
 # 5. Zusammenfassung
-
 Für die Kommunikation wurden RPC betrachtet, welche im Zusammenspiel mit ORBs auch RMIs ermöglichen, schließlich auch das Konzept der Autorität und Aspekten, welche die Objekt- und Zustandsreplikation unterstützen.
 
-Im Fallbeispiel wurde erläutert, wie durch Relevanzkriterien z. B. eine räumliche Partitionierung vorgenommen werden kann, um die zu verarbeitende und zu übertragene Datenmenge effizient zu reduzieren. Zusätzlich wurden hierbei die verschiedenen Optimierungsansätze aufeinander aufbauend gegenübergestellt und auch Gegensätzliche Konzepte betrachtet.
+Im Fallbeispiel wurde erläutert, wie durch Relevanzkriterien z. B. eine räumliche Partitionierung vorgenommen werden kann, um die zu verarbeitende und zu übertragene Datenmenge effizient zu reduzieren. Zusätzlich wurden hierbei die verschiedenen Optimierungsansätze aufeinander aufbauend gegenübergestellt und auch gegensätzliche Konzepte betrachtet.
 
 Es ist festzuhalten, dass es für alle Herausforderungen auch Lösungen gibt, jedoch ist anhand des Systemdesigns abzuwägen, welche der Konzepte und konkreten Middlewares die meisten der Anforderungen erfüllen kann. Vor- und Nachteile müssen gegenübergestellt und Anforderungen priorisiert werden, um ein möglichst gutes verteilte System zu realisieren.
 
