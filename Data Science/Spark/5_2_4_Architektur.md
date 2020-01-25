@@ -34,7 +34,7 @@ Mllib / SparkML ermöglicht Maschinelles Lernen in Spark. Verschiedene Algorithm
 
 ## 5.2.4.5 GraphX
 
-Diese Bibliothek stellt Funktionalitäten zur Verfügung, um Graphen (zum Beispiel Netzwerk von Freunden auf Social Media) zu manipulieren. In Kapitel [5.1.1 Neo4J](../Datenbanktechnologien/Neo4J.md) wurde bereits Neo4J vorgestellt, das auch zur Verarbeitung von Graphendaten dient.
+Diese Bibliothek stellt Funktionalitäten zur Verfügung, um Graphen (zum Beispiel Netzwerk von Freunden auf Social Media) zu manipulieren. In Kapitel [5.1.1 Neo4j](../Datenbanktechnologien/Neo4J.md) wurde bereits Neo4j vorgestellt, das auch zur Verarbeitung von Graphendaten dient.
 
 | [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 5.2.3 Funktionsweise](./5_2_3_Funktionsweise.md) | Architektur | [5.2.5 Praxis &gt;&gt;](./5_2_5_Praxis.md) |
 |------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|
