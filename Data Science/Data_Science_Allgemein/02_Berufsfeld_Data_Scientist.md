@@ -1,4 +1,4 @@
-# Berufsfeld Data Scientist
+# 2.2 Berufsfeld Data Scientist
 
 Eine Person, deren Aufgaben im Bereich Data Science liegen, wird als Data Scientist bezeichnet, dies gilt sowohl für die männliche als auch weibliche Form. Der Einfachheit halber wird in der vorliegenden Arbeit daher immer vom Data Scientist gesprochen.
 
@@ -12,3 +12,6 @@ Die folgende Grafik zeigt auf, aus welchen Bereichen sich Data Science zusammens
 
 
 ![Graph](../images/DataScientist.png) 
+
+| [&lt;&lt;&lt; Inhaltsverzeichnis](../README.md) | [&lt;&lt; 2.1 Was ist Data Science?](./01_Was_ist_Data_Science.md) | Berufsfeld Data Scientist | [2.3 Big Data &gt;&gt;](./03_Big_Data.md) |
+|------------------------------------------------|---------------------------------------------------------------------------------|-------------|-----------------------------------------------------------------|
