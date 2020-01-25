@@ -1,8 +1,8 @@
 # Literatur
 
-[1]	Brewer, E. 2000. Towards Robust Distributed Systems. https://​people.eecs.berkeley.edu​/~​brewer/​cs262b-2004/​PODC-keynote.pdf. Stand: 27 November 2019.
+[1]	Brewer, E. 2000. Towards Robust Distributed Systems. https://people.eecs.berkeley.edu/~brewer/cs262b-2004/PODC-keynote.pdf. Stand: 27 November 2019.
 
-[2]	Eric Brewer. 2012. CAP Twelve Years Later: How the "Rules" Have Changed. https://​www.infoq.com​/​articles/​cap-twelve-years-later-how-the-rules-have-changed/​. Stand: 27 November 2019.
+[2]	Eric Brewer. 2012. CAP Twelve Years Later: How the "Rules" Have Changed. https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/. Stand: 27 November 2019.
 
 [3]	Vogels, W. 2009. Eventually consistent. Commun. ACM 52, 1, 40.
 
@@ -10,9 +10,9 @@
 
 [5]	Shapiro, M., Preguiça, N., Baquero, C., and Zawirski, M. 2011. Conflict-free Replicated Data Types.
 
-[6]	Roit Games. 2016. Chat Service Architecture: Persistence. https://​engineering.riotgames.com​/​news/​chat-service-architecture-persistence. Stand: 27 November 2019.
+[6]	Roit Games. 2016. Chat Service Architecture: Persistence. https://engineering.riotgames.com/news/chat-service-architecture-persistence. Stand: 27 November 2019.
 
-[7]	SoundCloud. 2014. Roshi: a CRDT system for timestamped events. https://​developers.soundcloud.com​/​blog/​roshi-a-crdt-system-for-timestamped-events. Stand: 27 November 2019.
+[7]	SoundCloud. 2014. Roshi: a CRDT system for timestamped events. https://developers.soundcloud.com/blog/roshi-a-crdt-system-for-timestamped-events. Stand: 27 November 2019.
 
 [8]	Kleppmann, M. and Beresford, A. R. 2017. A Conflict-Free Replicated JSON Datatype. IEEE Trans. Parallel Distrib. Syst. 28, 10, 2733–2746.
 
