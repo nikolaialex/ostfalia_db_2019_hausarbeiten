@@ -5,7 +5,7 @@
 ---
 
 # 5. Zusammenfassung
-Für die Kommunikation wurden RPC betrachtet, welche im Zusammenspiel mit ORBs auch RMIs ermöglichen, schließlich auch das Konzept der Autorität und Aspekten, welche die Objekt- und Zustandsreplikation unterstützen.
+Für die Kommunikation wurden RPC betrachtet, welche im Zusammenspiel mit ORBs auch RMIs ermöglichen, schließlich auch das Konzept der Autorität und Aspekten, welche die Objekt- und Zustandsreplikation unterstützen. Separat ist hierbei die zustandslose nachrichtenbasierte Kommunikation zu sehen.
 
 Im Fallbeispiel wurde erläutert, wie durch Relevanzkriterien z. B. eine räumliche Partitionierung vorgenommen werden kann, um die zu verarbeitende und zu übertragene Datenmenge effizient zu reduzieren. Zusätzlich wurden hierbei die verschiedenen Optimierungsansätze aufeinander aufbauend gegenübergestellt und auch gegensätzliche Konzepte betrachtet.
 
