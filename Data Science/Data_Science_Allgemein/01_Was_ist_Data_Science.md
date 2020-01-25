@@ -6,7 +6,7 @@ Data Science wird zu deutsch Datenwissenschaft genannt. Gängig ist aber die Ver
 
 Data Mining und Text Mining sind gern genutzte Verfahren, um Datenbestände automatisiert zu analysieren und Antworten auf bestimmte Fragestellungen zu generieren. Dabei liegt das Hauptaugenmerk auf dem Erfassen von neuen und unbekannten Zusammenhängen.
 
-Ein weiteres interessantes und oft genutztes Verfahren zur Erstellungs von Prognosen mittels Datenanalyse ist Predicitve Analytics. Hierbei wird mit Extrapolation* von bekannten Daten Entwicklungen im Unternehmensumfeld frühzeitig erkannt.
+Ein weiteres interessantes und oft genutztes Verfahren zur Erstellung von Prognosen mittels Datenanalyse ist Predicitve Analytics. Hierbei wird mit Extrapolation* von bekannten Daten Entwicklungen im Unternehmensumfeld frühzeitig erkannt.
 
 **Extrapolation steht für die Bestimmung eines  mathematischen Verhaltens über den gesicherten Bereich hinaus* 
 
