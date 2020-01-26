@@ -37,6 +37,10 @@ Der Apriori-Algorithmus basiert auf Assoziationsregeln, die, bei EIntreten ein o
 
 Beim K-Means-Verfahren werden Mittelpunkte eines Clusters durch Iteration gesucht.  Das Cluster repräsentiert dabei eine bestimmte Gruppe (mit ähnliche, unter Umständen auch variablen und mehrdimensionalen Daten), deren Mittelpunkt gesucht wird. Das Verfahren findet beispielsweise in der Qualitätssicherung, der Produktentwicklung oder in Bereichen der Computersicherheit Anwendung. [46]
 
+## Hauptkomponentenanalyse
+
+Durch den Versuch, möglichst viele variable Faktoren zu isolieren und  trotzdem eine großen Teil der Abweichungen einzelner Faktoren zu verstehen, können mit der Hauptkomponentenanalyse große Datensätze vereinfacht und strukturiert werden. Das Verfahren wird unter Anderem bei der Transformationen von Bildern angewandt. [47]
+
 
 
 [41]
@@ -57,3 +61,5 @@ http://www.gm.fh-koeln.de/~konen/WPF-DM-Cup/04-Naive-Bayes.pdf
 [46]
 https://www.micromata.de/blog/k-means-clustering-big-data/
 
+[47]
+http://www.ra.cs.uni-tuebingen.de/lehre/ss06/pro_learning/ClaudiaBroelemann.pdf
