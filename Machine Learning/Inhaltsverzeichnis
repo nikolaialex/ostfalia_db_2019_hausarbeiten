@@ -1,0 +1,26 @@
+Einleitung
+Definition und historische Entwicklungen
+Arten von Machine Learning
+überwachtes Lernen
+unüberwachtes Lernen
+teilüberwachtes Lernen
+bestärkendes Lernen
+aktives Lernen
+Algorithmen
+Algorithmen des überwachten Lernens
+Lineare Regression
+Logistische Regression
+CART
+Naiive Bayes
+Algorithmen des unüberwachten Lernens
+Apriori
+K-Means Clustering
+Bezug zu Arten von Machine Learning
+Anwendungsbeispiele
+Deep Learning - Gesichtserkennung mit Python
+Sprachassistenten
+Datenbanken und Frameworks
+Beispiele: MLDB
+Spark 
+Hadoop
+Fazit 
