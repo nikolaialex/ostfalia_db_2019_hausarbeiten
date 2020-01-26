@@ -115,12 +115,33 @@ Der Bayes-Klassifikator ist schnell berechenbar und hat eine gute Erkennungsrate
 |*Abbildung 1-3: Mathemtische Definition des naiven Bayes-Klassifikators*|
 
 ## Assoziation
-In der Assoziationsanalyse steht die Suche nach starken Regeln im Vordergrund. Beispielsweise wird mit ihr das Kaufverhalten von Personen analysiert und Korrelationen zwischen Gemeinsamkeiten beschrieben. Im Alltag kommen wir mit den Ergebnissen einer Assoziationsanalyse in Berührung, wenn wir online einkaufen. Alle Produkte, die in unserem Warenkorb gespeichert sind, sind in irgendeiner Form mit anderen Produkten verknüpft, die in Verbindung mit unseren Produkten zusammen gekauft wurden. Wir erhalten dann diese Ergebnisse als weitere Kaufvorschläge.  
+In der Assoziationsanalyse steht die Suche nach starken Regeln im Vordergrund. Beispielsweise wird mit ihr das Kaufverhalten von Personen analysiert und Korrelationen zwischen Gemeinsamkeiten beschrieben. Im Alltag kommen wir mit den Ergebnissen einer Assoziationsanalyse über das Crossmarketing in Berührung, wenn wir online einkaufen. Alle Produkte, die in unserem Warenkorb gespeichert sind, sind in irgendeiner Form mit anderen Produkten verknüpft, die in Verbindung mit unseren Produkten zusammen gekauft wurden. Wir erhalten dann diese Ergebnisse als weitere Kaufvorschläge.  
 
 |![assoziation](https://github.com/Averan82/ostfalia_db_2019_hausarbeiten/blob/master/modern_data_mining/images/assoziation.png)|  
 |:--:|  
 |*Abbildung 1-4: Amazons Kaufempfehlungen anhand getätigter Einkäufe*|  
 
-Ähnlich verfahren die Algorithmen auch mit Produkten, die Ähnlich sind. Wer beispielsweise eine Digitalkamera kauft, bekommt auch gleich die passende Speicherkarte angeboten.
+Ähnlich verfahren die Algorithmen auch mit Produkten, die miteinander verwandt sind. Wer beispielsweise eine Digitalkamera kauft, bekommt auch gleich die passende Speicherkarte angeboten.
+
+Zu der Berechnung solcher Assoziationen wird häufig der Apriori-Algorithmus eingesetzt. Als Voraussetzung muss eine bestimmte Form der Daten vorliegen. Es braucht eine Menge möglicher Items, eine Datenbasis mit Transaktionen und jede Transaktion fasst eine Menge von Items zusammen. Die Assoziationsregel benötigt drei Kenngrößen, um Ergebnisse zu liefern:
+Der Support zeigt die relative Häufigkeit des Auftretens der Regel. Es berechnet entsprechend, wie häufig eine Transaktion vorgekommen ist, auf die die Regel zutrifft. Um beim Beispiel Digitalkamera und Speicherkarte zu bleiben: Der Support zeigt an, wie häufig beide Produkte zusammen gekauft wurden.
+Der Konfidenz berechnet, wie hoch der Anteil der Anteil der Transaktionen ist, in denen beide Produkte vorkommen. Die Berechnung ist die Anzahl aller Transaktionen, auf die die Regel zutrifft (Support), durch die Anzahl der Transaktionen, die nur das erste der Produkte enthält. 
+Der Lift ist die Kenngröße die anzeigt, um welches vielfache der Konfidenzwert den Erwartungswert übertrifft, er zeigt also, wie groß die Bedeutung der Regel ist.
+Der Apriori-Algorithmus kämpft mit zahlreichen Problemen, er wächst exponentiell bei wachsender Anzahl der Produkte, die geprüft werden müssen. Dies führte dazu, dass er immer mehr vom FPGrowth-Algorithmus abgelöst wird. Dieser benötigt zur Berechnung eine komprimierte Auflistung aller Transaktionen als Frequent Pattern-Baum. 
+#### Pseudocode FPGrowth-Algorithmus
+```
+Input: Frequent Pattern Tree tree, Frequent Itemset I
+Output: vollständige Menge häufiger Itemsets
+If tree hat nur einen Pfad P then 
+     foreach Kombination K von Knoten in P do
+       return K I mit support = minimaler Support der Items in K end
+else 
+     foreach Item i in Tabelle F (in umgekehrter Häufigkeitsreihenfolge) do
+       K = i I mit support = Support von i;
+       Erstelle Musterbasis von K und reduzierten FP-Baum FPK;
+       If FPK nicht leer then FP-Growth (FPK,K)
+     end
+end
+```
 
 ## Regression
