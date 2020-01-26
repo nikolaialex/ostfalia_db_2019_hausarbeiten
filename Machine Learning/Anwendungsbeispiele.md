@@ -25,6 +25,7 @@ Machine bzw. Deep Learning Technologien sind dabei ein Schlüsselfaktor für den
 Neben der Fehlererkennung lernen die Amazon Services auch Im Bereich der Personalisierung weiter - seit 2018 kann das System spezifische Aufforderungen und Synonyme  lernen, und nicht bekannte Kommandos für eine bereits bekannte Aktion von selbst erlernen. Benutzen zwei Personen unterschiedliche Wörter für die selbe Aktion, lernt das System dazu.
 Neben den zwei aufgezeigten Beispielen verwendete Amazon Alexa Machine Learning Technologien noch für weitere Verbesserungen an ihrem Ökosystem, angefangen von möglichen Verbesserungsvorschlägen bis hin zu signifikanten Verbesserungen im Verstehen natürlicher menschlicher Sprache.[57]
 
+---
 
 [51]
 https://de.mathworks.com/discovery/deep-learning.html
@@ -47,5 +48,6 @@ https://www.forbes.com/sites/bernardmarr/2018/10/05/how-does-amazons-alexa-reall
 [57]
 https://www.wired.com/story/amazon-alexa-2018-machine-learning/
 
+---
 
 [< Algorithmen](Algorithmen.md) | [Datenbanken und Frameworks>](Datenbanken_und_Frameworks.md)
