@@ -1,6 +1,6 @@
 # Einführung in Geodatenbanken
 
-Diese Ausarbeitung soll eine kurze Einführung in das Thema der Geodatenbanken bieten. Zunächst soll anhand einiger historischen Hintergründe erläutert werden, wie die Notwendigkeit von Geodatenbanken entstanden ist. Darauf aufbauen wird in einer theoretischen Einführung das grundlegende Verständnis für Geodatenbanken aufgebaut und wie die Entwicklung und Weiterentwicklung solcher System vorangetrieben werden. Den Abschluss bildet eine praktische Übung.
+Diese Ausarbeitung soll eine kurze Einführung in das Thema der Geodatenbanken bieten. Zunächst soll anhand einiger historischen Hintergründe erläutert werden, wie die Notwendigkeit von Geodatenbanken entstanden ist. Darauf aufbauend wird in einer theoretischen Einführung das grundlegende Verständnis für Geodatenbanken aufgebaut und wie die Entwicklung solcher System vorangetrieben werden. Den Abschluss bildet einige praktische Beispiele.
 
 ## Autoren
 
