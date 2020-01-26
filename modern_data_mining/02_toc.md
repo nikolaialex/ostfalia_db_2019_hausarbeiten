@@ -15,3 +15,4 @@
    2. [OLAP](11_olap.md)
    3. [Neuronale Netze](12_neuronale_netze.md)
 6. [Zusammenfassung]()
+7. [Quellen](14_quellen.md)
