@@ -14,8 +14,4 @@
    1. [Entscheidungsbäume](10_entscheidungsbäume.md)
    2. [OLAP](11_olap.md)
    3. [Neuronale Netze](12_neuronale_netze.md)
-5. [Data Mining Einsatz](13_datamining_einsatz.md) <- Lars
 6. [Zusammenfassung](14_zusammenfassung.md)
-
-
- 
