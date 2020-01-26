@@ -40,7 +40,7 @@ Einen weiteren Meilenstein in der Geschichte der Geodaten stellte 1994 die Grün
 
 Die 2004 veröffentlichte Spezifikation [ISO 19125-2:2004](https://www.iso.org/standard/40115.html)[6], dem sogenannten *Simple feature access*, die die grundlegenden geometrischen Datentypen und deren Speicherung festlegt, gilt als heutiger Industriestandard. Eine der wichtigsten Spezifikationen des *Simple feature access*  sind die Formate *WKT - Well-known Text* und *WKB - Well-known Binary*, die die Repärsentation von Geometrien standartisieren und und somit die Interoperabilität erhöhen soll. Die Darstellungsarten werden im Kapitel *Geometrische Formen* näher erläutert.
 
-**HINWEIS** Eine Kopie der *OGC-Simple feature access* Spezifikation in der Version *1.2.1* befindet sich im [Literaturverzeichnis](lit/06-103r4_Implementation_Specification_for_Geographic_Information_-_Simple_feature_access_-_Part_1_Common_Architecture_v1.2.1). Abgerufen am 08.01.2020 von [OGC](https://www.opengeospatial.org/standards/sfa)
+**HINWEIS** Eine Kopie der *OGC-Simple feature access* Spezifikation in der Version *1.2.1* befindet sich im [Literaturverzeichnis](lit/06-103r4_Implementation_Specification_for_Geographic_Information_-_Simple_feature_access_-_Part_1_Common_Architecture_v1.2.1.pdf). Abgerufen am 08.01.2020 von [OGC](https://www.opengeospatial.org/standards/sfa)
 
 ## Anwendungen
 
