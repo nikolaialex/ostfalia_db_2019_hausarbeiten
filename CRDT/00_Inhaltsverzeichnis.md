@@ -15,10 +15,11 @@ Erstellt von:   Andreas Breer (Hochschule Emden/Leer)
   * State-based CRDTs
 * [Beispiele für CRDTs](04_Beispiele.md)  
   * Counter
-  * Set
   * Register
+  * Set
+  * CRDTs höherer Ordnung
 * [Implementierungen von CRDTs](05_Implementierungen.md)  
-  * Riak
-  * Ruby
+  * Industrieeinsatz
+  * JSON-CRDT
 * [Fazit](06_Fazit.md)  
 * [Literatur](07_Literatur.md)  
