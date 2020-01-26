@@ -10,5 +10,5 @@ Data Mining und Knowledge Discovery in Data (KDD) werden manchmal synonym verwen
 
 ## Data Mining Prozess
 Der Data Mining Prozess ist der eigentliche Analyseschritt des KDD-Prozesses. Der KDD-Prozess setzt sich auf mehreren verschiedenen Teilschritten zusammen:
-Zunächst müssen die Daten mit dem Wissen zusammengestellt werden und eine Definition der Ziele erfolgen, die bei der Wissenssuche und -findung notwendig ist. Danach wird eine Auswahl der Daten vorgenommen und diese bereinigt und auf wesentliche Daten reduziert. Nachdem ein Modell definiert wurde, wie das gefundene Wissen dargestellt werden soll, kommt das eigentliche Data Mining, die Datenanalyse. Zum Schluss folgt die Nachbearbeitung durch Interpretation der gefundenen Muster.
+Zunächst müssen die Daten mit dem Wissen zusammengestellt werden und eine Definition der Ziele erfolgen, die bei der Wissenssuche und -findung notwendig ist. Danach wird eine Auswahl der Daten vorgenommen und diese bereinigt und auf wesentliche Daten reduziert. Nachdem ein Modell definiert wurde, wie das gefundene Wissen dargestellt werden soll, kommt das eigentliche Data Mining, die Datenanalyse. Zum Schluss folgt die Nachbearbeitung durch Interpretation der gefundenen Muster.  
 | [<< Einleitung ](03_einleitung.md) | [ Data Mining Methoden >>](05_methoden.md) |
