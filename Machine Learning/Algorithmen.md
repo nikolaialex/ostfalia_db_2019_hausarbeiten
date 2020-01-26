@@ -31,11 +31,11 @@ Durch die Methode von Bayes wird, basierend auf dem Bayeschen Theorem, durch von
 
 ## Apriori
 
-Der Apriori-Algorithmus basiert auf Assoziationsregeln, die, bei EIntreten ein oder mehrer Ereignisse ein Folgeereignisse vorhersagen, Beispielsweise kann davon ausgegangen werden, dass eine Person, die Ski und einen Skihelm kauft, sich ebenfalls für einen Skihelm interessieren könnte. 
+Der Apriori-Algorithmus basiert auf Assoziationsregeln, die, bei Eintreten ein oder mehrer Ereignisse ein Folgeereignisse vorhersagen, Beispielsweise kann davon ausgegangen werden, dass eine Person, die Ski und einen Skihelm kauft, sich ebenfalls für einen Skihelm interessieren könnte. 
 
 ## K-Means
 
-Beim K-Means-Verfahren werden Mittelpunkte eines Clusters durch Iteration gesucht.  Das Cluster repräsentiert dabei eine bestimmte Gruppe (mit ähnliche, unter Umständen auch variablen und mehrdimensionalen Daten), deren Mittelpunkt gesucht wird. Das Verfahren findet beispielsweise in der Qualitätssicherung, der Produktentwicklung oder in Bereichen der Computersicherheit Anwendung. [46]
+Beim K-Means-Verfahren werden Mittelpunkte eines Clusters durch Iteration gesucht. Das Cluster repräsentiert dabei eine bestimmte Gruppe (mit ähnliche, unter Umständen auch variablen und mehrdimensionalen Daten), deren Mittelpunkt gesucht wird. Das Verfahren findet beispielsweise in der Qualitätssicherung, der Produktentwicklung oder in Bereichen der Computersicherheit Anwendung. [46]
 
 ## Hauptkomponentenanalyse
 
