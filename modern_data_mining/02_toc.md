@@ -6,7 +6,7 @@
    2. [Verwandte Bereiche und ihre Unterschiede zu Data Mining](04_einfuehrung.md#verwandte-bereiche-und-ihre-unterschiede-zu-data-mining)
    3. [Data Mining Prozess](04_einfuehrung.md#data-mining-prozess)
 3. [Data Mining Methoden](05_methoden.md)
-   1. [Ausreßer-Erkennung](05_methoden.md#ausreißer-erkennung-outliner-detection)
+   1. [Ausreißer-Erkennung](05_methoden.md#ausreißer-erkennung-outliner-detection)
    2. [Clustering](05_methoden.md#clustering)
    3. [Klassifikation](05_methoden.md#klassifikation)
    4. [Assoziation](05_methoden.md#assoziation)
