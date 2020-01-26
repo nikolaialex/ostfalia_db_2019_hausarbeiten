@@ -23,6 +23,22 @@ Der CART- Algorithmus basiert auf Entscheidungsbäumen, ein Ergebnis ist dabei d
 
 Der Entscheidungsbaum dient als Grundlage zur Berechnung des möglichen Ausgangs eines Ereignisses - dieses kann sich in seiner Aussage aber durch stetige Eigenschaften (z.B. die Fiebertemperatur in Grad) oder der Zuordnung zu einer gewissen Klasse (der Patient hat überlebt oder nicht) unterscheiden. Stetige Eigenschaften durch Regression, die Zuordnung zu einer gewissen Klasse durch Klassifikation berechnet. [44]
 
+## Naiive Bayes
+
+Durch die Methode von Bayes wird, basierend auf dem Bayeschen Theorem, durch von einander unabhängige Variablen der Ausgang eines Ereignisses geschätzt. Durch Division der miteinander mulitplizierten bedingten Wahrscheinlichkeitund der Klassenwahrscheinlichkeit durch die Schätzung können Vorhersagen sehr einfach getroffen werden - kritisiert wird allerdings die Annahme, dass alle Variablen unabhängig voneinander sind. [45]
+
+# Algorithmen des unüberwachten Lernens
+
+## Apriori
+
+Der Apriori-Algorithmus basiert auf Assoziationsregeln, die, bei EIntreten ein oder mehrer Ereignisse ein Folgeereignisse vorhersagen, Beispielsweise kann davon ausgegangen werden, dass eine Person, die Ski und einen Skihelm kauft, sich ebenfalls für einen Skihelm interessieren könnte. 
+
+## K-Means
+
+Beim K-Means-Verfahren werden Mittelpunkte eines Clusters durch Iteration gesucht.  Das Cluster repräsentiert dabei eine bestimmte Gruppe (mit ähnliche, unter Umständen auch variablen und mehrdimensionalen Daten), deren Mittelpunkt gesucht wird. Das Verfahren findet beispielsweise in der Qualitätssicherung, der Produktentwicklung oder in Bereichen der Computersicherheit Anwendung. [46]
+
+
+
 [41]
 https://www.dataquest.io/blog/top-10-machine-learning-algorithms-for-beginners/
 
@@ -35,5 +51,9 @@ https://www.inwt-statistics.de/blog-artikel-lesen/Logistische_Regression.html
 [44]
 https://www.dbs.ifi.lmu.de/Lehre/MaschLernen/SS2009/folien/Entscheidungsbaeume2009.pd
 
+[45]
+http://www.gm.fh-koeln.de/~konen/WPF-DM-Cup/04-Naive-Bayes.pdf
 
+[46]
+https://www.micromata.de/blog/k-means-clustering-big-data/
 
