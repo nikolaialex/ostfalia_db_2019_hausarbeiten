@@ -1,6 +1,4 @@
 .history/
 .DS_Store
-/.idea/
-*.iml
 ./idea
 .vscode
