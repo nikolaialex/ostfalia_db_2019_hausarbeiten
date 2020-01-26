@@ -2,7 +2,9 @@
 
 Ein wichtiger Apskekt sowohl für die Speicherung, als auch für die Anwendung von Geodaten ist das zugrundeliegende Referenzkoordinatensystem (*engl* Spatial reference system). Je nach Anwendung und Abstraktionslevel existieren verschiedene Annahmen über die geometrische Figur der Erde. Bei macnhen Anwendungen reichen einfache X/Y-Koordinaten, andere Anwendungen wie beispielsweise die Navigation brauchen zur korrekten Berechnung die Höhenangaben einer Koordinate. Dies ist die einfachste Form der Unterscheidung. Komplexer wird die Unterscheidung, wenn man bedenkt, dass die Erde weder eine Kugel, noch eine Ellipse mit abgeflachten Polen ist. Vielmehr ist die Erde ein Geoid. Dieser Geoid ist nach Definition *der von der tatsächlichen Erdgestalt abweichende theoretische Körper, dessen Oberfläche die Feldlinien der Schwerkraft überall im rechten Winkel schneidet* [1].
 
-![earth_shape](img/earth_sphae.png)[2]
+|![earth_shape](img/earth_sphae.png)|
+|:--:|
+|*Abbildung 4-1: Grafische Darstellung verschiedener Annahmen von Erdformen. Quelle: [2]*|
 
 Dies bedeutet, dass je nach Anwendungsfall und zugrundeliegenden Referenzkoordinatensystem die Darstellung der Geometrien unterschiedlich sein können.
 
@@ -12,13 +14,17 @@ Aufgrund dessen wurde das geodätische Datum eingeführt. Dieses Datum beschreib
 
 Neben dem zugrundeliegenden Erdköper und der Anwendung spielt auch die Region der Anwendung eine wichtige Rolle. Um die Genauigkeit des geodätischen Datum zu erhöhen wird dieses je nach Region angepasst.
 
-![Nord america_europa](img/na_europe.gif)
+|![america_europa](img/na_europe.gif)|
+|:--:|
+|*Abbildung 4-2: Gegenüberstellung verschiedener geodätischer Daten. Quelle: [4]*|
 
 Diese Datum werden als **lokal** bezeichnet, da sie nur für eine bestimmte Region eine hohe Präzision liefern, für den Rest des Geoid jedoch nicht nutzbar sind. In der oben gezeigtn Grafik sind die beiden Datum für die Regionen *Nord Amerika* und *Europa* gewählt. Wählt man das rote Datum erhählkt man eine hohe Präzision für Amerika, verringert jedoch die Präzision für Europa und umgekehrt.
 
 Um eine allgemeingültiges Datum zur Verfügung zu stellen wird das *Earth-centered datum* verwendet. Seit 2000 wird dazu das Datum *WGS84 - World Geodetic System 1984* verwendet. Dies soll in nahezu allen Regionen er Erde eine ausreichende Präzision ermöglichen.
 
-![local-erde](img/local_earth.gif)
+|![america_europa](img/local_earth.gif)|
+|:--:|
+|*Abbildung 4-3: Gegenüberstellung lokaler und weltweiter geodätischer Daten. Quelle: [4]*|
 
 Die linke Abbildung zeigt das lokale Datum *NAD27 - North America Datum of 1927* für Nord Amerika, daneben das allgemeingültige *WGS84 - World Geometric System 1984*. Auch wenn es in einigen Regionen deutlich von der eigentlichen Geoid-Form abweicht, verfügt es für den Großteil des Geoid eine akzeptable Präzision.
 

@@ -14,9 +14,9 @@ In diesem Zusammenhang bedeuten räumliche Daten und Objek:te
 
 Diese vier Komponenten sollen in den nächsten Kapiteln beschrieben werden.
 
-![geometry](img/geometry_context.png)
-
-Grafische Darstellung der Komponennten einer Geodatenbank
+|![geometry](img/geometry_context.png)|
+|:--:|
+|*Abbildung 1-1: Grafische Darstellung der Komponennten einer Geodatenbank. Quelle: Selbsterstellt*|
 
 ## Geschichte
 
@@ -29,7 +29,9 @@ Diese Sternenkonstellation wurde vor allem in der nördlichen Hemisphäre zum na
 
 Im Jahr 1854 konnte der der britische Mediziner John Snow die Ursache einer Choleraepidemie in London durch die Anwendung eines einfachen Geoinformationssystem erkennen und deren Ausbreitung dadurch einschränken. Durch die Kombination von bereits bekannten Karten der Londoner Innenstadt und dem Auftreten der bekannten Cholerafälle konnte schnell eine Ursache für die Infektion ermitteln werden. Dazu wurden die Cholerafälle ortsbezogen gruppiert, d.h. die Daten wurden geclustert. Nahezu alle der Cholerafälle bezogen ihr Wasser aus der gleichen Wasserpumpe[3].
 
-![Punkte](img/SnowMap_Points.png)
+|![snow_map](img/SnowMap_Points.png)|
+|:--:|
+|*Abbildung 1-2: Cholera-Map von John Snow. Quelle: [3]*|
 
 Die roten Punkte stellen die gruppierten Fälle von Cholera dar. Je größer der Punkt ist, desto mehr Fälle sind an diesem Ort aufgetreten. Unter Clustering versteht man in diesem Zusammenhang die logische Zusammenfassung von Objekten und Informationen mit ähnlichen Eigenschaften.
 

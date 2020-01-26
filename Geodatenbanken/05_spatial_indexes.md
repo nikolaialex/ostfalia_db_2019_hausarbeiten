@@ -10,12 +10,17 @@
 
 Bei der R-Baum Hierarchie werden die Koordinaten der urprünglichen Geometrie in eine sogenannte *BoundingBox* umgewandelt. Dabei ist eine BoundingBox nichts weiteres als ein Rechteck, dass sämtliche Punkte der Geometrie umschliesst[2]. Beim Speichern wird dieses Rechteck in der indexierten Spalte gespeichert.
 
-![boundingbox](img/bbox.jpg)
+|![america_europa](img/bbox.jpg)|
+|:--:|
+|*Abbildung 5-1: Beispielhafte Entwicklung einer BoundingBox. Quelle [2]*|
 
 Um nun zu prüfen, welche Geometrien in einer topologischen Relation stehen oder z.B. durch einen gewissen Punkte gehen wird geprüft, welche BoundingBoxen sich überschneiden oder welche BoundingBoxen den gesuchten Punkt enthalten. Dieser Suchvorgang ist wesentlich perfomanter als die Suche nach der exakten Geometrie. In späteren Suchdurchläufen wird die Suche verfeinert und der Baum wird in weitere Sub-Bäume unterteilt.
 
 Man spricht von einem Baum, da größere BoundingBoxen kleinere BoundingBoxen umgeben. Ist die gesuchte Position bereits ausserhalb der ersten BoundinBox müssen die Kindselemente nicht weiter untersucht werden[3].
-![boundingbox_tree](img/rtree.jpg)
+
+|![boundingbox_tree](img/rtree.jpg)|
+|:--:|
+|*Abbildung 5-2: Hierarchische Darstellung eine R-Baume. Quelle: [3]*|
 
  Eine Erweiterung der *R-Baum Hierarchie* ist die _R*-Baum Hierarchie_ die versucht durch eine weiterentwickelte Split-Strategie das Überlappen von Rechtecksregionen zu minimieren.[4]
 

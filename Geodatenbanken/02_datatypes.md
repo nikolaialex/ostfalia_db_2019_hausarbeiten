@@ -2,7 +2,9 @@
 
 Neben den klassischen Datentypenen stellen Geodatenbanken spezielle Datentypen zum Speichern von Geoinformationen zur Verfügung. Dabei besitzen die Datentypen eine hierarische Vererbungsstruktur, ähnlich wie Objekte bei der Objektorientieren Programmierung. Diese Struktur erlaubt die Vererbung von Attributen und Verhalten von den Elternelementen an ihre Kindelemente. Im einfachsten Ansatz können diese Datentypen als Formen bezeichnet werden. Dabei gibt es verschiedene nicht instanziibare, sogenannten abstrakte, Typen, die zur Vereinfachung und Vererbung von geteilten Funktionen verwndet werden. Die folgende Abbildung enthält die Vererbungshierarchy der räumlichen Datentypen nach Vorgaben des OGC. Des weiteren werden die Datentypen in einfache Typen und Auflistungstypen unterteilt[1].
 
-![Punkte](img/ogc_hierarchiy.png)
+|![ogc_datatype_hierarchiy](img/ogc_hierarchiy.png)|
+|:--:|
+|*Abbildung 2-1: Geodatentypen Hierarchie. Quelle: [1]*|
 
 | Datentyp | Beispiel
 |------ | -----------
