@@ -1,7 +1,7 @@
 ## Inhaltsverzeichnis
 
 - [1. Einleitung](Einleitung.md)
-- [2. Einführung in Machine Learning](Einfürung.md)
+- [2. Einführung in Machine Learning](Einführung.md)
 - [3. Arten von Machine Learning](Arten_von_Machine_Learning.md)
   - überwachtes Lernen
   - unüberwachtes Lernen
