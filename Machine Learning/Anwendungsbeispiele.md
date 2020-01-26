@@ -48,4 +48,4 @@ https://www.forbes.com/sites/bernardmarr/2018/10/05/how-does-amazons-alexa-reall
 https://www.wired.com/story/amazon-alexa-2018-machine-learning/
 
 
-
+[< Algorithmen](Algorithmen.md) | [Datenbanken und Frameworks>](Datenbanken_und_Frameworks.md)
