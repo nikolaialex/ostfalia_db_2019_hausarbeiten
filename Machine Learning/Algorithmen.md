@@ -24,7 +24,7 @@ https://www.inwt-statistics.de/blog-artikel-lesen/Logistische_Regression.html
 
 Der CART- Algorithmus basiert auf Entscheidungsbäumen, ein Ergebnis ist dabei die Kette ein oder mehrer binärer Ereignisse. Das Verfahren eignet sich beispielsweise hervorragend zum Auffinden von Fehlern oder zum Data Mining. Ein ähnliches Verfahren, bei dem ebenfalls Entscheidungsbäume als Grundlage für die Berechnung der Wahrscheinlichkeit verwendet werden, ist der Interactive Dichotomizer Algorithmus. 
 
-![Entscheidungsbaum](images/regTree.PNG.PNG "Entscheidungsbaum")
+![Entscheidungsbaum](images/regTree.PNG "Entscheidungsbaum")
 
 Der Entscheidungsbaum dient als Grundlage zur Berechnung des möglichen Ausgangs eines Ereignisses - dieses kann sich in seiner Aussage aber durch stetige Eigenschaften (z.B. die Fiebertemperatur in Grad) oder der Zuordnung zu einer gewissen Klasse (der Patient hat überlebt oder nicht) unterscheiden. Stetige Eigenschaften durch Regression, die Zuordnung zu einer gewissen Klasse durch Klassifikation berechnet. 
 
