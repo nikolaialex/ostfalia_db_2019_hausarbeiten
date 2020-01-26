@@ -59,11 +59,32 @@ Abbildung: Schaubild Data Set
 
 Quelle: [61]
 
+ # Hadoop
+
+Das Open-Source Framework Hadoop erlaubt das Verarbeiten von Batch-Prozessen in einem Clustern mit mehreren Knoten, Server und virtuellen Maschinen. Durch dieses Cluster lassen sich große Datenmengen effizient verarbeiten. 
+
+Hadoop besteht aus vier Bausteinen. Die Komponente Hadoop Common stellt verschiedene Umgebungen und Tools, beispielsweise zum Ausführen von JavaScript, bereit und kommuniziert über verschiedene Schnittstellen mit den anderen Komponenten des Systems.
+
+Zur Verarbeitung riesiger Datenmengen wird ein verteiltes Dateisystem, das Distributed File System HDFS, eingesetzt. Die Komponenten strukturiert das Dateisystem und stellt verschiedene Dienste zur Datenverwaltung, beispielsweise bei der Datensicherung, bereit.
+
+Der MapReduce-Algorithmus stellt die wichtigste Einheit des Frameworks dar. Der ursprünglich von Google entworfene Algorithmus ermöglicht das Ausführen von Berechnungen parallel auf mehreren Instanzen. DIe Daten werden dabei in Schlüssel-Werte-Paaren in Blöcke eingeteilt, verschiedene Berechnungen durchgeführt und am Ende vom Hadoop Framework wieder zusammengefasst.
+ 
+Die vierte Komponente YARN dient zur Ressourcen- Verwaltung, verschiedene Jobs können dynamisch einer Maschine oder Ressource zugewiesen werden. [62]  [62] 
+
+# Spark
+
+Spark ist ein Datenanalysesystem, dass es erlaubt, Echtzeitdaten, beispielsweise aus sozialen Netzwerken, in Echtzeit zu verarbeiten. Die Datenverarbeitung erfolgt dabei im Arbeitsspeicher, was einen sehr dynamischen Umgang mit Datenströmen erlaubt.
+
+Iterationen in der Verarbeitung spielen beim maschinellen Lernen eine große Rolle - der Fokus von Spark liegt in einer optimalen Verarbeitung entsprechender Algorithmen, Das Framework bringt von Haus aus eine eigene Machine Learning Bibliothek mit und kann in verschiedenen Sprachen wie Java oder Python angesprochen werden.
+
+Neben der Verarbeitung von Streamingdaten aus sozialen Netzwerken kann das Framework für Finanzanalysen, in der Automatisierung oder im e-Commerce Bereich eingesetzt werden - bei Amazon wird das Tool weitläufig zur Ermittlung von Kaufempfehlungen eingesetzt. Der Fokus der Anwendung liegt, im Gegensatz zum Framework Hadoop, dass vor Allem zur Verarbeitung von Batch-Prozessen verwendet wird, auf der Verarbeitung von Echtzeitdaten. [64]
 
 ---
 
 [61]  https://docs.mldb.ai/doc/#builtin/Overview.md.html
-
+[62]  https://dbs.uni-leipzig.de/file/seminar_0910_findling_K%C3%B6nig.pdf
+[63]  https://www.bigdata-insider.de/was-ist-hadoop-a-587448/
+[64]  https://data-science-blog.com/blog/2016/08/03/was-ist-eigentlich-apache-spark/
 ---
 
 [< Anwendungsbeispiele](Anwendungsbeispiele.md) | [ Fazit >](Fazit.md)
