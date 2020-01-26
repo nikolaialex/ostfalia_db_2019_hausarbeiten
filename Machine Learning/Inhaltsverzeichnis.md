@@ -7,13 +7,13 @@
   - unüberwachtes Lernen
   - teilüberwachtes Lernen
   - bestärkendes Lernen
-- [4. Algorithmen] (Algorithmen.md)
-  - [Algorithmen des überwachten Lernens]
+- [4. Algorithmen](Algorithmen.md)
+  - Algorithmen des überwachten Lernens
     - Lineare Regression
     - Logistische Regression
     - CART
     - Naiive Bayes
-  - [Algorithmen des unüberwachten Lernens](Algorithmen_des_unüberwachten_Lernens.md)
+  - Algorithmen des unüberwachten Lernens
     - Apriori
     - K-Means Clustering
     - Bezug zu Arten von Machine Learning
