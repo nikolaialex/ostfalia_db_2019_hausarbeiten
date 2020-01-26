@@ -19,7 +19,7 @@ Neben den klassischen Datentypenen stellen Geodatenbanken spezielle Datentypen z
 
 ## Repräsentation der Datentypen
 
-Das OGC spezifiziert neben der topologischen Abbildung auch die Repräsentation, also die Darstellung, der räumlichen Objete. Dort wird hauptsächlich zwischen zwei Repräsentationsarten unterschieden. [1]
+Das OGC spezifiziert neben der topologischen Abbildung auch die Repräsentation, also die Darstellung, der räumlichen Objete. Dort wird hauptsächlich zwischen zwei Repräsentationsarten unterschieden[1].
 
 **WKT - Well-known Text**
 Die Well-known-Text-Repräsentation wird vor allem dazu verwendet, um die Geometrie alphanumerisch darstellen zu können. Dies ist von Vorteil, wenn der menschliche Anwender die Geometriespalten verstehen soll.

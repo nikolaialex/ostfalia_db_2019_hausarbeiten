@@ -5,7 +5,7 @@
 
 In einer einfachen Definition sind Geodatenbanken Datenbanken, die die Integration räumlichen oder geometrischen Daten in das Datenabnkschema untesrtützen. Dabei werden spezielle Datentypen, Funktionen und Objekte zum Arbeiten mit räumlichen Daten angeboten. Neben der Speicherung stellen diese Datenbanken Funktionen zur Erfassung, Bearbeitung, Organisation, Analyse und Präsentation räumlicher Daten[1]. Die Geodatenbanken sind meißt in einem sogenannten Geoinformationsystem eingebetet. Dieses beinhaltet neben den Datenbanken meißt zusätzliche Hardware.
 
-In diesem Zusammenhang bedeuten räumliche Daten und Objek:te
+In diesem Zusammenhang bedeuten räumliche Daten und Objekte
 
 - **Geometrischen Formen:** Es werden spezielle Datentypen zu Speicherung von räumlichen Daten bzw. Formen bereitgestellt.
 - **Geometrischen Operationen:** Auf den geometrischen Formen können weitere Operationen ausgeführt werden. Daunter Zählnen zB. Schnitte, die das Arbeiten mit diesen Daten erleichtern.

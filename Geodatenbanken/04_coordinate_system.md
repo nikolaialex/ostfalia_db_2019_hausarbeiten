@@ -18,9 +18,9 @@ Neben dem zugrundeliegenden Erdköper und der Anwendung spielt auch die Region d
 |:--:|
 |*Abbildung 4-2: Gegenüberstellung verschiedener geodätischer Daten. Quelle: [4]*|
 
-Diese Datum werden als **lokal** bezeichnet, da sie nur für eine bestimmte Region eine hohe Präzision liefern, für den Rest des Geoid jedoch nicht nutzbar sind. In der oben gezeigtn Grafik sind die beiden Datum für die Regionen *Nord Amerika* und *Europa* gewählt. Wählt man das rote Datum erhählkt man eine hohe Präzision für Amerika, verringert jedoch die Präzision für Europa und umgekehrt.
+Diese Daten werden als **lokal** bezeichnet, da sie nur für eine bestimmte Region eine hohe Präzision liefern, für den Rest des Geoid jedoch nicht nutzbar sind. In der oben gezeigtn Grafik sind die beiden Daten für die Regionen *Nord Amerika* und *Europa* gewählt. Wählt man das rote Datum erhählkt man eine hohe Präzision für Amerika, verringert jedoch die Präzision für Europa und umgekehrt.
 
-Um eine allgemeingültiges Datum zur Verfügung zu stellen wird das *Earth-centered datum* verwendet. Seit 2000 wird dazu das Datum *WGS84 - World Geodetic System 1984* verwendet. Dies soll in nahezu allen Regionen er Erde eine ausreichende Präzision ermöglichen.
+Um eine allgemeingültiges Datum zur Verfügung zu stellen wird das *Earth-centered datum* verwendet. Seit 2000 wird dazu das Datum *WGS84 - World Geodetic System 1984* verwendet. Dies soll in nahezu allen Regionen der Erde eine ausreichende Präzision ermöglichen.
 
 |![america_europa](img/local_earth.gif)|
 |:--:|
@@ -28,9 +28,9 @@ Um eine allgemeingültiges Datum zur Verfügung zu stellen wird das *Earth-cente
 
 Die linke Abbildung zeigt das lokale Datum *NAD27 - North America Datum of 1927* für Nord Amerika, daneben das allgemeingültige *WGS84 - World Geometric System 1984*. Auch wenn es in einigen Regionen deutlich von der eigentlichen Geoid-Form abweicht, verfügt es für den Großteil des Geoid eine akzeptable Präzision.
 
-Bei dem Referenzsystem dienen 6 Koordinaten zur exakten Positionsbestimmung relativ zur Erde. Dabei dienen 3 Koordinaten für den Ursprung und dreit für die Orientierung.[3]
+Bei dem Referenzsystem dienen 6 Koordinaten zur exakten Positionsbestimmung relativ zur Erde. Dabei gelten 3 Koordinaten für den Ursprung und drei für die Orientierung.[3]
 
-Die folgende Tabelle bietet eine Übersicht über aktuelle eingesetzt Daten und deren Ursprung[4]
+Die folgende Tabelle bietet eine Übersicht über aktuelle eingesetzte geodätischer Daten und deren Ursprung[4]
 
 | Datum   | Ursprung | Ursprungs Koordinaten | Genutze Erdform | Anmerkung
 | ---   | ----- | -----------| ----- | --------
@@ -41,7 +41,7 @@ Die folgende Tabelle bietet eine Übersicht über aktuelle eingesetzt Daten und 
 
 ## SRID
 
-Jede räumliche Geometrie hat einen SRID (Spatial Reference Identifier), einen räumlichen Referenzbezeichner. Der SRID bezieht sich auf ein räumliches Referenzsystem. Eine räumliche Spalte kann Objekte mit unterschiedlichen SRIDs enthalten. Allerdings können nur räumliche Instanzen mit dem gleichen SRID verwendet werden, wenn Daten mit räumlichen Datenmethoden von SQL Server bearbeitet werden. Das von zwei räumlichen Dateninstanzen abgeleitete Ergebnis einer beliebigen räumlichen Methode ist nur dann gültig, wenn diese Instanzen den gleichen SRID haben und die gleiche Maßeinheit, Bezugsebene und Projektion zur Bestimmung der Koordinaten der Instanzen verwendet wurde. Die gängigsten Maßeinheiten für einen SRID sind Meter oder Quadratmeter. [5]
+Jede räumliche Geometrie hat einen SRID (Spatial Reference Identifier), einen räumlichen Referenzbezeichner. Der SRID bezieht sich auf ein räumliches Referenzsystem. Eine räumliche Spalte kann Objekte mit unterschiedlichen SRIDs enthalten. Zum Arbeiten mit räumlichen Operationen, müssen alle Objekte die gleiche SRID besitzen. Das von zwei räumlichen Dateninstanzen abgeleitete Ergebnis einer beliebigen räumlichen Methode ist nur dann gültig, wenn diese Instanzen den gleichen SRID haben und die gleiche Maßeinheit, Bezugsebene und Projektion zur Bestimmung der Koordinaten der Instanzen verwendet wurde[5].
 
 ---
 
