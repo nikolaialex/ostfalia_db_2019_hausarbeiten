@@ -42,7 +42,7 @@ In den folgenden Kapiteln und in der praktischen Überung werden wir, wenn nicht
 
 ---
 
-| [<< Einleitung](01_introduction.md) | Geometrische Formen | [Geometrische Funktionen >>](03_operations.md) |
+| [<< Einleitung](01_introduction.md) | Geometrische Formen | [Geometrische Operationen >>](03_operations.md) |
 |------------------------------------|------------|-------------------------------------|
 
 ---

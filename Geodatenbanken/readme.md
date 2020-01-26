@@ -12,7 +12,7 @@ Diese Ausarbeitung soll eine kurze Einführung in das Thema der Geodatenbanken b
 
 1. [Einleitung](01_introduction.md)
 2. [Geometrische Formen](02_datatypes.md)
-3. [Geometrische Funktionen](03_operations.md)
+3. [Geometrische Operationen](03_operations.md)
 4. [Referenzkoordinatensystem](04_coordinate_system.md)
 5. [Räumliche Indizes](04_spatial_indexes.md)
 6. [Praktische Beispiele](06_exercise.md)
