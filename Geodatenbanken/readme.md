@@ -17,6 +17,6 @@ Diese Ausarbeitung soll eine kurze Einführung in das Thema der Geodatenbanken b
 5. [Räumliche Indizes](04_spatial_indexes.md)
 6. [Praktische Beispiele](06_exercise.md)
 
-## Anemerkung
+## Anmerkung
 
 Da in dieser Ausarbeitung relativ viel auf die Spezifikation des OGC eingegangen wird, wurde die Spezifikation *Implementation Specification for Geographic Information - Simple feature access - Part 1 Common Architecture* in der Version *1.2.1* in das [Literaturverzeichnis](lit/06-103r4_Implementation_Specification_for_Geographic_Information_-_Simple_feature_access_-_Part_1_Common_Architecture_v1.2.1.pdf) kopiert.
