@@ -1,18 +1,30 @@
 # Geometrische Operationen
 
-Neben den in vorherigen Kapitel beschriebenen neu eingeführten geometrischen Datentypen verfügen Geodatenbank über spezielle geometrische funktionen, die das Arbeiten mit den neuen Datentypen erleichtern sollen.
+Neben den im vorherigen Kapitel beschriebenen neu eingeführten geometrischen Datentypen verfügen Geodatenbank über spezielle geometrische Funktionen, die das Arbeiten mit den neuen Datentypen erleichtern sollen. Eine komplette Auflistung würde den Rahmen dieser Ausarbeitung weit überschreiten, deswegen soll hier auf die SQL Function List von [SpatiaLite](http://www.gaia-gis.it/gaia-sins/spatialite-sql-4.3.0.html) verwiesen werden. Primäre sollen die relationalen Operatoren erläutert werden. Diese Operatoren spezifizieren die topologische Beziehung zwischen verschiedenen Geometrien.
 
+## Relationale Operatoren
 
-Datentyp | Beispiel
------- | -----
-**Punkt**<br/> Der Punkt stellt einen einzelnen Ort dar. Dieser setzt sich in der Regel aus einem Längen- und Breitengrad (Latitude/Longitude) zusammen. Die Werte für die Breite und Länge werden in Grad gemessen und haben fest vorgegebene Bereiche.  Die Werte für den Breitengrad liegen immer im Bereich (-90, 90). Werte für den Längengrad liegen immer im Bereich [-180, 180]| ![Punkte](img/point.png)
-**Linestring**<br/>Ein LineString ist ein eindimensionales Objekt, das eine Sequenz aus Punkten und die sie verbindenden Liniensegmente darstellt.  | ![Linestring](img/linestring.png)
-**Polygon**<br/>  | ![polygon](img/polygon.png)
-**Multipunkt**<br/>  | ![multipoint](img/multipoint.png)
-**Multilinestring**<br/>  | ![Punkte](img/multilinestring.png)
-**Mulitpolygon**<br/>Test  | ![Punkte](img/multipolygon.png)
+Die relationalen Operatoren sind Operationen, die zwei oder mehr Geometrien auf eine spezifische, topologische Beziehung untersuchen. Sie arbeiten mit dem Rückgabewerten `Wahr` oder `Falsch`. Ist die topologische Beziehung vorhanden, wird `Wahr`zurückgegeben, anderseit `Falsch`.
 
+Der grundlegende Ansatz zum Vergleichen von zwei geometrischen Objekten besteht darin, die Objekte auf ein horizontale 2D-Koordinatenreferenzsystem zu projizieren, das die Erdoberfläche darstellt. Anschliessend paarweise die Schnittpunkte zwischen den Innenräumen, Grenzen und Außenräumen der beiden Projektionen zu testen und zu klassifizieren[1].
 
-| [<< Geometrische Formen](02_datatypes.md) | Geometrische Operationen | [Das Koordinatenreferenzsystem >>](04_coordinate_system.md) |
+| Operation | Beispiel
+| ------ | -----------
+| **Gleich/Equals**<br/> Prüft, ob die beiden Geometrien identisch sind. Dafür werden alle Punkte der Geometrie miteinander verglichen. | ![gleich](img/equals.png)
+| **Disjunkt/Disjoint**<br/> Mit dieser Funktion lässt sich festestellen, ob die beiden Geometrien sich weder berühren, schneiden noch überlappen. | ![disjoint](img/disjunkt.png)
+| **Berührt/Touches**<br/> Geometrien berühren sich, wenn eine *endliche* Anzahl von Punkten aufeinander liegen, ohne das sie sich kreuzen. | ![touches](img/touches.png)
+| **Kreuzt/Crosses**<br/> Eine Geometrie kreuzt eine andere Geometire, wenn sie interpolierte Punkte innerhalb oder auf einer anderen Geometrieform besitzt. Dabei können Start und Enpunkt sowohl innerhalb als auch ausserhalb der zweiten Geometrie liegen.  | ![crosses](img/crosses.png)
+| **Innerhalb/Within**<br/> Eine Geometrie ist innerhalb einer anderen, sobald  alle Punkte der ersten Geometrie innerhalb der zweiten Geometrieform befindet. | ![contains](img/contains.png)
+| **Überschneidet/Overlaps**<br/> Wenn Teile einer Geometrieform Teilflächen der anderen Geometrieform überdecken, spricht man von überlappen. | ![overlaps](img/overlaps.png)
+| **Distanz/Distance**<br/> Ermöglicht die Berechnung der Dsitanz zwischen Punkten. Im Gegensatz zu den relationalen Operatoren wird hier eine Entfernung als Zahlenwert zurückgegeben, `nicht Wahr/Falsch` | ![distance](img/distance.png)
+
+---
+
+| [<< Geometrische Formen](02_datatypes.md) | Geometrische Operationen | [Referenzkoordinatensystem >>](04_coordinate_system.md) |
 |------------------------------------|------------|-------------------------------------|
 
+---
+
+| #   | Literatur            |
+| --- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [1] | **OGC**: *OGC -  Simple feature access*, [lit/06-103r4_Implementation_Specification_for_Geographic_Information_-_Simple_feature_access_-_Part_1_Common_Architecture_v1.2.1.pdf](lit/06-103r4_Implementation_Specification_for_Geographic_Information_-_Simple_feature_access_-_Part_1_Common_Architecture_v1.2.1.pdf), abgerufen am 08.01.2020  |

@@ -1,32 +1,32 @@
-# Übung 
+# Praktische Beispiele
 
-Zur Festigung der theoretishen Grnudlagen soll nun beispielhaft eine Geodatenbank erstellt und einige praktische Beispiele gezeigt werden. 
+Zur Festigung der theoretishen Grnudlagen soll nun beispielhaft eine Geodatenbank erstellt und einige praktische Beispiele gezeigt werden.
 
 ## Vorrausetzungen
 
 Zum durchführen der Übung müssen einige Vorraustzungen erfüllt werden bzw. müssen verschiedene Tool installiert werden. Diese sollen kurz erläutert werden.<br/> 
-**ACHTUNG:** Bei dem von mir eingesetzten Betriebssystem handelt es sich um die Linux Distribution **Ubuntu**. Für andere Betriebssystem wie Windows oder MacOS sind zahlreiche Installationsanweisungen für die eingesetzten Tools im Internet vorhanden. 
+**ACHTUNG:** Bei dem von mir eingesetzten Betriebssystem handelt es sich um die Linux Distribution **Ubuntu**. Für andere Betriebssystem wie Windows oder MacOS sind zahlreiche Installationsanweisungen für die eingesetzten Tools im Internet vorhanden.
 
 ## Python 3
 
-Bei [Python](https://www.python.org/) handelt es sich um eine höhere, interpretierte Programmiersprache, die sich vor allem durch Einfachheit und gute Lesbarkeit auszeichnet. 
-
-![python](img/python-logo.png)
+<img align="right" width="300" height="200" src="img/python-logo.png">
+Bei [Python](https://www.python.org/) handelt es sich um eine höhere, interpretierte Programmiersprache, die sich vor allem durch Einfachheit und gute Lesbarkeit auszeichnet. Die Python-Code wurde mittels Jupyter Notebook erstellt und verwendet.
 
 ### Module
-Python zeichnet sich durch seine Modularität aus. So ist es relativ einfach möglich, bereits vorhandene Klassen und Funktionen zu verwenden. Folgende Module müssen zur Ausführung der Skripte installiert sein. 
+
+Python zeichnet sich durch seine Modularität aus. So ist es relativ einfach möglich, bereits vorhandene Klassen und Funktionen zu verwenden. Folgende Module müssen zur Ausführung der Skripte installiert sein.
 
 **Installation von Modulen**
-Sollten Module fehlen, können diese bequem per *pip* bzw. *pip3*, einem Paketverwaltungsprogramm für Python-Pakete, installiert werden. 
+Sollten Module fehlen, können diese bequem per *pip* bzw. *pip3*, einem Paketverwaltungsprogramm für Python-Pakete, installiert werden.
 
--  **os:** Operating System Interface. Modul zum Zugriff auf das Dateissystem. Verwendet zum einfachen erstellen von absoluten und relativen Pfaden. In der Regel Teil der Python Standardinstallation. 
--  **sqlite3:** DB-API. Modul zum einfachen Zugriff auf die SqLite Datenbank. Bietet Methoden zum Schreiben, Lesen, Erstellen und Löschen von Datenbanken. In der Regel Teil der Python Standardinstallation. 
--  **pandas:** Python Data Analyses Library. Modul zur Datenanalyse. Vor allem im Gebiet der Data Science weit verbreitet. Kein Teil der Standardinstallation *pip install pandas*
--  **keplergl:** Modul zur Darstellung von Geodaten. Ausführliche Beschreibung siehe Abschnitt [Visualisierung](#visualisierung)
+- **os:** Operating System Interface. Modul zum Zugriff auf das Dateissystem. Verwendet zum einfachen erstellen von absoluten und relativen Pfaden. In der Regel Teil der Python Standardinstallation. 
+- **sqlite3:** DB-API. Modul zum einfachen Zugriff auf die SqLite Datenbank. Bietet Methoden zum Schreiben, Lesen, Erstellen und Löschen von Datenbanken. In der Regel Teil der Python Standardinstallation. 
+- **pandas:** Python Data Analyses Library. Modul zur Datenanalyse. Vor allem im Gebiet der Data Science weit verbreitet. Kein Teil der Standardinstallation *pip install pandas*
+- **keplergl:** Modul zur Darstellung von Geodaten. Ausführliche Beschreibung siehe Abschnitt [Visualisierung](#visualisierung)
 
 ### SqLite und SpatiaLite
 
-Zur Datenhaltung wird das gemeinfreie[1] Datenbanksystem SqLite eingesetzt. Dieses gilt als das weltweit meißtgenutzte Datenbanksystem[2] und kommt ohne weitere Serveranwendung aus. Neben der *Stand Alone*-Eigenschaft ist es vor allem durch seine Schnelligkeit und Robustheit in verschiedenen Szenarien einsetzbar[3]. 
+Zur Datenhaltung wird das gemeinfreie[1] Datenbanksystem SqLite eingesetzt. Dieses gilt als das weltweit meißtgenutzte Datenbanksystem[2] und kommt ohne weitere Serveranwendung aus. Neben der *Stand Alone*-Eigenschaft ist es vor allem durch seine Schnelligkeit und Robustheit in verschiedenen Szenarien einsetzbar[3].
 
 ```
 sudo apt-get update
@@ -34,31 +34,32 @@ sudo apt-get install spatialite-bin
 sudo apt-get install spatialite-gui
 ```
 
-Neben SqLite wird SpatiaLite[4], eine Geo-Datenbank-Erweiterung, vorrausgetzt. Diese Erweiterung ermöglich den Einsatz von geografischen Objekten und Funktionen. Die Erweiteurng wird in der praktischen Übung dynamisch geladen. 
+Neben SqLite wird SpatiaLite[4], eine Geo-Datenbank-Erweiterung, vorrausgetzt. Diese Erweiterung ermöglich den Einsatz von geografischen Objekten und Funktionen. Die Erweiteurng wird in der praktischen Übung dynamisch geladen.
 ```
 sudo apt-get install libsqlite3-mod-spatialite
 ```
 
-### Visualisierung 
-Zur Visualisierung 
-https://github.com/keplergl/kepler.gl/blob/master/docs/keplergl-jupyter/user-guide.md
+### Visualisierung
+
+Zur Visualisierung wird die datenunabhängige, webbasierte und leistungsstarke kepler.gl[quelle](https://eng.uber.com/keplergl/) verwendet. Dieser basiert auf deck.gl, einem WebGL-Framework, für die visuelle Darstellung großer Datensätze. Kepler.GL wurde 2018 von dem Uber Team über die Bereitstellung des Codes (open source) [quelle](https://medium.com/vis-gl/exploring-geospatial-data-with-kepler-gl-cf655839628f) der Allgemeinheit zur Verfügung gestellt.  Über das oben genannten Python Modul is teine Integration problemos möglich. Eine [User Guide ist](https://github.com/keplergl/kepler.gl/blob/master/docs/keplergl-jupyter/user-guide.md) unter in dem Github Repository von keppler.gl verfügbar.
 
 ## Erstellung und Befüllung der Datenbank
 
-Nach dem die technischen Vorrausetzungen geschaffen wurde kann nun begonnen werden mit der Datenbank zu arbeiten. Dafür müssen vorab Daten in die Datenbank eingefügt werden. Dazu befinden sich im Unterverzeichnis [data](data/) einige CSV-Dateien mit Infromationen der Stadt New York. Diese Daten sind frei verfügbar und können über verschiedene Portale wie beispielsweise [Open NY](https://data.ny.gov/widgets/i9wp-a4ja) bezogen werden. 
+Nach dem die technischen Vorrausetzungen geschaffen wurde kann nun begonnen werden mit der Datenbank zu arbeiten. Dafür müssen vorab Daten in die Datenbank eingefügt werden. Dazu befinden sich im Unterverzeichnis [data](data/) einige CSV-Dateien mit Infromationen der Stadt New York. Diese Daten sind frei verfügbar und können über verschiedene Portale wie beispielsweise [Open NY](https://data.ny.gov/widgets/i9wp-a4ja) bezogen werden.
 
--  **nyc_parking_lots.csv** beinhaltete Informationen über Parkplätze in New York.
--  **nyc_school_locations.csv** beinhaltete Informationen über Schulen in New York.
--  **nyc_subway_entrances.csv** beinhaltete Informationen über die Eingänge zur U-Bahn in New York.
--  **nyc_subway lines.csv** beinhaltete Informationen über die U-Bahn-Linien in New York.
--  **nyc_vehicle_collisions_2019.csv** beinhaltete Informationen über Verkehrsunfälle im Jahr 2019 in New York
--  **nypd_complaints_2010.csv** beinhaltete Informationen über polizeiliche Beschwerden in New York aus dem Jahr 2010.
+- **nyc_parking_lots.csv** beinhaltete Informationen über Parkplätze in New York. Die Infromationen liegen als *MultiPolygone* zur Verfügung.
+- **nyc_school_locations.csv** beinhaltete Informationen über Schulen in New York. Die Schulorte besitzen den Geodatentypen *Punkt*
+- **nyc_subway_entrances.csv** beinhaltete Informationen über die Eingänge zur U-Bahn in New York. Diese besitzen den Datentyp *Punkt*
+- **nyc_subway lines.csv** beinhaltete Informationen über die U-Bahn-Linien in New York. Die Koordinaten der U-Bahn-Linien besitzen den Typ *LineString*
+- **nyc_vehicle_collisions_2019.csv** beinhaltete Informationen über Verkehrsunfälle im Jahr 2019 in New York. Die Unfallstelle wird dabei über den Datentyp *Punkt* dargestellt.
+- **nypd_complaints_2010.csv** beinhaltete Informationen über polizeiliche Beschwerden in New York aus dem Jahr 2010. Die Beschwerden sind jeweils einem bestimmten *Punkte* zugeordnet.
 
+## Start praktisches Beispiel
 
-# Start praktische Übung
+Zur Wiederholung einige nützliche Links:
 
-- [Spatialite Documentation](http://www.gaia-gis.it/gaia-sins/spatialite-sql-4.3.0.html)
-- [Well-known text representation of geometry](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)
+- [SpatiaLite Dokumentation](http://www.gaia-gis.it/gaia-sins/spatialite-sql-4.3.0.html)
+- [Well-known text repräsentation for Geometrien](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)
 - [Kepler GL Jupyter](https://github.com/keplergl/kepler.gl/blob/master/docs/keplergl-jupyter/user-guide.md)
 
 ```python
@@ -74,8 +75,9 @@ DB_FILE = os.path.join(BASE_DIR, 'demo.db')
 ```
 
 ## Datenbefüllung
-Im folgenden werden Hilfsfunktionen zur Befüllung der Tabellen mit den Daten der csv-Dateien bereitgestellt. Diese Methoden müssen nur einmalig durch geführt werden. 
-Exemplarisch soll eine dieser Hilfsfunktionen erläutert werden
+
+Im folgenden werden Hilfsfunktionen zur Befüllung der Tabellen mit den Daten der csv-Dateien bereitgestellt. Diese Methoden müssen nur einmalig durch geführt werden. Die Hilfsfunktionen zur Befüllung der TAbellen ist für alle csv-Dateien ähnlich. Sollte die Tabelle bereits bestehen, wird diese gelöscht und neu erstellt. Eine Besonderheit liegt dabei bei der Funktion `AddGeometryColumn()` diese erzeugt Anhand der angegebnen Parameter eine `geom`-Spalte die die verarbeitetenden Geodaten enthält. Zum Schluss wird die Tabelle anhand der csv-Datei befüllt mithilfe weitere weiterer Funktionen (z.B. `ST_GeomFromText()`) befüllt.
+Um die Ausgabe zu optimeren, wird für alle Tabellen die  `geom`-Spalte indexiert(`CreateSpatialIndex()`).
 
 ```python
 def create_parking_lots_table(conn: sqlite3.Connection):
@@ -213,14 +215,16 @@ def create_subway_entrances_table(conn: sqlite3.Connection):
     cursor.execute("""SELECT CreateSpatialIndex('subway_entrances', 'geom')""")
     conn.commit()
 ```
-Todo
-Das folgende Snippt lädt die SpatiaLite-Erweiterung und blbla
-```python 
-if __name__ == '__main__':
 
+Das folgende Snippt lädt die SpatiaLite-Erweiterung uznd prüft, ob Aktivierung erfolgreich war.
+
+**ACHTUNG:** Der Code `conn.load_extension('mod_spatialite.so')`ist zum Laden der Erweiterung auf Linux-Systemen (SO = Shared Object). Um die Erweiterung unter Windows oder MacOS zu laden muss dieser Parameter angepasst werden. 
+
+
+```python
     with sqlite3.connect(DB_FILE) as conn:
         conn.enable_load_extension(True)
-        conn.load_extension('mod_spatialite')
+        conn.load_extension('mod_spatialite.so')
         conn.execute('SELECT InitSpatialMetaData();')
 
         cursor = conn.cursor()
@@ -237,7 +241,11 @@ if __name__ == '__main__':
         for row in cursor:
             print(row)
         print('\n')
+```
 
+Hilfsmethode zum befüllen der Datenbanken, diese können erst nach dem Laden der SpatiaLite-Erweiterung durchgeführt werden.
+
+```python
         create_vehicle_collisions_table(conn)
         create_parking_lots_table(conn)
         create_complaints_table(conn)
@@ -247,6 +255,7 @@ if __name__ == '__main__':
 ```
 
 ### Hilfsfunktion zur Virtualisierung
+
 Die Funktion save_kepler_map erstellt anhand eines Cursor einen panda-DataFrame und rendert diesen mithilfe des KeplerGl-Moduls in eine Kartendarstellung.
 
 ```python
@@ -259,27 +268,20 @@ def save_kepler_map(file_name, layer_name, cursor, columns):
     map_1.save_to_html(file_name=file_name)
 ```
 
-## SpatiaLit Erweiterung dynamisch laden
-Zunächst soll getestet werden, ob die SpatiaLite-Erweiterung geladen werden konnte. 
+## Spatialite Dependencies
 
-**ACHTUNG:** Der Code `conn.load_extension('mod_spatialite.so')`ist zum Laden der Erweiterung auf Linux-Systemen (SO = Shared Object). Um die Erweiterung unter Windows oder MacOS zu laden muss dieser Parameter angepasst werden. 
+Abfragen des Referenzkoordinatensystem zu bestimmten SRID und der aktuellen Version der SpatiaLite-Erweiterung
 
-```python
-conn = sqlite3.connect(DB_FILE)
-conn.enable_load_extension(True)
-conn.load_extension('mod_spatialite.so')
-```
-Prüfen, ob das Laden der Erweiterung erfolgreich war. Dazu werden Infromationen aus dem Referenzkoordinatensystem geladen
 ```python
 cursor = conn.cursor()
 cursor.execute("""
-SELECT 
-    srid, 
-    auth_name, 
-    auth_srid, 
-    ref_sys_name 
-FROM spatial_ref_sys 
-WHERE srid IN (4326, 3857)
+    SELECT 
+        srid, 
+        auth_name, 
+        auth_srid, 
+        ref_sys_name 
+    FROM spatial_ref_sys 
+    WHERE srid IN (4326, 3857)
 """)
 for row in cursor:
     print(row)
@@ -288,8 +290,6 @@ for row in cursor:
     (3857, 'epsg', 3857, 'WGS 84 / Pseudo-Mercator')
     (4326, 'epsg', 4326, 'WGS 84')
     
-
-## Spatialite Dependencies 
 
 ```python
 cursor.execute("""SELECT spatialite_version()""").fetchone()
@@ -300,24 +300,6 @@ cursor.execute("""SELECT spatialite_version()""").fetchone()
 cursor.execute("""SELECT proj4_version()""").fetchone()
 ```
     ('Rel. 4.9.3, 15 August 2016',)
-
-```python
-cursor.execute("""SELECT geos_version()""").fetchone()
-```
-
-    ('3.6.2-CAPI-1.10.2 4d2925d6',)
-
-```python
-cursor.execute("""SELECT lwgeom_version()""").fetchone()
-```
-
-    (None,)
-
-```python
-cursor.execute("""SELECT libxml2_version()""").fetchone()
-```
-
-    ('2.9.4',)
 
 ## Erste Abfragen
 
@@ -345,16 +327,16 @@ Wenn mit der Geometry gearbeitet werden soll können folgende Funktionen hilfrei
 
 ```python
 cursor.execute("""
-SELECT 
-    name,
-    ST_AsText(geom), 
-    AsEWKT(geom), 
-    AsGeoJSON(geom), 
-    AsGML(geom), 
-    ST_X(geom), 
-    ST_Y(geom) 
-FROM schools 
-LIMIT 1
+    SELECT 
+        name,
+        ST_AsText(geom), 
+        AsEWKT(geom), 
+        AsGeoJSON(geom), 
+        AsGML(geom), 
+        ST_X(geom), 
+        ST_Y(geom) 
+    FROM schools 
+    LIMIT 1
 """)
 for row in cursor:
     name, wkt, ewkt, geojson, gml, x, y = row
@@ -379,18 +361,18 @@ for row in cursor:
 
 ```python
 cursor.execute("""
-SELECT 
-    ST_NPoints(geom), 
-    CoordDimension(geom), 
-    ST_NDims(geom), 
-    ST_GeometryType(geom),
-    GeodesicLength(geom),
-    GreatCircleLength(geom),
-    ST_AsText(ST_Centroid(geom)),
-    ST_Area(ST_Transform(geom, 32618)), -- WGS 84 / UTM zone 18N
-    ST_Area(geom),                      
-    ST_AsText(ST_Envelope(geom))
-FROM parking_lots LIMIT 1
+    SELECT 
+        ST_NPoints(geom), 
+        CoordDimension(geom), 
+        ST_NDims(geom), 
+        ST_GeometryType(geom),
+        GeodesicLength(geom),
+        GreatCircleLength(geom),
+        ST_AsText(ST_Centroid(geom)),
+        ST_Area(ST_Transform(geom, 32618)), -- WGS 84 / UTM zone 18N
+        ST_Area(geom), 
+        ST_AsText(ST_Envelope(geom))
+    FROM parking_lots LIMIT 1
 """)
 for row in cursor:
     num_points, coord_dim, dim, geom_type, geo_length, circle_length, centroid, area_1, area_2, envelope = row
@@ -416,14 +398,15 @@ for row in cursor:
     POLYGON((-73.979515 40.689908, -73.978813 40.689908, -73.978813 40.690496, -73.979515 40.690496, -73.979515 40.689908))
     
 
-## Übung #1: Größter Parkplatz in NY
+## Beispiel #1: Größter Parkplatz in NY
+
 Dies Übung soll die flächenmäßig 10 größten Parkplätze New Yorks finden und anzeigen.
 
 ```python
 cursor.execute("""
-SELECT id, ST_Area(ST_Transform(geom, 32618)) area, ST_AsText(geom) 
-FROM parking_lots 
-ORDER BY ST_Area(geom) DESC LIMIT 10
+    SELECT id, ST_Area(ST_Transform(geom, 32618)) area, ST_AsText(geom) 
+    FROM parking_lots 
+    ORDER BY ST_Area(geom) DESC LIMIT 10
 """)
 save_kepler_map(os.path.join(RESULTS_DIR, 'parking_lots.html'), 'parking_lots', cursor, ['id', 'area', 'geom'])
 ```
@@ -431,26 +414,26 @@ Ergebnisvorschau
 
 ![res_img_ny_parking](img/res_im_ny_parking.png)
 
-Um das komplette Ergebnis zu sehen kann die von Kepler.gl erstellte [HTML-Datei](res/parking_lots.html) verwendet werden. 
+Um das komplette Ergebnis zu sehen kann die von Kepler.gl erstellte [HTML-Datei](res/parking_lots.html) verwendet werden.
 
-**ACHTUNG:** Um die HTML-Datei komplette zu rendern muss eine Verbindung zum Internet bestehen. 
+**ACHTUNG:** Um die HTML-Datei komplette zu rendern muss eine Verbindung zum Internet bestehen. Für die korrekte Anzeige der HTML Datei muss diese separat im Browser angezeigt werden, da Github sonst den QUellocode der HTML-Datei anzeigt. 
 
-## Übung #2: Gefährlichsten Schulzonen in NY
+## Beispiel #2: Gefährlichsten Schulzonen in NY
 
-Mit der folgenden Abfrage lassen sich die gefährlichsten Schulen in New York ermitteln. Dazu werden die Schulstandorte mit den räumlichen Nachbarn aus der Beshwerdedatenbank der Polizei kombiniert. Zusätzlich wird ein Risikofaktor berechnet. 
+Mit der folgenden Abfrage lassen sich die gefährlichsten Schulen in New York ermitteln. Dazu werden die Schulstandorte mit den räumlichen Nachbarn aus der Beshwerdedatenbank der Polizei kombiniert. Zusätzlich wird ein Risikofaktor berechnet.
 
 ```python
 cursor.execute("""
-SELECT name, risk_factor, ST_X(geom), ST_Y(geom) FROM (
-    SELECT s.name, COUNT(0) as risk_factor, s.geom FROM schools s INNER JOIN complaints c
-    ON ST_Distance(s.geom, c.geom) * 111195.0802 < 500.0 AND c.rowid IN (
-        SELECT rowid FROM SpatialIndex 
-        WHERE f_table_name = 'complaints' 
-        AND f_geometry_column = 'geom' 
-        AND search_frame = BuildCircleMbr(ST_X(s.geom), ST_Y(s.geom), 500.0 / 111195.0802, 4326)
-    )
-    GROUP BY s.name
-) ORDER BY risk_factor DESC;
+    SELECT name, risk_factor, ST_X(geom), ST_Y(geom) FROM (
+        SELECT s.name, COUNT(0) as risk_factor, s.geom FROM schools s INNER JOIN complaints c
+        ON ST_Distance(s.geom, c.geom) * 111195.0802 < 500.0 AND c.rowid IN (
+            SELECT rowid FROM SpatialIndex 
+            WHERE f_table_name = 'complaints' 
+            AND f_geometry_column = 'geom' 
+            AND search_frame = BuildCircleMbr(ST_X(s.geom), ST_Y(s.geom), 500.0 / 111195.0802, 4326)
+        )
+        GROUP BY s.name
+    ) ORDER BY risk_factor DESC;
 """)
 save_kepler_map(os.path.join(RESULTS_DIR, 'schools.html'), 'schools', cursor, ['name', 'risk_factor', 'longitude', 'latitude'])
 ```
@@ -461,24 +444,13 @@ Ergebnisvorschau
 
 ![res_img_schools](img/res_img_schools.png)
 
-Um das komplette Ergebnis zu sehen kann die von Kepler.gl erstellte [HTML-Datei](res/schools.html) verwendet werden. 
+Um das komplette Ergebnis zu sehen kann die von Kepler.gl erstellte [HTML-Datei](res/schools.html) verwendet werden.
 
-**ACHTUNG:** Um die HTML-Datei komplette zu rendern muss eine Verbindung zum Internet bestehen. 
+**ACHTUNG:** Um die HTML-Datei komplette zu rendern muss eine Verbindung zum Internet bestehen. Für die korrekte Anzeige der HTML Datei muss diese separat im Browser angezeigt werden, da Github sonst den QUellocode der HTML-Datei anzeigt.
 
-## Hands On-Übungen
+## Datenstruktur der Tabellen
 
-- Exercise #1: Top-5 der Längsten U-Bahnlinien in New York.
-   - Tabelle `subway_lines`
-   - Typ `ST_Lenght`
-   
-- Exercise #2: "Tödlichsten" U-Bahneingänge in New York
-  - Tabellen `subway_entrances` und `complaints`
-  - Typ `select DISTINCT description from complaints`
-  
-- Excerise #3: Verkehrsunfälle auf Parkplätzen
-  - Tabellen `parking_lots` und `vehicle_collisions`
-
-### Datenstruktur der Tabellen 
+Die folgenden Kommandos sollen eine Übersicht über die zugrundeligenden Datensturktur vermitteln
 
 ```python
 cursor.execute("""PRAGMA table_info('complaints')""")
@@ -514,11 +486,10 @@ cursor.fetchall()
 cursor.execute("""PRAGMA table_info('subway_entrances')""")
 cursor.fetchall()
 ```
-
-    [(0, 'id', 'INTEGER', 0, None, 1),
-     (1, 'name', 'TEXT', 0, None, 0),
-     (2, 'line', 'TEXT', 0, None, 0),
-     (3, 'geom', 'POINT', 0, None, 0)]
+[(0, 'id', 'INTEGER', 0, None, 1),
+    (1, 'name', 'TEXT', 0, None, 0),
+    (2, 'line', 'TEXT', 0, None, 0),
+    (3, 'geom', 'POINT', 0, None, 0)]
 
 
 ```python
@@ -552,17 +523,10 @@ cursor.fetchall()
      (14, 'contributing_factor_vehicle_2', 'TEXT', 0, None, 0),
      (15, 'geom', 'POINT', 0, None, 0)]
 
-
-```python
-cursor.execute("""
-SELECT id,name, ST_Length(ST_Transform(geom, 32618)) Length
-FROM subway_lines 
-ORDER BY Length DESC
-""")
-save_kepler_map(os.path.join(RESULTS_DIR, 'subwy.html'), 'parking_lots', cursor, ['id', 'area', 'geom'])
-```
-    <sqlite3.Cursor at 0x7f724d5ac340>
 ---
-1 https://de.wikipedia.org/wiki/Gemeinfreiheit<br/>
-2 https://www.sqlite.org/mostdeployed.html<br/>
-3 https://www.sqlite.org/index.html<br/>
+
+| #   | Literatur            |
+| --- |-----------------------------------------------------------------------------------------------------------------------------------|
+| [1] | **Wikipedia**: *Gemeinfreiheit*, [https://de.wikipedia.org/wiki/Gemeinfreiheit](https://de.wikipedia.org/wiki/Gemeinfreiheit), aufgerufen am 20.01.2020  |
+| [2] | **SqLite**: *Most deployed*, [[www.geosci.usyd.edu.au](https://www.sqlite.org/mostdeployed.html)](https://www.sqlite.org/mostdeployed.html), aufgerufen am 10.01.2020  |
+| [3] | **SqLite**: *SqLite*, [https://www.sqlite.org/index.html](https://www.sqlite.org/index.html), aufgerufen am 10.01.2020  |
