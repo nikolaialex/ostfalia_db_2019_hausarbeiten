@@ -1,3 +1,5 @@
+[Inhaltsverzeichnis >>](02_toc.md)
+
 # Data Mining Methoden
 Data Mining steht verschiedenen Aufgaben gegenüber, um die Ziele des Prozesses zu erreichen. Die wichtigsten Anforderungen sind die hohe Qualität und Menge der Daten, in denen Data Mining Muster erkennen soll. In ihnen kann Data Mining verschiedene Analysen durchführen, je nach Zieldefinition. Zu diesen Aufgaben gehören unter anderem das Erkennen und Identifizieren von ungewöhnlichen Mustern und Datensätzen oder die Gruppierung von Daten aufgrund ihrer Ähnlichkeit. Insgesamt gibt es viele verschiedenen Methoden, von denen hier einige vorgestellt werden:
 ## Ausreißer-Erkennung (Outliner Detection)
