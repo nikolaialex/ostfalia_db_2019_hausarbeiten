@@ -7,8 +7,8 @@
   - unüberwachtes Lernen
   - teilüberwachtes Lernen
   - bestärkendes Lernen
-- 4. Algorithmen
-  - [Algorithmen des überwachten Lernens](Algorithmen_des_überwachten_Lernens.md)
+- [4. Algorithmen] (Algorithmen.md)
+  - [Algorithmen des überwachten Lernens]
     - Lineare Regression
     - Logistische Regression
     - CART
