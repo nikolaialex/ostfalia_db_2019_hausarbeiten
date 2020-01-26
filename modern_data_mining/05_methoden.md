@@ -12,7 +12,7 @@ Die Clusteranalyse ist oft nicht eindeutig und bildet Cluster, die möglicherwei
 
 Typische und häufig verwendete Algorithmen zur Clusteranalyse im Data Mining sind beispielsweise der DBSCAN, OPTICS oder der Expectation-Maximization-Alogirthmus.
 
-### Pseudocode: Ursprüngliche Version des DBSCAN
+#### Pseudocode: Ursprüngliche Version des DBSCAN
 ```
 DBSCAN(SetOfPoints, Eps, MinPts)
 // SetOfPoints is UNCLASSIFIED
@@ -27,7 +27,7 @@ Point := SetOfPoints.get(i);
 END FOR
 END;
 ```
-### Wichtigste Funktion im DBSCAN: ExpandCluster
+#### Wichtigste Funktion im DBSCAN: ExpandCluster
 ```
 ExpandCluster (SetOfPoints, Point, CiId, Eps,MinPts) : Boolean;
    seeds := SetOfPoints.regionQuery (Point, Eps); 
@@ -59,6 +59,47 @@ ExpandCluster (SetOfPoints, Point, CiId, Eps,MinPts) : Boolean;
 END; // ExpandCluster 
 ```
 
+Der OPTICS-Algorithmus verwendet das gleiche Grundprinzip wie DBSCAN, kann jedoch stattdessen Cluster mit unterschiedliche Dichte erkennen. Er ordnet die Punkte eines Datensatzes so an, dass räumlich nahe Punkte aufeinander folgen und speichert die Distanz. Bei einer Ausgabe als Diagramm zeigt die y-Achse, wie dicht der Punkt zum Nachbarn ist, je geringer der y-Wert, desto dichter der Punkt. So entstehen Täler, welche die Cluster zeigen.
+|![OPTICS](https://github.com/Averan82/ostfalia_db_2019_hausarbeiten/blob/master/modern_data_mining/images/OPTICS.png)|
+|:--:|
+|*Abbildung 1-2: Ergebnis OPTICS, (Quelle: © Chire, Gemeinfrei; Wikipedia)*|
+
+#### Pseudocode: OPTICS
+```
+OPTICS(DB, eps, MinPts)
+     for each point p of DB
+        p.reachability-distance = UNDEFINED
+     for each unprocessed point p of DB
+        N = getNeighbors(p, eps)
+        mark p as processed
+        output p to the ordered list
+        Seeds = empty priority queue
+        if (core-distance(p, eps, Minpts) != UNDEFINED)
+           update(N, p, Seeds, eps, Minpts)
+           for each next q in Seeds
+              N' = getNeighbors(q, eps)
+              mark q as processed
+              output q to the ordered list
+              if (core-distance(q, eps, Minpts) != UNDEFINED)
+                 update(N', q, Seeds, eps, Minpts)
+
+```
+#### Update-Funktion im OPTICS-Algorithmus
+```
+update(N, p, Seeds, eps, Minpts)
+     coredist = core-distance(p, eps, MinPts)
+     for each o in N
+        if (o is not processed)
+           new-reach-dist = max(coredist, dist(p,o))
+           if (o.reachability-distance == UNDEFINED) // o is not in Seeds
+               o.reachability-distance = new-reach-dist
+               Seeds.insert(o, new-reach-dist)
+           else               // o in Seeds, check for improvement
+               if (new-reach-dist < o.reachability-distance)
+                  o.reachability-distance = new-reach-dist
+                  Seeds.move-up(o, new-reach-dist)
+
+```
 ## Klassifikation
 ## Assoziation
 ## Regression
