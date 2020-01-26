@@ -63,3 +63,5 @@ https://www.micromata.de/blog/k-means-clustering-big-data/
 
 [47]
 http://www.ra.cs.uni-tuebingen.de/lehre/ss06/pro_learning/ClaudiaBroelemann.pdf
+
+[< Arten von Machine Learnins](Arten_von_Machine_Learning.md) | [Anwendungsbeispiele >](Anwendungsbeispiele.md)
