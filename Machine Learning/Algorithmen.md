@@ -42,6 +42,7 @@ Beim K-Means-Verfahren werden Mittelpunkte eines Clusters durch Iteration gesuch
 Durch den Versuch, möglichst viele variable Faktoren zu isolieren und  trotzdem eine großen Teil der Abweichungen einzelner Faktoren zu verstehen, können mit der Hauptkomponentenanalyse große Datensätze vereinfacht und strukturiert werden. Das Verfahren wird unter Anderem bei der Transformationen von Bildern angewandt. [47]
 
 
+----
 
 [41]
 https://www.dataquest.io/blog/top-10-machine-learning-algorithms-for-beginners/
@@ -63,5 +64,7 @@ https://www.micromata.de/blog/k-means-clustering-big-data/
 
 [47]
 http://www.ra.cs.uni-tuebingen.de/lehre/ss06/pro_learning/ClaudiaBroelemann.pdf
+
+---
 
 [< Arten von Machine Learnins](Arten_von_Machine_Learning.md) | [Anwendungsbeispiele >](Anwendungsbeispiele.md)
