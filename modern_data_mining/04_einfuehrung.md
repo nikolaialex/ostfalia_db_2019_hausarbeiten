@@ -1,3 +1,5 @@
+[Inhaltsverzeichnis >>](02_toc.md)
+
 # Einführung in Data Mining
 ## Definition
 Der Begriff Data Mining wird häufig auch als Datenmustererkennung beschrieben. Es handelt sich dabei um die Extraktion von Wissen aus großen Datenbeständen. Wichtig dabei ist, dass das Wissen nicht trivial aber nützlich ist. Die Datenbestände können sowohl groß, als auch dynamisch und komplex sein.
