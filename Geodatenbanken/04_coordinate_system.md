@@ -18,7 +18,7 @@ Neben dem zugrundeliegenden Erdköper und der Anwendung spielt auch die Region d
 |:--:|
 |*Abbildung 4-2: Gegenüberstellung verschiedener geodätischer Daten. Quelle: [4]*|
 
-Diese Datum werden als **lokal** bezeichnet, da sie nur für eine bestimmte Region eine hohe Präzision liefern, für den Rest des Geoid jedoch nicht nutzbar sind. In der oben gezeigtn Grafik sind die beiden Datum für die Regionen *Nord Amerika* und *Europa* gewählt. Wählt man das rote Datum erhählkt man eine hohe Präzision für Amerika, verringert jedoch die Präzision für Europa und umgekehrt.
+Diese Daten werden als **lokal** bezeichnet, da sie nur für eine bestimmte Region eine hohe Präzision liefern, für den Rest des Geoid jedoch nicht nutzbar sind. In der oben gezeigtn Grafik sind die beiden Daten für die Regionen *Nord Amerika* und *Europa* gewählt. Wählt man das rote Datum erhählkt man eine hohe Präzision für Amerika, verringert jedoch die Präzision für Europa und umgekehrt.
 
 Um eine allgemeingültiges Datum zur Verfügung zu stellen wird das *Earth-centered datum* verwendet. Seit 2000 wird dazu das Datum *WGS84 - World Geodetic System 1984* verwendet. Dies soll in nahezu allen Regionen der Erde eine ausreichende Präzision ermöglichen.
 

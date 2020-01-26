@@ -12,7 +12,7 @@ Bei der R-Baum Hierarchie werden die Koordinaten der urprünglichen Geometrie in
 
 |![america_europa](img/bbox.jpg)|
 |:--:|
-|*Abbildung 5-1: Beispielhafte Entwicklung einer BoundingBox. Quelle [2]*|
+|*Abbildung 5-1: Beispielhafte Entwicklung einer BoundingBox. Quelle: [2]*|
 
 Um nun zu prüfen, welche Geometrien in einer topologischen Relation stehen oder z.B. durch einen gewissen Punkte gehen wird geprüft, welche BoundingBoxen sich überschneiden oder welche BoundingBoxen den gesuchten Punkt enthalten. Dieser Suchvorgang ist wesentlich perfomanter als die Suche nach der exakten Geometrie. In späteren Suchdurchläufen wird die Suche verfeinert und der Baum wird in weitere Sub-Bäume unterteilt.
 
