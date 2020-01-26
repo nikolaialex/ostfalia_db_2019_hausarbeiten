@@ -10,7 +10,6 @@
    2. [Clustering](05_methoden.md#clustering)
    3. [Klassifikation](05_methoden.md#klassifikation)
    4. [Assoziation](05_methoden.md#assoziation)
-   5. [Regression](05_methoden.md#regression)
 4. [Aktuelle Data Mining Methoden](09_aktuelle.md) <- Fabian
    1. [Entscheidungsbäume](10_entscheidungsbäume.md)
    2. [OLAP](11_olap.md)
