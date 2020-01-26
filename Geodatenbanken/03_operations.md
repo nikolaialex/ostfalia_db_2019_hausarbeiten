@@ -10,13 +10,13 @@ Der grundlegende Ansatz zum Vergleichen von zwei geometrischen Objekten besteht 
 
 | Operation | Beispiel
 | ------ | -----------
-| **Gleich/Equals:**<br/> Prüft, ob die beiden Geometrien identisch sind. Dafür werden alle Punkte der Geometrie miteinander verglichen. | ![gleich](img/equals.png)
-| **Disjunkt/Disjoint:**<br/> Mit dieser Funktion lässt sich festestellen, ob die beiden Geometrien sich weder berühren, schneiden noch überlappen. | ![disjoint](img/disjunkt.png)
-| **Berührt/Touches:**<br/> Geometrien berühren sich, wenn eine *endliche* Anzahl von Punkten aufeinander liegen, ohne das sie sich kreuzen. | ![touches](img/touches.png)
-| **Kreuzt/Crosses:**<br/> Eine Geometrie kreuzt eine andere Geometire, wenn sie interpolierte Punkte innerhalb oder auf einer anderen Geometrieform besitzt. Dabei können Start und Enpunkt sowohl innerhalb als auch ausserhalb der zweiten Geometrie liegen.  | ![crosses](img/crosses.png)
-| **Innerhalb/Within:**<br/> Eine Geometrie ist innerhalb einer anderen, sobald  alle Punkte der ersten Geometrie innerhalb der zweiten Geometrieform befindet. | ![contains](img/contains.png)
-| **Überschneidet/Overlaps:**<br/> Wenn Teile einer Geometrieform Teilflächen der anderen Geometrieform überdecken, spricht man von überlappen. | ![overlaps](img/overlaps.png)
-| **Distanz/Distance:**<br/> Ermöglicht die Berechnung der Dsitanz zwischen Punkten. Im Gegensatz zu den relationalen Operatoren wird hier eine Entfernung als Zahlenwert zurückgegeben, `nicht Wahr/Falsch` | ![distance](img/distance.png)
+| **Gleich/Equals**<br/> Prüft, ob die beiden Geometrien identisch sind. Dafür werden alle Punkte der Geometrie miteinander verglichen. | ![gleich](img/equals.png)
+| **Disjunkt/Disjoint**<br/> Mit dieser Funktion lässt sich festestellen, ob die beiden Geometrien sich weder berühren, schneiden noch überlappen. | ![disjoint](img/disjunkt.png)
+| **Berührt/Touches**<br/> Geometrien berühren sich, wenn eine *endliche* Anzahl von Punkten aufeinander liegen, ohne das sie sich kreuzen. | ![touches](img/touches.png)
+| **Kreuzt/Crosses**<br/> Eine Geometrie kreuzt eine andere Geometire, wenn sie interpolierte Punkte innerhalb oder auf einer anderen Geometrieform besitzt. Dabei können Start und Enpunkt sowohl innerhalb als auch ausserhalb der zweiten Geometrie liegen.  | ![crosses](img/crosses.png)
+| **Innerhalb/Within**<br/> Eine Geometrie ist innerhalb einer anderen, sobald  alle Punkte der ersten Geometrie innerhalb der zweiten Geometrieform befindet. | ![contains](img/contains.png)
+| **Überschneidet/Overlaps**<br/> Wenn Teile einer Geometrieform Teilflächen der anderen Geometrieform überdecken, spricht man von überlappen. | ![overlaps](img/overlaps.png)
+| **Distanz/Distance**<br/> Ermöglicht die Berechnung der Dsitanz zwischen Punkten. Im Gegensatz zu den relationalen Operatoren wird hier eine Entfernung als Zahlenwert zurückgegeben, `nicht Wahr/Falsch` | ![distance](img/distance.png)
 
 ---
 
