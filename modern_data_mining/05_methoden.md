@@ -103,7 +103,7 @@ update(N, p, Seeds, eps, Minpts)
 ## Klassifikation
 Ähnlich wie die Clusteranalyse ist auch die Klassifikation im Data Mining. Hier geht es darum Objekte in Gruppen zu ordnen, die bereits bekannt sind. Während die Clusteranalyse neue Gruppen (Klassen) findet, ist hier die Einordnung in bestehende Klassen relevant.
 Es gibt verschiedene Arten von Klassifikationsverfahren, die sich durch ihre Eigenschaften unterscheiden lassen. Statistische und verteilungsfreie Verfahren wie der Bayes-Klassifikator basieren auf Wahrscheinlichkeiten, manuelle und automatische Verfahren hingegen entscheiden nach erlernten Strukturen und sind daher ein Teilgebiet vom maschinellen Lernen.
-Der Bayes-Klassifikator ist ein schnell berechenbar und hat eine gute Erkennungsrate, wenn die Attribute zwischen den Objekte nicht zu stark korrelieren. Er bestimmt die Zugehörigkeit eines Objektes zu einer Klasse anhand von Attributen.
+Der Bayes-Klassifikator ist schnell berechenbar und hat eine gute Erkennungsrate, wenn die Attribute zwischen den Objekte nicht zu stark korrelieren. Er bestimmt die Zugehörigkeit eines Objektes zu einer Klasse anhand von Attributen.
 
 #### Mathematische Definition
 *b*: Bayes-Klassifikator  
@@ -115,4 +115,12 @@ Der Bayes-Klassifikator ist ein schnell berechenbar und hat eine gute Erkennungs
 |*Abbildung 1-3: Mathemtische Definition des naiven Bayes-Klassifikators*|
 
 ## Assoziation
+In der Assoziationsanalyse steht die Suche nach starken Regeln im Vordergrund. Beispielsweise wird mit ihr das Kaufverhalten von Personen analysiert und Korrelationen zwischen Gemeinsamkeiten beschrieben. Im Alltag kommen wir mit den Ergebnissen einer Assoziationsanalyse in Berührung, wenn wir online einkaufen. Alle Produkte, die in unserem Warenkorb gespeichert sind, sind in irgendeiner Form mit anderen Produkten verknüpft, die in Verbindung mit unseren Produkten zusammen gekauft wurden. Wir erhalten dann diese Ergebnisse als weitere Kaufvorschläge.  
+
+|![assoziation](https://github.com/Averan82/ostfalia_db_2019_hausarbeiten/blob/master/modern_data_mining/images/assoziation.png)|  
+|:--:|  
+|*Abbildung 1-4: Amazons Kaufempfehlungen anhand getätigter Einkäufe*|  
+
+Ähnlich verfahren die Algorithmen auch mit Produkten, die Ähnlich sind. Wer beispielsweise eine Digitalkamera kauft, bekommt auch gleich die passende Speicherkarte angeboten.
+
 ## Regression
