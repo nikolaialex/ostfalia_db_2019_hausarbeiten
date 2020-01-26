@@ -12,13 +12,13 @@
 
 ## Data Science Prozess
 
-[3.1] (https://towardsdatascience.com/everything-a-data-scientist-should-know-about-data-management-6877788c6a42)
+[3.1] <https://towardsdatascience.com/everything-a-data-scientist-should-know-about-data-management-6877788c6a42>
 
-[3.2] (https://towardsdatascience.com/the-data-science-workflow-43859db0415)
+[3.2] <https://towardsdatascience.com/the-data-science-workflow-43859db0415>
 
-[3.3] (https://www.blue-granite.com/blog/bid/402596/top-five-differences-between-data-lakes-and-data-warehouses)
+[3.3] <https://www.blue-granite.com/blog/bid/402596/top-five-differences-between-data-lakes-and-data-warehouses>
 
-[3.4] (https://en.wikipedia.org/wiki/Data_lake)
+[3.4] <https://en.wikipedia.org/wiki/Data_lake>
 
 ## Technologien
 
@@ -123,6 +123,12 @@
 [5.2.20] <https://databricks.com/spark/getting-started-with-apache-spark>
 
 [5.2.21] <http://pages.databricks.com/rs/094-YMS-629/images/2016_Spark_Infographic.pdf>
+
+## Fazit
+
+[6.1] <https://www.heise.de/newsticker/meldung/So-starb-Elwis-Hintergruende-zu-Lidls-SAP-Rueckzug-4113285.html>
+
+[6.2] <https://www.handelsblatt.com/politik/deutschland/bundeswehr-milliarden-it-projekt-herkules-wird-zum-debakel-seite-2/3421532-2.html?ticket=ST-1849454-5HWV7TEKqzNxbN4msxY0-ap4>
 
 | [&lt;&lt;&lt; Inhaltsverzeichnis](./readme.md) | [&lt;&lt; 7 Darstellungsverzeichnis](darstellungsverzeichnis.md) | Literaturverzeichnis | [1 Einleitung &gt;&gt;](./Data_Science_Allgemein/00_Einleitung.md) |
 |------------------------------------------------|--------------------------------------------------------------------------|----------------------|----------------------------------------------------------------------------|
