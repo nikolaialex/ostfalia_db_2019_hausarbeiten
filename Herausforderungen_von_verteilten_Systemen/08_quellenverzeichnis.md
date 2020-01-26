@@ -1,4 +1,4 @@
-| [<< Zusammenfassung](07_fallbeispiel.md) | [Inhaltsverzeichnis](02_toc.md) |
+| [<< Zusammenfassung](07_zusammenfassung.md) | [Inhaltsverzeichnis](02_toc.md) |
 | ---------------------------------------- | ------------------------------- |
 
 ---
@@ -25,5 +25,5 @@
 
 ---
 
-| [<< Zusammenfassung](07_fallbeispiel.md) | [Inhaltsverzeichnis](02_toc.md) |
+| [<< Zusammenfassung](07_zusammenfassung.md) | [Inhaltsverzeichnis](02_toc.md) |
 | ---------------------------------------- | ------------------------------- |
