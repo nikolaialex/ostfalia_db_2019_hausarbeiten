@@ -15,10 +15,12 @@
     5. [Koordination](05_herausforderungen.md)
     6. [Konsistenz und Replikation](05_herausforderungen.md)
     7. [Fehlertoleranz](05_herausforderungen.md)
-    
+
 4. [Fallbeispiel - Optimierung der Replikation für Echtzeit Simulationen](06_fallbeispiel.md)
 
 5. [Zusammenfassung](07_zusammenfassung.md)
+
+[Quellenverzeichnis](08_quellenverzeichnis.md)
 
 ---
 [<< Titel](01_title.md) | [Einleitung >>](03_einleitung.md)

@@ -1,6 +1,5 @@
-| [<< Fallbeispiel](06_fallbeispiel.md) | [Inhaltsverzeichnis](02_toc.md) |
-| ------------------------------------- | ------------------------------- |
-
+| [<< Fallbeispiel](06_fallbeispiel.md) | [Inhaltsverzeichnis](02_toc.md) | [Quellenverzeichnis >>](08_quellenverzeichnis.md) |
+| ------------------------------------- | ------------------------------- | ------------------------------------------------- |
 
 ---
 
@@ -30,6 +29,5 @@ Die Konzepte und Technologien unterliegen durch variierende Anforderungen und Pr
 
 ---
 
-| [<< Fallbeispiel](06_fallbeispiel.md) | [Inhaltsverzeichnis](02_toc.md) |
-| ------------------------------------- | ------------------------------- |
-
+| [<< Fallbeispiel](06_fallbeispiel.md) | [Inhaltsverzeichnis](02_toc.md) | [Quellenverzeichnis >>](08_quellenverzeichnis.md) |
+| ------------------------------------- | ------------------------------- | ------------------------------------------------- |
