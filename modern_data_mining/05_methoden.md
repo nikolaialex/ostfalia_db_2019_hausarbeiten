@@ -145,3 +145,7 @@ end
 ```
 
 ## Regression
+
+***
+| [<< Einführung in Data Mining ](04_einfuehrung.md) | [ Aktuelle Data Mining Methoden >>](09_aktuelle.md) |
+***
