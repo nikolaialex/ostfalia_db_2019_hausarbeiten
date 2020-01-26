@@ -1,4 +1,6 @@
-# MLDB
+# Datenbanken und Frameworks
+
+## MLDB
  
 Die MLDB ist eine open-source Datenbank, welche von Element AI für den Bereich Machine Learning entworfen wurde. Zusammenfassend bietet die MLDB die folgenden Eigenschaften:
 -   Frei zugänglich (open-source)
@@ -18,7 +20,7 @@ Quelle: [61]
 
 Nachfolgend wird die Funktionsweise von Functions, Procedures, Data Sets und Files näher erläutert.
 
-## Functions
+### Functions
 
  ![Functions ](images/MLDB3.PNG "Functions")
 
@@ -31,7 +33,7 @@ Functions (dt. Funktionen) sind wiederverwendbare Programme, die nach ihrer Funk
 
 
 
-## Procedures
+### Procedures
 
  ![Procedures ](images/MLDB4.PNG "Procedures")
 
@@ -43,7 +45,7 @@ Procedures (dt. Prozeduren) sind ebenfalls wiederverwendbare Programme, die nach
 
 
 
-## Data Sets
+### Data Sets
 
  ![Data Sets ](images/MLDB5.PNG "Data Sets ")
 
@@ -59,7 +61,7 @@ Abbildung: Schaubild Data Set
 
 Quelle: [61]
 
- # Hadoop
+## Hadoop
 
 Das Open-Source Framework Hadoop erlaubt das Verarbeiten von Batch-Prozessen in einem Clustern mit mehreren Knoten, Server und virtuellen Maschinen. Durch dieses Cluster lassen sich große Datenmengen effizient verarbeiten. 
 
@@ -71,7 +73,7 @@ Der MapReduce-Algorithmus stellt die wichtigste Einheit des Frameworks dar. Der 
  
 Die vierte Komponente YARN dient zur Ressourcen- Verwaltung, verschiedene Jobs können dynamisch einer Maschine oder Ressource zugewiesen werden. [62]  [62] 
 
-# Spark
+## Spark
 
 Spark ist ein Datenanalysesystem, dass es erlaubt, Echtzeitdaten, beispielsweise aus sozialen Netzwerken, in Echtzeit zu verarbeiten. Die Datenverarbeitung erfolgt dabei im Arbeitsspeicher, was einen sehr dynamischen Umgang mit Datenströmen erlaubt.
 
@@ -82,9 +84,13 @@ Neben der Verarbeitung von Streamingdaten aus sozialen Netzwerken kann das Frame
 ---
 
 [61]  https://docs.mldb.ai/doc/#builtin/Overview.md.html
+
 [62]  https://dbs.uni-leipzig.de/file/seminar_0910_findling_K%C3%B6nig.pdf
+
 [63]  https://www.bigdata-insider.de/was-ist-hadoop-a-587448/
+
 [64]  https://data-science-blog.com/blog/2016/08/03/was-ist-eigentlich-apache-spark/
+
 ---
 
 [< Anwendungsbeispiele](Anwendungsbeispiele.md) | [ Fazit >](Fazit.md)
