@@ -14,4 +14,4 @@
    1. [Entscheidungsbäume](10_entscheidungsbäume.md)
    2. [OLAP](11_olap.md)
    3. [Neuronale Netze](12_neuronale_netze.md)
-6. [Zusammenfassung](14_zusammenfassung.md)
+6. [Zusammenfassung]()
