@@ -8,7 +8,7 @@ Ein Verzeichnis, in dem alle Dateien zu dem Projekt abgelegt werden. Die Erreich
 
 ### 3.3.2 Datenzugriff
 
-Unabhängig davon, ob es sich um eine SQL Datenbank oder ein Verzeichnis mit Dateien handelt. Auch hier gilt, dem der Zugriff ermöglicht wird, gesteuert werden kann und dass regelmäßig Datensicherungen vorgenommen werden.
+Unabhängig davon, ob es sich um eine SQL Datenbank oder ein Verzeichnis mit Dateien handelt. Auch hier gilt, dass der Zugriff ermöglicht wird, gesteuert werden kann und dass regelmäßig Datensicherungen vorgenommen werden.
 
 ### 3.3.3 Versionierung
 

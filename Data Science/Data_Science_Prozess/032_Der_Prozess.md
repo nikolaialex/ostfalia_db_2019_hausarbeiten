@@ -4,7 +4,7 @@
 
 Die erste Aufgabe besteht im Anschluss der Quelle an das Daten Management Systems. Neben dem Einlesen klassischer Datenbanktabellen werden, insbesondere bei Data Lakes, auch Daten aus Log-Dateien (Textformat), CSV-Dateien, Sensoren- und Maschinendaten gesammelt.
 
-Dazu können neben SQL Abfragen, Restful [API](../Technologien/API.md), RFC-Konnektoren, API oder [Microservices](../Technologien/Microservice.md) verwendet werden. Da Daten Änderungen unterworfen sind, sollten ein regelmäßiges Update eingeplant werden. Die Häufigkeit richtet sich nach der Dynamik der Daten. Dabei sollte auch geprüft werden, wie mit Löschungen umzugehen ist. Sollen zum Beispiel Unternehmen, die Aufgelöst wurden, weiter geführt werden und wie sollen Unternehmen behandelt werden, die fusionieren.
+Dazu können neben SQL Abfragen, Restful [API](../Technologien/API.md), RFC-Konnektoren, API oder [Microservices](../Technologien/Microservice.md) verwendet werden. Da Daten Änderungen unterworfen sind, sollten ein regelmäßiges Update eingeplant werden. Die Häufigkeit richtet sich nach der Dynamik der Daten. Dabei sollte auch geprüft werden, wie mit Löschungen umzugehen ist. Werden Daten über Unternehmen gespeichert muss geklärt werden wie mit den Daten umgegangen wird wenn das Unternehmen zum Beispiel aufgelöst oder mit einem anderen fusioniert wurde.
 
 Bei der Anbindung sollte darauf geachtet werden, dass:
 
@@ -18,7 +18,7 @@ Es gibt natürlich noch andere Lösungen, die Verwendung eines ELK Stacks (Elast
 
 Im zweiten Schritt werden die Daten bereinigt. Die für die weitere Verarbeitung notwendigen Features werden identifiziert und als strukturierte Daten bereitgestellt. Dabei muss der Vorgang reversible und wartungsfreundlich bleiben. Da sich die Quelldaten ändern können (neue Versionen der angeschlossenen Systeme, Protokolldateien, zusätzliche Datenfelder/-spalten usw.), müssen auch diese Prozessschritte weiterentwickelt werden können. Gegebenenfalls müssen auch die archivierten Quelldaten mit der neuen Version verarbeitet werden können. Gerade bei längeren Projekten spielt dann auch die Fortführung der Dokumentation eine gewichtige Rolle.
 In der Regel sollten die Quelldaten nicht geändert werden, das impliziert, dass alle Änderungen als Kopie oder View gespeichert werden sollten. Auch das Löschen von Daten sollte möglichst über ein Löschkennzeichen vorgenommen werden. Ausnahmen sind rechtliche oder ähnliche Forderungen (zum Beispiel DSGVO) zur Löschung oder Anonymisierung der Daten.
-Um diese Anforderungen umzusetzen müssen die Prozesssachritte maschinell beschrieben und auch mehrere Ansätze parallel vorgehalten werden. Dies wird Computation Graph genannt. Dadurch gewinnt man die Möglichkeiten verschiedene Variationen abzuspeichern und die Effektivität zu vergleichen. Der Computation Graph kann auch in den weiteren Prozessschritten erweitert werden.
+Um diese Anforderungen umzusetzen müssen die Prozesssachritte maschinell beschrieben und auch mehrere Ansätze parallel vorgehalten werden. Dies wird Computation Graph genannt. Zusätzlich wird die Möglichkeit geschaffen verschiedene Varianten zu speichern und die Effektivität zu vergleichen. Der Computation Graph kann auch in den weiteren Prozessschritten erweitert werden.
 Dazu können unter anderem folgende Lösungen verwendet werden:
 
 - Makefiles

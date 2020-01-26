@@ -12,9 +12,13 @@
 
 ## Data Science Prozess
 
-[3.1] <>
+[3.1] (https://towardsdatascience.com/everything-a-data-scientist-should-know-about-data-management-6877788c6a42)
 
-[3.2] <>
+[3.2] (https://towardsdatascience.com/the-data-science-workflow-43859db0415)
+
+[3.3] (https://www.blue-granite.com/blog/bid/402596/top-five-differences-between-data-lakes-and-data-warehouses)
+
+[3.4] (https://en.wikipedia.org/wiki/Data_lake)
 
 ## Technologien
 
