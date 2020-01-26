@@ -134,10 +134,10 @@ Input: Frequent Pattern Tree tree, Frequent Itemset I
 Output: vollständige Menge häufiger Itemsets
 If tree hat nur einen Pfad P then 
      foreach Kombination K von Knoten in P do
-       return K I mit support = minimaler Support der Items in K end
+       return K *vereinigt* I mit support = minimaler Support der Items in K end
 else 
      foreach Item i in Tabelle F (in umgekehrter Häufigkeitsreihenfolge) do
-       K = i I mit support = Support von i;
+       K = i *vereinigt* I mit support = Support von i;
        Erstelle Musterbasis von K und reduzierten FP-Baum FPK;
        If FPK nicht leer then FP-Growth (FPK,K)
      end
