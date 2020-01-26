@@ -8,7 +8,7 @@
 
 Im Rahmen dieser Ausarbeitung wurden Herausforderungen betrachtet, die sich in verteilten Systemen ergeben können und in den meisten Systemen immer wieder bewältigt werden müssen.
 
-Grundlegende Herausforderungen ergeben sich bereits bei der Wahl einer geeigneten System- und Softwarearchitektur, wobei die Verwendung von Middleware-Schichten breite Verwendung erfahren hat.
+Grundlegende Herausforderungen ergeben sich bereits bei der Wahl einer geeigneten System- und Softwarearchitektur, wobei die Verwendung von Middleware-Schichten breite Verwendung gefunden hat.
 
 Eng verbunden mit der Wahl der Architekturen ist die Gestaltung und Verteilung der beteiligten Prozesse. Neben der erforderlichen Synchronisation über die einzelnen Knoten hinweg erfordern vor allem die Virtualisierung von Systemen und die Migration von Code eine sorgfältige Handhabung bei der Erstellung verteilter Systeme.
 
