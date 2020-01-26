@@ -12,6 +12,53 @@ Die Clusteranalyse ist oft nicht eindeutig und bildet Cluster, die möglicherwei
 
 Typische und häufig verwendete Algorithmen zur Clusteranalyse im Data Mining sind beispielsweise der DBSCAN, OPTICS oder der Expectation-Maximization-Alogirthmus.
 
+### Pseudocode: Ursprüngliche Version des DBSCAN
+```
+DBSCAN(SetOfPoints, Eps, MinPts)
+// SetOfPoints is UNCLASSIFIED
+ClusterID := nextID(NOISE);
+FOR i FROM 1 TO SetOfPoints.size DO
+Point := SetOfPoints.get(i);      
+   IF Point.ClID = UNCLASSIFIED THEN
+      IF ExpandCluster(SetOfPoints, Point, ClusterID, Eps, MinPts) THEN
+         ClusterID := nextID(ClusterID)
+      END IF
+   END IF
+END FOR
+END;
+```
+### Wichtigste Funktion im DBSCAN: ExpandCluster
+```
+ExpandCluster (SetOfPoints, Point, CiId, Eps,MinPts) : Boolean;
+   seeds := SetOfPoints.regionQuery (Point, Eps); 
+   IF seeds.size<MinPts THEN // no core point
+      SetOfPoint.changeCl Id (Point, NOISE); 
+      RETURN False;
+   ELSE // all points in seeds are density-reachable from Point
+      SetOfpoints. changeCiIds (seeds, C1Id); 
+      seeds.delete(Point); 
+      WHILE seeds <> Empty DO 
+         currentP := seeds.first(); 
+         result := setofPoints.regionQuery(currentP,Eps);
+         IF result.size >= MinPts THEN
+            FOR i FROM 1 TO result.size DO
+               resultP := result.get(i) 
+               IF resultP.CiId
+                     IN (UNCLASSIFIED, NOISE} THEN
+                  IF resultP.CiId = UNCLASSIFIED THEN 
+                     seeds.append(resultP);
+                  END IF; 
+                  SetOfPoints. changeCiId (resultP, CiId) 
+               END IF; // UNCLASSIFIED or NOISE
+            END FOR;
+         END IF; // result.size >= MinPts
+         seeds, delete (currentP) 
+      END WHILE; // seeds <> Empty
+      RETURN True;
+   END IF
+END; // ExpandCluster 
+```
+
 ## Klassifikation
 ## Assoziation
 ## Regression
