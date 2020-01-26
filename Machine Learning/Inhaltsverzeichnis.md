@@ -24,4 +24,4 @@
   - MLDB
   - Spark 
   - Hadoop
-- [7. Fazit](Fazie.md) 
+- [7. Fazit](Fazit.md) 
