@@ -16,7 +16,7 @@ Bei der R-Baum Hierarchie werden die Koordinaten der urprünglichen Geometrie in
 
 Um nun zu prüfen, welche Geometrien in einer topologischen Relation stehen oder z.B. durch einen gewissen Punkte gehen wird geprüft, welche BoundingBoxen sich überschneiden oder welche BoundingBoxen den gesuchten Punkt enthalten. Dieser Suchvorgang ist wesentlich perfomanter als die Suche nach der exakten Geometrie. In späteren Suchdurchläufen wird die Suche verfeinert und der Baum wird in weitere Sub-Bäume unterteilt.
 
-Man spricht von einem Baum, da größere BoundingBoxen kleinere BoundingBoxen umgeben. Ist die gesuchte Position bereits ausserhalb der ersten BoundinBox müssen die Kindselemente nicht weiter untersucht werden[3].
+Man spricht von einem Baum, da größere BoundingBoxen kleinere BoundingBoxen umgeben. Ist die gesuchte Position bereits ausserhalb des ersten Rechtecks, müssen die Kindselemente nicht weiter untersucht werden[3].
 
 |![boundingbox_tree](img/rtree.jpg)|
 |:--:|

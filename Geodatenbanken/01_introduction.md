@@ -76,7 +76,7 @@ Die meißten aktuellen Datenbanksystem bieten entweder bereits integrierte oder 
 | [3] | **Robin Wilson**: *John Snow’s Cholera data in more formats*,  [https://www.r-bloggers.com/john-snows-cholera-data-in-more-formats/](https://www.r-bloggers.com/john-snows-cholera-data-in-more-formats/), aufgerufen am 20.01.2020  |
 | [4] | **OGC**: *20th Anniversary*,  [https://www.opengeospatial.org/about/20th-anniversary](https://www.opengeospatial.org/about/20th-anniversary), aufgerufen am 20.01.2020  |
 | [5] | **OGC**: *OGC Members*,  [https://www.opengeospatial.org/ogc/members](https://www.opengeospatial.org/ogc/members), aufgerufen am 20.01.2020  |
-| [6] | **ISO**: *ISO 19125-2:2004 Geographic information — Simple feature access — Part 2: SQL option*,  [[ISO 19125-2:2004](https://www.iso.org/standard/40115.html)](https://www.iso.org/standard/40115.html), aufgerufen am 10.01.2020  |
+| [6] | **ISO**: *ISO 19125-2:2004 Geographic information — Simple feature access — Part 2: SQL option*,  [ISO 19125-2:2004](https://www.iso.org/standard/40115.html), aufgerufen am 10.01.2020  |
 | [7] | **Australian Government**: *Mapping Bushfires*,  [https://www.ga.gov.au/scientific-topics/earth-obs/case-studies/mapping-bushfires](https://www.ga.gov.au/scientific-topics/earth-obs/case-studies/mapping-bushfires), aufgerufen am 20.01.2020  |
 | [8] | **Berlin.de**: *Geoportal Berlin*,  [https://www.stadtentwicklung.berlin.de/geoinformation/](https://www.stadtentwicklung.berlin.de/geoinformation/), aufgerufen am 07.01.2020  |
 | [9] | **Christopher Kipp**: *Allgemeines über Geodaten*,  [https://data-science-blog.com/blog/2019/05/06/allgemeines-uber-geodaten/](https://data-science-blog.com/blog/2019/05/06/allgemeines-uber-geodaten/), aufgerufen am 07.01.2020  |
