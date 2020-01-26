@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15b9b15b-8b5c-4bc0-a951-698fc02c8a4e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Science/title.md" beforeDir="false" afterPath="$PROJECT_DIR$/Data Science/title.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md" beforeDir="false" afterPath="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,31 +10,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-2134819104">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Markdown" value="6" />
-          <entry key="PLAIN_TEXT" value="9" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data Science/title.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -48,43 +42,142 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="888">
+                <caret line="339" column="269" selection-start-line="339" selection-start-column="269" selection-end-line="339" selection-end-column="269" />
+                <folding>
+                  <element signature="e#781#782#0" expanded="true" />
+                  <element signature="e#857#858#0" expanded="true" />
+                  <element signature="e#895#896#0" expanded="true" />
+                  <element signature="e#922#923#0" expanded="true" />
+                  <element signature="e#975#976#0" expanded="true" />
+                  <element signature="e#1013#1014#0" expanded="true" />
+                  <element signature="e#1051#1052#0" expanded="true" />
+                  <element signature="e#1078#1079#0" expanded="true" />
+                  <element signature="e#1131#1132#0" expanded="true" />
+                  <element signature="e#1169#1170#0" expanded="true" />
+                  <element signature="e#1229#1230#0" expanded="true" />
+                  <element signature="e#1267#1268#0" expanded="true" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-574">
+                <caret line="317" column="36" selection-start-line="317" selection-start-column="36" selection-end-line="317" selection-end-column="36" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="102">
+                <caret line="6" column="1022" selection-start-line="6" selection-start-column="1022" selection-end-line="6" selection-end-column="1022" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/06_literature.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="85">
+                <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/00-1_title.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="119">
+                <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/00-2_toc.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_allgemein.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="176">
+                <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/01_einleitung.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>OMG</find>
+      <find>OGM</find>
+      <find>ACID</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>OGM</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="projectSyncType">
-      <map>
-        <entry key="$USER_HOME$/TUI/Projekte/login-backend" value="PREVIEW" />
-        <entry key="$USER_HOME$/TUI/Projekte/travelexplorer-backend" value="PREVIEW" />
-        <entry key="$USER_HOME$/TUI/Projekte/travelexplorer-importer" value="PREVIEW" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Data Science/title.md" />
+        <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_toc.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/06_literature.md" />
+        <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/00-1_title.md" />
+        <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_allgemein.md" />
+        <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md" />
+        <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md" />
+        <option value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1280" />
     <option name="height" value="800" />
   </component>
@@ -106,6 +199,11 @@
               <item name="ostfalia_db_2019_hausarbeiten" type="462c0819:PsiDirectoryNode" />
               <item name="Data Science" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ostfalia_db_2019_hausarbeiten" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ostfalia_db_2019_hausarbeiten" type="462c0819:PsiDirectoryNode" />
+              <item name="Vergleich_RDBMS_und_Neo4j" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -114,15 +212,27 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -137,7 +247,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,12 +260,14 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <properties />
       <listeners />
@@ -163,11 +275,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -184,28 +296,374 @@
       <option name="presentableId" value="Default" />
       <updated>1571939230592</updated>
       <workItem from="1571939232175" duration="198000" />
+      <workItem from="1574515358115" duration="1703000" />
+      <workItem from="1574518934649" duration="186000" />
+      <workItem from="1574519553124" duration="591000" />
+      <workItem from="1574520720467" duration="485000" />
+      <workItem from="1574588975854" duration="18618000" />
+      <workItem from="1576919779777" duration="490000" />
+      <workItem from="1576920728886" duration="45933000" />
     </task>
+    <task id="LOCAL-00045" summary="Add Test Results">
+      <created>1578591904872</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1578591904872</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Add Vicents Result">
+      <created>1578599885547</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1578599885547</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Add Performance Tuning">
+      <created>1578750884974</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1578750884974</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Add Performance Tuning">
+      <created>1578753147900</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1578753147900</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Add Performance Tuning">
+      <created>1578753605196</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1578753605196</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Add Performance Tuning">
+      <created>1578754808307</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1578754808308</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Add Performance Tuning">
+      <created>1578754836459</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1578754836459</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Add Performance Tuning">
+      <created>1578755698141</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1578755698141</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Add Performance Tuning">
+      <created>1578756024730</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1578756024730</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Add Performance Tuning">
+      <created>1578760740657</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1578760740657</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Add Performance Tuning">
+      <created>1578771506017</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1578771506017</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Add Performance Tuning">
+      <created>1578771738424</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1578771738424</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Several Enhanecments">
+      <created>1578773584375</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1578773584375</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Several Enhanecments">
+      <created>1578775843135</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1578775843135</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Set theoretical correct values">
+      <created>1578780605896</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1578780605896</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Add last missing results">
+      <created>1578831210804</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1578831210804</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Fix broken table">
+      <created>1579287571907</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1579287571907</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Fix broken table">
+      <created>1579288376373</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1579288376373</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Reduce image size">
+      <created>1579288801564</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1579288801564</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Reduce image size">
+      <created>1579288929589</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1579288929589</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Reduce image size">
+      <created>1579289124134</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1579289124134</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Fix issue in code">
+      <created>1579289241425</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1579289241425</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Fix issue in code">
+      <created>1579289441449</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1579289441449</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Fix issue in code">
+      <created>1579289460110</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1579289460110</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Fix issue in code">
+      <created>1579290588474</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1579290588474</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Fix issue in code">
+      <created>1579807399359</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1579807399359</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Satz für die Titelseite ergänzt">
+      <created>1579807543373</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1579807543373</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Korrektur REchtschreibung">
+      <created>1579807967250</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1579807967250</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Korrektur REchtschreibung">
+      <created>1579808456473</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1579808456474</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Korrektur REchtschreibung">
+      <created>1579808537673</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1579808537673</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Korrektur REchtschreibung">
+      <created>1579808629088</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1579808629088</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Korrektur REchtschreibung">
+      <created>1579809101040</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809101040</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Korrektur REchtschreibung">
+      <created>1579809214746</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809214746</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Korrektur REchtschreibung">
+      <created>1579809350311</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809350311</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Korrektur REchtschreibung">
+      <created>1579809545019</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809545019</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Korrektur REchtschreibung">
+      <created>1579809739676</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809739676</updated>
+    </task>
+    <task id="LOCAL-00081" summary="Korrektur REchtschreibung">
+      <created>1579809818582</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809818582</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Korrektur REchtschreibung">
+      <created>1579809948705</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809948705</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Korrektur REchtschreibung">
+      <created>1579809984772</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1579809984772</updated>
+    </task>
+    <task id="LOCAL-00084" summary="Korrektur REchtschreibung">
+      <created>1579810022708</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1579810022708</updated>
+    </task>
+    <task id="LOCAL-00085" summary="Korrektur REchtschreibung">
+      <created>1579810194002</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1579810194002</updated>
+    </task>
+    <task id="LOCAL-00086" summary="Korrektur REchtschreibung">
+      <created>1579810349675</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1579810349675</updated>
+    </task>
+    <task id="LOCAL-00087" summary="Korrektur REchtschreibung">
+      <created>1579810461352</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1579810461352</updated>
+    </task>
+    <task id="LOCAL-00088" summary="Korrektur REchtschreibung">
+      <created>1579810695531</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1579810695531</updated>
+    </task>
+    <task id="LOCAL-00089" summary="Korrektur REchtschreibung">
+      <created>1579810937373</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1579810937373</updated>
+    </task>
+    <task id="LOCAL-00090" summary="Korrektur REchtschreibung">
+      <created>1579811810511</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1579811810511</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Korrektur REchtschreibung">
+      <created>1579811863141</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1579811863141</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Korrektur REchtschreibung">
+      <created>1579812059578</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1579812059578</updated>
+    </task>
+    <task id="LOCAL-00093" summary="Korrektur REchtschreibung">
+      <created>1579812263920</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1579812263920</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198000" />
+    <option name="totallyTimeSpent" value="68204000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08459094" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32956153" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -213,28 +671,102 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.20145985" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.33430657" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Graph Database Console" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.32962668" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven" order="9" />
+      <window_info anchor="right" id="Graph Database" order="10" weight="0.2466243" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Table of Content" />
+    <MESSAGE value="Add first project description" />
+    <MESSAGE value="Add more information for ORM Mapping" />
+    <MESSAGE value="Add more Information to Domain Model" />
+    <MESSAGE value="Adjust Headlines" />
+    <MESSAGE value="Add Schema Section" />
+    <MESSAGE value="Add first Query comparison" />
+    <MESSAGE value="Add third Query comparison" />
+    <MESSAGE value="Add fourth Query comparison" />
+    <MESSAGE value="Add fith Query comparison" />
+    <MESSAGE value="Add Example from Neo4J in Action" />
+    <MESSAGE value="Add Testdata Image" />
+    <MESSAGE value="Add Test Results" />
+    <MESSAGE value="Add Vicents Result" />
+    <MESSAGE value="Add Performance Tuning" />
+    <MESSAGE value="Several Enhanecments" />
+    <MESSAGE value="Set theoretical correct values" />
+    <MESSAGE value="Add last missing results" />
+    <MESSAGE value="Fix broken table" />
+    <MESSAGE value="Reduce image size" />
+    <MESSAGE value="Fix issue in code" />
+    <MESSAGE value="Satz für die Titelseite ergänzt" />
+    <MESSAGE value="Korrektur REchtschreibung" />
+    <option name="LAST_COMMIT_MESSAGE" value="Korrektur REchtschreibung" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04-1_rdbms.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_general_introduction.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/01_title.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/cypher_beschreibung_5.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/cypher_beschreibung_6.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/testdaten_performance.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_toc.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="102">
+            <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -243,6 +775,115 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="153">
             <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02-1_rdbms.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02-2_neo4j.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-996" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/img/johannesversorbuch.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/06_literature.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="85">
+            <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/00-1_title.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/00-2_toc.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/01_einleitung.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/02_allgemein.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="176">
+            <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/03_project.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="888">
+            <caret line="339" column="269" selection-start-line="339" selection-start-column="269" selection-end-line="339" selection-end-column="269" />
+            <folding>
+              <element signature="e#781#782#0" expanded="true" />
+              <element signature="e#857#858#0" expanded="true" />
+              <element signature="e#895#896#0" expanded="true" />
+              <element signature="e#922#923#0" expanded="true" />
+              <element signature="e#975#976#0" expanded="true" />
+              <element signature="e#1013#1014#0" expanded="true" />
+              <element signature="e#1051#1052#0" expanded="true" />
+              <element signature="e#1078#1079#0" expanded="true" />
+              <element signature="e#1131#1132#0" expanded="true" />
+              <element signature="e#1169#1170#0" expanded="true" />
+              <element signature="e#1229#1230#0" expanded="true" />
+              <element signature="e#1267#1268#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/04_untersuchungen.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-574">
+            <caret line="317" column="36" selection-start-line="317" selection-start-column="36" selection-end-line="317" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vergleich_RDBMS_und_Neo4j/05_fazit.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="102">
+            <caret line="6" column="1022" selection-start-line="6" selection-start-column="1022" selection-end-line="6" selection-end-column="1022" />
           </first_editor>
           <second_editor />
         </state>
