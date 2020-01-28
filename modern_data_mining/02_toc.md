@@ -11,8 +11,7 @@
    3. [Klassifikation](05_methoden.md#klassifikation)
    4. [Assoziation](05_methoden.md#assoziation)
 4. [Aktuelle Data Mining Methoden](09_aktuelle.md) <- Fabian
-   1. [Entscheidungsbäume](10_entscheidungsbäume.md)
-   2. [OLAP](11_olap.md)
-   3. [Neuronale Netze](12_neuronale_netze.md)
-6. [Zusammenfassung]()
+   1. [Entscheidungsbäume](09_aktuelle.md#entscheidungsbäume)
+   2. [OLAP](09_aktuelle.md#olap)
+   3. [Neuronale Netze](09_aktuelle.md#künstliches-neuronales-netz)
 7. [Quellen](14_quellen.md)
